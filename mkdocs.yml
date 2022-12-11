@@ -61,7 +61,7 @@ nav:
 
 
 theme: 
-   name: material
+   name: readthedocs
    logo: assets/uepal-logo.svg
    locale: fr
    features:
