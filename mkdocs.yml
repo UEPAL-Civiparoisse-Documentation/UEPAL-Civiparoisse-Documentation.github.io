@@ -1,0 +1,23 @@
+site_name: Documentation UEPAL Civiparoisse
+site_url : https://www.uepal.fr
+nav:
+    - Home: index.md
+theme: 
+   name: material
+   logo: assets/uepal-logo.svg
+   locale: fr
+   features:
+     - search.suggest
+     - search.highlight
+   palette:
+     - scheme: slate
+       toggle:
+         icon: material/toggle-switch-off-outline
+         name: switch to light mode
+     - scheme: default
+       toggle:
+         icon: material/toggle-switch
+         name: Switch to dark mode
+   plugins:
+   - search:
+       lang: fr
