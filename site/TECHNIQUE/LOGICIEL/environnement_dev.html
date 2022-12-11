@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.uepal.fr/TECHNIQUE/LOGICIEL/environnement_dev.html" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Environnement de dev - Documentation UEPAL Civiparoisse</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Environnement de dev";
+        var mkdocs_page_input_path = "TECHNIQUE/LOGICIEL/environnement_dev.md";
+        var mkdocs_page_url = "/TECHNIQUE/LOGICIEL/environnement_dev.html";
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../index.html">
+          <img src="../../assets/uepal-logo.svg" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Présentation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PRESENTATION/index.html">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PRESENTATION/presentation_fonctionnelle.html">Périmètre fonctionnel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PRESENTATION/presentation_ecosysteme.html">Ecosystème projet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PRESENTATION/presentation_livrables.html">Livrables</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technique</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../roles.html">Rôles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../MAIL/mail.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../MAIL/ecosysteme.html">Ecosystème</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../MAIL/sendmail.html">Envoi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../MAIL/fetchmail.html">Réception</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Logiciel</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="distribution_code_composer.html">Distribution de code</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="environnement_dev.html">Environnement de dev</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#principe-de-fonctionnement">Principe de fonctionnement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#resolution-de-noms">Résolution de noms</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initialisation-du-repertoire-de-destination">Initialisation du répertoire de destination</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#recuperation-des-dockerfiles">Récupération des Dockerfiles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initialisation-dune-installation">Initialisation d'une installation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#recuperation-des-donnees-en-local">Récupération des données en local</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#branchement-des-depots-gits">Branchement des dépôts gits</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lancement-de-lenvironnement-pour-dev">Lancement de l'environnement pour dev</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mots-de-passe-par-defaut">Mots de passe par défaut</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#configuration-xdebug-pour-vscode-launchjson">Configuration xdebug pour vscode : launch.json</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="environnement_dev_env.html">Personnalisation environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="importation.html">Importation de données</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Intégration</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../INTEGRATION/index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../INTEGRATION/etude_authentification.html">Authentification</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../INTEGRATION/docker.html">Description générale</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Images</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/composer_base.html">Composer_base</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/composer_files.html">Composer_files</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/tools.html">tools</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/init.html">init</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/cron.html">cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/selfkeys.html">selfkeys</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/httpd.html">httpd</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/authenticator.html">authenticator</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/proxy.html">proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/db_tls_server.html">db_tls_server</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/db_tls_client.html">db_tls_client</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/update.html">update</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../INTEGRATION/db_ssl.html">DB_SSL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Kubernetes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../INTEGRATION/KUBERNETES/maquettage.html">Maquettage</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../INTEGRATION/KUBERNETES/ressources.html">Ressources utiles</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Chart Helm</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/KUBERNETES/HELM/description_generale.html">Description générale</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/KUBERNETES/HELM/db_dbproxy.html">DB et DB proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/KUBERNETES/HELM/httpd.html">Serveur web interne</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/KUBERNETES/HELM/proxy_auth.html">Proxy et authenticateur</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/KUBERNETES/HELM/cron.html">Cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/KUBERNETES/HELM/volumes.html">Volumes (persistants)</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/KUBERNETES/HELM/secrets.html">Secrets</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/KUBERNETES/HELM/reservations.html">Réservations</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Documentation UEPAL Civiparoisse</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Technique &raquo;</li>
+          <li>Logiciel &raquo;</li>
+      <li>Environnement de dev</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="environnement-de-developpement">Environnement de développement</h1>
+<h2 id="principe-de-fonctionnement">Principe de fonctionnement</h2>
+<p>L'idée de l'environnement de développement est de fournir des outils rapides et efficaces pour faire les travaux de développement, sans s'encombrer d'une infrastructure complète.
+Cette structure est prévue pour des travaux sur des fonctionnalités internes à Civiparoisse, mais n'est pas suffisante s'il y a besoin de tester des éléments plus importants qui mettent en jeu l'infrastructure (ex : envoi / réception de mail).</p>
+<p>Dans le dépot des Dockerfiles, il y a non seulement le nécessaire pour constituer les images, mais également trois docker-compose : </p>
+<ul>
+<li><code>docker-init.yml</code> : contient un container d'initialisation</li>
+<li><code>docker-compose.yml</code> : contient une stack minimale, avec la DB, l'authenticateur, et le proxy et le serveur web</li>
+<li><code>docker-compose-bind.yml</code> : contient la même stack, mais avec une variable d'environnement pour faire un montage en bind du répertoire <code>/app</code></li>
+</ul>
+<p>L'idée est la suivante :</p>
+<ul>
+<li>initialiser un environnement pour avoir une installation propre</li>
+<li>récupérer en local l'ensemble des fichiers de l'environnement</li>
+<li>remplacer les emplacements qui contiennent le code spécifique de civiparoisse par des clones git</li>
+<li>utiliser la copie pour la faire tourner dans Docker</li>
+</ul>
+<h2 id="resolution-de-noms">Résolution de noms</h2>
+<p>Le nom utilisé dans les images est <code>civicrm.test</code>. Il y a lieu d'écrire une entrée dans <code>/etc/hosts</code> pour résoudre ce nom vers <code>127.0.0.1</code>.</p>
+<h2 id="initialisation-du-repertoire-de-destination">Initialisation du répertoire de destination</h2>
+<pre><code class="language-bash">#!/bin/bash
+
+echo &quot;export CIVIPAROISSEDEV=~/devciviparoisse&quot; &gt;&gt;~/.bashrc
+source ~/.bashrc
+mkdir -p ${CIVIPAROISSEDEV}
+</code></pre>
+<p>On définit la variable CIVIPAROISSEDEV dans le bashrc de sorte que la variable soit disponible, et chargée via le shell (bash).</p>
+<h2 id="recuperation-des-dockerfiles">Récupération des Dockerfiles</h2>
+<p>Les dockerfiles se trouvent dans un dépôt spécifique :
+<code>git@github.com:UEPAL-CiviParoisse/Dockerfiles.git</code></p>
+<p>Il faut compiler les images du Dockerfile (pour l'instant, branche <code>ENV_DEV</code>), via le build.sh présent dans le dépôt.
+La compilation des images prend un certain temps (et un temps certain).</p>
+<h2 id="initialisation-dune-installation">Initialisation d'une installation</h2>
+<pre><code class="language-bash">docker-compose -f docker-init.yml up
+docker-compose -f docker-init.yml down --remove-orphans
+</code></pre>
+<p>Ceci initialise surtout les volumes dont on aura besoin</p>
+<h2 id="recuperation-des-donnees-en-local">Récupération des données en local</h2>
+<p>On lance l'environnement :</p>
+<pre><code class="language-bash">docker-compose -f docker-compose.yml up -d
+</code></pre>
+<p>Le but est d'avoir le conteneur du serveur web lancé. On utilise <code>docker container ls</code> pour voir la liste des conteneurs lancés. Le nom du conteneur dépendra du répertoire contenant le clone du dépôt des dockerfiles.</p>
+<pre><code class="language-bash">docker container ls
+CONTAINER ID   IMAGE                        COMMAND                  CREATED              STATUS              PORTS                            NAMES
+7d607761b474   uepal_test/proxy             &quot;apache2-foreground&quot;     About a minute ago   Up About a minute   80/tcp, 127.0.0.1:443-&gt;443/tcp   git_dockerfiles_civiproxy_1
+00d5bf0ad884   uepal_test/authenticator     &quot;/exec/exec.sh&quot;          About a minute ago   Up About a minute                                    git_dockerfiles_civiauthenticator_1
+d960762f63b0   uepal_test/httpd             &quot;apache2-foreground&quot;     About a minute ago   Up About a minute   80/tcp, 444/tcp                  git_dockerfiles_civihttpd_1
+898dca63e562   ubuntu/mysql                 &quot;docker-entrypoint.s…&quot;   About a minute ago   Up About a minute   3306/tcp, 33060/tcp              git_dockerfiles_cividb_1
+22b88b8c9cde   uepal_test/mkdocs-material   &quot;mkdocs serve --dev-…&quot;   2 hours ago          Up 2 hours          127.0.0.1:8000-&gt;8000/tcp         mkdocs_material
+
+</code></pre>
+<p>Ici, le nom du conteneur est : <code>git_dockerfiles_civihttpd_1</code>. </p>
+<p>On va récupérer l'ensemble du répertoire /app en local, et on va utiliser des règles ACL pour positionner des droits pour l'utilisateur courant (et ainsi, on aura moins besoin de jongler entre les droits dans le conteneur et l'environnement de travail).
+La copie créant de nouveaux fichiers, et comme on va binder les volumes, il faut également positionner les droits sur les fichiers du bind. Dans le conteneur courant, www-data est un utilisateur dont l'UID est 33 (pour le moment, mais ça peut changer en fonction de la vie des images); d'où la mise en place des droits pour l'utilisateur 33.</p>
+<pre><code class="language-bash">sudo docker cp git_dockerfiles_civihttpd_1:/app/ ${CIVIPAROISSEDEV}
+sudo setfacl -R -m u:$(whoami):rwx ${CIVIPAROISSEDEV}
+sudo setfacl -R -m u:33:rxw ${CIVIPAROISSEDEV}
+</code></pre>
+<p>On arrête les conteneurs :</p>
+<pre><code class="language-bash">docker-compose -f docker-compose.yml down
+</code></pre>
+<h2 id="branchement-des-depots-gits">Branchement des dépôts gits</h2>
+<p>Les dépôts gits viendront remplacer les fichiers de l'image, via de l'effacement puis des clones.</p>
+<table>
+<thead>
+<tr>
+<th>Dépôt</th>
+<th>Description</th>
+<th>Chemin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git@github.com:UEPAL-CiviParoisse/Extensions_CiviCRM.git</code></td>
+<td>Fichiers extension civiparoisse</td>
+<td><code>${CIVIPAROISSEDEV}/app/vendor/uepal/fr.uepalparoisse.civiparoisse</code></td>
+</tr>
+<tr>
+<td><code>git@github.com:UEPAL-CiviParoisse/CIVIP_INSTALL.git</code></td>
+<td>Setup civicrm-civiparoisse</td>
+<td><code>${CIVIPAROISSEDEV}/app/vendor/uepal/civisetup</code></td>
+</tr>
+<tr>
+<td><code>git@github.com:UEPAL-CiviParoisse/Modules_Drupal.git</code></td>
+<td>Module drupal civiparoisse</td>
+<td><code>${CIVIPAROISSEDEV}/app/web/modules/contrib/fr.uepalparoisse.druparoisse</code></td>
+</tr>
+</tbody>
+</table>
+<p>Lorsqu'on branche les dépôts gits, on va certainement faire :</p>
+<ul>
+<li>un mv ou rm des fichiers présents en local dans les répertoires cibles, </li>
+<li>des <code>git clone</code> pour remplacer les fichiers</li>
+<li>des <code>git checkout</code> pour se positionner dans les bonnes branches</li>
+<li>des <code>setfacl</code> pour positionner les droits pour le serveur web</li>
+</ul>
+<p>Lorsqu'on change les branches, il faudra penser à vider les caches (par exemple via les interfaces d'administration).</p>
+<h2 id="lancement-de-lenvironnement-pour-dev">Lancement de l'environnement pour dev</h2>
+<p>L'environnement pour le développement est un peu particulier, dans la mesure où l'on va utiliser un conteneur httpd modifié pour inclure Xdebug, ainsi qu'un montage bind des fichiers locaux. De même, le réseau utilisé est un seul réseau (en raison de problèmes de mise au point sur les scopes). Pour le lancer : </p>
+<pre><code class="language-bash">docker-compose -f docker-compose-bind.yml up -d
+</code></pre>
+<p>Pour arrêter : </p>
+<pre><code class="language-bash">docker-compose -f docker-compose-bind.yml down
+</code></pre>
+<h2 id="mots-de-passe-par-defaut">Mots de passe par défaut</h2>
+<p>Les mots de passe sont présents dans les secrets liés à l'image <code>init</code>.</p>
+<h2 id="configuration-xdebug-pour-vscode-launchjson">Configuration xdebug pour vscode : launch.json</h2>
+<p>On ouvre le dossier ${CIVIPAROISSEDEV}/app dans vscode.
+Vscode propose une extension pour xdebug : identificateur : <code>xdebug.php-debug</code>.</p>
+<p>Cette extension utilise un fichier <code>launch.json</code> pour configurer une instance de xdebug. Il convient de faire attention d'écouter sur toutes les IP et sur le bon port (9003), ainsi que de configurer le pathMapping, pour la correspondance des fichiers sources.</p>
+<pre><code class="language-json">{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    &quot;version&quot;: &quot;0.2.0&quot;,
+    &quot;configurations&quot;: [
+        {
+            &quot;name&quot;: &quot;Listen for Xdebug&quot;,
+            &quot;type&quot;: &quot;php&quot;,
+            &quot;request&quot;: &quot;launch&quot;,
+            &quot;port&quot;: 9003,
+            &quot;hostname&quot;: &quot;::&quot;,
+            &quot;pathMappings&quot;: {
+                &quot;/app&quot;:&quot;${workspaceFolder}&quot;
+            }
+
+        }
+
+    ]
+}
+</code></pre>
+<p>Une fois que cela est fait, il suffit donc de positionner les points d'arrêts et de lancer le débugger.</p>
+<p>A noter que xdebug, tel que configuré, est prévu pour envoyer des requêtes dans tous les cas à l'IDE.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="distribution_code_composer.html" class="btn btn-neutral float-left" title="Distribution de code"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="environnement_dev_env.html" class="btn btn-neutral float-right" title="Personnalisation environnement de dev">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="distribution_code_composer.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="environnement_dev_env.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

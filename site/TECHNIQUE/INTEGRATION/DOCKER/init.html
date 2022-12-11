@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.uepal.fr/TECHNIQUE/INTEGRATION/DOCKER/init.html" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>init - Documentation UEPAL Civiparoisse</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "init";
+        var mkdocs_page_input_path = "TECHNIQUE/INTEGRATION/DOCKER/init.md";
+        var mkdocs_page_url = "/TECHNIQUE/INTEGRATION/DOCKER/init.html";
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../index.html">
+          <img src="../../../assets/uepal-logo.svg" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Présentation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../PRESENTATION/index.html">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../PRESENTATION/presentation_fonctionnelle.html">Périmètre fonctionnel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../PRESENTATION/presentation_ecosysteme.html">Ecosystème projet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../PRESENTATION/presentation_livrables.html">Livrables</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technique</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../roles.html">Rôles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../MAIL/mail.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../MAIL/ecosysteme.html">Ecosystème</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../MAIL/sendmail.html">Envoi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../MAIL/fetchmail.html">Réception</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Logiciel</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/distribution_code_composer.html">Distribution de code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/environnement_dev.html">Environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/environnement_dev_env.html">Personnalisation environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/importation.html">Importation de données</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Intégration</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../etude_authentification.html">Authentification</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Docker</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../docker.html">Description générale</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">Images</a>
+    <ul class="current">
+                <li class="toctree-l4"><a class="reference internal" href="composer_base.html">Composer_base</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="composer_files.html">Composer_files</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="tools.html">tools</a>
+                </li>
+                <li class="toctree-l4 current"><a class="reference internal current" href="init.html">init</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="cron.html">cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="selfkeys.html">selfkeys</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="httpd.html">httpd</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="authenticator.html">authenticator</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="proxy.html">proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="db_tls_server.html">db_tls_server</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="db_tls_client.html">db_tls_client</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="update.html">update</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../db_ssl.html">DB_SSL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Kubernetes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../KUBERNETES/maquettage.html">Maquettage</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../KUBERNETES/ressources.html">Ressources utiles</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Chart Helm</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/description_generale.html">Description générale</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/db_dbproxy.html">DB et DB proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/httpd.html">Serveur web interne</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/proxy_auth.html">Proxy et authenticateur</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/cron.html">Cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/volumes.html">Volumes (persistants)</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/secrets.html">Secrets</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/reservations.html">Réservations</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Documentation UEPAL Civiparoisse</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Technique &raquo;</li>
+          <li>Intégration &raquo;</li>
+          <li>Docker &raquo;</li>
+          <li>Images &raquo;</li>
+      <li>init</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="image-init">Image init</h1>
+<h2 id="description">Description</h2>
+<p>Cette image est prévue pour initialiser les volumes d'une instance.
+Elle est prévue pour effectuer les tâches d'installation spécifiées dans un script shell, utilisant grandement les variables d'environnement.</p>
+<p>Les secrets (dont mots de passe) sont sensés être passés via des fichiers montés dans l'environnement du container, comme ce qui est prévu dans Kubernetes pour la mise à disposition des secrets, ce qui permet d'ailleurs la personnalisation des installations.</p>
+<p>A noter que si les volumes ne sont pas vides, le script est prévu pour ne rien faire.</p>
+<pre><code class="language-Docker">FROM uepal_test/tools
+LABEL uepal.name=&quot;init&quot; uepal.version=&quot;0.0.1&quot;
+ENV PAROISSE_NAME=&quot;Paroisse Uepal de test&quot; PAROISSE_ADDR=&quot;1b,quai Saint Thomas&quot; PAROISSE_CITY=&quot;Strasbourg&quot;  PAROISSE_PHONE=&quot;0011223344&quot; PAROISSE_ZIPCODE=&quot;67000&quot; CIVI_DOMAIN=&quot;DomaineParoisse&quot; DBNAME_CIVICRM=&quot;civicrm&quot; DBNAME_DRUPAL=&quot;drupal&quot; DBNAME_CIVILOG=&quot;civilog&quot; DBHOST=&quot;civicrmdb&quot; DBUSER=&quot;exploitant&quot; DBSECRET=&quot;dbsecret&quot;  DRUPAL_ADMIN_USER_SECRET=&quot;drupal_user&quot; DRUPAL_ADMIN_PASSWORD_SECRET=&quot;drupal_password&quot; SERVERNAME=&quot;civicrm.test&quot; TRUSTED_HOST_PATTERNS=&quot;['^civicrm\\.test$','^intern\\.civicrm\\.test$']&quot; MAILADMIN_ADDR=&quot;admin@civicrm.test&quot; MAILADMIN_NAME=&quot;Admin ADMIN&quot; MAILADMIN_DESCR=&quot;mail admin descr&quot; MAILDIR=&quot;/maildir&quot; SITENAME=&quot;Site de test civicrm&quot;
+RUN rsync -av /app/web/sites/ /app/web/sites_orig &amp;&amp; rsync -av /var/lib/mysql/ /var/lib/mysql_orig &amp;&amp; rm -Rf /app/web/sites/* &amp;&amp; rm -Rf /var/lib/mysql/*
+COPY exec.sh /exec/exec.sh
+COPY secrets /var/run/secrets/
+RUN chown -R root:root /exec &amp;&amp; chmod -R 500 /exec &amp;&amp; chown -R root:root /var/run/secrets &amp;&amp; find /var/run/secrets -type f -exec chmod 400 '{}' \; &amp;&amp; find /var/run/secrets -type d -exec chmod 500 '{}' \;
+</code></pre>
+<h2 id="variables-denvironnement">Variables d'environnement</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Signification</th>
+<th>Default Docker</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PAROISSE_NAME</td>
+<td>Nom de la paroisse</td>
+<td>"Paroisse Uepal de test"</td>
+</tr>
+<tr>
+<td>PAROISSE_ADDR</td>
+<td>Adresse de la paroisse</td>
+<td>"1b,quai Saint Thomas"</td>
+</tr>
+<tr>
+<td>PAROISSE_CITY</td>
+<td>Ville de la paroisse</td>
+<td>"Strasbourg"</td>
+</tr>
+<tr>
+<td>PAROISSE_PHONE</td>
+<td>Numéro de téléphone de la paroisse</td>
+<td>"0011223344"</td>
+</tr>
+<tr>
+<td>PAROISSE_ZIPCODE</td>
+<td>Code postal de la paroisse</td>
+<td>"67000"</td>
+</tr>
+<tr>
+<td>CIVI_DOMAIN</td>
+<td>Nom du domaine civicrm</td>
+<td>"DomaineParoisse"</td>
+</tr>
+<tr>
+<td>DBNAME_CIVICRM</td>
+<td>Nom DB CiviCRM</td>
+<td>"civicrm"</td>
+</tr>
+<tr>
+<td>DBNAME_DRUPAL</td>
+<td>Nom DB Drupal</td>
+<td>"drupal"</td>
+</tr>
+<tr>
+<td>DBNAME_CIVILOG</td>
+<td>Nom DB Audit CiviCRM</td>
+<td>"civilog"</td>
+</tr>
+<tr>
+<td>DBHOST</td>
+<td>Hote base de données</td>
+<td>"civicrmdb"</td>
+</tr>
+<tr>
+<td>DBUSER</td>
+<td>Utilisateur au niveau des BD mysql</td>
+<td>"exploitant"</td>
+</tr>
+<tr>
+<td>DBSECRET</td>
+<td>Nom du secret pour le mot de passe</td>
+<td>"dbsecret"</td>
+</tr>
+<tr>
+<td>DRUPAL_ADMIN_USER_SECRET</td>
+<td>Nom du secret pour l'utilisateur administrateur Drupal</td>
+<td>"drupal_user"</td>
+</tr>
+<tr>
+<td>DRUPAL_ADMIN_PASSWORD_SECRET</td>
+<td>Nom du secret pour le mot de passe administrateur Drupal</td>
+<td>"drupal_password"</td>
+</tr>
+<tr>
+<td>SERVERNAME</td>
+<td>Nom du serveur externe</td>
+<td>"civicrm.test"</td>
+</tr>
+<tr>
+<td>TRUSTED_HOST_PATTERNS</td>
+<td>Patterns de hosts autorisés pour Drupal</td>
+<td>"['^civicrm\.test$','^intern\.civicrm\.test$']"</td>
+</tr>
+<tr>
+<td>MAILADMIN_ADDR</td>
+<td>Adresse mail de l'administrateur</td>
+<td>"admin@civicrm.test"</td>
+</tr>
+<tr>
+<td>MAILADMIN_NAME</td>
+<td>Nom de l'administrateur pour l'adresse mail</td>
+<td>"Admin ADMIN"</td>
+</tr>
+<tr>
+<td>MAILADMIN_DESCR</td>
+<td>Description de l'adresse mail admin</td>
+<td>"mail admin descr"</td>
+</tr>
+<tr>
+<td>MAILDIR</td>
+<td>Path du répertoire de mails entrants (maildir)</td>
+<td>"/maildir"</td>
+</tr>
+<tr>
+<td>SITENAME</td>
+<td>Nom du site</td>
+<td>"Site de test civicrm"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="raf">RAF</h2>
+<ul>
+<li>Améliorer les trusted_host_patterns, pour rajouter le "intern" en dur, en plus des autres patterns.</li>
+<li>S'occuper du MAILDIR (pas dans l'image init, mais dans le reste : Docker et Helm)</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="tools.html" class="btn btn-neutral float-left" title="tools"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="cron.html" class="btn btn-neutral float-right" title="cron">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="tools.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="cron.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.uepal.fr/TECHNIQUE/INTEGRATION/db_ssl.html" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>DB_SSL - Documentation UEPAL Civiparoisse</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "DB_SSL";
+        var mkdocs_page_input_path = "TECHNIQUE/INTEGRATION/db_ssl.md";
+        var mkdocs_page_url = "/TECHNIQUE/INTEGRATION/db_ssl.html";
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../index.html">
+          <img src="../../assets/uepal-logo.svg" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Présentation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PRESENTATION/index.html">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PRESENTATION/presentation_fonctionnelle.html">Périmètre fonctionnel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PRESENTATION/presentation_ecosysteme.html">Ecosystème projet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PRESENTATION/presentation_livrables.html">Livrables</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technique</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../roles.html">Rôles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../MAIL/mail.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../MAIL/ecosysteme.html">Ecosystème</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../MAIL/sendmail.html">Envoi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../MAIL/fetchmail.html">Réception</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Logiciel</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../LOGICIEL/index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../LOGICIEL/distribution_code_composer.html">Distribution de code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../LOGICIEL/environnement_dev.html">Environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../LOGICIEL/environnement_dev_env.html">Personnalisation environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../LOGICIEL/importation.html">Importation de données</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Intégration</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="etude_authentification.html">Authentification</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="docker.html">Description générale</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Images</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="DOCKER/composer_base.html">Composer_base</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="DOCKER/composer_files.html">Composer_files</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="DOCKER/tools.html">tools</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="DOCKER/init.html">init</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="DOCKER/cron.html">cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="DOCKER/selfkeys.html">selfkeys</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="DOCKER/httpd.html">httpd</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="DOCKER/authenticator.html">authenticator</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="DOCKER/proxy.html">proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="DOCKER/db_tls_server.html">db_tls_server</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="DOCKER/db_tls_client.html">db_tls_client</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="DOCKER/update.html">update</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="db_ssl.html">DB_SSL</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#annexe-probleme-mysqlrouter">Annexe : problème MySQLRouter</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Kubernetes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="KUBERNETES/maquettage.html">Maquettage</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="KUBERNETES/ressources.html">Ressources utiles</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Chart Helm</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="KUBERNETES/HELM/description_generale.html">Description générale</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="KUBERNETES/HELM/db_dbproxy.html">DB et DB proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="KUBERNETES/HELM/httpd.html">Serveur web interne</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="KUBERNETES/HELM/proxy_auth.html">Proxy et authenticateur</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="KUBERNETES/HELM/cron.html">Cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="KUBERNETES/HELM/volumes.html">Volumes (persistants)</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="KUBERNETES/HELM/secrets.html">Secrets</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="KUBERNETES/HELM/reservations.html">Réservations</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Documentation UEPAL Civiparoisse</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Technique &raquo;</li>
+          <li>Intégration &raquo;</li>
+      <li>DB_SSL</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="connexion-chiffree-a-la-bd-mysql">Connexion chiffrée à la BD MySQL</h1>
+<p>La connexion chiffrée à la BD est un élément qui ne doit pas être négligé : l'accès à la BD doit être limité et ne doit pas être permis à d'autres intervenants que le cron et serveur web interne, et le trafic doit être chiffré pour assurer la confidentialité des informations.</p>
+<p>De même, les données doivent être stockées dans la BD de manière chiffrée. Ce chiffrement n'est pas forcément effectué par le SGBD, car il peut éventuellement être effectué par le système de fichiers. On retiendra, par simplicité, ce scénario.</p>
+<p>En ce qui concerne la connexion à la BD, un point important est qu'il convient de distinguer deux types d'accès :</p>
+<ul>
+<li>l'accès réseau, par une stack TCP/IP : cet accès doit être sécurisé par SSL</li>
+<li>l'accès par socket : cet accès est géré par les droits d'accès du fichier de socket, et la communication proprement dite se passe au niveau du kernel : la surcouche SSL ne s'applique pas.</li>
+</ul>
+<p>Pour mettre en oeuvre la connexion chiffrée, plusieurs approches sont possibles :</p>
+<ul>
+<li>
+<p>l'accès chiffré jusqu'à la BD en passant par les mécanismes de MySQL : il y a effectivement un support SSL intégré dans MySQL, mais il faut bien remarquer que ce support n'est pas semblable à une connexion SSL de HTTPS : la connexion est négociée au niveau protocolaire : voir &lt;&gt;https://dev.mysql.com/doc/dev/mysql-server/latest/page_protocol_connection_phase.html&gt;. Si CiviCRM semble prévoir dès l'installation la configuration SSL à la BD, cela ne semble pas être le cas de Drush/Drupal, et rend ce mécanisme difficile à utiliser et nécessite plusieurs configurations à maintenir (CiviCRM et Drupal).</p>
+</li>
+<li>
+<p>l'accès par un proxy SQL : le proxy SQL proprement dit intervient au niveau protocolaire dans les communications. On peut citer deux proxys : </p>
+<ul>
+<li>
+<p>MySQLRouter : ce proxy est disponible sous Ubuntu, et fait partie du code du server MySQL. Il est simple à configurer, et permet normalement de faire la distinction entre la connection client-proxy et la connection proxy-serveur, de sorte que le TLS puisse être négocié de manière distincte. Toutefois, un bug introduit dans la version 8.0.24 fait que même si l'on ne souhaite au niveau du client qu'ouvrir uniquement une socket Unix (et pas un accès réseau), un accès réseau est quand même ouvert sur un port aléatoire. De ce fait, ce logiciel n'a pas été retenu.</p>
+</li>
+<li>
+<p>ProxySQL <a href="https://proxysql.com/">https://proxysql.com/</a> : ce proxy est un logiciel tiers Opensource. Son fonctionnement nécessite de stocker les identifiants de connexion dans sa configuration. Ceci n'est pas souhaité, et le logiciel a donc été écarté pour cette raison.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>l'accès par un tunnel SSL : le tunnel SSL est en fait une encapsulation des données protocolaires dans un flux TCP SSL ; le plus simple pour obtenir ce fonctionnement est d'utiliser socat, tout aussi bien en tant que client qu'en serveur, avec les configurations adéquates: la partie serveur va écouter en SSL sur une socket inet et va brancher le flux après authentification SSL sur la socket de MySQL, tandis que la partie client va fournir une socket unix et faire transiter grâce à une authentification par certificat SSL dûment configuré le trafic vers le serveur. L'intérêt de ce système est qu'il est simple à mettre en oeuvre, et qu'il est transparent au niveau applicatif. L'inconvénient est qu'il nécessite d'utiliser le design pattern sidecar pour fournir les connexions, ce qui augmente quelque peu les ressources utilisées. On remarquera toutefois que cette approche sidecar est dans les normes, puisqu'elle est par exemple proposée pour certains accès à Google Cloud SQL : voir <a href="https://cloud.google.com/sql/docs/mysql/sql-proxy">https://cloud.google.com/sql/docs/mysql/sql-proxy</a></p>
+</li>
+</ul>
+<p>En définitive, l'approche de tunnel SSL via socat est celle retenue. Sa configuration est relativement facile, et est effectuée dans les images docker <code>DB_TLS_CLIENT</code> et <code>DB_TLS_SERVER</code>.</p>
+<h2 id="annexe-probleme-mysqlrouter">Annexe : problème MySQLRouter</h2>
+<p>Le problème se situe peut-être sur le fichier mysql_routing.cc : <a href="https://github.com/mysql/mysql-server/blob/fbdaa4def30d269bc4de5b85de61de34b11c0afc/router/src/routing/src/mysql_routing.cc#L185">https://github.com/mysql/mysql-server/blob/fbdaa4def30d269bc4de5b85de61de34b11c0afc/router/src/routing/src/mysql_routing.cc#L185</a></p>
+<pre><code class="language-cc">  if (context_.get_bind_address().port() &gt; 0 ||
+      context_.get_bind_named_socket().is_set()) {
+    auto res = start_acceptor(env);
+    if (!res) {
+      clear_running(env);
+      throw std::runtime_error(
+          string_format(&quot;Failed setting up TCP service using %s: %s&quot;,
+                        context_.get_bind_address().str().c_str(),
+                        res.error().message().c_str()));
+    }
+</code></pre>
+<p>Il est possible que le problème soit apparu dans la 8.0.24 dont un des symptômes (mais qui n'explique pas le problème) est le code d'au-dessus. Un test de compilation (bricolée pour outrepasser un problème de FIPS) et d'exécution n'a pas montré le problème avec la 8.0.23 en vérifiant /proc/<em>pid</em>/net/tcp et tcp6.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="DOCKER/update.html" class="btn btn-neutral float-left" title="update"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="KUBERNETES/maquettage.html" class="btn btn-neutral float-right" title="Maquettage">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="DOCKER/update.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="KUBERNETES/maquettage.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

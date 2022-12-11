@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.uepal.fr/TECHNIQUE/INTEGRATION/DOCKER/authenticator.html" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>authenticator - Documentation UEPAL Civiparoisse</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "authenticator";
+        var mkdocs_page_input_path = "TECHNIQUE/INTEGRATION/DOCKER/authenticator.md";
+        var mkdocs_page_url = "/TECHNIQUE/INTEGRATION/DOCKER/authenticator.html";
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../index.html">
+          <img src="../../../assets/uepal-logo.svg" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Présentation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../PRESENTATION/index.html">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../PRESENTATION/presentation_fonctionnelle.html">Périmètre fonctionnel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../PRESENTATION/presentation_ecosysteme.html">Ecosystème projet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../PRESENTATION/presentation_livrables.html">Livrables</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technique</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../roles.html">Rôles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../MAIL/mail.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../MAIL/ecosysteme.html">Ecosystème</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../MAIL/sendmail.html">Envoi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../MAIL/fetchmail.html">Réception</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Logiciel</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/distribution_code_composer.html">Distribution de code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/environnement_dev.html">Environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/environnement_dev_env.html">Personnalisation environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/importation.html">Importation de données</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Intégration</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../etude_authentification.html">Authentification</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Docker</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../docker.html">Description générale</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">Images</a>
+    <ul class="current">
+                <li class="toctree-l4"><a class="reference internal" href="composer_base.html">Composer_base</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="composer_files.html">Composer_files</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="tools.html">tools</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="init.html">init</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="cron.html">cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="selfkeys.html">selfkeys</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="httpd.html">httpd</a>
+                </li>
+                <li class="toctree-l4 current"><a class="reference internal current" href="authenticator.html">authenticator</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="proxy.html">proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="db_tls_server.html">db_tls_server</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="db_tls_client.html">db_tls_client</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="update.html">update</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../db_ssl.html">DB_SSL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Kubernetes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../KUBERNETES/maquettage.html">Maquettage</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../KUBERNETES/ressources.html">Ressources utiles</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Chart Helm</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/description_generale.html">Description générale</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/db_dbproxy.html">DB et DB proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/httpd.html">Serveur web interne</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/proxy_auth.html">Proxy et authenticateur</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/cron.html">Cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/volumes.html">Volumes (persistants)</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/secrets.html">Secrets</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/reservations.html">Réservations</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Documentation UEPAL Civiparoisse</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Technique &raquo;</li>
+          <li>Intégration &raquo;</li>
+          <li>Docker &raquo;</li>
+          <li>Images &raquo;</li>
+      <li>authenticator</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="authenticateur">Authenticateur</h1>
+<p>L'authenticateur a pour vocation de vérifier si les identifiants transmis par un utilisateur (au travers du reverse proxy) sont valides, en les testant vers une URL spécifique.</p>
+<p>L'authentification en elle-même a été traitée dans une <a href="../etude_authentification.html">étude spécifique</a>.</p>
+<p>Un utilisateur et un groupe <code>authenticator</code> ont été rajoutés de sorte à faire tourner le script d'authentification via cet utilisateur. Le propriétaire des fichiers reste root, de sorte que ce soient les droits du groupe qui soient (normalement) utilisés pour exécuter le script shell d'authentification.</p>
+<p>Pour le même système a été utilisé pour la mise à disposition de la socket : l'owner est paroisse, et www-data y accède grâce au positionnement du groupe.</p>
+<h2 id="raf">RAF</h2>
+<p>Voir s'il y a moyen de simplifier / factoriser les comptes tout en gardant le même niveau de protection induit par les différenciations.</p>
+<pre><code class="language-Docker">FROM ubuntu
+LABEL uepal.name=&quot;authenticator&quot; uepal.version=&quot;0.0.1&quot;
+ENV INTERN_SERVERNAME=&quot;intern.civicrm.test&quot; AUTH_CLIENT_CERT=&quot;/var/run/secrets/KEYS/auth_client.x509&quot; AUTH_CLIENT_KEY=&quot;/var/run/secrets/KEYS/auth_client.pem&quot; AUTH_CLIENT_CA=&quot;/var/run/secrets/KEYS/ca.x509&quot; AUTH_CONTEXT=&quot;/var/run/AUTH_CLIENT_CONFIG&quot; CONTEXT=&quot;/var/run/AUTH_CLIENT_CONFIG&quot;
+RUN groupadd -g 1000 -f paroisse &amp;&amp; useradd -d /nonexistent -e 1 -g 1000 -u 1000 -M -N -s /usr/sbin/nologin paroisse &amp;&amp; usermod -L paroisse &amp;&amp; groupadd -g 1001 -f authenticator &amp;&amp; useradd -d /nonexistent -e 1 -g 1001 -u 1001 -M -N -s /usr/sbin/nologin authenticator &amp;&amp; usermod -L authenticator &amp;&amp; mkdir /exec &amp;&amp; mkdir /var/run/AUTH_CLIENT_CONFIG &amp;&amp; apt-get update &amp;&amp; apt-get full-upgrade -y &amp;&amp; export DEBIAN_FRONTEND=noninteractive &amp;&amp; ln -fs /usr/share/zoneinfo/Europe/Paris /etc/localtime &amp;&amp; apt-get install -y tzdata &amp;&amp; dpkg-reconfigure --frontend noninteractive tzdata &amp;&amp; apt-get install -y wget socat &amp;&amp; apt-get remove --purge --auto-remove -y &amp;&amp; rm -rf /var/lib/apt/lists &amp;&amp; mkdir /app &amp;&amp; mkdir /AUTH &amp;&amp; install -d /var/run/secrets/KEYS &amp;&amp; chmod 550 /var/run/secrets &amp;&amp; chmod 550 /var/run/secrets/KEYS &amp;&amp; chown root:authenticator -R /var/run/secrets
+COPY exec.sh /exec/
+COPY AUTH/* AUTH/
+COPY AUTH_CLIENT_CONFIG/* /var/run/AUTH_CLIENT_CONFIG/
+COPY --from=uepal_test/selfkeys /KEYS/USAGE/auth_client* /var/run/secrets/KEYS/
+COPY --from=uepal_test/selfkeys /KEYS/USAGE/ca.x509 /var/run/secrets/KEYS/
+RUN chown root:authenticator /var/run/secrets/KEYS/* &amp;&amp; chmod 440 /var/run/secrets/KEYS/* &amp;&amp; chown root:authenticator -R /exec &amp;&amp; chmod -R 550 /exec
+VOLUME /authentication
+CMD [&quot;/exec/exec.sh&quot;]
+</code></pre>
+<h2 id="variables-denvironnement">Variables d'environnement</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+<th>Valeur par défaut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INTERN_SERVERNAME</td>
+<td>Nom du serveur interne</td>
+<td>"intern.civicrm.test"</td>
+</tr>
+<tr>
+<td>AUTH_CLIENT_CERT</td>
+<td>chemin du certificat client authenticateur</td>
+<td>"/var/run/secrets/KEYS/auth_client.x509"</td>
+</tr>
+<tr>
+<td>AUTH_CLIENT_KEY</td>
+<td>chemin de la clef pour le client authenticateur</td>
+<td>"/var/run/secrets/KEYS/auth_client.pem"</td>
+</tr>
+<tr>
+<td>AUTH_CLIENT_CA</td>
+<td>chemin du CA</td>
+<td>"/var/run/secrets/KEYS/ca.x509"</td>
+</tr>
+<tr>
+<td>AUTH_CONTEXT</td>
+<td>chemin du répertoire de configuration</td>
+<td>"/var/run/AUTH_CLIENT_CONFIG"</td>
+</tr>
+<tr>
+<td>CONTEXT</td>
+<td>chemin du répertoire de configuration</td>
+<td>"/var/run/AUTH_CLIENT_CONFIG"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ecoute-sur-socket-unix">Ecoute sur socket unix</h2>
+<p>L'authenticateur écoute sur une socket Unix, car c'est un bon moyen de faire des communications entre containers d'un même pod sans passer par le réseau. Etant donné que l'authenticateur vient à la base d'une image unifié entre authenticateur, serveur web interne et reverse proxy, le plus simple a été d'utiliser socat pour brancher une socket unix sur un script déjà existant :</p>
+<pre><code class="language-bash">#!/bin/bash
+socat -d -d -d -D -t 50 -T 50 -lf /tmp/socat.txt UNIX-LISTEN:/authentication/authenticator,fork,user=paroisse,group=www-data,mode=0660,unlink-early EXEC:/AUTH/externalauth.sh,su=authenticator
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="httpd.html" class="btn btn-neutral float-left" title="httpd"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="proxy.html" class="btn btn-neutral float-right" title="proxy">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="httpd.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="proxy.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

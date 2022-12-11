@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.uepal.fr/TECHNIQUE/INTEGRATION/KUBERNETES/HELM/db_dbproxy.html" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>DB et DB proxy - Documentation UEPAL Civiparoisse</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "DB et DB proxy";
+        var mkdocs_page_input_path = "TECHNIQUE/INTEGRATION/KUBERNETES/HELM/db_dbproxy.md";
+        var mkdocs_page_url = "/TECHNIQUE/INTEGRATION/KUBERNETES/HELM/db_dbproxy.html";
+      </script>
+    
+    <script src="../../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../../index.html">
+          <img src="../../../../assets/uepal-logo.svg" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Présentation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../PRESENTATION/index.html">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../PRESENTATION/presentation_fonctionnelle.html">Périmètre fonctionnel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../PRESENTATION/presentation_ecosysteme.html">Ecosystème projet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../PRESENTATION/presentation_livrables.html">Livrables</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technique</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../../roles.html">Rôles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../MAIL/mail.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../MAIL/ecosysteme.html">Ecosystème</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../MAIL/sendmail.html">Envoi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../MAIL/fetchmail.html">Réception</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Logiciel</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LOGICIEL/index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LOGICIEL/distribution_code_composer.html">Distribution de code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LOGICIEL/environnement_dev.html">Environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LOGICIEL/environnement_dev_env.html">Personnalisation environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LOGICIEL/importation.html">Importation de données</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Intégration</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../../index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../etude_authentification.html">Authentification</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../docker.html">Description générale</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Images</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/composer_base.html">Composer_base</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/composer_files.html">Composer_files</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/tools.html">tools</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/init.html">init</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/cron.html">cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/selfkeys.html">selfkeys</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/httpd.html">httpd</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/authenticator.html">authenticator</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/proxy.html">proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/db_tls_server.html">db_tls_server</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/db_tls_client.html">db_tls_client</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/update.html">update</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../db_ssl.html">DB_SSL</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Kubernetes</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../maquettage.html">Maquettage</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../ressources.html">Ressources utiles</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">Chart Helm</a>
+    <ul class="current">
+                <li class="toctree-l4"><a class="reference internal" href="description_generale.html">Description générale</a>
+                </li>
+                <li class="toctree-l4 current"><a class="reference internal current" href="db_dbproxy.html">DB et DB proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="httpd.html">Serveur web interne</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="proxy_auth.html">Proxy et authenticateur</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="cron.html">Cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="volumes.html">Volumes (persistants)</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="secrets.html">Secrets</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="reservations.html">Réservations</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Documentation UEPAL Civiparoisse</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Technique &raquo;</li>
+          <li>Intégration &raquo;</li>
+          <li>Kubernetes &raquo;</li>
+          <li>Chart Helm &raquo;</li>
+      <li>DB et DB proxy</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="db-et-db-proxy">DB et DB proxy</h1>
+<p>La BD est hébergée dans un stateful set. La BD est prévue pour être accédée par une socket Unix directement, ou par un tunnel SSL : d'où les deux services distincts, même s'il est vrai qu'il est moins pertinent d'avoir un service DB puisque ce service n'est pas prévu pour être accédé par le réseau.</p>
+<p>Une conséquence de cette architecture est qu'en PHP, si on configure correctement le chemin par défaut des sockets, on peut utiliser le nom spécial <code>localhost</code> pour passer par la socket Unix et accéder, directement ou indirectement à la BD</p>
+<h2 id="initialisation">Initialisation</h2>
+<p>Un container d'initialisation est chargé d'initialiser l'ensemble des ressources (fichiers et base de données). Il pourra être envisagé que ce container puisse également procéder aux mises à jours des données (c'est à dire, effectuer les modifications qui impactent la BD et les fichiers propres à chaque paroisse - les images étant mises à jour en les reconstruisant).</p>
+<p>Il est à noter que ce stateful set doit être opérationnel pour que les autres éléments puissent s'activer (synchronisation via containers d'initialisation).</p>
+<h2 id="configuration-bd">Configuration BD</h2>
+<p>Selon la documentation de MySQL <a href="https://dev.mysql.com/doc/refman/8.0/en/memory-use.html">https://dev.mysql.com/doc/refman/8.0/en/memory-use.html</a>, MySQL est prévu pour tenir dans environ 512M de RAM. Ceci est confirmé en pratique par l'utilisation du performance_schema :</p>
+<pre><code class="language-sql">
+```mysql&gt; SELECT SUBSTRING_INDEX(event_name,'/',2) AS
+    -&gt;        code_area, FORMAT_BYTES(SUM(current_alloc))
+    -&gt;        AS current_alloc
+    -&gt;        FROM sys.x$memory_global_by_current_bytes
+    -&gt;        GROUP BY SUBSTRING_INDEX(event_name,'/',2)
+    -&gt;        ORDER BY SUM(current_alloc) DESC;
++---------------------------+---------------+
+| code_area                 | current_alloc |
++---------------------------+---------------+
+| memory/performance_schema | 214.94 MiB    |
+| memory/innodb             | 196.09 MiB    |
+| memory/sql                | 9.39 MiB      |
+| memory/mysys              | 8.58 MiB      |
+| memory/temptable          | 1.00 MiB      |
+| memory/mysqld_openssl     | 808.83 KiB    |
+| memory/mysqlx             | 3.38 KiB      |
+| memory/vio                | 1.16 KiB      |
+| memory/myisam             |  728 bytes    |
+| memory/csv                |  120 bytes    |
+| memory/blackhole          |  120 bytes    |
++---------------------------+---------------+
+11 rows in set (0.02 sec)
+mysql&gt; select * from sys.memory_global_total;
++-----------------+
+| total_allocated |
++-----------------+
+| 448.20 MiB      |
++-----------------+
+1 row in set (0.01 sec)
+
+</code></pre>
+<pre><code class="language-bash">
+root@b64de810e1b6:/# ps -ua
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0   4140  3368 pts/0    Ss   13:45   0:00 bash
+mysql         12  1.1 10.0 2228664 389164 pts/0  Sl+  13:45   0:02 mysqld
+root         155  0.0  0.0   4136  3392 pts/1    Ss   13:46   0:00 bash
+root         226  0.0  0.0   6420  1600 pts/1    R+   13:49   0:00 ps -ua
+
+</code></pre>
+<p>On constate en particulier l'utilisation de 215MB de ram pour performance_schema, alors que cette partie de la BD ne va pas réellement être utilisée. Du coup, il est envisageable de désactiver performance_schema. Après désactivation, on ne peut plus utiliser la requête SQL, mais on peut continuer à utiliser <code>ps -ua</code> :</p>
+<pre><code class="language-sql">mysql&gt; SELECT SUBSTRING_INDEX(event_name,'/',2) AS
+    -&gt;        code_area, FORMAT_BYTES(SUM(current_alloc))
+    -&gt;        AS current_alloc
+    -&gt;        FROM sys.x$memory_global_by_current_bytes
+    -&gt;        GROUP BY SUBSTRING_INDEX(event_name,'/',2)
+    -&gt;        ORDER BY SUM(current_alloc) DESC;
+Empty set (0.01 sec)
+mysql&gt; select * from sys.memory_global_total;
++-----------------+
+| total_allocated |
++-----------------+
+| NULL            |
++-----------------+
+1 row in set (0.02 sec)
+
+
+</code></pre>
+<pre><code>root@b64de810e1b6:/etc/mysql/conf.d# ps -ua
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0   4140  3368 pts/0    Ss   13:45   0:00 bash
+root         155  0.0  0.0   4136  3400 pts/1    Ss   13:46   0:00 bash
+mysql        461  2.5  4.0 1940420 156368 pts/0  Sl+  13:52   0:01 mysqld
+root         545  0.0  0.0   6420  1640 pts/1    R+   13:52   0:00 ps -ua
+</code></pre>
+<p>Comme j'ai fait les opérations dans un même container, on peut voir que plus de la moitié de la RAM n'est plus utilisée après avoir mis <code>performance_schema = 0</code>.</p>
+<p>L'autre modification effectuée est de positionner <code>skip_networking = 1</code> de sorte que le port réseau ne soit plus écouté, étant qu'un accès direct est à proscrire sans support chiffré configuré.</p>
+<h2 id="proxy">Proxy</h2>
+<p>Le proxy est en fait une utilisation d'un tunnel socat vers la socket de mysql. On prend en fait soin de positionner le répertoire de la socket dans un <code>emptyDir</code> stocké en mémoire et déclaré dans les specs, et on partage ce volume entre le container de db et la terminaison serveur du proxy : c'est une application du design pattern sidecar.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="description_generale.html" class="btn btn-neutral float-left" title="Description générale"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="httpd.html" class="btn btn-neutral float-right" title="Serveur web interne">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="description_generale.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="httpd.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../../..';</script>
+    <script src="../../../../js/theme_extra.js" defer></script>
+    <script src="../../../../js/theme.js" defer></script>
+      <script src="../../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

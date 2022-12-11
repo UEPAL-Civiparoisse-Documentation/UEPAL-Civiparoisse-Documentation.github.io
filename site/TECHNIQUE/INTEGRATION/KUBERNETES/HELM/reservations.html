@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.uepal.fr/TECHNIQUE/INTEGRATION/KUBERNETES/HELM/reservations.html" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>Réservations - Documentation UEPAL Civiparoisse</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "R\u00e9servations";
+        var mkdocs_page_input_path = "TECHNIQUE/INTEGRATION/KUBERNETES/HELM/reservations.md";
+        var mkdocs_page_url = "/TECHNIQUE/INTEGRATION/KUBERNETES/HELM/reservations.html";
+      </script>
+    
+    <script src="../../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../../index.html">
+          <img src="../../../../assets/uepal-logo.svg" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Présentation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../PRESENTATION/index.html">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../PRESENTATION/presentation_fonctionnelle.html">Périmètre fonctionnel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../PRESENTATION/presentation_ecosysteme.html">Ecosystème projet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../PRESENTATION/presentation_livrables.html">Livrables</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technique</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../../roles.html">Rôles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../MAIL/mail.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../MAIL/ecosysteme.html">Ecosystème</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../MAIL/sendmail.html">Envoi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../MAIL/fetchmail.html">Réception</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Logiciel</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LOGICIEL/index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LOGICIEL/distribution_code_composer.html">Distribution de code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LOGICIEL/environnement_dev.html">Environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LOGICIEL/environnement_dev_env.html">Personnalisation environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LOGICIEL/importation.html">Importation de données</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Intégration</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../../index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../etude_authentification.html">Authentification</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../docker.html">Description générale</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Images</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/composer_base.html">Composer_base</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/composer_files.html">Composer_files</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/tools.html">tools</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/init.html">init</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/cron.html">cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/selfkeys.html">selfkeys</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/httpd.html">httpd</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/authenticator.html">authenticator</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/proxy.html">proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/db_tls_server.html">db_tls_server</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/db_tls_client.html">db_tls_client</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/update.html">update</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../db_ssl.html">DB_SSL</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Kubernetes</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../maquettage.html">Maquettage</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../ressources.html">Ressources utiles</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">Chart Helm</a>
+    <ul class="current">
+                <li class="toctree-l4"><a class="reference internal" href="description_generale.html">Description générale</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="db_dbproxy.html">DB et DB proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="httpd.html">Serveur web interne</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="proxy_auth.html">Proxy et authenticateur</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="cron.html">Cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="volumes.html">Volumes (persistants)</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="secrets.html">Secrets</a>
+                </li>
+                <li class="toctree-l4 current"><a class="reference internal current" href="reservations.html">Réservations</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Documentation UEPAL Civiparoisse</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Technique &raquo;</li>
+          <li>Intégration &raquo;</li>
+          <li>Kubernetes &raquo;</li>
+          <li>Chart Helm &raquo;</li>
+      <li>Réservations</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="reservations-de-ressources">Réservations de ressources</h1>
+<h2 id="considerations-generales">Considérations Générales</h2>
+<p>La réservation des ressources est un domaine important dans Kubernetes, car les réservations permettent de mieux planifier l'exécution des pods. Les ressources attribuées seraient garanties quand la demande et la limite sont équivalentes. D'où la mise en oeuvre de limitations et de requêtes de mêmes valeurs, et ce au niveau CPU et mémoire.</p>
+<p>Le profilage des ressources consommées joue sur plusieurs éléments :</p>
+<ul>
+<li>la RAM et l'espace disque sont des ressources critiques : en particulier, si l'on n'a plus de RAM, le container peut crasher ; en revanche, au niveau CPU, on jouera plutôt sur les performances (à moins d'avoir des prolématiques de temporisation)</li>
+<li>la BD est prévue initialement pour tenir dans 512Mo ; en désactivant performance_schema, on devrait pouvoir tenir dans 350Mo</li>
+<li>on peut limiter au niveau d'Apache le nombre de requêtes servies simultanément ; ces requêtes, lorsqu'elles arrivent sur du code PHP, font entrer en jeu la limite mémoire de PHP. On arrive alors à borner la plus grosse dépense mémoire</li>
+<li>le cron travaille avec un seul environnement PHP à la fois : il devrait donc être possible de borner sa consommation de RAM</li>
+<li>il y a le problème de l'authentification de toutes les requêtes : si on passe à la double authentification, on peut envisager d'utiliser le cache d'authentification malgré sa structure qui n'est plus satisfaisante, ce qui permettrait une meilleure utilisation des ressources</li>
+<li>on ne peut pas encore déterminer avec précision les espaces disques qui seront à allouer, que ce soit pour les volumes persistants ou pour les volumes éphémères (dont logs)</li>
+<li>il a été prévu de pouvoir changer les valeurs des ressources dans chaque déploiement de release : en effet, la charge dépend aussi de l'utilisation (intensive ou non) qui sera faite de l'outil. Il peut être compréhensible de chercher à contenter les plus gros consommateurs tant que ce n'est pas au détriment des autres consommateurs</li>
+<li>il ne faut pas oublier que le nombre cible de déploiements est très conséquent : de ce fait, des petites économies de ressources peuvent avoir toutefois un effet notable</li>
+<li>on ne peut pas additionner aveuglément les ressources de tous les containers : il faut également considérer l'ordre de démarrage des pods, et le fait que les containers d'init d'un pod n'existent pas en même temps que les containers qui constituent la véritable charge de travail</li>
+<li>il ne faut pas oublier que toutes les ressources du cloud ont un coût associé, d'où l'apparition d'une nouvelle démarche : le FinOps, qui cherche à optimiser l'utilisation des ressources et le coût.</li>
+</ul>
+<h2 id="estimations-des-ressources-dune-instance">Estimations des ressources d'une instance</h2>
+<h3 id="hypotheses-de-travail">Hypothèses de travail</h3>
+<p>Il est nécessaire de poser un certain nombre d'hypothèses de travail :</p>
+<ul>
+<li>
+<p><strong>on va supposer que l'on va utiliser le cache d'authentification</strong> ; en effet, le coût d'une authentification multifacteur via du SSL est un coût quasiment considérable comme fixe (prix des clefs de sécurité, et éventuellement, prix des certificats (annuels ou multiannuels)s'ils ne sont pas autogénérés), alors que la puissance consommée dépend du nombre de requêtes, et influe donc sur le coût de revient mensuel de l'instance : on va limiter le nombre de requêtes traitables simultanément.</p>
+</li>
+<li>
+<p>on va se baser sur des ressources garanties (request=limit sur les réservations), pour ne pas avoir en théorie de problèmes d'éviction</p>
+</li>
+<li>
+<p>il faudra rajouter le coût d'un probable firewall qui viendra en coupure des flux</p>
+</li>
+<li>
+<p>on va passer sur un modèle de threading Apache en mpm_prefork, qui est de toute façon utilisé pour le PHP si on n'utilise pas php-fpm, et on va utiliser par simplicité ce modèle de threading à la fois sur le serveur web interne et le reverse proxy</p>
+</li>
+<li>
+<p>le minimum de mémoire (memory_limit requis par Drupal est 64M); toutefois selon <a href="https://docs.civicrm.org/installation/en/latest/general/requirements/">https://docs.civicrm.org/installation/en/latest/general/requirements/</a> il faudrait passer au moins à 256M</p>
+</li>
+<li>
+<p>les logs passeront par un DaemonSet EFK ou équivalent : du coup, le conteneur de gestion des logs n'est pas comptabilisé dans l'infrastructure d'une instance</p>
+</li>
+<li>
+<p><strong>on suppose qu'on n'intègre pas de serveur de médias, qu'on n'intègre pas le traitement des mails entrants (donc traitement manuel), et qu'on spécialise le traitement des mails sortants</strong></p>
+</li>
+<li>
+<p>configuration mpm_prefork :</p>
+</li>
+</ul>
+<pre><code>MAX_CONNECTIONS_PER_CHILD=1
+MAX_REQUEST_WORKERS=4
+SERVER_LIMIT=4
+START_SERVERS=4
+MIN_SPARE_SERVERS=0
+MAX_SPARE_SERVERS=4
+</code></pre>
+<p>Du coup, on sert 4 connexions simultanées, ce qui pourrait être suffisant pour un seul utilisateur.</p>
+<table>
+<thead>
+<tr>
+<th>Conteneur</th>
+<th>Description</th>
+<th>Limite mémoire</th>
+<th>Limite CPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>proxy</td>
+<td>reverse proxy d'authentification</td>
+<td>256Mi</td>
+<td>250m</td>
+</tr>
+<tr>
+<td>proxy_init</td>
+<td>init du reverse proxy</td>
+<td>50Mi</td>
+<td>100m</td>
+</tr>
+<tr>
+<td>auth (proxy_authenticator)</td>
+<td>authentificateur</td>
+<td>256Mi</td>
+<td>250m</td>
+</tr>
+<tr>
+<td>cron</td>
+<td>exécution cron</td>
+<td>384Mi</td>
+<td>250m</td>
+</tr>
+<tr>
+<td>cron_dbproxy</td>
+<td>accès tunnel BD SSL pour cron</td>
+<td>50Mi</td>
+<td>100m</td>
+</tr>
+<tr>
+<td>cron_init</td>
+<td>initialisation du pod cron</td>
+<td>50Mi</td>
+<td>100m</td>
+</tr>
+<tr>
+<td>httpd</td>
+<td>serveur web interne</td>
+<td>1536Mi</td>
+<td>1000m</td>
+</tr>
+<tr>
+<td>httpd_dbproxy</td>
+<td>accès tunnel BD SSL pour serveur web</td>
+<td>100Mi</td>
+<td>100m</td>
+</tr>
+<tr>
+<td>httpd_init</td>
+<td>initialisation du pod server web interne</td>
+<td>50Mi</td>
+<td>100m</td>
+</tr>
+<tr>
+<td>db</td>
+<td>conteneur BD</td>
+<td>512Mi</td>
+<td>250m</td>
+</tr>
+<tr>
+<td>db_init</td>
+<td>initialisation environnement BD</td>
+<td>1024Mi</td>
+<td>1000m</td>
+</tr>
+<tr>
+<td>dbproxy</td>
+<td>accès tunnel BD SSL pour le serveur BD</td>
+<td>100Mi</td>
+<td>100m</td>
+</tr>
+</tbody>
+</table>
+<p>Ordre de démarrage (sans spécialisation du mail sortant):</p>
+<p>Les containeurs d'initialisation implémentent les contraintes suivantes :</p>
+<ul>
+<li><code>db_init</code> permet de lancer <code>db</code> et <code>dbproxy</code> </li>
+<li><code>httpd_init</code> dépend de <code>dbproxy</code> pour lancer <code>httpd_dbproxy</code> et <code>httpd</code></li>
+<li><code>cron_init</code> dépend de dbproxy pour lancer <code>cron</code> et <code>cron_dbproxy</code></li>
+<li><code>proxy_init</code> dépend du lancement de <code>httpd</code> pour lancer <code>proxy</code> et <code>auth</code></li>
+</ul>
+<p>On en obtient un équivalent de graphe de dépendances :</p>
+<ul>
+<li><code>db_init</code><ul>
+<li><code>db</code></li>
+<li><code>dbproxy</code><ul>
+<li><code>httpd_init</code><ul>
+<li><code>httpd_dbproxy</code></li>
+<li><code>httpd</code><ul>
+<li><code>proxy_init</code><ul>
+<li><code>proxy</code></li>
+<li><code>auth</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>cron_init</code><ul>
+<li><code>cron</code></li>
+<li><code>cron_dbproxy</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>On peut déduire deux phases de lancement d'une instance :</p>
+<ul>
+<li>installation initiale : seul <code>db_init</code> est lancé : 1024Mi, 1000m</li>
+<li>ensuite, le pire cas est quand tous les services tournent, car <code>httpd_init</code>, <code>proxy_init</code> et <code>cron_init</code> consomment moins que les services proprement dits. Toutefois, l'unité étant le pod d'exécution (à cause du scheduling sur les noeuds), il faut faire des sommes séparées pour chaque pod :<ul>
+<li>pod db : 1124Mi et 1100m</li>
+<li>pod cron : 434Mi et 350m</li>
+<li>pod httpd : 1636Mi et 1100m</li>
+<li>pod proxy : 512Mi et 500m</li>
+</ul>
+</li>
+</ul>
+<p>Ce à quoi on ajoute la spécialisation du mail sortant :</p>
+<ul>
+<li>Client d'accès à 50Mi et 100m pour le pod httpd et le pod proxy</li>
+<li>Pod spécifique d'envoi des mails : 256Mi et 200m</li>
+</ul>
+<p>On en arrive donc, avec la spécialisation du mail sortant :</p>
+<ul>
+<li>pod db : <strong>1124Mi et 1100m</strong></li>
+<li>pod cron : <strong>484Mi et 450m</strong></li>
+<li>pod httpd : <strong>1686Mi et 1200m</strong></li>
+<li>pod proxy : <strong>512Mi et 500m</strong></li>
+<li>pod mail_sortant : <strong>256Mi et 200m</strong></li>
+</ul>
+<p>Donc une consommation totale max de : <strong>4062Mi et 3450m</strong></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="secrets.html" class="btn btn-neutral float-left" title="Secrets"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="secrets.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../../../..';</script>
+    <script src="../../../../js/theme_extra.js" defer></script>
+    <script src="../../../../js/theme.js" defer></script>
+      <script src="../../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

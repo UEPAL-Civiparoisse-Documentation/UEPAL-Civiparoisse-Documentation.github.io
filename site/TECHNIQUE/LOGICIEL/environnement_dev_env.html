@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.uepal.fr/TECHNIQUE/LOGICIEL/environnement_dev_env.html" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Personnalisation environnement de dev - Documentation UEPAL Civiparoisse</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Personnalisation environnement de dev";
+        var mkdocs_page_input_path = "TECHNIQUE/LOGICIEL/environnement_dev_env.md";
+        var mkdocs_page_url = "/TECHNIQUE/LOGICIEL/environnement_dev_env.html";
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../index.html">
+          <img src="../../assets/uepal-logo.svg" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Présentation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PRESENTATION/index.html">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PRESENTATION/presentation_fonctionnelle.html">Périmètre fonctionnel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PRESENTATION/presentation_ecosysteme.html">Ecosystème projet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PRESENTATION/presentation_livrables.html">Livrables</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technique</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../roles.html">Rôles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../MAIL/mail.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../MAIL/ecosysteme.html">Ecosystème</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../MAIL/sendmail.html">Envoi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../MAIL/fetchmail.html">Réception</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Logiciel</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="distribution_code_composer.html">Distribution de code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="environnement_dev.html">Environnement de dev</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="environnement_dev_env.html">Personnalisation environnement de dev</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#aspects-theoriques">Aspects théoriques</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#personnalisation-de-lenvironnement">Personnalisation de l'environnement</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#clefs-tls">Clefs TLS</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aspects-pratiques">Aspects pratiques</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="importation.html">Importation de données</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Intégration</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../INTEGRATION/index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../INTEGRATION/etude_authentification.html">Authentification</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../INTEGRATION/docker.html">Description générale</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Images</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/composer_base.html">Composer_base</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/composer_files.html">Composer_files</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/tools.html">tools</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/init.html">init</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/cron.html">cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/selfkeys.html">selfkeys</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/httpd.html">httpd</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/authenticator.html">authenticator</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/proxy.html">proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/db_tls_server.html">db_tls_server</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/db_tls_client.html">db_tls_client</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/DOCKER/update.html">update</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../INTEGRATION/db_ssl.html">DB_SSL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Kubernetes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../INTEGRATION/KUBERNETES/maquettage.html">Maquettage</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../INTEGRATION/KUBERNETES/ressources.html">Ressources utiles</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Chart Helm</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/KUBERNETES/HELM/description_generale.html">Description générale</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/KUBERNETES/HELM/db_dbproxy.html">DB et DB proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/KUBERNETES/HELM/httpd.html">Serveur web interne</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/KUBERNETES/HELM/proxy_auth.html">Proxy et authenticateur</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/KUBERNETES/HELM/cron.html">Cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/KUBERNETES/HELM/volumes.html">Volumes (persistants)</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/KUBERNETES/HELM/secrets.html">Secrets</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../INTEGRATION/KUBERNETES/HELM/reservations.html">Réservations</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Documentation UEPAL Civiparoisse</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Technique &raquo;</li>
+          <li>Logiciel &raquo;</li>
+      <li>Personnalisation environnement de dev</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="personnalisation-de-lenvironnement-de-developpement">Personnalisation de l'environnement de développement</h1>
+<p>!!! warning "Attention !"</p>
+<pre><code>Les éléments de ce fichier n'ont pas été vérifiés ; les lignes de commandes n'ont pas été testées.
+</code></pre>
+<p>L'environnement de développement a été pensé initialement pour utiliser les images issues des Dockerfiles avec les variables d'environnement par défaut. Toutefois, il est parfois nécessaire de pouvoir personnaliser les valeurs, dont notamment le nom du serveur, et ceci peut avoir un impact sur les clefs TLS.</p>
+<h2 id="aspects-theoriques">Aspects théoriques</h2>
+<h3 id="personnalisation-de-lenvironnement">Personnalisation de l'environnement</h3>
+<p>L'approche qui est prévue pour Helm est d'utiliser le fichier de valeurs, qui hérite des valeurs par défaut, pour préparer les éléments de configuration nécessaires (ConfigMap, Secrets, entre autres) des pods. En revanche, cette approche est plus difficile à mettre en oeuvre dans le cas de Compose.</p>
+<p>L'approche retenue est d'utiliser les fichiers d'environnement. On trouve trois type de fichiers :</p>
+<ul>
+<li>le fichier d'environnement spécifié au niveau de la ligne de commande (<code>--env-file</code>) : ce fichier permet d'utiliser des variables qui sont référencées directement dans le fichier yml de docker-compose, et les valeurs peuvent être propagées, si elles sont au minimum mentionnées dans le docker-compose, jusqu'au container</li>
+<li>le premier fichier d'environnement spécifié au niveau des configurations via <code>env_file</code> : ce fichier est prévu pour contenir des valeurs "par défaut" qui sont normalement celles présentes dans les images. Ces valeurs peuvent se retrouver par <code>docker image inspect &lt;nom image&gt;</code>.</li>
+<li>le deuxième fichier d'environnement spécifié via <code>env_file</code> (fichier avec suffixe <code>override dans la configuration</code>): comme c'est le deuxième fichier, il sera pris en compte en priorité par rapport au premier fichier.</li>
+</ul>
+<p>Lorsque l'on souhaite modifier l'environnement, il faut donc modifier le fichier envfile principal et les fichiers d'override, en gardant la correspondance des valeurs.</p>
+<p>!!! warning "Attention !"
+    Si on modifie <code>SERVERNAME</code>, il faut également penser à inclure la modification dans le <code>TRUSTED_HOST_PATTERNS</code>.</p>
+<h3 id="clefs-tls">Clefs TLS</h3>
+<p>Au niveau de Helm, le template qui gère les clefs TLS est capable de préparer les hiérarchies de certificats (avec CA autosignés), et est prévu pour ne remplacer les clefs que si elles n'existent pas.</p>
+<p>Au niveau de docker-compose, ce mécanisme n'existe pas, et il a été nécessaire de préparer une image KEYS_INIT pour préparer les jeux de clefs qui vont être stockés dans un montage de type bind (vers le répertoire <code>genkeys</code>).</p>
+<p>Pour utiliser cette image, il faudra passer la valeur de la variable d'environnement SERVERNAME au container. Le fichier docker-init-envkeys.yml est prévu pour cela, en utilisant en plus le fichier principal d'environnement (<code>--env-file</code>).</p>
+<h2 id="aspects-pratiques">Aspects pratiques</h2>
+<p>En pratique, on suivra le cheminement suivant pour utiliser ces éléments :</p>
+<ul>
+<li>récupération du dépôt des Dockerfiles, et se positionner sur la branche (peut-être <code>ENV_DEV_KEYS</code>)</li>
+<li>personnalisation des fichiers d'environnement <code>envfile</code> principal et les fichiers <code>envfile_*_override</code>, en fonction des besoins du développeur </li>
+<li>build des images, grâce au script <code>build.sh</code></li>
+<li>génération des clefs :</li>
+</ul>
+<pre><code class="language-bash">#!/bin/bash
+docker-compose -f docker-init-envkeys.yml --env-file envfile up
+docker-compose -f docker-init-envkeys.yml --env-file envfile down
+</code></pre>
+<ul>
+<li>installation de l'environnement (volumes et BD) : </li>
+</ul>
+<pre><code class="language-bash">#!/bin/bash
+docker-compose -f docker-init-env.yml --env-file envfile up
+docker-compose -f docker-init-env.yml --env-file envfile down
+</code></pre>
+<ul>
+<li>démarrage avec l'environnement des containers :</li>
+</ul>
+<pre><code class="language-bash">#!/bin/bash
+docker-compose -f docker-compose-env.yml --env-file envfile up
+</code></pre>
+<ul>
+<li>se logguer dans le système pour vérifier que tout s'est bien passé</li>
+<li>récupérer le /app du container de serveur web interne comme décrit dans l'environnement de dev (en pensant à régler aussi les droits)</li>
+<li>arrêter l'environnement des containers :</li>
+</ul>
+<pre><code class="language-bash">#!/bin/bash
+docker-compose -f docker-compose-env.yml --env-file envfile down
+</code></pre>
+<ul>
+<li>démarrer l'environnement bindé avec les répertoires locaux (comme décrits dans l'environnement de développement)</li>
+</ul>
+<pre><code class="language-bash">#!/bin/bash
+docker-compose -f docker-compose-bind-env.yml --env-file envfile up
+</code></pre>
+<ul>
+<li>
+<p>faire le travail désiré (développement)</p>
+</li>
+<li>
+<p>arrêter l'environnement</p>
+</li>
+</ul>
+<pre><code class="language-bash">#!/bin/bash
+docker-compose -f docker-compose-bind-env.yml --env-file envfile down
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="environnement_dev.html" class="btn btn-neutral float-left" title="Environnement de dev"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="importation.html" class="btn btn-neutral float-right" title="Importation de données">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="environnement_dev.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="importation.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

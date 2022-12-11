@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.uepal.fr/TECHNIQUE/INTEGRATION/KUBERNETES/HELM/description_generale.html" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>Description générale - Documentation UEPAL Civiparoisse</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Description g\u00e9n\u00e9rale";
+        var mkdocs_page_input_path = "TECHNIQUE/INTEGRATION/KUBERNETES/HELM/description_generale.md";
+        var mkdocs_page_url = "/TECHNIQUE/INTEGRATION/KUBERNETES/HELM/description_generale.html";
+      </script>
+    
+    <script src="../../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../../index.html">
+          <img src="../../../../assets/uepal-logo.svg" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Présentation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../PRESENTATION/index.html">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../PRESENTATION/presentation_fonctionnelle.html">Périmètre fonctionnel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../PRESENTATION/presentation_ecosysteme.html">Ecosystème projet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../PRESENTATION/presentation_livrables.html">Livrables</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technique</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../../roles.html">Rôles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../MAIL/mail.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../MAIL/ecosysteme.html">Ecosystème</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../MAIL/sendmail.html">Envoi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../MAIL/fetchmail.html">Réception</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Logiciel</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LOGICIEL/index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LOGICIEL/distribution_code_composer.html">Distribution de code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LOGICIEL/environnement_dev.html">Environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LOGICIEL/environnement_dev_env.html">Personnalisation environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LOGICIEL/importation.html">Importation de données</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Intégration</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../../index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../etude_authentification.html">Authentification</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../docker.html">Description générale</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Images</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/composer_base.html">Composer_base</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/composer_files.html">Composer_files</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/tools.html">tools</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/init.html">init</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/cron.html">cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/selfkeys.html">selfkeys</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/httpd.html">httpd</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/authenticator.html">authenticator</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/proxy.html">proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/db_tls_server.html">db_tls_server</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/db_tls_client.html">db_tls_client</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../DOCKER/update.html">update</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../db_ssl.html">DB_SSL</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Kubernetes</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../maquettage.html">Maquettage</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../ressources.html">Ressources utiles</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">Chart Helm</a>
+    <ul class="current">
+                <li class="toctree-l4 current"><a class="reference internal current" href="description_generale.html">Description générale</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="db_dbproxy.html">DB et DB proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="httpd.html">Serveur web interne</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="proxy_auth.html">Proxy et authenticateur</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="cron.html">Cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="volumes.html">Volumes (persistants)</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="secrets.html">Secrets</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="reservations.html">Réservations</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Documentation UEPAL Civiparoisse</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Technique &raquo;</li>
+          <li>Intégration &raquo;</li>
+          <li>Kubernetes &raquo;</li>
+          <li>Chart Helm &raquo;</li>
+      <li>Description générale</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="chart-helm-description-generale">Chart Helm: description générale</h1>
+<h2 id="helm">Helm</h2>
+<p>Helm est un système de packaging pour Kubernetes. L'intérêt de Helm est qu'il permet de préparer des modèles de déploiement d'application, dans un package appelé "chart". En pratique, il permet notamment d'avoir des modèles (templates) pour déployer des ressources Kubernetes, et permet d'injecter des valeurs dans ces ressources. Ces valeurs peuvent être par exemple précises dans des fichiers de valeurs, ou être calculées depuis des commandes indiquées dans les fichiers, ou même être récupérées depuis un cluster Kubernetes (par exemple des clefs de chiffrement).</p>
+<p>Helm constitue donc un outil essentiel pour packager un environnement de paroisse.</p>
+<p>L'installation de Helm se fait assez simplement en récupérant l'archive Helm depuis <a href="https://github.com/helm/helm/releases">https://github.com/helm/helm/releases</a>, en vérifiant la somme de contrôle, en décompressant l'archive, et en mettant Helm a un endroit accessible depuis le path (avec les droits d'exécution).</p>
+<p>Quelques commandes utiles : </p>
+<ul>
+<li>
+<p><code>helm install --create-namespace -n helmtls helmciviparoisse .</code> : depuis le package Helm de civiparoisse (le <code>.</code>), installer une release (ici nommée <code>helmciviparoisse</code>) dans un namespace crée pour l'occasion (ici <code>helmtls</code>), en utilisant les valeurs par défaut</p>
+</li>
+<li>
+<p><code>helm uninstall -n helmtls helmciviparoisse</code>: désinstaller les ressources de la release <code>helmciviparoisse</code> dans le namespace <code>helmtls</code></p>
+</li>
+<li>
+<p><code>helm list -n helmtls</code> : récupérer les noms de releases d'un namespace (ici <code>helmtls</code>)</p>
+</li>
+</ul>
+<p><strong> Attention : pour le moment, il faut builder les images uepal_test dans l'environnement docker de Minikube. De plus, il faut puller manuellement les images ubuntu, ubuntu/apache, ubuntu/mysql, à cause des interactions avec le tag latest et la pull Policy mise à none dans le package helm </strong></p>
+<h2 id="description-des-types-dobjets-utilises-dans-le-chart-helm">Description des types d'objets utilisés dans le chart Helm</h2>
+<p>Il s'agit ici de définir une liste des types d'objets avec une brève description ; on se réfèrera bien entendu à la documentation Kubernetes (<a href="https://kubernetes.io/fr/docs/concepts/">https://kubernetes.io/fr/docs/concepts/</a>) et Nginx (<a href="https://docs.nginx.com/nginx-ingress-controller/configuration/transportserver-resource/">https://docs.nginx.com/nginx-ingress-controller/configuration/transportserver-resource/</a>) pour des explications complètes.</p>
+<p>On va trouver des objets de bas niveau, qui sont des objets de base, qui vont être employés et gérés implicitement par les objets de plus haut niveau, dont notamment :</p>
+<ul>
+<li>
+<p>Pod : le pod est un environnement d'exécution qui peut être partagé par un ou plusieurs containers. Les containers du pod auront tous accès au réseau entre eux via le loopback (127.0.0.1), et ont un espace mémoire partagé. Outre les containers qui constituent la charge de travail pricipale du pod, on peut trouver des containers d'initialisation, qui sont lancés les uns après les autres pour initialiser l'environnement du pod.</p>
+</li>
+<li>
+<p>ReplicaSet : un replicaSet se charge de maintenir actif un certain nombre de ressources de Pod basés sur un même modèle. Dans le cas de Civiparoisse, le passage par le ReplicaSet est plutôt anecdotique, dans la mesure où l'on ne maintiendra qu'un seul pod pour chaque tâche. Toutefois, le replicaSet est utilisé indirectement par les déploiements.</p>
+</li>
+<li>
+<p>Namespace : le namespace est l'espace de nom, qui va permettre de regrouper les objets spécifiques à une même application (ici, un environnement Civiparoisse). Le namespace sera crée lors du déploiement du package Helm, via une option de la ligne de commande. De ce fait, on ne trouvera pas explicitement de définition du namespace.</p>
+</li>
+</ul>
+<p>En ce qui concerne les types d'objets explicitement déclarés, on retrouve : </p>
+<ul>
+<li>
+<p>PersistentVolumeClaim : cette ressource permet de définir un volume de stockage que l'on veut obtenir auprès d'un fournisseur (classe de stockage), avec des propriétés particulières (nom, taille du stockage, type d'accès...)</p>
+</li>
+<li>
+<p>ConfigMap : cette ressource permet de définir des couples clef-valeur qui vont ensuite être rendus disponibles sous forme de variables d'environnement ou de montage de fichiers dans le conteneur. Ces objets ne sont pas prévus pour contenir des informations sensibles (mot de passes ou clefs par exemple)</p>
+</li>
+<li>
+<p>Secret : cette ressource permet le stockage d'informations sensibles dans le cluster Elle n'est normalement pas stocké dans un conteneur, mais est montée comme fichier.</p>
+</li>
+<li>
+<p>CronJob : permet l'exécution périodique d'un type de pod</p>
+</li>
+<li>
+<p>Service : le service permet de publier au niveau du cluster la présence d'un service qui est retrouvé à l'aide de sélecteurs ; la publication se fait au niveau du DNS et dans les variables d'environnement.</p>
+</li>
+<li>
+<p>Deployment : objet d'exécution de charge pour les tâches ne nécessitant pas de gestion d'état ; ex : authenticateur</p>
+</li>
+<li>
+<p>StatefulSet : objet d'exécution de charge pour les tâches nécessitant une gestion d'état, et un nommage fixe ; ex : bd</p>
+</li>
+<li>
+<p>TransportServer : permet de configurer le TLS passthrough pour accéder au pod reverse proxy d'une paroisse</p>
+</li>
+</ul>
+<h2 id="description-grosses-mailles-du-chart-helm">Description grosses mailles du chart Helm</h2>
+<p>Le fichier principal du chart Helm est Chart.yaml. Ce fichier contient le versionning du package, mais surtout les annotations, qui peuvent être utilisées comme des constantes dans les templates. Dans ces annotations, on a en particulier les indications des images et des tags associés (pour le moment, tag latest, mais que sera à changer pour le versionning réel pour la production).</p>
+<p>Le principe de fonctionnement est décrit dans la section dédiée plus haut.</p>
+<p>Le fichier values.yaml contient des définitions de variables qui peuvent être ensuite remplacées lors de l'installation du chart. Ce sont les réglages des valeurs de ce fichier qui va être propre à chaque paroisse (en plus des volumes de stockage).</p>
+<p>Le namespace sera défini à l'installation du chart.</p>
+<p>Les constantes et les variables vont permettre de setter notamment les variables d'environnement ; les variables d'environnement sont expliquées au niveau des images Docker du projet.</p>
+<p>Le répertoire charts est prévu pour contenir des sous-charts. Ce répertoire est pour le moment vide.</p>
+<p>Le répertoire des templates contient les définitions des différents composants présentés. Il n'y a que peu de choses à dire, si ce n'est sur les secrets : les secrets peuvent être récupérés depuis Kubernertes, de sorte à ce qu'ils ne soient pas remplacés par de nouvelles valeurs : c'est important pour les mot de passes. Ce mécanisme est également mis en oeuvre au niveau des clefs, car il est arrivé que certains containers n'ont pas été redémarrés lors d'un upgrade et utilisaient les anciennes clefs, ce qui a déclenché un problème de communication entre les containers.</p>
+<p>Les containers d'initialisation ont plusieurs utilités :</p>
+<ul>
+<li>ils permettent d'initialiser des volumes avec des données initiales, si les volumes sont vides</li>
+<li>ils permettent d'effectuer une synchronisation entre containers, en attendant qu'un service soit disponible par exemple, dans le container d'init.</li>
+</ul>
+<p>En ce qui concerne la synchronisation, l'ordre de démarrage est fixé dans une certaine mesure : </p>
+<ul>
+<li>le stateful set de base de données démarre en premier, en initilisant si nécessaire la BD et les volumes persistants</li>
+<li>le serveur web interne démarre ensuite</li>
+<li>
+<p>le serveur proxy démarre enfin</p>
+</li>
+<li>
+<p>le cron peut démarrer du moment que la BD est initialisée, c'est à dire que le stateful set de BD est prêt.</p>
+</li>
+</ul>
+<p>Le design pattern <code>sidecar</code> (et ses variantes) est utilisé à plusieurs reprises dans ce chart :</p>
+<ul>
+<li>
+<p>au niveau de la BD, les connexions sont chiffrées / chiffrables via des connexions SSL dont les terminaisons sont dans des sidecars</p>
+</li>
+<li>
+<p>au niveau du proxy, l'authentificateur est également un sidecar</p>
+</li>
+</ul>
+<p>En termes de synchronisation / attentes :</p>
+<ul>
+<li>mysqladmin ping permet de vérifier si une BD est disponible</li>
+<li>nslookup permet de vérifier si un nom est résolu ; ce test n'est toutefois pas trop intéressant, car un service peut avoir une IP assignée même s'il n'y a pas de points de terminaisons associés au service</li>
+<li>nc -z permet de vérifier si un port est ouvert</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ressources.html" class="btn btn-neutral float-left" title="Ressources utiles"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="db_dbproxy.html" class="btn btn-neutral float-right" title="DB et DB proxy">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../ressources.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="db_dbproxy.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../../..';</script>
+    <script src="../../../../js/theme_extra.js" defer></script>
+    <script src="../../../../js/theme.js" defer></script>
+      <script src="../../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

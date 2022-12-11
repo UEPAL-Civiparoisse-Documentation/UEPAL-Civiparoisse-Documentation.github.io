@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.uepal.fr/TECHNIQUE/roles.html" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Rôles - Documentation UEPAL Civiparoisse</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "R\u00f4les";
+        var mkdocs_page_input_path = "TECHNIQUE/roles.md";
+        var mkdocs_page_url = "/TECHNIQUE/roles.html";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html">
+          <img src="../assets/uepal-logo.svg" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Présentation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../PRESENTATION/index.html">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PRESENTATION/presentation_fonctionnelle.html">Périmètre fonctionnel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PRESENTATION/presentation_ecosysteme.html">Ecosystème projet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PRESENTATION/presentation_livrables.html">Livrables</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technique</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="roles.html">Rôles</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#schema-yaml">Schéma yaml</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#export-dun-role">Export d'un rôle</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#import-des-roles">Import des rôles</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#verification-de-letat">Vérification de l'état</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#implementation-dans-le-si">Implémentation dans le SI</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#strategie-a-long-terme">Stratégie à long terme</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="MAIL/mail.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="MAIL/ecosysteme.html">Ecosystème</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="MAIL/sendmail.html">Envoi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="MAIL/fetchmail.html">Réception</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Logiciel</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="LOGICIEL/index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="LOGICIEL/distribution_code_composer.html">Distribution de code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="LOGICIEL/environnement_dev.html">Environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="LOGICIEL/environnement_dev_env.html">Personnalisation environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="LOGICIEL/importation.html">Importation de données</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Intégration</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="INTEGRATION/index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="INTEGRATION/etude_authentification.html">Authentification</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="INTEGRATION/docker.html">Description générale</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Images</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/DOCKER/composer_base.html">Composer_base</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/DOCKER/composer_files.html">Composer_files</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/DOCKER/tools.html">tools</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/DOCKER/init.html">init</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/DOCKER/cron.html">cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/DOCKER/selfkeys.html">selfkeys</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/DOCKER/httpd.html">httpd</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/DOCKER/authenticator.html">authenticator</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/DOCKER/proxy.html">proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/DOCKER/db_tls_server.html">db_tls_server</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/DOCKER/db_tls_client.html">db_tls_client</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/DOCKER/update.html">update</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="INTEGRATION/db_ssl.html">DB_SSL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Kubernetes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="INTEGRATION/KUBERNETES/maquettage.html">Maquettage</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="INTEGRATION/KUBERNETES/ressources.html">Ressources utiles</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Chart Helm</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/KUBERNETES/HELM/description_generale.html">Description générale</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/KUBERNETES/HELM/db_dbproxy.html">DB et DB proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/KUBERNETES/HELM/httpd.html">Serveur web interne</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/KUBERNETES/HELM/proxy_auth.html">Proxy et authenticateur</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/KUBERNETES/HELM/cron.html">Cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/KUBERNETES/HELM/volumes.html">Volumes (persistants)</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/KUBERNETES/HELM/secrets.html">Secrets</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="INTEGRATION/KUBERNETES/HELM/reservations.html">Réservations</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Documentation UEPAL Civiparoisse</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Technique &raquo;</li>
+      <li>Rôles</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="integration-des-roles">Intégration des rôles</h1>
+<p>Les rôles utilisateurs sont un sujet complexe. Un rôle regroupe un ensemble de permissions qui sont nécessaires à la réalisation d'une tâche.
+On attribute ensuite à un utilisateur le ou les rôles qui lui sont nécessaires.</p>
+<p>Au niveau de CiviCRM au-dessus de Drupal, on constate que les permissions utilisées sont intégrées dans Drupal, si bien que la gestion des rôles se ferait réellement au niveau de Drupal et pas au niveau de CiviCRM. On ne parle en revanche pas ici du système d'ACL proposé par CiviCRM.</p>
+<p>!!! Danger "Attention : L'exception de l'utilisateur Drupal UID 1"</p>
+<pre><code>Cet utilisateur est une exception dans Drupal, car il est prévu pour toujours se voir donner toutes les permissions.
+</code></pre>
+<h2 id="schema-yaml">Schéma yaml</h2>
+<p>Les rôles sont stockés comme des objets de configuration, et se retrouvent de ce fait dans la table <code>config</code> de Drupal, et comment par <code>user.role</code>. Etant donné que ce sont des objets de configuration, ils sont décrits par un schéma (<code>/app/web/core/modules/user/config/schema/user.schema.yml</code>):</p>
+<pre><code class="language-yaml">user.role.*:
+  type: config_entity
+  label: 'User role settings'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    weight:
+      type: integer
+      label: 'User role weight'
+    is_admin:
+      type: boolean
+      label: 'User is admin'
+    permissions:
+      type: sequence
+      label: 'Permissions'
+      sequence:
+        type: string
+        label: 'Permission'
+
+</code></pre>
+<p>Il devient de ce fait plus intéressant de coder les rôles dans des fichiers yaml, voire même de les créer sur une instance de développement, supprimer leur uuid, et de les récupérer pour les intégrer dans les autres instances, où le nom de fichier détermine le nom de l'objet de configuration.</p>
+<h2 id="export-dun-role">Export d'un rôle</h2>
+<pre><code class="language-bash">drush config:get user.role.r1 &gt;user.role.r1.yml
+cat user.role.r1.yml
+</code></pre>
+<pre><code class="language-yaml">uuid: b0d165ca-3a16-4996-9aa8-e57366a22a2c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - block
+    - civicrm
+id: r1
+label: R1
+weight: 4
+is_admin: null
+permissions:
+  - 'administer blocks'
+  - 'authenticate with password'
+</code></pre>
+<p>Pour supprimer au passage l'UUID :</p>
+<pre><code class="language-bash">cat user.role.r1.yml |grep -v uuid &gt;TEST/user.role.r1.yml
+</code></pre>
+<h2 id="import-des-roles">Import des rôles</h2>
+<p>Pour importer le fichier yaml, il faut faire attention de bien indiquer un import partiel (sans quoi les objets de configuration non existants sont supprimés). La source est le répertoire dans lequel sont stockés les fichiers à importer.</p>
+<pre><code class="language-bash">drush --no-interaction config:import --partial --source=/app/TEST -vvv
+</code></pre>
+<h2 id="verification-de-letat">Vérification de l'état</h2>
+<p>Pour vérifier la source de configuration pour les différents objets :</p>
+<pre><code class="language-bash">drush config:status
+</code></pre>
+<h2 id="implementation-dans-le-si">Implémentation dans le SI</h2>
+<p>Le moyen le plus simple d'intégrer les rôles est de créer un package composer supplémentaire à l'aide d'un dépôt git, et d'appeler les commandes drush lors de l'installation initiale et lors des mises à jour. De ce fait, les packages de rôles seront versionnés et la correspondance de versions sera maîtrisée via le composer.json principal ; de plus, ces fichiers seront présents directement dans les images Docker, qui elles-mêmes peuvent être taggées, et donc versionnées.</p>
+<h2 id="strategie-a-long-terme">Stratégie à long terme</h2>
+<p>Il est probable que l'ensemble des rôles proposés avec Civiparoisse ne correspondra pas aux besoins de toutes les paroisses, et que des jeux de rôles vont venir remplacer ou compléter le jeu de rôles initial.</p>
+<p>Toutefois, il faut assurer une certaine "compatibilité ascendante", de sorte à ne pas casser les droits et surtout les droits non donnés aux utilisateurs. Ainsi, si un rôle est crée, il ne devra pas être modifié, car il faut considérer qu'il a pu être utilisé par une paroisse, et qu'il ne faut pas interférer dans les droits donnés par une paroisse.</p>
+<p>A ce sujet, comme les paroisses peuvent également créer des rôles, il faudra définir un préfixe utilisé pour les rôles préparés pour Civiparoisse. On pourrait donc arriver à un nom de rôle comme  <code>user.role.civiparoisse.&lt;nom_jeu&gt;_&lt;nom_role&gt;</code>.</p>
+<p>Un cas particulier doit cependant être prévu : le cas où les permissions évoluent dans CiviCRM ou Drupal. Dans ce cas précis, on peut envisager de supprimer les droits des anciens rôles crées par Civiparoisse et préparer un nouveau jeu de rôles : l'utilisateur UID 1 pourra de toute manière intervenir pour mettre en place les nouveaux droits : c'est une approche sûre, dans la mesure où on ne donnera à aucun moment par mégarde des droits trop importants à des utilisateurs. En revanche, si l'utilisateur UID 1 n'est pas un utilisateur de la paroisse (équipe technique interne Civiparoisse), il faudra convenir d'une réunion de maintenance avec les responsables de la paroisse pour effectuer les actions qui conviennent.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../PRESENTATION/presentation_livrables.html" class="btn btn-neutral float-left" title="Livrables"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="MAIL/mail.html" class="btn btn-neutral float-right" title="Index">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../PRESENTATION/presentation_livrables.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="MAIL/mail.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

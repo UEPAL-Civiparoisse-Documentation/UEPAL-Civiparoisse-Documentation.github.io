@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.uepal.fr/TECHNIQUE/INTEGRATION/DOCKER/tools.html" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>tools - Documentation UEPAL Civiparoisse</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "tools";
+        var mkdocs_page_input_path = "TECHNIQUE/INTEGRATION/DOCKER/tools.md";
+        var mkdocs_page_url = "/TECHNIQUE/INTEGRATION/DOCKER/tools.html";
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../index.html">
+          <img src="../../../assets/uepal-logo.svg" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Présentation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../PRESENTATION/index.html">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../PRESENTATION/presentation_fonctionnelle.html">Périmètre fonctionnel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../PRESENTATION/presentation_ecosysteme.html">Ecosystème projet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../PRESENTATION/presentation_livrables.html">Livrables</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technique</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../roles.html">Rôles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../MAIL/mail.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../MAIL/ecosysteme.html">Ecosystème</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../MAIL/sendmail.html">Envoi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../MAIL/fetchmail.html">Réception</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Logiciel</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/distribution_code_composer.html">Distribution de code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/environnement_dev.html">Environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/environnement_dev_env.html">Personnalisation environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/importation.html">Importation de données</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Intégration</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../etude_authentification.html">Authentification</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Docker</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../docker.html">Description générale</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">Images</a>
+    <ul class="current">
+                <li class="toctree-l4"><a class="reference internal" href="composer_base.html">Composer_base</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="composer_files.html">Composer_files</a>
+                </li>
+                <li class="toctree-l4 current"><a class="reference internal current" href="tools.html">tools</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="init.html">init</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="cron.html">cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="selfkeys.html">selfkeys</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="httpd.html">httpd</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="authenticator.html">authenticator</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="proxy.html">proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="db_tls_server.html">db_tls_server</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="db_tls_client.html">db_tls_client</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="update.html">update</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../db_ssl.html">DB_SSL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Kubernetes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../KUBERNETES/maquettage.html">Maquettage</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../KUBERNETES/ressources.html">Ressources utiles</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Chart Helm</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/description_generale.html">Description générale</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/db_dbproxy.html">DB et DB proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/httpd.html">Serveur web interne</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/proxy_auth.html">Proxy et authenticateur</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/cron.html">Cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/volumes.html">Volumes (persistants)</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/secrets.html">Secrets</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/reservations.html">Réservations</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Documentation UEPAL Civiparoisse</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Technique &raquo;</li>
+          <li>Intégration &raquo;</li>
+          <li>Docker &raquo;</li>
+          <li>Images &raquo;</li>
+      <li>tools</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tools-image-des-outils">Tools : image des outils</h1>
+<p>L'image des outils est une sorte d'image générale, à tout faire, non spécialisée, qui sert de support pour les opérations spécifiques (initialisation d'une instance, mise à jour d'une instance (RAF), exécution de cron).</p>
+<pre><code class="language-docker">FROM uepal_test/composer_base
+LABEL uepal.name=&quot;tools&quot; uepal.version=&quot;0.0.1&quot;
+ARG MYSQLVERSION=8.0.28-0ubuntu4
+ENV MYSQLVERSIONENV=${MYSQLVERSION}
+RUN echo &quot;MySQLVERSION : &quot;${MYSQLVERSION}
+RUN mkdir /tools &amp;&amp; mkdir /exec &amp;&amp; touch /usr/share/man/man5/maildir.maildrop.5.gz &amp;&amp; touch /usr/share/man/man7/maildirquota.maildrop.7.gz &amp;&amp; touch /usr/share/man/man1/makedat.1.gz &amp;&amp; apt-get update &amp;&amp; apt-get full-upgrade -y &amp;&amp; export DEBIAN_FRONTEND=noninteractive &amp;&amp; apt-get install -y gnupg mysql-client nano openssh-client mc mysql-server mysql-server-8.0=${MYSQLVERSION} mysql-server-core-8.0=${MYSQLVERSION} mysql-client mysql-client-core-8.0=${MYSQLVERSION} maildrop rsync lftp openssh-client dnsutils &amp;&amp; apt-get remove --purge --auto-remove -y &amp;&amp; rm -rf /var/lib/apt/lists
+COPY composer.* /tools/
+COPY exec.sh /exec/exec.sh
+WORKDIR /tools
+RUN /composer/vendor/bin/composer install &amp;&amp; ln -s /tools/vendor/drush/drush/drush /usr/local/bin/drush &amp;&amp; ln -s /tools/vendor/bin/drupal /usr/local/bin/drupal &amp;&amp; wget https://download.civicrm.org/cv/cv.phar -O /usr/local/bin/cv &amp;&amp; chmod 755 /usr/local/bin/cv &amp;&amp; chmod 755 /exec/exec.sh &amp;&amp; maildirmake /maildir &amp;&amp; install -d /var/run/secrets
+COPY --from=uepal_test/composer_files /app /app/
+WORKDIR /app
+VOLUME /var/lib/mysql /app/web/sites /maildir /app/private
+CMD [&quot;/exec/exec.sh&quot;]
+
+
+</code></pre>
+<p>Cette image n'est pas prévue pour être "en contact direct" avec des connexions entrantes, ni une utilisation comme serveur. Elle n'est en aucun cas "durcie".</p>
+<p>Les outils sont installés de plusieurs manières : 
+* packages Ubuntu (mysql, maildrop, rsync, lftp, gnupg, nano...)
+* packages Composer (dont drupal-console et drush)
+* téléchargement direct (cv)</p>
+<h2 id="installation-dune-version-specifique-de-mysql">Installation d'une version spécifique de MySQL</h2>
+<p>L'installation d'une version spécifique de MySQL n'est pas un prérequis. En revanche, le but de cette installation spécifique vient du fait que l'image <code>ubuntu/mysql</code> n'est pas forcément mise à jour au même rythme qu'une image <code>ubuntu</code>, ce qui peut conduire à des différences de versions. Ces différences ont d'ailleurs déjà fait que des fichiers de BD MySQL crées avec une version supérieure (8.0.29) n'ont pas voulu fonctionner avec une version inférieure (8.0.28) : d'où la mise en place de l'argument pour la version mysql, avec une version par défaut, qui est répercutée sur l'installation de packages Ubuntu.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="composer_files.html" class="btn btn-neutral float-left" title="Composer_files"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="init.html" class="btn btn-neutral float-right" title="init">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="composer_files.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="init.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

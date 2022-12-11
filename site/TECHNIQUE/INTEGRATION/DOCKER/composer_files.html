@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.uepal.fr/TECHNIQUE/INTEGRATION/DOCKER/composer_files.html" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Composer_files - Documentation UEPAL Civiparoisse</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Composer_files";
+        var mkdocs_page_input_path = "TECHNIQUE/INTEGRATION/DOCKER/composer_files.md";
+        var mkdocs_page_url = "/TECHNIQUE/INTEGRATION/DOCKER/composer_files.html";
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../index.html">
+          <img src="../../../assets/uepal-logo.svg" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Présentation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../PRESENTATION/index.html">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../PRESENTATION/presentation_fonctionnelle.html">Périmètre fonctionnel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../PRESENTATION/presentation_ecosysteme.html">Ecosystème projet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../PRESENTATION/presentation_livrables.html">Livrables</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technique</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../roles.html">Rôles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../MAIL/mail.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../MAIL/ecosysteme.html">Ecosystème</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../MAIL/sendmail.html">Envoi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../MAIL/fetchmail.html">Réception</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Logiciel</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/distribution_code_composer.html">Distribution de code</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/environnement_dev.html">Environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/environnement_dev_env.html">Personnalisation environnement de dev</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LOGICIEL/importation.html">Importation de données</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Intégration</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../index.html">Index</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../etude_authentification.html">Authentification</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Docker</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../docker.html">Description générale</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">Images</a>
+    <ul class="current">
+                <li class="toctree-l4"><a class="reference internal" href="composer_base.html">Composer_base</a>
+                </li>
+                <li class="toctree-l4 current"><a class="reference internal current" href="composer_files.html">Composer_files</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="tools.html">tools</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="init.html">init</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="cron.html">cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="selfkeys.html">selfkeys</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="httpd.html">httpd</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="authenticator.html">authenticator</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="proxy.html">proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="db_tls_server.html">db_tls_server</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="db_tls_client.html">db_tls_client</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="update.html">update</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../db_ssl.html">DB_SSL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Kubernetes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../KUBERNETES/maquettage.html">Maquettage</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../KUBERNETES/ressources.html">Ressources utiles</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="#">Chart Helm</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/description_generale.html">Description générale</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/db_dbproxy.html">DB et DB proxy</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/httpd.html">Serveur web interne</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/proxy_auth.html">Proxy et authenticateur</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/cron.html">Cron</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/volumes.html">Volumes (persistants)</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/secrets.html">Secrets</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../KUBERNETES/HELM/reservations.html">Réservations</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Documentation UEPAL Civiparoisse</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Technique &raquo;</li>
+          <li>Intégration &raquo;</li>
+          <li>Docker &raquo;</li>
+          <li>Images &raquo;</li>
+      <li>Composer_files</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="composer_files">Composer_files</h1>
+<p>L'image composer_files permet de figer les fichiers à déployer pour une instance CiviCRM, ce qui permet de comprendre les inclusions effectuées depuis le Dockerfile (<code>COPY --from</code>, présents notamment dans tools, et indirectement init et cron, ainsi que dans httpd).</p>
+<pre><code class="language-composer">{
+&quot;config&quot;:{
+&quot;allow-plugins&quot;:true,
+&quot;store-auths&quot;:false
+},
+&quot;repositories&quot;:[{
+&quot;type&quot;:&quot;git&quot;,
+&quot;url&quot;:&quot;/composer_registry/DRUPAROISSE&quot;
+},{
+&quot;type&quot;:&quot;git&quot;,
+&quot;url&quot;:&quot;/composer_registry/CIVIPAROISSE&quot;
+},{
+&quot;type&quot;:&quot;git&quot;,
+&quot;url&quot;:&quot;/composer_registry/SETUP&quot;
+},{
+&quot;type&quot;:&quot;package&quot;,
+&quot;package&quot;:[{
+    &quot;name&quot;:&quot;eileenmcnaughton/org.wikimedia.geocoder&quot;,
+    &quot;version&quot;:&quot;1.8&quot;,
+    &quot;source&quot;:{
+        &quot;type&quot;:&quot;git&quot;,
+        &quot;url&quot;:&quot;https://github.com/eileenmcnaughton/org.wikimedia.geocoder.git&quot;,
+        &quot;reference&quot;:&quot;1.8&quot;
+     }
+},{
+    &quot;name&quot;:&quot;systopia/de.systopia.birthdays&quot;,
+    &quot;version&quot;:&quot;1.4&quot;,
+    &quot;source&quot;:{
+        &quot;type&quot;:&quot;git&quot;,
+        &quot;url&quot;:&quot;https://github.com/systopia/de.systopia.birthdays.git&quot;,
+        &quot;reference&quot;:&quot;1.4&quot;
+     }
+},{
+    &quot;name&quot;:&quot;civicrm/org.civicrm.recentmenu&quot;,
+    &quot;version&quot;:&quot;1.3&quot;,
+    &quot;source&quot;:{
+        &quot;type&quot;:&quot;git&quot;,
+        &quot;url&quot;:&quot;https://github.com/civicrm/org.civicrm.recentmenu.git&quot;,
+        &quot;reference&quot;:&quot;1.3&quot;
+    }
+}]
+}
+],
+    &quot;extra&quot;:{
+    &quot;installer-paths&quot;: {
+            &quot;web/core&quot;: [&quot;type:drupal-core&quot;],
+            &quot;web/libraries/{$name}&quot;: [&quot;type:drupal-library&quot;],
+            &quot;web/modules/contrib/{$name}&quot;: [&quot;type:drupal-module&quot;],
+            &quot;web/profiles/contrib/{$name}&quot;: [&quot;type:drupal-profile&quot;],
+            &quot;web/themes/contrib/{$name}&quot;: [&quot;type:drupal-theme&quot;],
+            &quot;drush/Commands/contrib/{$name}&quot;: [&quot;type:drupal-drush&quot;],
+            &quot;web/modules/custom/{$name}&quot;: [&quot;type:drupal-custom-module&quot;],
+            &quot;web/profiles/custom/{$name}&quot;: [&quot;type:drupal-custom-profile&quot;],
+            &quot;web/themes/custom/{$name}&quot;: [&quot;type:drupal-custom-theme&quot;]
+        },
+&quot;drupal-scaffold&quot;:{
+&quot;locations&quot;:{
+&quot;web-root&quot;:&quot;web/&quot;
+},
+&quot;allowed-packages&quot;:[&quot;drupal/recommended-project&quot;]
+},
+&quot;compile-mode&quot;:&quot;all&quot;,
+&quot;compile-passthru&quot;:&quot;always&quot;,
+&quot;enable-patching&quot;:true,
+        &quot;compile-whitelist&quot;: [&quot;civicrm/civicrm-core&quot;, &quot;civicrm/composer-compile-lib&quot;],
+&quot;drupal-l10n&quot;:{
+&quot;languages&quot;:[&quot;fr&quot;]
+},
+&quot;compile&quot;:[
+{&quot;run&quot;:&quot;@sh /bin/bash -c pwd ; export VERSION=`xmllint -xpath '/version/version_no/text()' vendor/civicrm/civicrm-core/xml/version.xml`; wget -O- https://download.civicrm.org/civicrm-${VERSION}-l10n.tar.gz|tar -z -f- -C vendor/civicrm/civicrm-core -x --strip-components=1&quot;}
+],
+&quot;patches&quot;:{
+&quot;systopia/de.systopia.birthdays&quot;:{
+&quot;Curly brace adjustement&quot;:&quot;patches/birthdays.patch&quot;
+}
+}
+},
+&quot;require&quot;:{
+&quot;drush/drush&quot;:&quot;~11&quot;,
+&quot;drupal/recommended-project&quot;:&quot;~9.2&quot;,
+&quot;drupal-composer/drupal-l10n&quot;:&quot;~2&quot;,
+&quot;cweagans/composer-patches&quot;:&quot;~1.7&quot;,
+&quot;eileenmcnaughton/org.wikimedia.geocoder&quot;:&quot;1.8&quot;,
+&quot;systopia/de.systopia.birthdays&quot;:&quot;1.4&quot;,
+&quot;civicrm/org.civicrm.recentmenu&quot;:&quot;1.3&quot;,
+&quot;civicrm/civicrm-core&quot;:&quot;~5.47.0&quot;,
+&quot;civicrm/civicrm-packages&quot;:&quot;~5.47.0&quot;,
+&quot;civicrm/civicrm-drupal-8&quot;:&quot;~5.47.0&quot;,
+&quot;civicrm/civicrm-asset-plugin&quot;:&quot;~1.1&quot;,
+&quot;civicrm/composer-downloads-plugin&quot;:&quot;~3&quot;,
+&quot;civicrm/composer-compile-plugin&quot;:&quot;~0.17&quot;,
+&quot;uepal/fr.uepalparoisse.civiparoisse&quot;:&quot;0.0.1&quot;,
+&quot;uepal/fr.uepalparoisse.druparoisse&quot;:&quot;0.0.1&quot;,
+&quot;uepal/civisetup&quot;:&quot;0.0.1&quot;
+},
+&quot;minimum-stability&quot;:&quot;dev&quot;,
+&quot;prefer-stable&quot;:true
+}
+</code></pre>
+<h2 id="allow-plugins">Allow plugins</h2>
+<p><strong> Pour le moment, la directive allow plugins a été placée à true, ce qui autorise l'exécution des plugins sans avoir besoin de les spécifier. Toutefois, on pourrait préférer une liste de plugins explicitement déclarés. </strong></p>
+<p><strong> Ce paramètre a été mis à true pour le moment car la valeur par défaut de ce paramètre va passer en juillet 2022 de <code>null</code> à <code>{}</code> : autorisation implicite à aucun plugin autorisé (voir <a href="https://getcomposer.org/doc/06-config.md#allow-plugins">https://getcomposer.org/doc/06-config.md#allow-plugins</a>) </strong></p>
+<h2 id="diversite-des-sources">Diversité des sources</h2>
+<p>Plusieurs types de sources sont utilisées :</p>
+<ul>
+<li>les packages de Packagist : pour les packages "standards"</li>
+<li>les packages qui viennent de dépôt Git qui disposent d'un nécessaire pour composer (composer.json) et de versionning (via des tags notamment) : type git</li>
+<li>les packages qui viennent de dépôt Git mais qui n'ont pas le nécessaire pour composer : ces packages sont déclarés de manière explicite, avec la référence vers la source : type package</li>
+</ul>
+<p>Les packages de sources locales de Civiparoisse sont destinés à être remplacé par les dépôts publics git une fois qu'une version aura été stabilisée et distribuée.</p>
+<h2 id="presence-de-drush-dans-les-packages-requis">Présence de drush dans les packages requis</h2>
+<p>Drush est présent dans les packages requis. Ceci peut surprendre a priori, mais l'expérimentation montre qu'il est réellement nécessaire : en effet, Drush est utilisé pour exécuter les appels de cron, mais en ayant accès aux volumes de fichiers du serveur web interne ainsi qu'à la base de données.
+Lors de son exécution, Drush supplante dans certains services (notamment les logs) les classes qu'il fournit. Si lors de l'exécution de Drush les caches sont regénérés, les supplantations de Drush seront présents dans les caches. Lorsque le cache est réutilisé sur le serveur web interne, le serveur doit avoir accès aux classes de Drush pour ne pas tomber sur une erreur.</p>
+<p><strong> On retiendra donc que Drush est nécessaire pour ces classes, mais qu'on peut envisager de ne pas laisser les droits en exécution sur les exécutables dans les fichiers. </strong></p>
+<h2 id="patches">Patches</h2>
+<p>Le package <code>cweagans/composer-patches</code> permet d'indiquer des fichiers de patches à déployer : un fichier du package systopia/de.systopia.birthdays devait être mis à jour pour régler un problème de syntaxe déprécié.</p>
+<h2 id="scaffolding">Scaffolding</h2>
+<p>Le scaffolding est le fait de répartir les fichiers entre le DocumentRoot du site et un autre lieu hors du DocumentRoot. Cette répartition est prévue par le package <code>drupal/recommended-project</code> ; toutefois, il a fallu reprendre la majorité de cette configuration dans le fichier composer.json de l'image pour que ce scaffolding puisse avoir lieu, car il est nécessaire que cette configuration se situe dans le composer.json principal.</p>
+<h2 id="traductions">Traductions</h2>
+<p>Les traductions ont deux sources :
+* pour Drupal, il s'agit du package <code>drupal-composer/drupal-l10n</code>
+* pour CiviCRM, les traductions sont récupérées via une étape de (post)-compilation, où l'on va récupérer d'abord la version de CiviCRM depuis un fichier XML présent dans les sources, puis récupérer sur le net les traductions, et enfin les décompresser au bon endroit.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="composer_base.html" class="btn btn-neutral float-left" title="Composer_base"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="tools.html" class="btn btn-neutral float-right" title="tools">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="composer_base.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="tools.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

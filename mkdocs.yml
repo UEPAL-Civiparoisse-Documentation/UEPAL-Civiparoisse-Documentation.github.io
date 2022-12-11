@@ -82,11 +82,3 @@ theme:
    - search:
        lang: fr
 use_directory_urls: false
-markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-  - admonition
-  - pymdownx.superfences
