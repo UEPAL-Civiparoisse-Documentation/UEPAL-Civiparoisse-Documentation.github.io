@@ -1,7 +1,65 @@
 site_name: Documentation UEPAL Civiparoisse
 site_url : https://www.uepal.fr
 nav:
-    - Home: index.md
+    - 'Home': 'index.md'
+    - 'Présentation':
+        - 'Introduction': 'PRESENTATION/index.md'
+        - 'Périmètre fonctionnel': 'PRESENTATION/presentation_fonctionnelle.md'
+        - 'Ecosystème projet': 'PRESENTATION/presentation_ecosysteme.md'
+        - 'Livrables': 'PRESENTATION/presentation_livrables.md'
+    - 'Technique':
+       - 'Rôles': 'TECHNIQUE/roles.md'
+       - 'Mail':
+           - 'Index': 'TECHNIQUE/MAIL/mail.md'
+           - 'Ecosystème': 'TECHNIQUE/MAIL/ecosysteme.md'
+           - 'Envoi': 'TECHNIQUE/MAIL/sendmail.md'
+           - 'Réception': 'TECHNIQUE/MAIL/fetchmail.md'
+       - 'Logiciel':
+           - 'Index': 'TECHNIQUE/LOGICIEL/index.md'
+           - 'Distribution de code': 'TECHNIQUE/LOGICIEL/distribution_code_composer.md'
+           - 'Environnement de dev': 'TECHNIQUE/LOGICIEL/environnement_dev.md'
+           - 'Personnalisation environnement de dev': 'TECHNIQUE/LOGICIEL/environnement_dev_env.md'
+           - 'Importation de données': 'TECHNIQUE/LOGICIEL/importation.md'
+       - 'Intégration':
+           - 'Index': 'TECHNIQUE/INTEGRATION/index.md'
+           - 'Authentification': 'TECHNIQUE/INTEGRATION/etude_authentification.md'
+           - 'Docker': 
+              - 'Description générale': 'TECHNIQUE/INTEGRATION/docker.md'
+              - Images:
+                - 'Composer_base': 'TECHNIQUE/INTEGRATION/DOCKER/composer_base.md'
+                - 'Composer_files': 'TECHNIQUE/INTEGRATION/DOCKER/composer_files.md'
+                - 'tools': 'TECHNIQUE/INTEGRATION/DOCKER/tools.md'
+                - 'init': 'TECHNIQUE/INTEGRATION/DOCKER/init.md'
+                - 'cron': 'TECHNIQUE/INTEGRATION/DOCKER/cron.md'
+                - 'selfkeys': 'TECHNIQUE/INTEGRATION/DOCKER/selfkeys.md'
+                - 'httpd': 'TECHNIQUE/INTEGRATION/DOCKER/httpd.md'
+                - 'authenticator': 'TECHNIQUE/INTEGRATION/DOCKER/authenticator.md'
+                - 'proxy': 'TECHNIQUE/INTEGRATION/DOCKER/proxy.md'
+                - 'db_tls_server': 'TECHNIQUE/INTEGRATION/DOCKER/db_tls_server.md'
+                - 'db_tls_client': 'TECHNIQUE/INTEGRATION/DOCKER/db_tls_client.md'
+                - 'update': 'TECHNIQUE/INTEGRATION/DOCKER/update.md'
+           - 'DB_SSL': 'TECHNIQUE/INTEGRATION/db_ssl.md'
+           - 'Kubernetes': 
+                - 'Maquettage': 'TECHNIQUE/INTEGRATION/KUBERNETES/maquettage.md'
+                - 'Ressources utiles': 'TECHNIQUE/INTEGRATION/KUBERNETES/ressources.md'
+                - 'Chart Helm':
+                    - 'Description générale': 'TECHNIQUE/INTEGRATION/KUBERNETES/HELM/description_generale.md'
+                    - 'DB et DB proxy': 'TECHNIQUE/INTEGRATION/KUBERNETES/HELM/db_dbproxy.md'
+                    - 'Serveur web interne': 'TECHNIQUE/INTEGRATION/KUBERNETES/HELM/httpd.md'
+                    - 'Proxy et authenticateur': 'TECHNIQUE/INTEGRATION/KUBERNETES/HELM/proxy_auth.md'
+                    - 'Cron': 'TECHNIQUE/INTEGRATION/KUBERNETES/HELM/cron.md'
+                    - 'Volumes (persistants)': 'TECHNIQUE/INTEGRATION/KUBERNETES/HELM/volumes.md'
+                    - 'Secrets': 'TECHNIQUE/INTEGRATION/KUBERNETES/HELM/secrets.md'
+                    - 'Réservations': 'TECHNIQUE/INTEGRATION/KUBERNETES/HELM/reservations.md'
+
+
+
+
+
+
+
+
+
 theme: 
    name: material
    logo: assets/uepal-logo.svg
@@ -9,6 +67,8 @@ theme:
    features:
      - search.suggest
      - search.highlight
+     - navigation.sections
+#     - navigation.expand
    palette:
      - scheme: slate
        toggle:
@@ -21,3 +81,12 @@ theme:
    plugins:
    - search:
        lang: fr
+use_directory_urls: false
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.superfences

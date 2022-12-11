@@ -20,6 +20,7 @@ Make supporte des options, en particulier :
 
 * -n : dry-run : voir ce que Make fera pour atteindre une cible
 * -C `<dirpath>`: permet de changer le répertoire
+* assignation de variable : on peut rajouter à la ligne de commande nom_var=valeur pour remplacer la valeur définie dans le makefile (en particulier servip et servport, ip et port pour faire tourner la documentation)
 
 Contrairement à une utilisation "classique" de Make, l'ensemble des cibles prévues sont des cibles factices (PHONY), ce qui fait qu'on se retrouve plutôt face à un appel rapide de commandes plutôt qu'à un processus de compilation optimisé.
 
@@ -32,3 +33,4 @@ Les cibles sont :
 * clean: suppression du répertoire de build de l'image et des fichiers générés dans site
 
 ***Attention : il faut penser à préparer l'image (cible image ou all) avant de lancer la cible build ou serve.***
+
