@@ -41,7 +41,7 @@ AllowOverride All
 SSLRequireSSL
 <RequireAll>
 Require ssl
-Require expr A REMPLACER
+Require expr "(%{SSL_CLIENT_S_DN_CN} in {%{ENV:AUTH_CLIENT_CN},%{ENV:PROXY_CLIENT_CN}})"
 </RequireAll>
 </Directory>
 SSLEngine on
