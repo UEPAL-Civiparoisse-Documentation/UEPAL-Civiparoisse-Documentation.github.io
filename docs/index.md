@@ -1,17 +1,11 @@
-# Welcome to MkDocs
+# Documentation Civiparoisse
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Cette documentation vise trois publics distincts, mais qui peuvent chacun avoir besoin de l'ensemble des informations disponibles :
 
-## Commands
+* les prospects : la section de documentation de [présentation](PRESENTATION/index.md) donne des explications globales sur le projet, et vise à donner notamment une information préalable aux paroisses qui seraient intéressées par Civiparoisse
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+* les utilisateurs finaux : la section de documentation [utilisateur](UTILISATION/index.md) vise à fournir des informations pratiques quant à l'utilisation de Civiparoisse
 
-## Project layout
+* les membres du groupe de travail Civiparoisse : la section de documentation [technique](TECHNIQUE/index.md) va intéresser plus particulièrement les personnes intéressées par l'informatique.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Bonne lecture !
