@@ -1,25 +1,28 @@
 # 4. Envoyer un courriel
 
-CiviParoisse propose deux formes de courriels, l'une qui ressemble à ce que vous connaissez dans votre logiciel de courriel habituel, l'autre qui permet des présentations bien plus élaborées, tout en étant relativement simple à mettre en oeuvre. Cette deuxième solution est recommandée pour vos lettres électroniques, la première étant plutôt pour des invitations simples n'ayant pas besoin d'une grande esthétique.
+PARTIE A REVOIR POUR SEPARER LES COURRIELS ENVOI IMMEDIAT ET COURRIELS MAILING
+
+CiviParoisse propose deux formes de courriels, l'une qui ressemble à ce que vous connaissez dans votre logiciel de courriel habituel, l'autre qui permet des présentations bien plus élaborées, tout en étant relativement simple à mettre en oeuvre. Cette deuxième solution est recommandée pour vos lettres électroniques, la première étant plutôt pour des courriels simples n'ayant pas besoin d'une grande esthétique.
 
 !!! warning "Attention" 
-    Une autre différence importante est le nombre de destinataires. Pour un envoi immédiat, il est recommandé d'avoir moins de 50 destinataires et de planifier l'envoi s'il y en a plus. Cela vous évitera, ainsi qu'à l'UEPAL si vous utilisez une adresse en @uepal.fr d'être blacklistés, c'est à dire considéré comme spameurs, ce qui aurait pour effet assez rapidement que soit vos courriels soient considérés comme "indésirables" (spam) ou pire n'arrivent pas du tout. CiviParoisse n'envoie pas les messages de la même façon dans les deux cas.
+    Une autre différence importante est le nombre de destinataires. 
+    Pour un **envoi immédiat**, il est nécessaire d'avoir moins de 50 destinataires.
+    Un **envoi massif** est possible à tout moment et imposé au-delà de 50 destinataires. Il est également possible d'en planifier l'envoi. Cela vous évitera d'être blacklistés, c'est à dire considéré comme spameurs. Ce qui aurait pour effet assez rapidement que soit vos courriels soient considérés comme "indésirables" (spam) ou pire n'arrivent pas du tout. CiviParoisse n'envoie pas les messages de la même façon dans les deux cas.
 
-Pour envoyer un courriel, vous pouvez partir d'une liste de contacts suite à une recherche effectuée. Dans ce cas sélectionnées les contacts voulus puis cliquez sur "Actions" et choisissez "Courriel - envoi immédiat" ou "Courriel - planifier/envoyer un envoi massif", selon le nombre de destinataires.
+Pour envoyer un courriel, vous pouvez partir d'une liste de contacts suite à une recherche effectuée. Dans ce cas sélectionnées les contacts voulus puis cliquez sur "Actions" et choisissez **"Courriel - envoi immédiat"** ou **"Courriel - planifier/envoyer un envoi massif"**, selon le nombre de destinataires.
 
 Mais vous pouvez aussi procéder des deux façons détaillées ci-après.
 
-## 4.1. Courriel classique
+## 4.1. Courriel classique ("Courriel - envoi immédiat")
 
 Pour par exemple inviter les conseillers presbytéraux à la prochaine réunion, le contenu sera plus important que le contenant et aussi par souci écologique (les illustrations ont un coût en CO2), vous opterez sans doute pour le courriel classique qui permet déjà d'appliquer du gras, de l'italique, de placer un tableau, une image, d'ajouter des pièces jointes, etc.
 
-Pour y accéder, cliquez sur "Mailings" et choisissez en bas de la liste "New Mailing (Traditional)".
+Pour y accéder, cliquez sur "Mailings" et choisissez en bas de la liste `New Mailing (Traditional)`.
 
 ![mailing 1.png](img/mailing_1.png)
 
-Dans la nouvelle fenêtre, indiqués un  nom du mailing (ce nom se retrouvera, une fois le courriel envoyé, dans l'onglet "Activités" de chaque destinataire, prenez par conséquent un nom suffisamment explicite pour qu'il vous parle encore des mois plus tard).
-Vous pouvez choisir d'utiliser un "Modèle" si vous avez déjà créé un.
-
+Dans la nouvelle fenêtre, indiquez un nom du mailing (ce nom se retrouvera, une fois le courriel envoyé, dans l'onglet "Activités" de chaque destinataire. Prenez par conséquent un nom suffisamment explicite pour qu'il vous parle encore des mois plus tard).
+Vous pouvez choisir d'utiliser un "Modèle" de courriel si vous avez déjà créé un.
 Le champ "De" comporte en principe l'adresse courriel de votre paroisse.
 
 Dans "Destinataires" vous allez pouvoir choisir un groupe (si pour ce groupe il est bien coché "Liste de diffusion")

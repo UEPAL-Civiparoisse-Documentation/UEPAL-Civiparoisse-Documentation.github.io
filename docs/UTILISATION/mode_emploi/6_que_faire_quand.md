@@ -10,9 +10,10 @@ Utilisez pour cela le formulaire spécifique accessible sur la page d'**Accueil*
 Merci de respecter les règles suivantes pour maintenir la cohérence des données au sein de votre base :
 
 * Nom du Foyer : saisir le nom de famille en **majuscules**. Cas de figure :
-	* NOM Prénom, pour un(e) célibataire (ex. : DUPONT Marc)
-	* NOM Prénom et Prénom, pour un couple portant le même nom de famille (ex. DUPONT Marc et Cécile)
-	* NOM Prénom et NOM Prénom pour un couple ne portant pas le même nom de famille (ex. DUPONT Marc et DURAND Cécile)
+
+	* NOM Prénom, pour un(e) célibataire (ex. : *DUPONT Marc*)
+	* NOM Prénom et Prénom, pour un couple portant le même nom de famille (ex. *DUPONT Marc et Cécile*)
+	* NOM Prénom et NOM Prénom pour un couple ne portant pas le même nom de famille (ex. *DUPONT Marc et DURAND Cécile*)
 * Adresse : la renseigner de façon aussi précise que possible
 * Numéro(s) de téléphone fixe de la maison : seul le téléphone fixe est saisi dans la fiche Foyer, les numéros de portables sont saisis sur les fiches Individu respectives.
 	* Le(s) saisir en respectant le format international (ex. +33 3 88 89 90 91)
@@ -22,16 +23,22 @@ Merci de respecter les règles suivantes pour maintenir la cohérence des donné
 
 Là aussi, il est important de respecter quelques règles :
 
-*  Nom de famille :
+* Nom de famille :
 	* Le saisir **en majuscules**
-	* Si besoin, saisir le nom de naissance dans la case `Surnom`.
+
+	* Si besoin, saisir le nom de naissance dans la case `Nom de naissance` (en bas à gauche, dans la partie `Etat Civil`.
 * Adresse : rattachez l’adresse à celle du foyer. Pour cela, tapez dans le champ "Choisir le foyer d'appartenance" les premières lettres du nom du foyer, puis sélectionnez le bon foyer.
 * Courriel : renseignez le ou les adresses mail.
 * Téléphone : renseignez le numéro de portable, personnel voire professionnel, là aussi en respectant le format international (ex. +33 6 00 11 22 33), avec des espaces entre les numéros et nom des points.
 * Date de naissance : renseignez la date de naissance, si vous ne connaissez que l'année, mettez par exemple 01/01/1970.
-* Complétez les données Religion (dates de baptême, de confirmation de mariage...) et indiquez si cela a eu lieu dans votre paroisse.
+
+* Complétez les données Religion (dates de baptême, de confirmation de mariage...) et indiquez dans quel paroisse cela a eu lieu.
 * Complétez ensuite l'état civil avec les éléments dont vous disposez.
-* Indiquer le lien avec la paroisse : électeur, inscrit enfant, ami de la paroisse, non intéressé.
+* Indiquer le lien avec la paroisse :
+	* **Electeur** : la personne est inscrite sur la liste des électeurs de votre paroisse
+	* **Inscrit enfant** : la personne a moins de 18 ans
+	* **Ami de la paroisse** : la personne est intéressé par les activités de la paroisse, sans pour autant être électeur (quelques exemples : choriste, conseiller municipal participant à la fête paroissiale, ...)
+	* **Non intéressé** : la personne n'est pas intéressé par les activités de la paroisse, mais il est nécessaire de conserver ses coordonnées (quelques exemples : parent divorcé d'un enfant du catéchisme, responsable politique du territoire, ...).
 * Ne négligez pas la rubrique Compétences qui pourra s'avérer fort utile par la suite.
 * Ajoutez une photo de la personne si vous en avez une (format conseillé : 250 x 370 pixels, en 72 dpi)
 
@@ -53,7 +60,8 @@ D'autres relations peuvent encore être ajoutées, comme Parrain de, Marraine de
 
 ### 6.2.4. Inscrire chaque Individu dans le(s) groupe(s) nécessaire(s)
 
-Si le groupe est dynamique, par exemple un groupe qui rassemblerait tous les jeunes de 11 ans pour le catéchisme, le Individu y sera ajouté automatiquement si son âge correspond à la règle du groupe.
+
+Si le groupe est dynamique, par exemple un groupe qui rassemblerait tous les jeunes de 11 ans pour le catéchisme, l'Individu y sera ajouté automatiquement si son âge correspond à la règle du groupe.
 Si vous avez préférez créer un groupe statique (parce que tous les jeunes de cette tranche d'âge ne sont finalement pas inscrits au catéchisme), il faut l'ajouter par vous même à ce groupe (voir 2.4.1. Les groupes classiques).
 Pour chaque Individu, il faudra donc voir s'il s'ajoute à un groupe (activités de la paroisse, souhait de recevoir les informations de la paroisse, cartes d'anniversaire, etc.).
 
@@ -68,7 +76,8 @@ Rappel : si un enfant participe à des activités de la paroisse alors que les p
 
 Si une personne, voire toutes les personnes d'un foyer, quitte la paroisse, il est important de respecter les principes suivants :
 
-* Ne pas supprimer les fiches Individu et Foyer car ces personnes pourraient revenir ou leur nouvelle paroisse pourrait vous contacter pour avoir des éléments d'information.
+
+* Ne pas supprimer les fiches Individu et Foyer car ces personnes pourraient revenir, ou leur nouvelle paroisse pourrait vous contacter pour avoir des éléments d'information.
 * Ne supprimer aucune information figurant dans la(les) fiche(s).
 * Ne pas mettre l'adresse mail en invalide.
 * Ne pas toucher aux relations (sauf s'il y a séparation).
@@ -85,7 +94,7 @@ Ce qu'il vous faut faire :
 
 * Enfin, cliquez sur le bouton "**Supprimer contact**" et confirmez en cliquant sur "Supprimer contact(s)". **Attention :** ne pas cliquer sur le bouton "Supprimer définitivement" !
 
-Pensez à le faire pour les différentes personnes, si c'est tout un foyer qui déménage.
+Pensez à le faire pour les différentes personnes et pour leur Foyer, si c'est tout un foyer qui déménage.
 
 ## 6.3. Une personne décède ?
 
@@ -97,11 +106,11 @@ Pour enregistrer le décès d'une personne, rendez vous sur la fiche Individu de
 	* Ne pas envoyer de courrier
 	* Ne pas envoyer de sms
 	* Utilisateur s'est exclu des mailings
-* Au niveau de l'**état civil**, renseignez si possible la date de l'enterrement et indiquez si l'enterrement a eu lieu au sein de la paroisse.
+* Au niveau de l'**état civil**, renseignez si possible la date de l'enterrement et indiquez au sein de quel paroisse a eu lieu l'enterrement.
 * Retirez la personne des **groupes** auxquels elle appartenait. Attention : Ne pas utiliser la fonction "Supprimer", mais mettre une date de fin, pour conserver un historique de l'activité).
 * Modifiez les **Adhésions** en indiquant comme date de fin d'adhésion la date du décès, là aussi, ne pas utiliser la fonction "Supprimer".
 * Sur la fiche **Foyer**, modifiez l'intitulé du foyer pour enlever le nom du défunt. S'il n'y a plus personne au sein du foyer, supprimez le foyer.
-* Si besoin, ajoutez la **date de veuvage** sur la fiche Individu du conjoint.
+* Si besoin, ajoutez la **date de veuvage** sur la fiche Individu du conjoint survivant.
 
 ## 6.4. Un couple se marie ?
 
@@ -150,6 +159,10 @@ Cette manipulation est valable aussi pour enlever la personne d'une liste automa
 
 Si par la suite la personne change d'avis, il faudra la rajouter manuellement au groupe.
 
+!!! warning "Attention"
+    Si vous supprimez son adresse mail, ou cochez la case `Ne pas envoyez de courriel`, la personne ne recevra plus aucun mail de votre paroisse.
+    Soyez prudent avec cette option, et privilégiez autant que possible la suppression d'un groupe comme indiqué ci-dessus.
+
 ## 6.7. Un courrier revient car la personne a changé d'adresse ?
 
 Si vos tentatives pour trouver sa nouvelle adresse ont échouées, la procédure est la suivante :
@@ -163,7 +176,7 @@ Si vos tentatives pour trouver sa nouvelle adresse ont échouées, la procédure
 
 Si un paroissien n'a pas d'adresse mail ou ne souhaite pas nous la communiquer, il est conseillé de renseigner CiviParoisse pour lui éviter des relances régulières (dans le cadre de la fiabilisation de la base). Pour cela :
 
-* Modifiez les préférences de communication en cliquant sur "Modifiez les préférences de communication" de l'onglet "Synthèse" et en cochant la case "Ne pas envoyer de courriel" puis cliquez sur "Enregistrer".
+* Modifiez les préférences de communication en cliquant sur "Modifiez les préférences de communication" de l'onglet "Synthèse" et en cochant la case `Ne pas envoyer de courriel` puis cliquez sur "Enregistrer".
 * Dans l'onglet "Notes" de sa fiche, cliquez sur "Ajouter une note" puis indiquez en titre "Courriel" ou "Mail", laissez "Protection de la vie privée" à "Aucun". Puis indiquez dans la note, selon le besoin, l'une des lignes suivantes :
 	* N'a pas d'adresse e-mail
 	* Ne souhaite pas communiquer son adresse e-mail

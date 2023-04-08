@@ -1,26 +1,27 @@
 site_name: Documentation UEPAL Civiparoisse
-site_url : https://www.uepal.fr
+site_url : https://uepal-civiparoisse-documentation.github.io/index.html
 nav:
     - 'INDEX': 'index.md'
-    - 'PRESENTATION':
+    - 'MODE D\''EMPLOI':
+        - 'Index': 'UTILISATION/mode_emploi/mode_d_emploi.md'
+        - '1. Introduction': 'UTILISATION/mode_emploi/1_introduction.md'
+        - '2. Débuter': 'UTILISATION/mode_emploi/2_debuter.md'
+        - '3. Faire des recherches sur les contacts': 'UTILISATION/mode_emploi/3_faire_des_recherches_sur_les_contacts.md'
+        - '4. Envoyer un courriel': 'UTILISATION/mode_emploi/4_envoyer_un_courriel.md'
+        - '5. Gestion des dons et édition des reçus fiscaux': 'UTILISATION/mode_emploi/5_gestion_des_dons_et_edition_des_recus_fiscaux.md'
+        - '6. Que faire quand... ?': 'UTILISATION/mode_emploi/6_que_faire_quand.md'
+        - '7. Créer et gérer un événement': 'UTILISATION/mode_emploi/7_creer_et_gerer_un_evenement.md'
+        - '8. Opérations à mener régulièrement': 'UTILISATION/mode_emploi/8_operations_a_mener_regulierement.md'
+        - '9. Gestion de la base de données' : 'UTILISATION/mode_emploi/9_gestion_base_donnees.md'
+        - '99. Préparer l\''installation initiale de CiviParoisse' : 'UTILISATION/mode_emploi/99_prepaper_installation.md'
+        - 'Les nouveautés dans CiviParoisse' : 'UTILISATION/mode_emploi/nouveautes_CiviParoisse.md'
+        - 'Ressources utiles': 'UTILISATION/ressources.md'
+    - 'PRESENTATION DU PROJET CIVIPAROISSE':
         - 'Introduction': 'PRESENTATION/index.md'
         - 'Périmètre fonctionnel': 'PRESENTATION/presentation_fonctionnelle.md'
         - 'Ecosystème projet': 'PRESENTATION/presentation_ecosysteme.md'
         - 'Livrables': 'PRESENTATION/presentation_livrables.md'
-    - 'UTILISATION':
-        - 'Introduction': 'UTILISATION/index.md'
-        - 'Ressources utiles': 'UTILISATION/ressources.md'
-        - 'Mode d emploi': 
-             - 'Index': 'UTILISATION/mode_emploi/mode_d_emploi.md'
-             - '1. Introduction': 'UTILISATION/mode_emploi/1_introduction.md'
-             - '2. Débuter': 'UTILISATION/mode_emploi/2_debuter.md'
-             - '3. Faire des recherches sur les contacts': 'UTILISATION/mode_emploi/3_faire_des_recherches_sur_les_contacts.md'
-             - '4. Envoyer un courriel': 'UTILISATION/mode_emploi/4_envoyer_un_courriel.md'
-             - '5. Gestion des dons et édition des reçus fiscaux': 'UTILISATION/mode_emploi/5_gestion_des_dons_et_edition_des_recus_fiscaux.md'
-             - '6. Que faire quand... ?': 'UTILISATION/mode_emploi/6_que_faire_quand.md'
-             - '7. Créer et gérer un événement': 'UTILISATION/mode_emploi/7_creer_et_gerer_un_evenement.md'
-             - '8. Opérations à mener régulièrement': 'UTILISATION/mode_emploi/8_operations_a_mener_regulierement.md'
-    - 'TECHNIQUE':
+    - 'ELEMENTS TECHNIQUES':
        - 'PRE_POC':
            - 'Index': 'TECHNIQUE/PREPOC/index.md'
            - 'Description générale': 'TECHNIQUE/PREPOC/poc.md'
@@ -28,6 +29,9 @@ nav:
            - 'Diff IMG Docker': 'TECHNIQUE/PREPOC/docker_diff.md'
            - 'Diff Chart Helm': 'TECHNIQUE/PREPOC/helm_diff.md'
            - 'Trafic initiateur entrant': 'TECHNIQUE/PREPOC/trafic_entrant.md'
+           - 'Maquettage Traefik': 'TECHNIQUE/PREPOC/traefik.md'
+           - 'Identités et certificats': 'TECHNIQUE/PREPOC/identites_certificats.md'
+           - 'Web Application Firewall': 'TECHNIQUE/PREPOC/waf.md'
        - 'Rôles': 'TECHNIQUE/roles.md'
        - 'Mail':
            - 'Index': 'TECHNIQUE/MAIL/mail.md'
@@ -45,7 +49,7 @@ nav:
            - 'Authentification': 'TECHNIQUE/INTEGRATION/etude_authentification.md'
            - 'Docker': 
               - 'Description générale': 'TECHNIQUE/INTEGRATION/docker.md'
-              - Images:
+              - 'Images':
                 - 'Composer_base': 'TECHNIQUE/INTEGRATION/DOCKER/composer_base.md'
                 - 'Composer_files': 'TECHNIQUE/INTEGRATION/DOCKER/composer_files.md'
                 - 'tools': 'TECHNIQUE/INTEGRATION/DOCKER/tools.md'

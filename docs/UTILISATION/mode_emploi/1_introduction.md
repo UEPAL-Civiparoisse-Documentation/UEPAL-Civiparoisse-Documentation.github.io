@@ -6,44 +6,51 @@ CiviParoisse ajoute un troisième type : le **foyer** .
 
 Pas d'inquiétude, vous allez pouvoir identifier le type de contact aisément par son icône :
 
-* le **foyer** : ![icone foyer](img/icone_foyer.png)  qui est le lieu où vivent un certain nombre de personnes ayant au minimum comme **relation** d'habiter au même endroit, mais qui souvent auront aussi des liens familiaux que CiviParoisse sait enregistrer.
+
+* le **foyer** : ![icone foyer](img/icone_foyer.png)  qui est le lieu où vivent un certain nombre de personnes ayant au minimum comme **relation** d'habiter dans le même foyer fiscal, mais qui souvent auront aussi des liens familiaux que CiviParoisse sait enregistrer.
 * l'**individu** : ![icone individu](img/icone_individu.png) qui comme son nom l'indique va être la fiche de contact de chaque individu que nous estimons important de garder dans notre fichier.
 * l'**organisation** : ![icone organisation](img/icone_organisation.png) qui pourra être la fiche de contact d'une paroisse, d'une association avec laquelle on est souvent en relation, de l'entreprise qui entretien le chauffage du presbytère...
 
 ### 1.1.2. Quelles données vont dans quelle fiche ?
-Les données qui ne changent pas d’un individu à l’autre d’un foyer sont à noter dans la fiche « Foyer » et les données personnelles sont à indiquer dans la fiche « Individu ». Le tableau ci-dessous montre de façon non exhaustive la répartition.
+
+Dans la fiche « Foyer » sont à noter les données qui ne changent pas d’un individu à l’autre au sein d'un même foyer. Et les données personnelles sont à indiquer dans la fiche « Individu ». Le tableau ci-dessous montre de façon non exhaustive la répartition.
 
 | Fiches                                                                                                                                           | Foyer           | Individu                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- | ------------------------------ |
 | Adresse postale                                                                                                                                  | ✅               | (lien vers l'adresse du foyer) |
 | Téléphone fixe                                                                                                                                   | ✅               |                                |
 | Site Internet                                                                                                                                    | ✅ (si familial) | ✅ (si individuel)              |
-| Mode de communication préféré                                                                                                                    | ✅               |                                |
+
+| Mode de communication préféré                                                                                                                    | ✅               | ✅                              |
 | Formules de communication foyer                                                                                                                  | ✅               |                                |
 | Informations complémentaires (quartier)                                                                                                          | ✅               |                                |
 | Courriel                                                                                                                                         |                 | ✅                              |
 | Téléphone portable                                                                                                                               |                 | ✅                              |
 | Message instantanée                                                                                                                              |                 | ✅                              |
-| Mode de communication préféré                                                                                                                    |                 | ✅                              |
 | Formules de communication individuelles                                                                                                          |                 | ✅                              |
 | Etat civil                                                                                                                                       |                 | ✅                              |
 | Informations religion                                                                                                                            |                 | ✅                              |
 | Compétences                                                                                                                                      |                 | ✅                              |
 | Groupes                                                                                                                                          |                 | ✅                              |
+| Relation avec la paroisse                                                                                                                        |                 | ✅                              |
+| Participation à des événements                                                                                                                   |                 | ✅                              |
+| Dons à la paroisse                                                                                                                               | ✅             |                                 |
 
 
 ### 1.1.3. Relations et groupes                                                                                                         
 
-CiviParoisse ne permet pas seulement de créer des fiches de contact, mais d'établir des liens entres les fiches et de les rassembler en groupes.
 
-Un enfant aura ainsi une **relation** avec "fils de" avec ses parents, un bénévole sera "bénévole de" pour une association ou un groupe d'activité.
+CiviParoisse ne permet pas seulement de créer des fiches de contact, mais également d'établir des liens entres les fiches et de les rassembler en groupes.
 
-il vous est également possible de constituer un **groupe** (dynamique ou non, voir le point dédié aux groupes pour plus de détails). Le groupe pourra par exemple recenser tous les bénévoles de la paroisse, un autre les membres de la chorale, un autre encore les dames de l'ouvroir. Un groupe est de plus un bon moyen pour rassembler l'ensemble des personnes à qui vous allez envoyer régulièrement un courriel (par exemple les membres du conseil presbytéral).
+Un enfant aura ainsi une **relation** comme "fils de" avec ses parents, un bénévole sera "bénévole de" pour une association ou un groupe d'activité.
+
+Il vous est également possible de constituer un **groupe** (dynamique ou non, voir le point dédié aux groupes pour plus de détails). Le groupe pourra par exemple recenser tous les bénévoles de la paroisse, un autre les membres de la chorale, un autre encore les dames de l'ouvroir. Un groupe est de plus un bon moyen pour rassembler l'ensemble des personnes à qui vous allez envoyer régulièrement un courriel (par exemple les membres du conseil presbytéral).
 
 !!! warning "Attention"
     Il est important de saisir toutes les relations dès la création d'une fiche, et de les faire évoluer dans le temps, pour bien identifier les interactions entre les personnes.
 
-## 1.2. Interface de civiParoisse
+
+## 1.2. Interface de CiviParoisse
 
 ### 1.2.1. La page d'accueil
 
@@ -75,20 +82,21 @@ Passons en revue les différents éléments :
 * L’onglet « Rechercher » vous permet soit une recherche simple, soit une recherche avancée, soit encore une recherche dans le contenu. Ce sera souvent par là que vous chercherez à accéder à une fiche.
 * L’onglet « Contacts » n’est pas à utiliser pour créer une fiche, puisque nous passons par un formulaire spécifique. C’est en revanche ici que vous pouvez gérer les groupes (Bénévoles, Acat, etc.).
 * L’onglet « Contributions » va nous permettre d’enregistrer les dons puis d’éditer les reçus fiscaux.
-* L’onglet « Événements » permet de créer un événement Individu (voyage à Wittenberg, par exemple) et de gérer tout ce qui y sera lié.
+
+* L’onglet « Événements » permet de créer un événement (voyage à Wittenberg ou repas paroissial, par exemple) et de gérer tout ce qui y sera lié.
 * L’onglet « Mailings » permet, comme son nom l’indique, d’envoyer des courriels.
 * L’onglet « Adhésions » permet d’enregistrer une nouvelle adhésion (mais il est conseillé de le faire au moment de la création de la fiche individuelle) et d’établir des statistiques sur les adhésions (d’où l’importance de le faire à la création pour avoir des dates réalistes).
 * L’onglet « Rapports » permet d’établir diverses statistiques.
-* L’onglet « Administrer » permet de paramétrer CiviParoisse. N’y intervenir quand étant sûr de ce que l’on fait.
+* L’onglet « Administrer » permet de paramétrer CiviParoisse. Ce menu est réservé aux personnes ayant les droits d'administration. N’y intervenir quand étant sûr de ce que l’on fait.
 * L’onglet « Support » donne accès à une documentation sur CiviCRM qui est la documentation officielle et non celle élaborée par l’UEPAL.
-* Enfin, l’onglet « Récent » vous indique les dernières fiches créées.
+* L’onglet « Récent » vous indique les dernières fiches créées.
+* Enfin, l'onglet « Paroisse » XXXXXXXXXXXX A COMPLETER
 
-Vous remarquerez que sous ce menu, à gauche, civiParoisse vous indique toujours où vous êtes.
+Vous remarquerez que sous ce menu, à gauche, CiviParoisse vous indique toujours où vous êtes.
 
 ### 1.2.3. L'interface de la fiche "foyer"
 
-Vous l'avez sans doute déjà remarqué, une fiche foyer a comme une icône une maison. C'est usr sur cette fiche que nous enregistrons toutes les informations communes aux différents membres d'un foyer : l'adresse, le numéro de téléphone fixe ou encore le quartier pour le portage du bulletin paroissial.
-
+Vous l'avez sans doute déjà remarqué, une fiche foyer a comme une icône une maison. C'est sur sur cette fiche que nous enregistrons toutes les informations communes aux différents membres d'un foyer : l'adresse, le numéro de téléphone fixe ou encore le quartier pour le portage du bulletin paroissial.
 Voici un aperçu d'une fiche foyer sur son onglet "synthèse" :
 
 ![ecran fiche](img/ecran_fiche.png)
@@ -102,7 +110,8 @@ Nous détaillons les différentes onglets à partir de la fiche "individu".
 Remarquez d'emblée deux choses :
 
 * une fiche de contact s'ouvre sur l'onglet "Synthèse" qui va vous afficher les éléments principaux de la fiche.
-* elle se découpe en zones et si vous cliquez dans l'une des zones vous pouvez modifier les informations de cette zone. Notez que vous modifier l'ensemble en cliquant sous le nom et prénom sur "Modifier".
+
+* elle se découpe en zones (ou onglets) et si vous cliquez dans l'une des zones (ou onglets) vous pouvez modifier les informations de cette zone. Notez que vous modifier l'ensemble en cliquant sous le nom et prénom sur "Modifier".
 
 Elle comporte quelques éléments communs avec la ficher "foyer", s'y ajoutent, du fait que nous sommes là sur une fiche individu :
 

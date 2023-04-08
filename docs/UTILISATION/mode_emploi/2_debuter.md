@@ -33,7 +33,7 @@ N'hésitez pas à consulter les recommandations sur le **lien avec la paroisse**
 
 Il est recommandé de noter les compétences lorsqu'elle sont connues, pour inviter par exemple la personne par la suite à venir renforcer la chorale ou un groupe de musique.
 
-Les éléments de Sécurité sociale, Guso ou de savoir si la personne est fonctionnaire ne sont réellement utiles que pour la fiche d'un salarié de la paroisse.
+Les éléments de Sécurité sociale, Guso ou de savoir si la personne est fonctionnaire ne sont réellement utiles que pour la fiche d'un musicien rémunéré par la paroisse.
 
 ## 2.3. Les relations
 
@@ -61,8 +61,13 @@ CiviParoisse en propose de nombreuses, que nous pouvons classer par catégorie :
 
 Ceci va vous permettre de tisser assez finement les liens entre les uns et les autres.
 
+
+!!! warning "Attention"
+    Il est important que chaque Invididu soit en relation avec au moins un Foyer ou une Organisation.
+    Au sein d'un Foyer, chaque Invidividu est à enregistrer comme *membre du Foyer* ; et **les parents sont également à enregistrer** comme *chef de famille de*.
+
 !!! note "Conseil"
-    Vous pouvez ainsi enregistrer la relation entre les membres du Conseil presbytéral et la paroisse (en créant au préalable une fiche organisation au nom de la paroisse).
+    Vous pouvez ainsi enregistrer la relation entre les membres du Conseil presbytéral et la paroisse.
     Pour des relations de ce genre, il est conseillé de mettre la date de l'élection ou de prise de fonction et la date de fin si elle est déjà connue.
 
 Fin d'une relation, deux cas possibles :
@@ -70,7 +75,8 @@ Fin d'une relation, deux cas possibles :
 * vous aviez indiqué une date de fin et la relation se désactivera automatiquement.
 * il n'y avait pas de date de fin, il suffit alors de cliquer à la fin de la ligne de la relation sur "plus" puis sur "modifier" et ajouter une date de fin.
 
-CiviParoisse garde mémoire des relations, c'est ainsi que les relations qui ont pris se retrouvent en bas des relations actives, dans la rubrique "Relations inactives".
+
+CiviParoisse garde en mémoire toutes les relations présentes et passées, c'est ainsi que les relations qui ont pris fin se retrouvent en bas des relations actives, dans la rubrique "Relations inactives".
 
 ## 2.4. Les groupes
 
@@ -100,7 +106,8 @@ C'est depuis la "Gestion des groupes" que vous pouvez visualiser les membres en 
 
 ### 2.4.2. Les groupes dynamiques
 
-Il existe cependant un autre type de groupes, les groupes dynamiques où vous n'ajoutez pas les personnes manuellement mais où elles se retrouvent automatiquement dans ce groupe de part leur âge, une relation ou tout autre élément rechargeable.
+
+Il existe cependant un autre type de groupes, les groupes dynamiques où vous n'ajoutez pas les personnes manuellement mais où elles se retrouvent automatiquement dans ce groupe de par leur âge, une relation ou tout autre élément rechargeable.
 
 Il s'agit donc tout d'abord d'effectuer une recherche (voir "Faire des recherches pour des conseils pour vous aider à retrouver les fiches selon divers critères").
 

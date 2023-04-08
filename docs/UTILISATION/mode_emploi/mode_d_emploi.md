@@ -9,3 +9,6 @@
 * [6. Que faire quand... ?](6_que_faire_quand.md)
 * [7. Créer et gérer un événement](7_creer_et_gerer_un_evenement.md)
 * [8. Opérations à mener régulièrement](8_operations_a_mener_regulierement.md)
+* [9. Gestion de la base de données](9_gestion_base_donnees.md)
+* [99. Préparer l'installation initiale de CiviParoisse](99_prepaper_installation.md)
+* [Les nouveautés dans CiviParoisse](nouveautes_CiviParoisse.md)
