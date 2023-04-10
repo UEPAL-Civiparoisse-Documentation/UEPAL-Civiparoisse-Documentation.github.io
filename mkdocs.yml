@@ -2,7 +2,7 @@ site_name: Documentation UEPAL Civiparoisse
 site_url : https://uepal-civiparoisse-documentation.github.io/index.html
 nav:
     - 'INDEX': 'index.md'
-    - 'MODE D\'EMPLOI':
+    - 'MODE D\''EMPLOI':
         - 'Index': 'UTILISATION/mode_emploi/mode_d_emploi.md'
         - '1. Introduction': 'UTILISATION/mode_emploi/1_introduction.md'
         - '2. Débuter': 'UTILISATION/mode_emploi/2_debuter.md'
@@ -13,7 +13,7 @@ nav:
         - '7. Créer et gérer un événement': 'UTILISATION/mode_emploi/7_creer_et_gerer_un_evenement.md'
         - '8. Opérations à mener régulièrement': 'UTILISATION/mode_emploi/8_operations_a_mener_regulierement.md'
         - '9. Gestion de la base de données' : 'UTILISATION/mode_emploi/9_gestion_base_donnees.md'
-        - '99. Préparer l\'installation initiale de CiviParoisse' : 'UTILISATION/mode_emploi/99_prepaper_installation.md'
+        - '99. Préparer l\''installation initiale de CiviParoisse' : 'UTILISATION/mode_emploi/99_prepaper_installation.md'
         - 'Les nouveautés dans CiviParoisse' : 'UTILISATION/mode_emploi/nouveautes_CiviParoisse.md'
         - 'Ressources utiles': 'UTILISATION/ressources.md'
     - 'PRESENTATION DU PROJET CIVIPAROISSE':
