@@ -66,18 +66,18 @@ Dans le menu Paroisse, cliquer sur le menu Paramètres.
 Dans la page des Paramètres de CiviParoisse qui s'ouvre, sélectionner *Modifier la liste des Quartiers*
 
 Si vous souhaitez modifier le nom d'un quartier :
-   * Cliquer sur le nom du quartier à modifier
-   * Saisir le nouveau nom
-   * Cliquer sur la flèche verte sous le nom
+* Cliquer sur le nom du quartier à modifier
+* Saisir le nouveau nom
+* Cliquer sur la flèche verte sous le nom
  
 Si vous souhaitez ne plus utiliser un quartier existant :
-   * Vérifier au préalable qu'aucun Foyer n'est encore attaché à ce quartier
-   * Dans la colonne *Visible ?*, cliquer sur *Oui*
-   * Choisir le bouton *Non*
-   * Cliquer sur la flèche verte
+* Vérifier au préalable qu'aucun Foyer n'est encore attaché à ce quartier
+* Dans la colonne *Visible ?*, cliquer sur *Oui*
+* Choisir le bouton *Non*
+* Cliquer sur la flèche verte
 
 Si vous souhaitez utiliser à nouveau un quartier actuellement Non visible :
-   * Dans la colonne *Visible ?*, cliquer sur *Non*
-   * Choisir le bouton *Oui*
-   * Cliquer sur la flèche verte
+* Dans la colonne *Visible ?*, cliquer sur *Non*
+* Choisir le bouton *Oui*
+* Cliquer sur la flèche verte
    
