@@ -14,6 +14,7 @@ Merci de respecter les règles suivantes pour maintenir la cohérence des donné
 	* NOM Prénom, pour un(e) célibataire (ex. : *DUPONT Marc*)
 	* NOM Prénom et Prénom, pour un couple portant le même nom de famille (ex. *DUPONT Marc et Cécile*)
 	* NOM Prénom et NOM Prénom pour un couple ne portant pas le même nom de famille (ex. *DUPONT Marc et DURAND Cécile*)
+
 * Adresse : la renseigner de façon aussi précise que possible
 * Numéro(s) de téléphone fixe de la maison : seul le téléphone fixe est saisi dans la fiche Foyer, les numéros de portables sont saisis sur les fiches Individu respectives.
 	* Le(s) saisir en respectant le format international (ex. +33 3 88 89 90 91)
@@ -27,11 +28,11 @@ Là aussi, il est important de respecter quelques règles :
 	* Le saisir **en majuscules**
 
 	* Si besoin, saisir le nom de naissance dans la case `Nom de naissance` (en bas à gauche, dans la partie `Etat Civil`.
+
 * Adresse : rattachez l’adresse à celle du foyer. Pour cela, tapez dans le champ "Choisir le foyer d'appartenance" les premières lettres du nom du foyer, puis sélectionnez le bon foyer.
 * Courriel : renseignez le ou les adresses mail.
 * Téléphone : renseignez le numéro de portable, personnel voire professionnel, là aussi en respectant le format international (ex. +33 6 00 11 22 33), avec des espaces entre les numéros et nom des points.
 * Date de naissance : renseignez la date de naissance, si vous ne connaissez que l'année, mettez par exemple 01/01/1970.
-
 * Complétez les données Religion (dates de baptême, de confirmation de mariage...) et indiquez dans quel paroisse cela a eu lieu.
 * Complétez ensuite l'état civil avec les éléments dont vous disposez.
 * Indiquer le lien avec la paroisse :
@@ -39,6 +40,7 @@ Là aussi, il est important de respecter quelques règles :
 	* **Inscrit enfant** : la personne a moins de 18 ans
 	* **Ami de la paroisse** : la personne est intéressé par les activités de la paroisse, sans pour autant être électeur (quelques exemples : choriste, conseiller municipal participant à la fête paroissiale, ...)
 	* **Non intéressé** : la personne n'est pas intéressé par les activités de la paroisse, mais il est nécessaire de conserver ses coordonnées (quelques exemples : parent divorcé d'un enfant du catéchisme, responsable politique du territoire, ...).
+
 * Ne négligez pas la rubrique Compétences qui pourra s'avérer fort utile par la suite.
 * Ajoutez une photo de la personne si vous en avez une (format conseillé : 250 x 370 pixels, en 72 dpi)
 
@@ -70,7 +72,7 @@ Pour chaque Individu, il faudra donc voir s'il s'ajoute à un groupe (activités
 Si cela n'a pas été fait au moment de la création de chaque fiche Individu, il est nécessaire d'indiquer aussi le lien avec la paroisse dans l'onglet Adhésion, selon les quatre possibilités : électeur, inscrit enfant, ami de la paroisse, non intéressé.
 N'indiquez pas d'adhésion pour le Foyer.
 
-Rappel : si un enfant participe à des activités de la paroisse alors que les parents ne sont pas intéressés par la paroisse, il est tout de même nécessaire de créer les fiches Individu des parents, en indiquant alors comme Adhésion "non intéressé", pour que vous ayez leurs coordonnées en cas de besoin.
+> Rappel : si un enfant participe à des activités de la paroisse alors que les parents ne sont pas intéressés par la paroisse, il est tout de même nécessaire de créer les fiches Individu des parents, en indiquant alors comme Adhésion "non intéressé", pour que vous ayez leurs coordonnées en cas de besoin.
 
 ## 6.2. Une personne quitte la paroisse ?
 

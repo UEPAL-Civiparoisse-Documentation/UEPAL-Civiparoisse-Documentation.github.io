@@ -15,26 +15,26 @@ Pas d'inquiétude, vous allez pouvoir identifier le type de contact aisément pa
 
 Dans la fiche « Foyer » sont à noter les données qui ne changent pas d’un individu à l’autre au sein d'un même foyer. Et les données personnelles sont à indiquer dans la fiche « Individu ». Le tableau ci-dessous montre de façon non exhaustive la répartition.
 
-| Fiches                                                                                                                                           | Foyer           | Individu                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- | ------------------------------ |
-| Adresse postale                                                                                                                                  | ✅               | (lien vers l'adresse du foyer) |
-| Téléphone fixe                                                                                                                                   | ✅               |                                |
-| Site Internet                                                                                                                                    | ✅ (si familial) | ✅ (si individuel)              |
-
-| Mode de communication préféré                                                                                                                    | ✅               | ✅                              |
-| Formules de communication foyer                                                                                                                  | ✅               |                                |
-| Informations complémentaires (quartier)                                                                                                          | ✅               |                                |
-| Courriel                                                                                                                                         |                 | ✅                              |
-| Téléphone portable                                                                                                                               |                 | ✅                              |
-| Message instantanée                                                                                                                              |                 | ✅                              |
-| Formules de communication individuelles                                                                                                          |                 | ✅                              |
-| Etat civil                                                                                                                                       |                 | ✅                              |
-| Informations religion                                                                                                                            |                 | ✅                              |
-| Compétences                                                                                                                                      |                 | ✅                              |
-| Groupes                                                                                                                                          |                 | ✅                              |
-| Relation avec la paroisse                                                                                                                        |                 | ✅                              |
-| Participation à des événements                                                                                                                   |                 | ✅                              |
-| Dons à la paroisse                                                                                                                               | ✅             |                                 |
+| Fiches | Foyer | Individu |
+| ----- | :----: | :---: |
+| Adresse postale | ✅  | (lien vers l'adresse du foyer) |
+| Téléphone fixe | ✅ | |
+| Site Internet | ✅ (si familial) | ✅ (si individuel) |
+| Mode de communication préféré | ✅  | ✅ |
+| Formules de communication foyer | ✅ | |
+| Informations complémentaires (quartier) | ✅ | |
+| Mode de distribution du journal | ✅ | |
+| Courriel | | ✅ |
+| Téléphone portable | | ✅ |
+| Message instantanée | | ✅ |
+| Formules de communication individuelles | | ✅ |
+| Etat civil | | ✅ |
+| Informations religion | | ✅ |
+| Compétences | | ✅ |
+| Groupes | | ✅ |
+| Relation avec la paroisse | | ✅ |
+| Participation à des événements | | ✅ |
+| Dons à la paroisse | | ✅ |
 
 
 ### 1.1.3. Relations et groupes                                                                                                         
@@ -58,7 +58,8 @@ L'adresse votre page d'accueil est du genre : <https://nomparoisse.bdd.uepal.org
 Elle devrait ressembler approximativement à ceci :
 ![Ecran accueil](img/ecran_accueil.png)
 
-Neuf éléments sont à identifier :
+Neuf éléments sont à identifier :
+
 * En 1, nous avons l’icône en forme de maison qui nous permettra toujours de revenir à cette page en cliquant dessus. A noter que le menu qui prolonge cette icône est celui de Drupal et ne vous sera pas utile, en dehors du point 9 ci-dessous.
 * En cliquant sur 2 nous accédons à CiviParoisse.
 * L’icône 3 nous permet d’enregistrer un nouveau foyer en suivant le cadre spécifique à CiviParoisse. Il est indispensable de passer par ce cadre.
@@ -90,7 +91,7 @@ Passons en revue les différents éléments :
 * L’onglet « Administrer » permet de paramétrer CiviParoisse. Ce menu est réservé aux personnes ayant les droits d'administration. N’y intervenir quand étant sûr de ce que l’on fait.
 * L’onglet « Support » donne accès à une documentation sur CiviCRM qui est la documentation officielle et non celle élaborée par l’UEPAL.
 * L’onglet « Récent » vous indique les dernières fiches créées.
-* Enfin, l'onglet « Paroisse » XXXXXXXXXXXX A COMPLETER
+* Enfin, l'onglet « Paroisse » reprend les entrées de menu que vous trouvez en page d'accueil.
 
 Vous remarquerez que sous ce menu, à gauche, CiviParoisse vous indique toujours où vous êtes.
 
