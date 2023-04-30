@@ -33,4 +33,5 @@ Cette section répertoire les documentations relatives au développement logicie
 
 * [Distribution du code](distribution_code_composer.md)
 * [Environnement de dev](environnement_dev.md)
+* [Customisation environnement de dev](environnement_dev_env.md)
 * [Importation des données](importation.md)

@@ -1,9 +1,9 @@
 site_name: Documentation UEPAL Civiparoisse
 site_url : https://uepal-civiparoisse-documentation.github.io/index.html
 nav:
-    - 'INDEX': 'index.md'
-    - 'MODE D\''EMPLOI':
-        - 'Index': 'UTILISATION/mode_emploi/mode_d_emploi.md'
+    - 'index.md'
+    - 'MODE D''EMPLOI':
+        - 'UTILISATION/mode_emploi/index.md'
         - '1. Introduction': 'UTILISATION/mode_emploi/1_introduction.md'
         - '2. Débuter': 'UTILISATION/mode_emploi/2_debuter.md'
         - '3. Faire des recherches sur les contacts': 'UTILISATION/mode_emploi/3_faire_des_recherches_sur_les_contacts.md'
@@ -15,66 +15,120 @@ nav:
         - '9. Gestion de la base de données' : 'UTILISATION/mode_emploi/9_gestion_base_donnees.md'
         - '99. Préparer l\''installation initiale de CiviParoisse' : 'UTILISATION/mode_emploi/99_prepaper_installation.md'
         - 'Les nouveautés dans CiviParoisse' : 'UTILISATION/mode_emploi/nouveautes_CiviParoisse.md'
-        - 'Ressources utiles': 'UTILISATION/ressources.md'
+        - 'Ressources utiles': 'UTILISATION/mode_emploi/ressources.md'
     - 'PRESENTATION DU PROJET CIVIPAROISSE':
-        - 'Introduction': 'PRESENTATION/index.md'
+        - 'PRESENTATION/index.md'
         - 'Périmètre fonctionnel': 'PRESENTATION/presentation_fonctionnelle.md'
         - 'Ecosystème projet': 'PRESENTATION/presentation_ecosysteme.md'
         - 'Livrables': 'PRESENTATION/presentation_livrables.md'
-    - 'ELEMENTS TECHNIQUES':
-       - 'PRE_POC':
-           - 'Index': 'TECHNIQUE/PREPOC/index.md'
-           - 'Description générale': 'TECHNIQUE/PREPOC/poc.md'
-           - 'Infrastructure': 'TECHNIQUE/PREPOC/infrastructure.md'
-           - 'Diff IMG Docker': 'TECHNIQUE/PREPOC/docker_diff.md'
-           - 'Diff Chart Helm': 'TECHNIQUE/PREPOC/helm_diff.md'
-           - 'Trafic initiateur entrant': 'TECHNIQUE/PREPOC/trafic_entrant.md'
-           - 'Maquettage Traefik': 'TECHNIQUE/PREPOC/traefik.md'
-           - 'Identités et certificats': 'TECHNIQUE/PREPOC/identites_certificats.md'
-           - 'Web Application Firewall': 'TECHNIQUE/PREPOC/waf.md'
+    - 'TECHNIQUE':
+       - 'TECHNIQUE/index.md'
+       - 'POC': 
+           - 'TECHNIQUE/POC/index.md'
+       - 'PRE_POC':           
+           - 'TECHNIQUE/PREPOC/index.md'
+           - 'Description générale': 'TECHNIQUE/PREPOC/prepoc.md'
+           - 'Etudes - précis techniques':
+              - 'TECHNIQUE/PREPOC/ETUDES_PRECIS/index.md'
+              - 'Infrastructure': 'TECHNIQUE/PREPOC/ETUDES_PRECIS/infrastructure.md'
+              - 'Trafic initiateur entrant': 'TECHNIQUE/PREPOC/ETUDES_PRECIS/trafic_entrant.md'
+              - 'Maquettage Traefik': 'TECHNIQUE/PREPOC/ETUDES_PRECIS/traefik.md'
+              - 'Identités et certificats': 'TECHNIQUE/PREPOC/ETUDES_PRECIS/identites_certificats.md'
+              - 'Web Application Firewall': 'TECHNIQUE/PREPOC/ETUDES_PRECIS/waf.md'
+              - 'Intégration CA Ubuntu': 'TECHNIQUE/PREPOC/ETUDES_PRECIS/integration_ca.md'
+              - 'Minikube + Traefik + Wildcard': 'TECHNIQUE/PREPOC/ETUDES_PRECIS/minikube_traefik_wildcard.md'
+           - 'Historique : Différentiels':
+              - 'TECHNIQUE/PREPOC/DIFF/index.md'
+              - 'Diff IMG Docker': 'TECHNIQUE/PREPOC/DIFF/docker_diff.md'
+              - 'Diff Chart Helm': 'TECHNIQUE/PREPOC/DIFF/helm_diff.md'
+           - 'Opérationnel':
+             - 'TECHNIQUE/PREPOC/INTEGRATION/index.md'
+             - 'Déploiement instance': 'TECHNIQUE/PREPOC/INTEGRATION/deploiement_instance.md'             
+             - 'Description générale Docker': 'TECHNIQUE/PREPOC/INTEGRATION/docker.md'
+             - 'Images Docker':                
+                - 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/index.md'
+                - 'selfkeys': 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/selfkeys.md'
+                - 'keys_init': 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/keys_init.md' 
+                - 'mysql_tls_router': 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/mysql_tls_router.md'
+                - 'mysql_tls_server': 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/mysql_tls_server.md'
+                - 'composer_base': 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/composer_base.md'
+                - 'composer_files': 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/composer_files.md'
+                - 'tools': 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/tools.md'
+                - 'tools_debug': 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/tools_debug'
+                - 'init': 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/init.md'
+                - 'cron': 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/cron.md'
+                - 'httpd': 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/httpd.md'
+                - 'httpd_debug': 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/httpd_debug.md'
+                - 'update': 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/update.md'
+                - 'test_msmtp_dovecot': 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/test_msmtp_dovecot.md'
+                - 'gen_hashed_ca': 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/gen_hashed_ca.md'
+                - 'traefik_docker': 'TECHNIQUE/PREPOC/INTEGRATION/DOCKER/traefik_docker.md'
+             - 'Kubernetes': 
+                - 'TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/index.md'
+                - 'Maquettage': 'TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/maquettage.md'
+                - 'Ressources utiles': 'TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/ressources.md'
+                - 'Chart Helm':
+                  - 'TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/index.md'
+                  - 'Description générale': 'TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/description_generale.md'
+                  - 'DB et DB Router': 'TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/db_dbrouter.md'
+                  - 'Serveur web interne': 'TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/httpd.md'
+                  - 'Cron': 'TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/cron.md'
+                  - 'Volumes (persistants)': 'TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/volumes.md'
+                  - 'Secrets': 'TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/secrets.md'
+                  - 'Réservations': 'TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/reservations.md'
+                  - 'Serveur mail de démo': 'TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/maildemo.md'
+                  - 'Outils': 'TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/tools.md'
        - 'Rôles': 'TECHNIQUE/roles.md'
        - 'Mail':
-           - 'Index': 'TECHNIQUE/MAIL/mail.md'
+           - 'TECHNIQUE/MAIL/index.md'
+           - 'Problématique': 'TECHNIQUE/MAIL/mail.md'
            - 'Ecosystème': 'TECHNIQUE/MAIL/ecosysteme.md'
            - 'Envoi': 'TECHNIQUE/MAIL/sendmail.md'
            - 'Réception': 'TECHNIQUE/MAIL/fetchmail.md'
+           - 'Opensmtpd Dovecot': 'TECHNIQUE/MAIL/opensmtpd_dovecot.md'
        - 'Logiciel':
-           - 'Index': 'TECHNIQUE/LOGICIEL/index.md'
+           - 'TECHNIQUE/LOGICIEL/index.md'
            - 'Distribution de code': 'TECHNIQUE/LOGICIEL/distribution_code_composer.md'
            - 'Environnement de dev': 'TECHNIQUE/LOGICIEL/environnement_dev.md'
            - 'Personnalisation environnement de dev': 'TECHNIQUE/LOGICIEL/environnement_dev_env.md'
            - 'Importation de données': 'TECHNIQUE/LOGICIEL/importation.md'
-       - 'Intégration':
-           - 'Index': 'TECHNIQUE/INTEGRATION/index.md'
-           - 'Authentification': 'TECHNIQUE/INTEGRATION/etude_authentification.md'
+       - 'Historique: serveur médias': 'TECHNIQUE/serveur_media.md'
+       - 'Historique : Intégration Auth Proxy':
+           - 'TECHNIQUE/INTEGRATION_AUTH_PROXY/index.md'
+           - 'Authentification': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/etude_authentification.md'
            - 'Docker': 
-              - 'Description générale': 'TECHNIQUE/INTEGRATION/docker.md'
-              - 'Images':
-                - 'Composer_base': 'TECHNIQUE/INTEGRATION/DOCKER/composer_base.md'
-                - 'Composer_files': 'TECHNIQUE/INTEGRATION/DOCKER/composer_files.md'
-                - 'tools': 'TECHNIQUE/INTEGRATION/DOCKER/tools.md'
-                - 'init': 'TECHNIQUE/INTEGRATION/DOCKER/init.md'
-                - 'cron': 'TECHNIQUE/INTEGRATION/DOCKER/cron.md'
-                - 'selfkeys': 'TECHNIQUE/INTEGRATION/DOCKER/selfkeys.md'
-                - 'httpd': 'TECHNIQUE/INTEGRATION/DOCKER/httpd.md'
-                - 'authenticator': 'TECHNIQUE/INTEGRATION/DOCKER/authenticator.md'
-                - 'proxy': 'TECHNIQUE/INTEGRATION/DOCKER/proxy.md'
-                - 'db_tls_server': 'TECHNIQUE/INTEGRATION/DOCKER/db_tls_server.md'
-                - 'db_tls_client': 'TECHNIQUE/INTEGRATION/DOCKER/db_tls_client.md'
-                - 'update': 'TECHNIQUE/INTEGRATION/DOCKER/update.md'
-           - 'DB_SSL': 'TECHNIQUE/INTEGRATION/db_ssl.md'
+              - 'TECHNIQUE/INTEGRATION_AUTH_PROXY/index.md'
+              - 'Description générale': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/docker.md'
+              - Images:
+                - 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/index.md'
+                - 'Composer_base': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/composer_base.md'
+                - 'Composer_files': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/composer_files.md'
+                - 'tools': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/tools.md'
+                - 'init': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/init.md'
+                - 'cron': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/cron.md'
+                - 'selfkeys': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/selfkeys.md'
+                - 'httpd': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/httpd.md'
+                - 'authenticator': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/authenticator.md'
+                - 'proxy': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/proxy.md'
+                - 'db_tls_server': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/db_tls_server.md'
+                - 'db_tls_client': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/db_tls_client.md'
+                - 'update': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/update.md'
+           - 'DB_SSL': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/db_ssl.md'
            - 'Kubernetes': 
-                - 'Maquettage': 'TECHNIQUE/INTEGRATION/KUBERNETES/maquettage.md'
-                - 'Ressources utiles': 'TECHNIQUE/INTEGRATION/KUBERNETES/ressources.md'
+                - 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/index.md'
+                - 'Maquettage': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/maquettage.md'
+                - 'Ressources utiles': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/ressources.md'
                 - 'Chart Helm':
-                    - 'Description générale': 'TECHNIQUE/INTEGRATION/KUBERNETES/HELM/description_generale.md'
-                    - 'DB et DB proxy': 'TECHNIQUE/INTEGRATION/KUBERNETES/HELM/db_dbproxy.md'
-                    - 'Serveur web interne': 'TECHNIQUE/INTEGRATION/KUBERNETES/HELM/httpd.md'
-                    - 'Proxy et authenticateur': 'TECHNIQUE/INTEGRATION/KUBERNETES/HELM/proxy_auth.md'
-                    - 'Cron': 'TECHNIQUE/INTEGRATION/KUBERNETES/HELM/cron.md'
-                    - 'Volumes (persistants)': 'TECHNIQUE/INTEGRATION/KUBERNETES/HELM/volumes.md'
-                    - 'Secrets': 'TECHNIQUE/INTEGRATION/KUBERNETES/HELM/secrets.md'
-                    - 'Réservations': 'TECHNIQUE/INTEGRATION/KUBERNETES/HELM/reservations.md'
+                    - 'Description générale': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/HELM/description_generale.md'
+                    - 'DB et DB proxy': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/HELM/db_dbproxy.md'
+                    - 'Serveur web interne': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/HELM/httpd.md'
+                    - 'Proxy et authenticateur': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/HELM/proxy_auth.md'
+                    - 'Cron': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/HELM/cron.md'
+                    - 'Volumes (persistants)': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/HELM/volumes.md'
+                    - 'Secrets': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/HELM/secrets.md'
+                    - 'Réservations': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/HELM/reservations.md'
+    - 'FORMATION': 
+        - 'FORMATION/index.md'
 
 
 
@@ -92,6 +146,7 @@ theme:
      - search.suggest
      - search.highlight
      - navigation.sections
+     - navigation.indexes
 #     - navigation.expand
    palette:
      - scheme: slate

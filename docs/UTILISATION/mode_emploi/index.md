@@ -12,3 +12,4 @@
 * [9. Gestion de la base de données](9_gestion_base_donnees.md)
 * [99. Préparer l'installation initiale de CiviParoisse](99_prepaper_installation.md)
 * [Les nouveautés dans CiviParoisse](nouveautes_CiviParoisse.md)
+* [Ressources](ressources.md)

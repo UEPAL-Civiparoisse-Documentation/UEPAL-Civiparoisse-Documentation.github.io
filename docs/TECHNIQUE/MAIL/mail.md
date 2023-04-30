@@ -15,10 +15,11 @@ L'envoi et de réceptions de mails utilisent des protocoles (et par connséquent
 
 * le protocole SMTP est utilisé lors de l'envoi d'un mail depuis un MUA (Mail User Agent), et de la transmission du mail jusqu'à sa destination finale
 * différents enregistrements DNS (dont les enregistrements MX et TXT pour DKIM) sont mis en oeuvre pour déterminer les cibles d'acheminements du mail
-* le protocole LMTP peut être utilisé pour transférer un mail du MTA (Mail Transfer Agent) ou MDA (Mail Delivery Agent)
+* le protocole LMTP peut être utilisé pour transférer un mail du MTA (Mail Transfer Agent) au MDA (Mail Delivery Agent)
 * un MUA peut soit attaquer directement une boîte mail locale (par exemble au format mbox ou maildir) ou on peut récupérer avec d'autres protocoles comme IMAP le contenu de la boîte.
 
-Il y a donc lieu de voir en voir en détail les deux problématiques :
+Il y a donc lieu de voir en voir en détail les deux problématiques.
 
 * [envoi de mail](sendmail.md)
-* [récupération de mail](fetchmail.md)
+* [récupération de mail avec consultation maildir](fetchmail.md)
+* [plateform de test : opensmtpd et dovecot](opensmtpd_dovecot.md)

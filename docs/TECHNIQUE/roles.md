@@ -101,3 +101,17 @@ A ce sujet, comme les paroisses peuvent également créer des rôles, il faudra 
 
 Un cas particulier doit cependant être prévu : le cas où les permissions évoluent dans CiviCRM ou Drupal. Dans ce cas précis, on peut envisager de supprimer les droits des anciens rôles crées par Civiparoisse et préparer un nouveau jeu de rôles : l'utilisateur UID 1 pourra de toute manière intervenir pour mettre en place les nouveaux droits : c'est une approche sûre, dans la mesure où on ne donnera à aucun moment par mégarde des droits trop importants à des utilisateurs. En revanche, si l'utilisateur UID 1 n'est pas un utilisateur de la paroisse (équipe technique interne Civiparoisse), il faudra convenir d'une réunion de maintenance avec les responsables de la paroisse pour effectuer les actions qui conviennent.
 
+## Liste des droits d'un système : attention aux droits actifs et inactifs
+
+CiviCRM dispose dans l'API4 d'un `Permission.get`. Il faut faire attention, car CiviCRM va lister les droits qui sont actifs et non actifs, par rapport à CiviCRM. Ceci est dû au fait que la liste des droits de CiviCRM vient d'implémentations du hook utilisé dans `CRM_Utils_Hook::permissionList`, et en particulier : CRM_Core_Permission::findCiviPermission.
+
+En revanche, si on passe par l'API Drupal, on aura plutôt des commandes du genre
+
+```bash
+drush php:eval "var_dump(array_keys(\\Drupal::service('user.permissions')>getPermissions()));"
+```
+
+Et dans ce cas, Drupal récupère les permissions pour CiviCRM via un callback (défini dans le module Drupal civicrm : civicrm.permissions.yml) depuis `Drupal\civicrm\CivicrmPermissions` et sa fonction `permissions` qui appele `CRM_Core_Permission::basicPermission(FALSE,TRUE)` et ne récupère donc que les droits actifs.
+
+En toute rigueur, l'usage est la politique du moindre privilège, et l'on peut donc plutôt penser que si un droit n'est pas actif, il conviendrait plutôt de ne l'affecter à aucun rôle.
+

@@ -2,17 +2,33 @@
 
 Ce dépôt a pour but de réunir la documentation de Civiparoisse, sous forme de fichiers Markdown qui sont processés ensuite pour générer un site web statique via mkdocs.
 
-Le site est prévu pour utiliser le thème [material](https://squidfunk.github.io/mkdocs-material/) car ce thème propose des fonctionnalités intéressantes, comme notamment l'intégration du moteur LUNR pour les rechercehs dans les documents et un mode sombre. De plus, il propose directement une [image Docker](https://github.com/squidfunk/mkdocs-material.git) prête à être compilée (ou à l'emploi, en fonction des architectures matérielles de chacun), ce qui simplifie nettement la mise en oeuvre du thème et de mkdocs.
+Le site est prévu pour utiliser le thème [material](https://squidfunk.github.io/mkdocs-material/) car ce thème propose des fonctionnalités intéressantes :
+
+* l'intégration du moteur LUNR pour les recherches dans les documents
+* un mode sombre.
+
+De plus, il propose directement une [image Docker](https://github.com/squidfunk/mkdocs-material.git) prête à être compilée (ou à l'emploi, en fonction des architectures matérielles de chacun), ce qui simplifie nettement la mise en oeuvre du thème et de mkdocs.
 
 La prise en main par des débutants est également simplifiée car les commandes courantes de travail ont été préparées dans un Makefile, ce qui les rend très facilement accessibles.
 
-## Prérequis
+L'ensemble de la documentation, une fois validée, est également disponible dans le GitHub *uepal-civiparoisse-documentation* 
+
+## Création de la documentation dans le Github
+
+* La documentation doit être validée dans le Github *Civiparoisse*, et intégré à la branche Main
+* La documentation est ensuite à incorporer dans le Github *Civiparoisse-documentation*, dans le répertoire **A PRECISER**
+* Github génèrera alors automatiquement la mise à jour du site, consultable à l'URL suivante : https://uepal-civiparoisse-documentation.github.io/index.html
+
+## Création de la documentation dans Docker
+### Prérequis pour créer l'image Docker
+
 * Linux : nécessaire pour disposer de la variable CURDIR dans le GNU Make
 * GNU Make : pour avoir en particulier la variable CURDIR écrite au-dessus
 * Git : récupération de dépôt à la volée
 * Docker : construction d'une image selon le Dockerfile et l'environnement récupérés via Git.
 
-## Options et cibles pour Make
+### Options et cibles pour Make
+
 Un certain nombre de cibles ont été prévues. Elles sont simplement à lancer en se plaçant dans le répertoire où on a récupéré le dépôt Git de la documentation et en lançant 
 ```make <nom de la cible>```
 
