@@ -37,10 +37,6 @@ nav:
               - 'Web Application Firewall': 'TECHNIQUE/PREPOC/ETUDES_PRECIS/waf.md'
               - 'Intégration CA Ubuntu': 'TECHNIQUE/PREPOC/ETUDES_PRECIS/integration_ca.md'
               - 'Minikube + Traefik + Wildcard': 'TECHNIQUE/PREPOC/ETUDES_PRECIS/minikube_traefik_wildcard.md'
-           - 'Historique : Différentiels':
-              - 'TECHNIQUE/PREPOC/DIFF/index.md'
-              - 'Diff IMG Docker': 'TECHNIQUE/PREPOC/DIFF/docker_diff.md'
-              - 'Diff Chart Helm': 'TECHNIQUE/PREPOC/DIFF/helm_diff.md'
            - 'Opérationnel':
              - 'TECHNIQUE/PREPOC/INTEGRATION/index.md'
              - 'Déploiement instance': 'TECHNIQUE/PREPOC/INTEGRATION/deploiement_instance.md'             
@@ -92,41 +88,9 @@ nav:
            - 'Environnement de dev': 'TECHNIQUE/LOGICIEL/environnement_dev.md'
            - 'Personnalisation environnement de dev': 'TECHNIQUE/LOGICIEL/environnement_dev_env.md'
            - 'Importation de données': 'TECHNIQUE/LOGICIEL/importation.md'
-       - 'Historique: serveur médias': 'TECHNIQUE/serveur_media.md'
-       - 'Historique : Intégration Auth Proxy':
-           - 'TECHNIQUE/INTEGRATION_AUTH_PROXY/index.md'
-           - 'Authentification': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/etude_authentification.md'
-           - 'Docker': 
-              - 'TECHNIQUE/INTEGRATION_AUTH_PROXY/index.md'
-              - 'Description générale': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/docker.md'
-              - Images:
-                - 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/index.md'
-                - 'Composer_base': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/composer_base.md'
-                - 'Composer_files': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/composer_files.md'
-                - 'tools': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/tools.md'
-                - 'init': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/init.md'
-                - 'cron': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/cron.md'
-                - 'selfkeys': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/selfkeys.md'
-                - 'httpd': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/httpd.md'
-                - 'authenticator': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/authenticator.md'
-                - 'proxy': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/proxy.md'
-                - 'db_tls_server': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/db_tls_server.md'
-                - 'db_tls_client': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/db_tls_client.md'
-                - 'update': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/DOCKER/update.md'
-           - 'DB_SSL': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/db_ssl.md'
-           - 'Kubernetes': 
-                - 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/index.md'
-                - 'Maquettage': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/maquettage.md'
-                - 'Ressources utiles': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/ressources.md'
-                - 'Chart Helm':
-                    - 'Description générale': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/HELM/description_generale.md'
-                    - 'DB et DB proxy': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/HELM/db_dbproxy.md'
-                    - 'Serveur web interne': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/HELM/httpd.md'
-                    - 'Proxy et authenticateur': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/HELM/proxy_auth.md'
-                    - 'Cron': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/HELM/cron.md'
-                    - 'Volumes (persistants)': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/HELM/volumes.md'
-                    - 'Secrets': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/HELM/secrets.md'
-                    - 'Réservations': 'TECHNIQUE/INTEGRATION_AUTH_PROXY/KUBERNETES/HELM/reservations.md'
+       - 'ARCHIVES':
+           - 'TECHNIQUE/ARCHIVES/index.md'
+
     - 'FORMATION': 
         - 'FORMATION/index.md'
 

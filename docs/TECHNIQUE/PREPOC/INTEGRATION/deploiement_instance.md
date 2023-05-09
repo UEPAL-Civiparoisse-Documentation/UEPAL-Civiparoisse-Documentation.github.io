@@ -46,6 +46,7 @@ Il y a une grande quantité d'informations à collecter :
 ## Rappel : fichier de valeurs Helm
 
 ```yaml
+imageVersion: "latest"
 externalhost: "civicrm2.test"
 storageClassName: "standard"
 servername: "civicrm2.test"
