@@ -112,6 +112,7 @@ theme:
      - navigation.sections
      - navigation.indexes
 #     - navigation.expand
+     - toc.follow
    palette:
      - scheme: slate
        toggle:
