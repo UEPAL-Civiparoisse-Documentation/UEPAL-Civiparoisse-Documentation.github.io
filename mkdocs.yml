@@ -113,6 +113,7 @@ theme:
      - navigation.indexes
 #     - navigation.expand
      - toc.follow
+     - navigation.tabs
    palette:
      - scheme: slate
        toggle:
