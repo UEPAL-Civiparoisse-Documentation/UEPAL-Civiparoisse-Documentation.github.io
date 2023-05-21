@@ -115,6 +115,7 @@ theme:
      - navigation.indexes
 #     - navigation.expand
      - navigation.top
+     - navigation.footer
      - toc.follow
      - navigation.tabs
      - toc.integrate
