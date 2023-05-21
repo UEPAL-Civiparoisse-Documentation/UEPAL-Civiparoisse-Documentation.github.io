@@ -105,6 +105,7 @@ nav:
 theme: 
    name: material
    logo: assets/uepal-logo.svg
+   language: fr
    locale: fr
    features:
      - search.suggest
