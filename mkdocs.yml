@@ -126,9 +126,6 @@ theme:
    plugins:
    - search:
        lang: fr
-   - git-revision-date-localized:
-      enable_creation_date: true
-      fallback_to_build_date: true
 use_directory_urls: false
 markdown_extensions:
   - pymdownx.highlight:
