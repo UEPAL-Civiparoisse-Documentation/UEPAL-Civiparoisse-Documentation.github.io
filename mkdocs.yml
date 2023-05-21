@@ -110,6 +110,7 @@ theme:
    features:
      - search.suggest
      - search.highlight
+     - search.share
      - navigation.sections
      - navigation.indexes
 #     - navigation.expand
