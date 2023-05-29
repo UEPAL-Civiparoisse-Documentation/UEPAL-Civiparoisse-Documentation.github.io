@@ -8,65 +8,113 @@ Chaque Dockerfile du projet dispose d'une directive `LABEL` directement après l
 
 Un script de build des images ( `build.sh`) est fourni dans le dépôt.
 
+```bash
+#!/bin/bash
+set -xev
+export EXPBUILDVERSION=`cat VERSION`
+echo ${EXPBUILDVERSION}
+docker build --rm --no-cache -t uepal_test/selfkeys:${EXPBUILDVERSION} -t uepal_test/selfkeys --build-arg BUILDVERSION=${EXPBUILDVERSION} SELFKEYS 
+docker build --rm --no-cache -t uepal_test/keys_init:${EXPBUILDVERSION} -t uepal_test/keys_init --build-arg BUILDVERSION=${EXPBUILDVERSION} KEYS_INIT
+docker build --rm --no-cache -t uepal_test/mysql_tls_router:${EXPBUILDVERSION} -t uepal_test/mysql_tls_router --build-arg BUILDVERSION=${EXPBUILDVERSION} MYSQL_TLS_ROUTER
+docker build --rm --no-cache -t uepal_test/mysql_tls_server:${EXPBUILDVERSION} -t uepal_test/mysql_tls_server --build-arg BUILDVERSION=${EXPBUILDVERSION} MYSQL_TLS_SERVER
+docker build --rm --no-cache -t uepal_test/composer_base:${EXPBUILDVERSION} -t uepal_test/composer_base --build-arg BUILDVERSION=${EXPBUILDVERSION} COMPOSER_BASE
+docker build --rm --no-cache -t uepal_test/composer_files:${EXPBUILDVERSION} -t uepal_test/composer_files --build-arg BUILDVERSION=${EXPBUILDVERSION} COMPOSER_FILES
+docker build --rm --no-cache -t uepal_test/tools:${EXPBUILDVERSION} -t uepal_test/tools --build-arg BUILDVERSION=${EXPBUILDVERSION} TOOLS
+docker build --rm --no-cache -t uepal_test/tools_debug:${EXPBUILDVERSION} -t uepal_test/tools_debug --build-arg BUILDVERSION=${EXPBUILDVERSION} TOOLS_DEBUG
+docker build --rm --no-cache -t uepal_test/init:${EXPBUILDVERSION} -t uepal_test/init --build-arg BUILDVERSION=${EXPBUILDVERSION} INIT
+docker build --rm --no-cache -t uepal_test/cron:${EXPBUILDVERSION} -t uepal_test/cron --build-arg BUILDVERSION=${EXPBUILDVERSION} CRON
+docker build --rm --no-cache -t uepal_test/httpd:${EXPBUILDVERSION} -t uepal_test/httpd --build-arg BUILDVERSION=${EXPBUILDVERSION} HTTPD
+docker build --rm --no-cache -t uepal_test/httpd_debug:${EXPBUILDVERSION} -t uepal_test/httpd_debug --build-arg BUILDVERSION=${EXPBUILDVERSION} HTTPD_DEBUG
+docker build --rm --no-cache -t uepal_test/update:${EXPBUILDVERSION} -t uepal_test/update --build-arg BUILDVERSION=${EXPBUILDVERSION} UPDATE
+docker build --rm --no-cache -t uepal_test/test_opensmtpd_dovecot:${EXPBUILDVERSION} -t uepal_test/test_opensmtpd_dovecot --build-arg BUILDVERSION=${EXPBUILDVERSION} TEST_OPENSMTPD_DOVECOT
+docker build --rm --no-cache -t uepal_test/gen_hashed_ca:${EXPBUILDVERSION} -t uepal_test/gen_hashed_ca --build-arg BUILDVERSION=${EXPBUILDVERSION} GEN_HASHED_CA
+docker build --rm --no-cache -t uepal_test/traefik_docker:${EXPBUILDVERSION} -t uepal_test/traefik_docker --build-arg BUILDVERSION=${EXPBUILDVERSION} TRAEFIK_DOCKER
+
+```
+
+Ce script utilise un fichier nommé `VERSION` pour tagger chaque image générée avec la version contenue dans le fichier, ainsi que le tag `latest`. La version est également positionnée dans un argument d'un label dans chaque image Docker générée. Ceci permet d'avoir un numéro de version uniforme pour l'ensemble des images générées.
+
 ## Liste des images
 
 Un certain nombre d'images Docker est nécessaire pour exécuter un environnement Civiparoisse complet.
 
 Ces images, dans l'ordre de build, sont :
 
+* [selfkeys](DOCKER/selfkeys.md)
+* [keys_init](DOCKER/keys_init.md)
+* [mysql_tls_router](DOCKER/mysql_tls_router.md)
+* [mysql_tls_server](DOCKER/mysql_tls_server.md)
 * [composer_base](DOCKER/composer_base.md)
 * [composer_files](DOCKER/composer_files.md)
 * [tools](DOCKER/tools.md)
+* [tools_debug](DOCKER/tools_debug.md)
 * [init](DOCKER/init.md)
 * [cron](DOCKER/cron.md)
-* [selfkeys](DOCKER/selfkeys.md)
 * [httpd](DOCKER/httpd.md)
-* [authenticator](DOCKER/authenticator.md)
-* [proxy](DOCKER/proxy.md)
+* [httpd_debug](DOCKER/httpd_debug.md)
+* [update](DOCKER/update.md)
+* [test_opensmtpd_dovecot](DOCKER/test_opensmtpd_dovecot.md)
+* [gen_hashed_ca](DOCKER/gen_hashed_ca.md)
+* [traefik_docker](DOCKER/traefik_docker.md)
 
 ## Dépendances des images entre elles
 
 En se basant sur la directive FROM des Dockerfiles, on obtient les dépendances suivantes :
 
-* ubuntu
-   * authenticator
+* ubuntu:focal
+   * test\_opensmtpd\_dovecot
+* ubuntu:lunar
+   * mysql\_tls\_router
+   * keys\_init
+   * gen\_hashed\_ca
    * selfkeys
-   * composer_base
-       * composer_files
+   * composer\_base
+       * composer\_files
        * tools
+          * tools\_debug
           * cron
           * init
+          * update
 * ubuntu/apache2
    * httpd
-   * proxy
-* ubuntu/mysql             
+   * httpd\_debug
+* ubuntu/mysql
+   * mysql\_tls\_server
+* traefik
+   * traefik\_docker
 
 Toutefois, il y a également des injections de données d'une image à l'autre  via `COPY --from` :
+
 * selfkeys
-    * authenticator
     * httpd
-    * proxy
-* composer_files
+       * indirectement (cf from): httpd\_debug
+    * traefik\_docker
+    * mysql\_tls\_router
+    * mysql\_tls\_server
+    * test\_opensmtpd\_dovecot
+* composer\_files
     * httpd
+        * indirectement (cf from): httpd\_debug
     * tools
-        * indirectement (cf from ): cron
-        * indirectement (cf from ): init    
+        * indirectement (cf from): cron
+        * indirectement (cf from): init    
+        * indirectement (cf from): tools\_debug
+        * indirectement (cf from): update
 
 Le but de ces dépendances est de "stabiliser" le contenu des images buildées, pour que le contenu qui doit être présent dans plusieurs images soit identique.
 
 ## Principe de fonctionnement
 
-On suppose l'existence d'un **forwarder TCP pricipal** qui va faire l'aiguillage vers le bon reverse-proxy  de paroisse en se basant sur le Server Name Indication, qui apparaît en clair dans la connexion TLS. Il y a donc une connexion TLS entre le client et le serveur TLS, mais deux liaisons TCP (client/forwarder et forwarder/reverse proxy).
-
-Le reverse proxy va authentifier les utilisateurs, au travers des identifiants Drupal convoyés via du HTTP Basic au-dessus d'une liason TLS, et probablement un autre moyen (certificat SSL par exemple). En ce qui concerne les identifiants, ils sont testé au travers d'un **authenticateur** qui est branché sur le reverse proxy au travers d'une socket Unix. Chaque requête adressée au reverse proxy doit être authentifiée, et déclenchera un appel à l'authenticateur.
-
-L'authenticateur va effectuer une requête vers le **serveur web interne** pour vérifier que l'utilisateur est bien reconnu. Si tel est le cas, le reverse proxy va transférer la requête vers le serveur web interne pour être traitée.
+Traefik va récupérer tout le trafic entrant, va servir de terminaison HTTPS avec le navigateur du client web, et va utiliser le hostname pour déterminer quelle instance de Civiparoisse contacter (via une liaison HTTPS "interne").
 
 ##Gestion des droits sur les fichiers
 
 La gestion des droits sur les fichiers est un sujet complexe. On suppose que les systèmes de fichiers mis en oeuvre dans le système proposent une gestion des droits traditionnels "à la Unix", avec des droits read-write-exec que l'on peut attribuer à un propriétaire, un groupe, et le reste du monde ; et on suppose qu'on peut identifier le propriétaire et le groupe de référence des fichiers.
 
-Etant donné qu'en principe seul le propriétaire et root peuvent changer les permissions sur un fichier, et qu'il est préférable que le compte root ne soit pas trop utilisé (par exemple pour éviter par la suite une exécution en root via du bit SUID), il a été privilégié de créer un compte spécifique, verrouillé, dont le but est d'être propriétaire des fichiers : le compte paroisse (UID 1000). Un groupe paroisse (GID 1000) est également provisionné.
+Etant donné qu'en principe seul le propriétaire et root peuvent changer les permissions sur un fichier, et qu'il est préférable que le compte root ne soit pas trop utilisé (par exemple pour éviter par la suite une exécution en root via du bit SUID), il a été privilégié de créer un compte spécifique, verrouillé, dont le but est d'être propriétaire des fichiers : le compte paroisse (UID 1001). Un groupe paroisse (GID 1001) est également provisionné.
+
+!!! Warning "Compte ubuntu"
+    Dans ubuntu:lunar, a été constatée l'existence d'un compte ubuntu (UID 1000). Ce compte a été verrouillé dans les images dérivant de ubuntu:lunar.
 
 Le principe général est que les fichiers (pour l'instant, non système) qui sont présents dans les images sont des fichiers destinés à être en lecture seule, tandis que les fichiers des volumes seront en lecture écriture. Il s'agit d'appliquer le principe des droits minimaux pour effectuer les opérations.
 

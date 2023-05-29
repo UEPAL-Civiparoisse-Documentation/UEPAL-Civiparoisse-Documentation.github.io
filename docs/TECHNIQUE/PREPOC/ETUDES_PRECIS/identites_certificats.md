@@ -1,26 +1,27 @@
 # Identités et certificats
 
-Un certificat SSL permet d'associer des données d'identité à une clef publique. Dans le cadre du projet Civiparoisse, la notion d'identité est complexe, déjà du fait des interactions entre l'Uepal et les paroisses. Il y a donc lieu de dresser un état des lieux des identités qui entrent dans le cadre de Civiparoisse, ainsi qu'un rapide résumé du contexte technique vis à vis des clefs et des CA, avant de voir quelles sont les éventuels scénarios techniques qui pourraient être envisagés, sachant qu'une validation commerciale/juridique devra également avoir lieu avant une prise de décision.
+Un certificat SSL permet d'associer des données d'identité à une clef publique. Dans le cadre du projet Civiparoisse, la notion d'identité est complexe, déjà du fait des interactions entre l'UEPAL et les paroisses. Il y a donc lieu de dresser un état des lieux des identités qui entrent dans le cadre de Civiparoisse, ainsi qu'un rapide résumé du contexte technique vis à vis des clefs et des CA, avant de voir quelles sont les éventuels scénarios techniques qui pourraient être envisagés.
 
 ## Identités dans Civiparoisse
 
-Un certain nombre d'identités gravitent de manière plus ou moins rapprochée autour du projet Civiparoisse :
+Un certain nombre d'identités gravitent de manière plus ou moins rapprochées autour du projet Civiparoisse :
 
-- l'identité de chaque paroisse et également de l'Uepal, en dehors du projet Civiparoisse :
+- l'identité de chaque paroisse et également de l'UEPAL, en dehors du projet Civiparoisse :
 	- identité juridique : nom, adresse,...
-	- identité numérique : nom de domaine, adresse de sites web, présentation de la paroisse sur le site de l'Uepal, réseaux sociaux, adresses de messagerie,...
+	- identité numérique : nom de domaine, adresse de sites web, présentation de la paroisse sur le site de l'UEPAL, réseaux sociaux, adresses de messagerie,...
 	- identité visuelle : liée au site web, mais éventuellemnt également dans d'autres supports de communication (présentations/diapositives, publications...)
-- les URL d'accès à Civiparoisse : il y a certes les URL pour accéder à CiviCRM, mais il y a également le fait que certaines interactions ont été rendues possibles suite à la décision Codir de mettre l'accent sur l'utilisabilité plutôt que la sécurité
+- les URL d'accès à Civiparoisse : il y a certes les URL pour accéder à CiviCRM, mais il y a également la possibilté d'affichage des mailings envoyés vers l'extérieur
 - l'identité visuelle intégrée dans les mails (templates) et pour les interactions avec CiviCRM par des personnes lambdas (formulaires)
 - les adresses et domaines de messagerie pour les mails de masse
 
-Une première approche qui semble logique serait de se dire que Civiparoisse est un outil au service des paroisses et des acteurs en relation avec les paroisses, et que de ce fait, il faudrait mettre l'identité de chaque paroisse en avant, de sorte qu'une seule identité homogène pour chaque paroisse soit mise en avant. Toutefois, ceci suppose que chaque paroisse soit en mesure d'effectuer les configurations dans son système d'information pour préparer la place de CiviCRM d'une part, et génère, voire délègue un certificat pour CiviCRM (cette déléguation devant être correctement encadrée). De plus, la paroisse doit également être en mesure d'intégrer son identité au niveau des formulaires Drupal/CiviCRM et des templates de mails. On comprend donc que ceci est en contradiction par rapport à la simplification et l'accent que le Codir souhaite mettre sur l'utilisabilité.
+Une première approche serait de se dire que Civiparoisse est un outil au service des paroisses et des acteurs en relation avec les paroisses, et que de ce fait, il faudrait mettre l'identité de chaque paroisse en avant, de sorte qu'une seule identité homogène pour chaque paroisse soit mise en avant. Toutefois, ceci suppose que chaque paroisse soit en mesure d'effectuer les configurations dans son système d'information pour préparer la place de CiviCRM d'une part, et génère, voire délègue un certificat pour CiviCRM (cette déléguation devant être correctement encadrée). De plus, la paroisse doit également être en mesure d'intégrer son identité au niveau des formulaires Drupal/CiviCRM et des templates de mails. On comprend donc que ceci est en contradiction par rapport à la simplification et l'accent que l'UEPAL souhaite mettre sur l'utilisabilité.
 
-A l'opposé, une autre approche également défendable est de dire que si une paroisse souhaite l'intégration entière avec son système d'information, il vaut mieux qu'elle héberge d'elle-même la solution. De ce fait, on pourra mettre l'accent dans l'offre hébergée sur l'aspect "prêt à utiliser", en préparant et cultivant un aspect de paroisse **utilisant** un outil mis à disposition par l'Uepal : s'il semble prudent de séparer les identités au niveau du mailing de masse, afin que les mailings issus d'une paroisse n'en impacte pas une autre, une seule identité de template de mail qui est configuré avec les informations de la paroisse. En ce qui concerne les URL de CiviCRM, une identité "technique" (domaine dédié à l'outil, avec mise à disposition d'un sous-domaine pour chaque paroisse) pourrait être envisagé. Toutefois, ceci pourrait éventuellement amoindrir les possibilités de certification des identités : il ne serait donc pas à exclure que l'identité de l'Uepal soit mise en avant comme fournisseur de l'outil, et que ceci conduise éventuellement à un proxy entrant en utilisant une URL avec un nom d'hôte fixe (et donc une identité unique) et une indication de paroisse cible dans les chemins des URLs.
+A l'opposé, une autre approche est de dire que si une paroisse souhaite l'intégration entière avec son système d'information, il vaut mieux qu'elle héberge d'elle-même la solution. 
 
-Comme indiqué en introduction, une étude commerciale et juridique pourrait donner un nouvel éclairage dans le choix du positionnement sur l'identité, et donc sur les solutions techniques à mettre en place.
+De ce fait, nous mettrons l'accent dans l'offre hébergée sur l'aspect "prêt à utiliser", en préparant et cultivant un aspect de paroisses *utilisant* un outil mis à disposition par l'UEPAL : s'il semble prudent de séparer les identités au niveau du mailing de masse, afin que les mailings issus d'une paroisse n'en impactent pas une autre, une seule identité de template de mail est configurée avec les informations de la paroisse.
+En ce qui concerne les URL de CiviCRM, une identité "technique" (domaine dédié à l'outil, avec mise à disposition d'un sous-domaine pour chaque paroisse) est choisie. L'identité de l'UEPAL est mise en avant comme fournisseur de l'outil, du fait du nom de domaine. Ceci conduit à un proxy entrant utilisant le nom d'hôte comme indication de paroisse cible.
 
-## Contexte technique
+## Contexte technique de l'étude
 
 ### Chiffrement et confiance
 
@@ -38,7 +39,7 @@ Deux modèles principaux de distribution de la confiance existent :
 - un modèle décentralisé, où la confiance est acquise petit à petit à travers des utilisateurs qui attestent de l'identité d'une clef publique, et c'est le nombre d'utilisateurs qui attestent de l'identité d'un propriétaire de clef qui forge la confiance en l'association : c'est par exemple le cas pour OpenPGP
 - un modèle plus centralisé, où on fait confiance à un tiers qui est une autorité de certification. C'est le modèle qui est utilisé pour les certificats X.509 utilisés notamment pour SSL/TLS (et donc HTTPS).
 
-Le trafic vers et depuis l'infrastructure de Civiparoisse se doit d'être chiffré, et il faut donc décider de comment mettre en oeuvre les certificats.
+Pour des raisons évidentes de sécurité, le trafic vers et depuis l'infrastructure de Civiparoisse se doit d'être chiffré, et il faut donc décider de comment mettre en oeuvre les certificats.
 
 On notera que l'utilisation des certificats n'est qu'un composant faisant parti d'un tout qui assure la sécurité de Civiparoisse. En termes de clefs, il faudra penser aussi à utiliser DNSSec pour chercher à authentifier les réponses DNS.
 
@@ -95,17 +96,15 @@ Les certificats sont des outils techniques, mais ce ne sont que des outils : la 
 
 ## Dans le cadre de Civiparoisse
 
-En ce qui concerne le projet Civiparoisse, la première des choses est de **vérifier si l'UEPAL et/ou les paroisses sont considérées comme des autorités administratives et si elles sont soumises aux réglementations publiques.**
-
-De même, il semble important de préciser/clarifier les relations entre paroisses et Uepal, pour pouvoir éventuellement mettre en oeuvre un formalisme adéquat.
-
-A priori, plusieurs stratégies d'utilisations de certificats peuvent être techniquement envisagées (sous réserves qu'elles soient valides du point de vue juridique, ce qui n'a pas été vérifié, et reste donc à vérifier ) :
+A priori, plusieurs stratégies d'utilisations de certificats peuvent être techniquement envisagées :
 
 * utiliser un certificat wildcard : le certificat wildcard permet de couvrir l'ensemble des noms d'un domaine
 * utiliser un certificat avec des Subject Alternative Names multiples : on dispose d'une identité, mais avec un ensemble de noms liés : cette méthode permet d'utiliser des certificats qui offrent des garanties plus importantes, mais il faut remarquer que le certificat devra être réédité s'il faut rajouter des noms supplémentaires. Par ailleurs, en fonction des autorités de certification, il y a un nombre maximal de SAN qui sont autorisés
 * utiliser un seul certificat sur un reverse proxy et router non pas en fonction du host, mais en fonction du chemin : ceci signifie que le reverse proxy devra se positionner en coupure et dialoguera en HTTPS avec les naviguateurs : il n'y aura qu'une seule identité qui sera véhiculée, aussi bien au niveau du hostname qu'au niveau du certificat
-* maintenir au niveau de l'Uepal une autorité de certification subsidiaire, pour un domaine distinct, et éditer des certificats : la bonne maintenance d'une autorité de certification semble très délicate, et nécessiterait probablement des ressources conséquentes.
+* maintenir au niveau de l'UEPAL une autorité de certification subsidiaire, pour un domaine distinct, et éditer des certificats : la bonne maintenance d'une autorité de certification semble très délicate, et nécessiterait probablement des ressources conséquentes.
 
+
+**Considérant que les besoins de signatures digitales des paroisses sont pour le moment très limités, voire inexistants, nous mettons en place pour démarrer une stratégie baseé sur un unique certificat wildcard.**
 
 ## Resources utiles
 

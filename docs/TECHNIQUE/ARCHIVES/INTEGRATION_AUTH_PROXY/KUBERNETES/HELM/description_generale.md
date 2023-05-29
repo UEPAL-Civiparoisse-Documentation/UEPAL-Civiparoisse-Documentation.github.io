@@ -1,8 +1,10 @@
 # Chart Helm: description générale
 
+Documentation archivée le 1er mai 2023.
+
 ## Helm
 
-Helm est un système de packaging pour Kubernetes. L'intérêt de Helm est qu'il permet de préparer des modèles de déploiement d'application, dans un package appelé "chart". En pratique, il permet notamment d'avoir des modèles (templates) pour déployer des ressources Kubernetes, et permet d'injecter des valeurs dans ces ressources. Ces valeurs peuvent être par exemple précisées dans des fichiers de valeurs, ou être calculées depuis des commandes indiquées dans les fichiers, ou même être récupérées depuis un cluster Kubernetes (par exemple des clefs de chiffrement).
+Helm est un système de packaging pour Kubernetes. L'intérêt de Helm est qu'il permet de préparer des modèles de déploiement d'application, dans un package appelé "chart". En pratique, il permet notamment d'avoir des modèles (templates) pour déployer des ressources Kubernetes, et permet d'injecter des valeurs dans ces ressources. Ces valeurs peuvent être par exemple précises dans des fichiers de valeurs, ou être calculées depuis des commandes indiquées dans les fichiers, ou même être récupérées depuis un cluster Kubernetes (par exemple des clefs de chiffrement).
 
 Helm constitue donc un outil essentiel pour packager un environnement de paroisse.
 
@@ -16,7 +18,7 @@ Quelques commandes utiles :
 
 * `helm list -n helmtls` : récupérer les noms de releases d'un namespace (ici `helmtls`)
 
-** Attention : pour le moment, il faut builder les images uepal_test dans l'environnement docker de Minikube. De plus, il faut puller manuellement l'image busybox,ubuntu/apache2, ubuntu/mysql, à cause des interactions avec le tag latest et la pull Policy mise à none dans le package helm **
+** Attention : pour le moment, il faut builder les images uepal_test dans l'environnement docker de Minikube. De plus, il faut puller manuellement les images ubuntu, ubuntu/apache, ubuntu/mysql, à cause des interactions avec le tag latest et la pull Policy mise à none dans le package helm **
 
 ## Description des types d'objets utilisés dans le chart Helm
 Il s'agit ici de définir une liste des types d'objets avec une brève description ; on se réfèrera bien entendu à la documentation Kubernetes (<https://kubernetes.io/fr/docs/concepts/>) et Nginx (<https://docs.nginx.com/nginx-ingress-controller/configuration/transportserver-resource/>) pour des explications complètes.
@@ -45,7 +47,7 @@ En ce qui concerne les types d'objets explicitement déclarés, on retrouve :
 
 * StatefulSet : objet d'exécution de charge pour les tâches nécessitant une gestion d'état, et un nommage fixe ; ex : bd
 
-* IngressRoute : configuration de la route vers le serveur HTTPS interne d'une instance, en fonction du nom d'hôte
+* TransportServer : permet de configurer le TLS passthrough pour accéder au pod reverse proxy d'une paroisse
 
 
 
@@ -63,7 +65,7 @@ Les constantes et les variables vont permettre de setter notamment les variables
 
 Le répertoire charts est prévu pour contenir des sous-charts. Ce répertoire est pour le moment vide.
 
-Le répertoire des templates contient les définitions des différents composants présentés. Il n'y a que peu de choses à dire, si ce n'est sur les secrets : les secrets peuvent être récupérés depuis Kubernetes, de sorte à ce qu'ils ne soient pas remplacés par de nouvelles valeurs : c'est important pour les mots de passe. Ce mécanisme est également mis en oeuvre au niveau des clefs, car il est arrivé que certains containers n'ont pas été redémarrés lors d'un upgrade et utilisaient les anciennes clefs, ce qui a déclenché un problème de communication entre les containers.
+Le répertoire des templates contient les définitions des différents composants présentés. Il n'y a que peu de choses à dire, si ce n'est sur les secrets : les secrets peuvent être récupérés depuis Kubernertes, de sorte à ce qu'ils ne soient pas remplacés par de nouvelles valeurs : c'est important pour les mot de passes. Ce mécanisme est également mis en oeuvre au niveau des clefs, car il est arrivé que certains containers n'ont pas été redémarrés lors d'un upgrade et utilisaient les anciennes clefs, ce qui a déclenché un problème de communication entre les containers.
 
 Les containers d'initialisation ont plusieurs utilités :
 
@@ -78,24 +80,14 @@ En ce qui concerne la synchronisation, l'ordre de démarrage est fixé dans une 
 
 * le cron peut démarrer du moment que la BD est initialisée, c'est à dire que le stateful set de BD est prêt.
 
-Le design pattern `sidecar` (et ses variantes) est utilisé dans ce chart :
+Le design pattern `sidecar` (et ses variantes) est utilisé à plusieurs reprises dans ce chart :
 
-* les accès à la BD sont effectués via un container `dbrouter` qui se charge de mettre en oeuvre la sécurité de la communication avec la BD.
+* au niveau de la BD, les connexions sont chiffrées / chiffrables via des connexions SSL dont les terminaisons sont dans des sidecars
+
+* au niveau du proxy, l'authentificateur est également un sidecar
 
 En termes de synchronisation / attentes :
 
 * mysqladmin ping permet de vérifier si une BD est disponible
 * nslookup permet de vérifier si un nom est résolu ; ce test n'est toutefois pas trop intéressant, car un service peut avoir une IP assignée même s'il n'y a pas de points de terminaisons associés au service
 * nc -z permet de vérifier si un port est ouvert
-
-## Serveur mail de démo
-
-Un serveur mail de démo est prévu dans le package Helm. Il est installé par défaut, de sorte qu'un environnement de démo complet puisse être installé sans passer par un fichier de valeurs aménagé. Le serveur mail de démo permet de faire un "bouchonnage", de sorte à ce qu'on puisse si nécessaire faire des tests via ce moyen. Le serveur de mails de démo utilise un CA dédié à cet usage, et qui doit être intégré aux CA reconnus par les containers, d'où l'intégration d'un volume dédié si le serveur de mail de démo est activé.
-
-Attention : ** le serveur de mail de démo n'est pas prévu pour être utilisé en production. ** Non seulement, il utilise des versions vieilles des programmes, mais en plus il n'a pas été revu/durci du point de vue sécurité.
-
-!!! Danger "Serveur mail de démo : ne pas utiliser en production"
-    Ce serveur mail de démo ne doit pas être déployé en production.
-
-
-Le paramètre qui déclenche l'utilisation du serveur mail de démo est la valeur `.Values.mail.deployMailserver`, qui vaut par défaut 1. Une valeur différente de 1 inhibe la mise en oeuvre du serveur mail de démo.

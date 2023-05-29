@@ -6,33 +6,40 @@ Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil d
 
 ### Nouvelles fonctions
 
+- Affichage des anniversaires des 7 prochains jours, en page d'accueil
+- Page pour changer les noms des quartiers (pour la distribution du journal, les visiteurs, etc...). Pour en savoir plus, [cliquer ici](gestion_base_donnees.md).
+
 ### Evolutions techniques
+
+- Nouvelle présentation graphique, avec le thème Claro
+- Création des rôles et permissions d'accès à CiviParoisse. Pour en savoir plus, [cliquer ici](gestion_base_donnees.md).
+- Nettoyage du code inital, pour supprimer des rapports inutiles ou redondants
 
 ## Version 1.41 - Hiver 2022
 
 ### Nouvelles fonctions
 
-* Nouveaux rapports disponibles
-   * Liste des nouveaux arrivants = inscriptions des 15 derniers mois
-   * Liste des Individus ayant moins de 18 ans
-   * Liste des Individus ayant plus de 75 ans
-   * Liste électorale
+- Nouveaux rapports disponibles :
+    - Liste des nouveaux arrivants = inscriptions des 15 derniers mois
+    - Liste des Individus ayant moins de 18 ans
+    - Liste des Individus ayant plus de 75 ans
+    - Liste électorale
 
-* Sommaire CiviParoisse en page d'accueil
+- Sommaire CiviParoisse en page d'accueil
 
-* Modèle de mail aux couleurs UEPAL
+- Modèle de mail aux couleurs UEPAL
 
-* Champ *Distribution du journal* rajouté à la fiche Foyer. Pour en savoir plus, [cliquer ici](9_gestion_base_donnees.md).
+- Champ *Distribution du journal* rajouté à la fiche Foyer
 
 ### Evolutions techniques
 
-* Activation des travaux programmés (Cron)
+- Activation des travaux programmés (Cron)
 
-* Liste complète des paroisses de l'UEPAL dans les listes déroulantes
+- Liste complète des paroisses de l'UEPAL dans les listes déroulantes
 
-* Création d'un Groupe *Désabonnement* pour les mailings courriel
+- Création d'un Groupe *Désabonnement* pour les mailings courriel
 
-* Format de page A4 standardisé pour les impressions PDF
+- Format de page A4 standardisé pour les impressions PDF
 
 
 ## Version 1.00 - Ete 2022
@@ -41,4 +48,4 @@ Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil d
 
 ### Evolutions techniques
 
-* Configuration des valeurs de base 
+- Configuration des valeurs de base 

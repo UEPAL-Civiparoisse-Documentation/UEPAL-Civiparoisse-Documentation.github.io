@@ -4,6 +4,5 @@ Cette section de la documention est prévue pour recevoir les documents liés à
 
 * [Description générale des préparatifs](prepoc.md)
 * [Etudes - précis techniques](ETUDES_PRECIS/index.md)
-* [Historique: Différentiels](DIFF/index.md)
 * [Opérationnel](INTEGRATION/index.md)
 

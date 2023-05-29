@@ -1,19 +1,19 @@
-# Intégration des rôles
+# Intégration des rôles des utilisateurs
 
 Les rôles utilisateurs sont un sujet complexe. Un rôle regroupe un ensemble de permissions qui sont nécessaires à la réalisation d'une tâche.
 On attribute ensuite à un utilisateur le ou les rôles qui lui sont nécessaires.
 
 
-Au niveau de CiviCRM au-dessus de Drupal, on constate que les permissions utilisées sont intégrées dans Drupal, si bien que la gestion des rôles se ferait réellement au niveau de Drupal et pas au niveau de CiviCRM. On ne parle en revanche pas ici du système d'ACL proposé par CiviCRM.
+Au niveau de CiviCRM, en sur-couche de Drupal, les permissions utilisées sont intégrées dans Drupal, si bien que la gestion des rôles se ferait réellement au niveau de Drupal et pas au niveau de CiviCRM. Cette documentation ne parle pas encore du système d'ACL proposé par CiviCRM.
 
 !!! Danger "Attention : L'exception de l'utilisateur Drupal UID 1"
 
     Cet utilisateur est une exception dans Drupal, car il est prévu pour toujours se voir donner toutes les permissions.
 
 
-## Schéma yaml
-
-Les rôles sont stockés comme des objets de configuration, et se retrouvent de ce fait dans la table `config` de Drupal, et comment par `user.role`. Etant donné que ce sont des objets de configuration, ils sont décrits par un schéma (`/app/web/core/modules/user/config/schema/user.schema.yml`):
+## Schémas yaml des rôles
+ 
+Les rôles sont stockés comme des objets de configuration, et se retrouvent de ce fait dans la table `config` de Drupal, et commencent par `user.role`. Etant donné que ce sont des objets de configuration, ils sont décrits par un schéma (`/app/web/core/modules/user/config/schema/user.schema.yml`) :
 
 ```yaml
 user.role.*:
@@ -41,9 +41,11 @@ user.role.*:
 
 ```
 
-Il devient de ce fait plus intéressant de coder les rôles dans des fichiers yaml, voire même de les créer sur une instance de développement, supprimer leur uuid, et de les récupérer pour les intégrer dans les autres instances, où le nom de fichier détermine le nom de l'objet de configuration.
+Nous avons choisi de coder les rôles dans des fichiers yaml, en les créant sur une instance de développement. Puis nous supprimons leur uuid, et nous les récupérons pour les intégrer dans les autres instances, où le nom de fichier détermine le nom de l'objet de configuration.
 
-## Export d'un rôle
+## Gestion technique
+
+### Export d'un rôle
 
 ```bash
 drush config:get user.role.r1 >user.role.r1.yml
@@ -73,7 +75,7 @@ Pour supprimer au passage l'UUID :
 cat user.role.r1.yml |grep -v uuid >TEST/user.role.r1.yml
 ```
 
-##Import des rôles
+### Import des rôles
 
 Pour importer le fichier yaml, il faut faire attention de bien indiquer un import partiel (sans quoi les objets de configuration non existants sont supprimés). La source est le répertoire dans lequel sont stockés les fichiers à importer.
 
@@ -81,7 +83,7 @@ Pour importer le fichier yaml, il faut faire attention de bien indiquer un impor
 drush --no-interaction config:import --partial --source=/app/TEST -vvv
 ```
 
-## Vérification de l'état
+### Vérification de l'état
 
 Pour vérifier la source de configuration pour les différents objets :
 
@@ -89,17 +91,14 @@ Pour vérifier la source de configuration pour les différents objets :
 drush config:status
 ```
 
-## Implémentation dans le SI
-Le moyen le plus simple d'intégrer les rôles est de créer un package composer supplémentaire à l'aide d'un dépôt git, et d'appeler les commandes drush lors de l'installation initiale et lors des mises à jour. De ce fait, les packages de rôles seront versionnés et la correspondance de versions sera maîtrisée via le composer.json principal ; de plus, ces fichiers seront présents directement dans les images Docker, qui elles-mêmes peuvent être taggées, et donc versionnées.
+## Implémentation dans CiviParoisse
+Nous avons intégré les rôles dans un package composer supplémentaire à l'aide d'un dépôt git, et nous utilisons les commandes drush lors de l'installation initiale et lors des mises à jour.  
+De ce fait, les packages de rôles seront versionnés et la correspondance de versions sera maîtrisée via le composer.json principal. De plus, ces fichiers seront présents directement dans les images Docker, qui elles-mêmes peuvent être taggées, et donc versionnées.
 
 ## Stratégie à long terme
-Il est probable que l'ensemble des rôles proposés avec Civiparoisse ne correspondra pas aux besoins de toutes les paroisses, et que des jeux de rôles vont venir remplacer ou compléter le jeu de rôles initial.
+Toutefois, il faut veiller à une certaine "compatibilité ascendante", de sorte à ne pas casser les droits et surtout les droits non donnés aux utilisateurs. Cette compatibilité pourra passer par des nouveaux ensembles de rôles, qui seront mis à disposition des paroisses.
 
-Toutefois, il faut assurer une certaine "compatibilité ascendante", de sorte à ne pas casser les droits et surtout les droits non donnés aux utilisateurs. Ainsi, si un rôle est crée, il ne devra pas être modifié, car il faut considérer qu'il a pu être utilisé par une paroisse, et qu'il ne faut pas interférer dans les droits donnés par une paroisse.
-
-A ce sujet, comme les paroisses peuvent également créer des rôles, il faudra définir un préfixe utilisé pour les rôles préparés pour Civiparoisse. On pourrait donc arriver à un nom de rôle comme  `user.role.civiparoisse.<nom_jeu>_<nom_role>`.
-
-Un cas particulier doit cependant être prévu : le cas où les permissions évoluent dans CiviCRM ou Drupal. Dans ce cas précis, on peut envisager de supprimer les droits des anciens rôles crées par Civiparoisse et préparer un nouveau jeu de rôles : l'utilisateur UID 1 pourra de toute manière intervenir pour mettre en place les nouveaux droits : c'est une approche sûre, dans la mesure où on ne donnera à aucun moment par mégarde des droits trop importants à des utilisateurs. En revanche, si l'utilisateur UID 1 n'est pas un utilisateur de la paroisse (équipe technique interne Civiparoisse), il faudra convenir d'une réunion de maintenance avec les responsables de la paroisse pour effectuer les actions qui conviennent.
+Un cas particulier doit cependant être prévu : le cas où les permissions évoluent dans CiviCRM ou Drupal. Dans ce cas précis, on peut envisager de supprimer les droits des anciens rôles crées par Civiparoisse et préparer un nouveau jeu de rôles : l'utilisateur UID 1 pourra de toute manière intervenir pour mettre en place les nouveaux droits. C'est une approche sûre, dans la mesure où on ne donnera à aucun moment par mégarde des droits trop importants à des utilisateurs. Comme l'utilisateur UID 1 n'est pas un utilisateur de la paroisse (mais l'équipe technique interne Civiparoisse), il faudra convenir, avec chaque paroisse, du User qui doit récupérer les nouveaux droits de gestion, pour qu'il effectue l'affectation des nouveaux droits au sein de sa paroisse.
 
 ## Liste des droits d'un système : attention aux droits actifs et inactifs
 
@@ -113,5 +112,5 @@ drush php:eval "var_dump(array_keys(\\Drupal::service('user.permissions')>getPer
 
 Et dans ce cas, Drupal récupère les permissions pour CiviCRM via un callback (défini dans le module Drupal civicrm : civicrm.permissions.yml) depuis `Drupal\civicrm\CivicrmPermissions` et sa fonction `permissions` qui appele `CRM_Core_Permission::basicPermission(FALSE,TRUE)` et ne récupère donc que les droits actifs.
 
-En toute rigueur, l'usage est la politique du moindre privilège, et l'on peut donc plutôt penser que si un droit n'est pas actif, il conviendrait plutôt de ne l'affecter à aucun rôle.
+En toute rigueur, nous respecterons l'usage de la politique du moindre privilège : si un droit n'est pas actif, il convient de ne l'affecter à aucun rôle.
 
