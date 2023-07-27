@@ -27,7 +27,7 @@ Vous pouvez à tout moment donner accès à la base de données à un utilisateu
 10. Dans la partie **Rôles**, choisir le ou les rôle(s) à donner à l'utilisateur, parmi la liste suivante
       * **Administrateur** : possibilité de gérer tout le site (Drupal comme CiviCRM). Réservé à l'équipe technique de CiviParoisse.
       * **Gestionnaire** : accès à l'ensemble de CiviParoisse en consultation et en modification, sans les données financières, ni l'envoi de mailing de masse ou l'administration du site. Ce rôle permet également de créer et gérer les droits d'accès à CiviParoisse.
-      * **Utilisateur paroissial** : accès à CiviParoisse uniquement en consultation, sans les données financières, et sans l'envoi de mailing de masse.
+      * **Utilisateur paroissial** : accès à CiviParoisse uniquement en consultation, sans les données financières, et sans l'envoi de mailing de masse. Ce rôle peut tout de même enregistrer des événements, des activités, des notes. Il peut préparer des mailings, sans pouvoir en valider l'envoi. Il peut aussi créer de nouvelles fiches (sans pouvoir les modifier). 
       * **Gestionnaire Mot de passe** : option qui permet de réinitialiser les mots de passe des utilisateurs. Attention, cette option permet également de créer et gérer les droits d'accès à CiviParoisse.
       * **Financier** : option qui permet de modifier et consulter les données financières.
       * **Envoi de mailing** : option qui permet d'envoyer les mailings de masse.
