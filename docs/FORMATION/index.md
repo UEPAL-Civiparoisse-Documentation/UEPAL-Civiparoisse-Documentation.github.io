@@ -80,27 +80,29 @@ CMD [bash]
 
 !!! info inline end "Titre de l'information"
     Texte de l'information à droite du texte
-Texte placé à gauche du bloc information
+
+Texte placé à gauche du bloc information  
 
 !!! info inline "Titre de l'information"
     Texte de l'information à gauche du texte
-Texte placé à droite du bloc information
+
+Texte placé à droite du bloc information  
 
 ??? note "Bloc developpable"
     Texte du bloc
 
 ### Icônes
 
-:fontawesome-solid-house-chimney: Foyer
-:fontawesome-solid-user: Individu
-:fontawesome-solid-building: Organisation
-:simple-civicrm: CiviCRM
+:fontawesome-solid-house-chimney: Foyer  
+:fontawesome-solid-user: Individu  
+:fontawesome-solid-building: Organisation  
+:simple-civicrm: CiviCRM  
 
 ### Grids
 
 <div class="grid cards" markdown>
 
-* :material-clock-fast:{ .lg .middle } **Test de vitesse**
+-   :material-clock-fast:{ .lg .middle } __Set up in 5 minutes__
 
     ---
 
