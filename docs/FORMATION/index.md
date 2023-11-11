@@ -102,7 +102,7 @@ Texte placé à droite du bloc information
 
 <div class="grid cards" markdown>
 
--   :material-clock-fast:{ .lg .middle } __Set up in 5 minutes__
+- :material-clock-fast:{ .lg .middle } __Set up in 5 minutes__
 
     ---
 
@@ -111,7 +111,7 @@ Texte placé à droite du bloc information
 
     [:octicons-arrow-right-24: Getting started](#)
 
--   :fontawesome-brands-markdown:{ .lg .middle } __It's just Markdown__
+- :fontawesome-brands-markdown:{ .lg .middle } __It's just Markdown__
 
     ---
 
@@ -119,7 +119,7 @@ Texte placé à droite du bloc information
 
     [:octicons-arrow-right-24: Reference](#)
 
--   :material-format-font:{ .lg .middle } __Made to measure__
+- :material-format-font:{ .lg .middle } __Made to measure__
 
     ---
 
@@ -127,7 +127,7 @@ Texte placé à droite du bloc information
 
     [:octicons-arrow-right-24: Customization](#)
 
--   :material-scale-balance:{ .lg .middle } __Open Source, MIT__
+- :material-scale-balance:{ .lg .middle } __Open Source, MIT__
 
     ---
 
