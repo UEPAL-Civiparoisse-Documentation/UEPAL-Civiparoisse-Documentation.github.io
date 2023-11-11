@@ -81,12 +81,16 @@ CMD [bash]
 !!! info inline end "Titre de l'information"
     Texte de l'information à droite du texte
 
-Texte placé à gauche du bloc information  
+Texte placé à gauche du bloc information.  
+Ce texte prend plusieurs lignes, pour occuper la place.  
+Et une ligne de plus.
 
 !!! info inline "Titre de l'information"
     Texte de l'information à gauche du texte
 
-Texte placé à droite du bloc information  
+Texte placé à droite du bloc information.  
+Ce texte prend plusieurs lignes, pour occuper la place.  
+Et une ligne de plus.
 
 ??? note "Bloc developpable"
     Texte du bloc
