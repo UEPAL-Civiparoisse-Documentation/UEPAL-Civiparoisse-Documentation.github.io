@@ -1,11 +1,12 @@
 # Gestion de la base de données
 
-!!! warning "Attention" 
+!!! warning "Attention"
     Cette partie est destinée aux administrateurs locaux de la base de données.
 
 ## Gérer les accès à CiviParoisse
 
 ### Donner accès à la base de données pour un nouvel utilisateur
+
 Vous pouvez à tout moment donner accès à la base de données à un utilisateur.
 
 **Pour mettre en place l’accès :**
@@ -27,7 +28,7 @@ Vous pouvez à tout moment donner accès à la base de données à un utilisateu
 10. Dans la partie **Rôles**, choisir le ou les rôle(s) à donner à l'utilisateur, parmi la liste suivante
       * **Administrateur** : possibilité de gérer tout le site (Drupal comme CiviCRM). Réservé à l'équipe technique de CiviParoisse.
       * **Gestionnaire** : accès à l'ensemble de CiviParoisse en consultation et en modification, sans les données financières, ni l'envoi de mailing de masse ou l'administration du site. Ce rôle permet également de créer et gérer les droits d'accès à CiviParoisse.
-      * **Utilisateur paroissial** : accès à CiviParoisse uniquement en consultation, sans les données financières, et sans l'envoi de mailing de masse. Ce rôle peut tout de même enregistrer des événements, des activités, des notes. Il peut préparer des mailings, sans pouvoir en valider l'envoi. Il peut aussi créer de nouvelles fiches (sans pouvoir les modifier). 
+      * **Utilisateur paroissial** : accès à CiviParoisse uniquement en consultation, sans les données financières, et sans l'envoi de mailing de masse. Ce rôle peut tout de même enregistrer des événements, des activités, des notes. Il peut préparer des mailings, sans pouvoir en valider l'envoi. Il peut aussi créer de nouvelles fiches (sans pouvoir les modifier).
       * **Gestionnaire Mot de passe** : option qui permet de réinitialiser les mots de passe des utilisateurs. Attention, cette option permet également de créer et gérer les droits d'accès à CiviParoisse.
       * **Financier** : option qui permet de modifier et consulter les données financières.
       * **Envoi de mailing** : option qui permet d'envoyer les mailings de masse.
@@ -36,7 +37,6 @@ Vous pouvez à tout moment donner accès à la base de données à un utilisateu
 
 !!! warning "Attention"
     Selon le rôle que vous donnez à l'utilisateur, il aura accès à plus ou moins d'informations stockées dans la base de données. Il est donc fortement recommandé de ne pas diffuser largement un rôle *Gestionnaire*, ceci afin de préserver la confiance de vos paroissiens quant aux données personnelles que vous recueillez.
-
 
 ### Supprimer l’accès à la base de données à un utilisateur existant
 
@@ -59,7 +59,6 @@ Vous pouvez à tout moment donner accès à la base de données à un utilisateu
 
 En cours d'écriture
 
-
 ## Modifier la liste des Quartiers
 
 Dans le menu Paroisse, cliquer sur le menu Paramètres.
@@ -71,7 +70,7 @@ Si vous souhaitez modifier le nom d'un quartier :
 * Cliquer sur le nom du quartier à modifier
 * Saisir le nouveau nom
 * Cliquer sur la flèche verte sous le nom
- 
+
 Si vous souhaitez ne plus utiliser un quartier existant :
 
 * Vérifier au préalable qu'aucun Foyer n'est encore attaché à ce quartier
@@ -84,4 +83,3 @@ Si vous souhaitez utiliser à nouveau un quartier actuellement Non visible :
 * Dans la colonne *Visible ?*, cliquer sur *Non*
 * Choisir le bouton *Oui*
 * Cliquer sur la flèche verte
-   

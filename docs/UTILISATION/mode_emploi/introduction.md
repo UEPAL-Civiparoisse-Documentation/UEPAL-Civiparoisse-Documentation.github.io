@@ -10,9 +10,9 @@ CiviParoisse ajoute un troisième type : le **foyer** .
 
 Pas d'inquiétude, vous allez pouvoir identifier le type de contact aisément par son icône :
 
-* Le **foyer** : :fontawesome-solid-house-chimney: ![icone foyer](img/icone_foyer.png)  qui est le lieu où vivent un certain nombre de personnes ayant au minimum comme **relation** d'habiter dans le même foyer fiscal, mais qui souvent auront aussi des liens familiaux, que CiviParoisse sait enregistrer.
-* L'**individu** : :fontawesome-solid-user: ![icone individu](img/icone_individu.png) qui comme son nom l'indique va être la fiche de contact de chaque individu que nous estimons important de garder dans notre fichier.
-* L'**organisation** : :fontawesome-solid-building: ![icone organisation](img/icone_organisation.png) qui pourra être la fiche de contact d'une paroisse, ou d'une association avec laquelle on est souvent en relation, ou de l'entreprise qui entretient le chauffage du presbytère...
+* Le **foyer** : :fontawesome-solid-house-chimney: qui est le lieu où vivent un certain nombre de personnes ayant au minimum comme **relation** d'habiter dans le même foyer fiscal, mais qui souvent auront aussi des liens familiaux, que CiviParoisse sait enregistrer.
+* L'**individu** : :fontawesome-solid-user: qui comme son nom l'indique va être la fiche de contact de chaque individu que nous estimons important de garder dans notre fichier.
+* L'**organisation** : :fontawesome-solid-building: qui pourra être la fiche de contact d'une paroisse, ou d'une association avec laquelle on est souvent en relation, ou de l'entreprise qui entretient le chauffage du presbytère...
 
 ### Quelles données vont dans quelle fiche ?
 
@@ -45,7 +45,7 @@ Le tableau ci-dessous montre de façon non exhaustive la répartition.
 
 CiviParoisse ne permet pas seulement de créer des fiches de contact, mais également d'établir des liens entres les fiches et de les rassembler en groupes.
 
-Un enfant aura ainsi une **relation** comme "fils de" avec ses parents, un bénévole sera "bénévole de" pour une association ou un groupe d'activité.
+Un enfant aura ainsi une **relation** comme *fils de* avec ses parents, un bénévole sera *bénévole de* pour une association ou un groupe d'activité.
 
 Il vous est également possible de constituer un **groupe** (dynamique ou non, voir le point dédié aux groupes pour plus de détails). Le groupe pourra par exemple recenser tous les bénévoles de la paroisse, un autre les membres de la chorale, un autre encore les dames de l'ouvroir.  
 Un groupe est de plus un bon moyen pour rassembler l'ensemble des personnes à qui vous allez envoyer régulièrement un courriel (par exemple les membres du conseil presbytéral).
@@ -95,7 +95,6 @@ Passons en revue les différents éléments :
 |L’onglet « Adhésions »| Permet d’enregistrer une nouvelle adhésion (mais il est conseillé de le faire au moment de la création de la fiche individuelle) et d’établir des statistiques sur les adhésions (d’où l’importance de le faire à la création pour avoir des dates réalistes).|
 |L’onglet « Rapports »| Permet d’établir diverses statistiques.|
 |L’onglet « Administrer »|Permet de paramétrer CiviParoisse. Ce menu est réservé aux personnes ayant les droits d'administration.|
-|L’onglet « Support »| Donne accès à une documentation sur CiviCRM qui est la documentation officielle et non celle élaborée par l’UEPAL.|
 |L’onglet « Récent »|Vous indique les dernières fiches créées.|
 |L'onglet « Paroisse »| Reprend les entrées de menu que vous trouvez en page d'accueil.|
 
@@ -104,7 +103,7 @@ Vous remarquerez que sous ce menu, à gauche, CiviParoisse vous indique toujours
 ### L'interface de la fiche "foyer"
 
 Vous l'avez sans doute déjà remarqué, une fiche foyer a comme une icône une maison. C'est sur sur cette fiche que nous enregistrons toutes les informations communes aux différents membres d'un foyer : l'adresse, le numéro de téléphone fixe ou encore le quartier pour le portage du bulletin paroissial.
-Voici un aperçu d'une fiche foyer sur son onglet "synthèse" :
+Voici un aperçu d'une fiche foyer sur son onglet `synthèse` :
 
 ![ecran fiche](img/ecran_fiche_foyer.png)
 
@@ -116,17 +115,17 @@ Nous détaillons les différentes onglets à partir de la fiche "individu".
 
 Remarquez d'emblée deux choses :
 
-* une fiche de contact s'ouvre sur l'onglet "Synthèse" qui va vous afficher les éléments principaux de la fiche.
+* une fiche de contact s'ouvre sur l'onglet `Synthèse` qui va vous afficher les éléments principaux de la fiche.
 
-* elle se découpe en zones (ou onglets) et si vous cliquez dans l'une des zones (ou onglets) vous pouvez modifier les informations de cette zone. Notez que vous modifier l'ensemble en cliquant sous le nom et prénom sur "Modifier".
+* elle se découpe en zones (ou onglets) et si vous cliquez dans l'une des zones (ou onglets) vous pouvez modifier les informations de cette zone. Notez que vous modifier l'ensemble en cliquant sous le nom et prénom sur `Modifier`.
 
 Elle comporte quelques éléments communs avec la ficher "foyer", s'y ajoutent, du fait que nous sommes là sur une fiche individu :
 
-* Son adresse courriel personnelle s’il en dispose d’une ; de même que son numéro de téléphone mobile et son numéro de téléphone professionnel le cas échéant.
-* L’adresse du foyer auquel il est rattaché (nous en dirons plus par la suite).
+* Son **adresse courriel personnelle** s’il en dispose d’une ; de même que son numéro de téléphone mobile et son numéro de téléphone professionnel le cas échéant.
+* L’**adresse du foyer** auquel il est rattaché (nous en dirons plus par la suite).
 * Son genre, sa date de naissance et son âge.
-* En bas à gauche les informations dont nous disposons sur son état civil.
-* En bas à droite les informations dont nous disposons sur sa religion, date et lieu de baptême, etc.
+* En bas à gauche les informations dont nous disposons sur son **état civil**.
+* En bas à droite les informations dont nous disposons sur sa **religion, date et lieu de baptême**, etc.
 
 Voyons maintenant les différents onglets de la fiche :
 

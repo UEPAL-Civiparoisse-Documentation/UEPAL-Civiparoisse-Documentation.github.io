@@ -1,6 +1,5 @@
 # Mode d'emploi de Civiparoisse
 
-
 * [Introduction](introduction.md)
 * [Débuter](debuter.md)
 * [Faire des recherches sur les contacts](faire_des_recherches_sur_les_contacts.md)
