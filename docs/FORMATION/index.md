@@ -100,4 +100,5 @@ Et une ligne de plus.
 :fontawesome-solid-house-chimney: Foyer  
 :fontawesome-solid-user: Individu  
 :fontawesome-solid-building: Organisation  
+:fontawesome-solid-magnifying-glass: Loupe  
 :simple-civicrm: CiviCRM  

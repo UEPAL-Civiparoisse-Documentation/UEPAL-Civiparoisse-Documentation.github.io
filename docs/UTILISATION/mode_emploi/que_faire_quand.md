@@ -7,27 +7,26 @@ A l'arrivée d'une nouvelle famille au sein de la paroisse il vous faut suivre l
 ### Créer la fiche Foyer
 
 Utilisez pour cela le formulaire spécifique accessible sur la page d'**Accueil** de CiviParoisse.
-Merci de respecter les règles suivantes pour maintenir la cohérence des données au sein de votre base :
+Merci de respecter les règles suivantes pour maintenir la cohérence des données au sein de votre base de données :
 
 * Nom du Foyer : saisir le nom de famille en **majuscules**. Cas de figure :
 
-	* NOM Prénom, pour un(e) célibataire (ex. : *DUPONT Marc*)
-	* NOM Prénom et Prénom, pour un couple portant le même nom de famille (ex. *DUPONT Marc et Cécile*)
-	* NOM Prénom et NOM Prénom pour un couple ne portant pas le même nom de famille (ex. *DUPONT Marc et DURAND Cécile*)
+  * NOM Prénom, pour un(e) célibataire (ex. : *DUPONT Marc*)
+  * NOM Prénom et Prénom, pour un couple portant le même nom de famille (ex. *DUPONT Marc et Cécile*)
+  * NOM Prénom et NOM Prénom pour un couple ne portant pas le même nom de famille (ex. *DUPONT Marc et DURAND Cécile*)
 
 * Adresse : la renseigner de façon aussi précise que possible
 * Numéro(s) de téléphone fixe de la maison : seul le téléphone fixe est saisi dans la fiche Foyer, les numéros de portables sont saisis sur les fiches Individu respectives.
-	* Le(s) saisir en respectant le format international (ex. +33 3 88 89 90 91)
-	* Mettre des espaces entre les numéros et non des points.
+  * Le(s) saisir en respectant le format international (ex. +33 3 88 89 90 91)
+  * Mettre des espaces entre les numéros et non des points.
 
 ### Créer autant de fiches Individu que de personnes composant le foyer
 
 Là aussi, il est important de respecter quelques règles :
 
 * Nom de famille :
-	* Le saisir **en majuscules**
-
-	* Si besoin, saisir le nom de naissance dans la case `Nom de naissance` (en bas à gauche, dans la partie `Etat Civil`.
+  * Le saisir **en majuscules**
+  * Si besoin, saisir le nom de naissance dans la case `Nom de naissance` (en bas à gauche, dans la partie `Etat Civil`.
 
 * Adresse : rattachez l’adresse à celle du foyer. Pour cela, tapez dans le champ "Choisir le foyer d'appartenance" les premières lettres du nom du foyer, puis sélectionnez le bon foyer.
 * Courriel : renseignez le ou les adresses mail.
@@ -97,28 +96,6 @@ Ce qu'il vous faut faire :
 * Enfin, cliquez sur le bouton "**Supprimer contact**" et confirmez en cliquant sur "Supprimer contact(s)". **Attention :** ne pas cliquer sur le bouton "Supprimer définitivement" !
 
 Pensez à le faire pour les différentes personnes et pour leur Foyer, si c'est tout un foyer qui déménage.
-
-<details>
-
-<summary>:material-grave-stone: Une personne décède ?</summary>
-
-Pour enregistrer le décès d'une personne, rendez-vous sur la fiche Individu de la personne et effectuez les modifications suivantes :
-
-* Dans les **Données démographiques**, cochez la case `Le contact est décédé` puis indiquez la date du décès.
-* Modifiez les **Préférences de communication** de la même façon que pour le cas de figure d'une personne qui déménage, en cochant les 4 cases :
-  * `Ne pas envoyer de courriel`
-  * `Ne pas envoyer de courrier postal`
-  * `Ne pas envoyer de sms`
-  * `Pas de mailing - opposition (opt out)`
-* Au niveau de l'**état civil**, renseignez si possible la date de l'enterrement et indiquez au sein de quel paroisse a eu lieu l'enterrement.
-* Retirez la personne des **groupes** auxquels elle appartenait, en utilisant la fonction `Retirer`.  
-Attention : Ne pas utiliser la fonction `Supprimer`, afin de conserver un historique de l'activité.
-* Vérifiez que les **Adhésions** soient passées en `Adhésions en attente ou exprirées`. Là aussi, ne pas utiliser la fonction `Supprimer` afin de conserver l'historique.
-* Créez une **Note** avec les coordonnées de contact de la famille. Cela pourra servir à les contacter en vue d'un culte des défunts.
-* Sur la fiche **Foyer**, modifiez l'intitulé du foyer pour enlever le nom du défunt. S'il n'y a plus personne au sein du foyer, supprimez le foyer.
-* Si besoin, ajoutez la **date de veuvage** sur la fiche Individu du conjoint survivant.
-</details>
-
 
 ## :material-grave-stone: Une personne décède ?
 

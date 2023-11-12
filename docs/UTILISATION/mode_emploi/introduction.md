@@ -63,7 +63,7 @@ Elle devrait ressembler à ceci :
 
 Plusieurs éléments sont à identifier :
 
-* En 1, nous avons la loupe, qui nous servira à effectuer des recherches ponctuelles (fiche d'une personne donnée, fiches de toutes une famille, etc...)
+* En 1, nous avons la loupe :fontawesome-solid-magnifying-glass: qui nous servira à effectuer des recherches ponctuelles (fiche d'une personne donnée, fiches de toutes une famille, etc...)
 * En 2, le lien `Accueil` qui nous permettra toujours de revenir à cette page en cliquant dessus.
 * L’icône 3 nous permet d’enregistrer un **nouveau foyer** en suivant le cadre spécifique à CiviParoisse. Il est indispensable de passer par ce cadre.
 * L’icône 4 permet d’enregistrer un **nouvel individu** si la fiche « Foyer » dont il fait parti existe déjà. Sinon passer d’abord par le point 3.
@@ -85,18 +85,18 @@ Passons en revue les différents éléments :
 
 |Elément du menu|Description|
 |----|-----|
-|La loupe| Raccourci qui permet de rechercher rapidement une fiche, sans passer par une fonction « rechercher » plus évoluée, mais en choisissant sur quoi porte la recherche.|
-|L’icône en forme de triangle vert| Est animée lorsque CiviParoisse est en train d’effectuer une opération. Elle permet une recherche rapide sur tout texte entré. Elle permet de revenir à l’accueil.|
-|L’onglet « Rechercher »| Vous permet soit une recherche simple, soit une recherche avancée, soit encore une recherche dans le contenu. Ce sera souvent par là que vous chercherez à accéder à une fiche.|
-|L’onglet « Contacts »|N’est pas à utiliser pour créer une fiche, puisque nous passons par un formulaire spécifique. C’est en revanche ici que vous pouvez gérer les groupes (Bénévoles, Acat, etc.).|
-|L’onglet « Contributions »| Va nous permettre d’enregistrer les dons puis d’éditer les reçus fiscaux.|
-|L’onglet « Événements »| Permet de créer un événement (voyage à Wittenberg ou repas paroissial, par exemple) et de gérer tout ce qui y sera lié.|
-|L’onglet « Mailings »| Permet, comme son nom l’indique, d’envoyer des courriels.|
-|L’onglet « Adhésions »| Permet d’enregistrer une nouvelle adhésion (mais il est conseillé de le faire au moment de la création de la fiche individuelle) et d’établir des statistiques sur les adhésions (d’où l’importance de le faire à la création pour avoir des dates réalistes).|
-|L’onglet « Rapports »| Permet d’établir diverses statistiques.|
-|L’onglet « Administrer »|Permet de paramétrer CiviParoisse. Ce menu est réservé aux personnes ayant les droits d'administration.|
-|L’onglet « Récent »|Vous indique les dernières fiches créées.|
-|L'onglet « Paroisse »| Reprend les entrées de menu que vous trouvez en page d'accueil.|
+|La loupe :fontawesome-solid-magnifying-glass:| Raccourci qui permet de rechercher rapidement une fiche, sans passer par une fonction « rechercher » plus évoluée, mais en choisissant sur quoi porte la recherche.|
+|L’icône en forme de triangle vert :simple-civicrm:| Est animée lorsque CiviParoisse est en train d’effectuer une opération. Elle permet une recherche rapide sur tout texte entré. Elle permet de revenir à l’accueil.|
+|L’onglet « Rechercher » :fontawesome-solid-magnifying-glass:| Vous permet soit une recherche simple, soit une recherche avancée, soit encore une recherche dans le contenu. Ce sera souvent par là que vous chercherez à accéder à une fiche.|
+|L’onglet « Contacts » :fontawesome-regular-address-book:|N’est pas à utiliser pour créer une fiche, puisque nous passons par un formulaire spécifique. C’est en revanche ici que vous pouvez gérer les groupes (Bénévoles, Acat, etc.).|
+|L’onglet « Contributions » :fontawesome-regular-credit-card:| Va nous permettre d’enregistrer les dons puis d’éditer les reçus fiscaux.|
+|L’onglet « Événements » :fontawesome-regular-calendar-days:| Permet de créer un événement (voyage à Wittenberg ou repas paroissial, par exemple) et de gérer tout ce qui y sera lié.|
+|L’onglet « Mailings » :octicons-mail-24:| Permet, comme son nom l’indique, d’envoyer des courriels.|
+|L’onglet « Adhésions » :fontawesome-regular-id-badge:| Permet d’enregistrer une nouvelle adhésion (mais il est conseillé de le faire au moment de la création de la fiche individuelle) et d’établir des statistiques sur les adhésions (d’où l’importance de le faire à la création pour avoir des dates réalistes).|
+|L’onglet « Rapports » :fontawesome-solid-chart-column:| Permet d’établir diverses statistiques.|
+|L’onglet « Administrer » :fontawesome-solid-gears:|Permet de paramétrer CiviParoisse. Ce menu est réservé aux personnes ayant les droits d'administration.|
+|L’onglet « Récent » :fontawesome-solid-clock-rotate-left:|Vous indique les dernières fiches créées.|
+|L'onglet « Paroisse » :fontawesome-regular-handshake:| Reprend les entrées de menu que vous trouvez en page d'accueil.|
 
 Vous remarquerez que sous ce menu, à gauche, CiviParoisse vous indique toujours où vous êtes.
 
