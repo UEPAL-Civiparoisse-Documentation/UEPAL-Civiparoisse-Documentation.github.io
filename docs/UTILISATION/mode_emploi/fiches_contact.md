@@ -15,6 +15,7 @@ Vous obtiendrez la fenêtre suivante :
 Merci de respecter les règles suivantes pour maintenir la cohérence des données au sein de votre base de données :
 
 :material-human-male-female-child: Nom du Foyer : saisir le nom de famille en **majuscules**. Cas de figure :
+
 * NOM Prénom, pour un(e) célibataire (ex. : *DUPONT Marc*)
 * NOM Prénom et Prénom, pour un couple portant le même nom de famille (ex. *DUPONT Marc et Cécile*)
 * NOM Prénom et NOM Prénom pour un couple ne portant pas le même nom de famille (ex. *DUPONT Marc et DURAND Cécile*)
@@ -47,8 +48,9 @@ Le premier élément important est de **relier l'individu à une fiche "foyer"**
 Il est important de respecter quelques règles :
 
 XXX Nom de famille :
-  * Le saisir **en majuscules**
-  * Si besoin, saisir le nom de naissance dans la case `Nom de naissance` (en bas à gauche, dans la partie `Etat Civil`.
+
+* Le saisir **en majuscules**
+* Si besoin, saisir le nom de naissance dans la case `Nom de naissance` (en bas à gauche, dans la partie `Etat Civil`.
 
 XXX Adresse : elle est automatiquement reprise de l'adresse du foyer. Si ce n'est pas le cas, il faut rattacher l’adresse à celle du foyer. Pour cela, tapez dans le champ `Choisir le foyer d'appartenance` les premières lettres du nom du foyer, puis sélectionnez le bon foyer.
 
@@ -69,4 +71,3 @@ N'hésitez pas à consulter les recommandations sur le **lien avec la paroisse**
 Il est recommandé de noter les compétences lorsqu'elle sont connues, pour inviter par exemple la personne par la suite à venir renforcer la chorale ou un groupe de musique.
 
 Les éléments sur la Sécurité sociale, le Guso, ou pour savoir si la personne est fonctionnaire, ne sont réellement utiles que pour la fiche d'un musicien rémunéré par la paroisse.
-

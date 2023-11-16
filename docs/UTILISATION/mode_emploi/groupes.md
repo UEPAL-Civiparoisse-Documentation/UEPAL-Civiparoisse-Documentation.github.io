@@ -41,6 +41,5 @@ Désormais, dès qu'un contact rempli les critères de la recherche il est autom
 
 ## Enlever d'un groupe
 
-!!! warning "N'utilisez pas la suppresion"
+!!! warning "N'utilisez pas la suppression"
     Afin de conserver l'historique des participations aux différents groupes de la paroisse, n'utilisez jamais la touche Supprimer.
-

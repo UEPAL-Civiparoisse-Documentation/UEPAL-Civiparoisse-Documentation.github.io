@@ -1,16 +1,15 @@
 # Débuter
 
 !!! warning "Attention"
-    Avant de créer une fiche "individu", vérifiez que la fiche "foyer" à laquelle elle sera liée existe déjà.  
-    Sinon créez d'abord la fiche "foyer".
+    Avant de créer une fiche "individu", vérifiez que la fiche "foyer" à laquelle elle sera liée existe déjà. Sinon créez d'abord la fiche "foyer".
 
 ## :fontawesome-solid-house-chimney: Enregistrer un nouveau foyer
 
 !!! warning "Attention"
-    N'utilisez pas le menu `Contact` -> `Nouveau foyer` mais suivez la procédure ci-dessous.
+    N'utilisez pas le menu `Contact` -> `Nouveau foyer`, mais suivez la procédure ci-dessous.
     Elle utilise un formulaire spécialement élaboré pour les paroisses.
 
-Pour créer un nouveau "foyer" vous devez passer par la page d'accueil (voir [Mode d'emploi#La page d'accueil](introduction.md#la-page-daccueil)) et cliquez sur l'icône "Nouveau Foyer".
+Pour créer un nouveau "foyer" vous devez passer par la page d'accueil (voir [La page d'accueil](introduction.md#la-page-daccueil)) et cliquez sur l'icône "Nouveau Foyer".
 
 Vous obtiendrez la fenêtre suivante :
 
@@ -26,23 +25,22 @@ Vous trouverez plus d'informations sur la gestion des fiches [:octicons-link-ext
 
 Contrairement à la fiche foyer, nous avons ici un large panel d'informations que nous pouvons enregistrer.
 
-Pour créer un nouveau "individu" vous devez passer par la page d'accueil (voir [Mode d'emploi#La page d'accueil](introduction.md#la-page-daccueil)) et cliquez sur l'icône "Nouvel Individu / Particulier".
+Pour créer un nouveau "individu" vous devez passer par la page d'accueil (voir [La page d'accueil](introduction.md#la-page-daccueil)) et cliquez sur l'icône "Nouvel Individu / Particulier".
 
 ![ecran creation individu.png](img/ecran_formulaire_individu.png)
 
 Vous trouverez plus d'informations sur la gestion des fiches [:octicons-link-external-16: en cliquant ici](fiches_contact.md).
 
-## Gérer les relations
+## :fontawesome-regular-handshake: Gérer les relations
 
 Les relations explicitent le lien entre des individus mais aussi entre des individus et la paroisse ou des individus et des associations  (ou des entreprises) que vous aurez enregistrées.
-CiviParoisse propose de nombreuses relations. 
+CiviParoisse propose de nombreuses relations.
 
 Vous trouverez plus d'information sur les relations [:octicons-link-external-16: en cliquant ici](relations.md).
 
-## Inscrire dans les groupes
+## :fontawesome-solid-users: Inscrire dans les groupes
 
 Après les relations, les groupes sont une autre façon d'établir un lien entre des personnes, de dire qu'elles partagent quelque chose, une activité par exemple.
 Vous pouvez ainsi créer un groupe qui recense tous les membres de la chorale, un autre pour les catéchètes, ou encore pour les participants au groupe biblique.
 
-Vous trouverez plus d'informations sur la gestion des fiches [:octicons-link-external-16: en cliquant ici](groupes.md).
-
+Vous trouverez plus d'informations sur la gestion des groupes [:octicons-link-external-16: en cliquant ici](groupes.md).

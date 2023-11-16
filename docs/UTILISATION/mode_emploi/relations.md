@@ -60,7 +60,7 @@ Ceci va vous permettre de tisser assez finement les liens entre les uns et les a
 
 ## Finir une relation
 
-!!! warning "N'utilisez pas la suppresion"
+!!! warning "N'utilisez pas la suppression"
     Afin de conserver l'historique des relations, n'utilisez jamais la touche Supprimer.
 
 Pour la **fin d'une relation**, deux cas possibles :

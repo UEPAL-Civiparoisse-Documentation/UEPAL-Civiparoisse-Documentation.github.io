@@ -45,8 +45,8 @@ Pour enregistrer le décès d'une personne, rendez-vous sur la fiche Individu de
 	* `Ne pas envoyer de sms`
 	* `Pas de mailing - opposition (opt out)`
 * Au niveau de l'**état civil**, renseignez si possible la date de l'enterrement et indiquez au sein de quel paroisse a eu lieu l'enterrement.
-* Retirez la personne des **groupes** auxquels elle appartenait, en utilisant la fonction `Retirer`. :octicons-stop-24: Ne pas utiliser la fonction `Supprimer`, afin de conserver un historique de l'activité.
-* Vérifiez que les **Adhésions** soient passées en `Adhésions en attente ou exprirées`. :octicons-stop-24: Ne pas utiliser la fonction `Supprimer` afin de conserver l'historique.
+* Retirez la personne des **groupes** auxquels elle appartenait, en utilisant la fonction `Retirer`. :octicons-no-entry-fill-12: Ne pas utiliser la fonction `Supprimer`, afin de conserver un historique de l'activité.
+* Vérifiez que les **Adhésions** soient passées en `Adhésions en attente ou exprirées`. :octicons-no-entry-fill-12: Ne pas utiliser la fonction `Supprimer` afin de conserver l'historique.
 * Créez une **Note** avec les coordonnées de contact de la famille. Cela pourra servir à les contacter en vue d'un culte des défunts.
 * Sur la fiche **Foyer**, modifiez l'intitulé du foyer pour enlever le nom du défunt. S'il n'y a plus personne au sein du foyer, supprimez le foyer.
 * Si besoin, ajoutez la **date de veuvage** sur la fiche Individu du conjoint survivant.

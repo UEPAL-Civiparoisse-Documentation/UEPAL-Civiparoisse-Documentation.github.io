@@ -7,13 +7,13 @@
 - Information sur les listes
 - Revoir page Que faire si
 
-## Page Debuter.md - FINI
+## Page Debuter.md - FINI-REVUE
 
 - [X] Passer les guillemets en ``
 - Changer les images
   - [X] Page d'accueil
 
-## Page Introduction.md - FINI
+## Page Introduction.md - FINI-REVUE
 
 - [X] Passer les guillemets en ``
 - Changer les images
