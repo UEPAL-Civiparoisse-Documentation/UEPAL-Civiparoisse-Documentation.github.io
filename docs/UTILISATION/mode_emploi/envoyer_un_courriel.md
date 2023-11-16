@@ -18,7 +18,7 @@ Pour par exemple inviter les conseillers presbytéraux à la prochaine réunion,
 
 Pour y accéder, recherchez le ou les destinataires concernés, en utilisant les outils de recherche ([cliquez ici pour en savoir plus](faire_des_recherches_sur_les_contacts.md)). Après les avoir sélectionnés, cliquez sur `Courriel - envoi immédiat`.
 
-![mailing 1.png](img/mailing_1.png)
+![courriel 1.png](img/courriel_1.png)
 
 Dans la nouvelle fenêtre, choisissez l'adresse mail d'expédition si nécessaire dans le champ `De`. Supprimez ou rajoutez des adresses mails dans le champ `A`. Puis indiquez l'objet du mail dans le champ `Sujet`.
 
@@ -31,44 +31,51 @@ Si vous pensez envoyer régulièrement le même courriel, vous pouvez créer un 
 !!! note "Astuce"
     CiviParoisse permet de faire du publipostage, vous pouvez donc ajouter par exemple les champs "Formule de salutation par courriel" suivi du champ "nom affiché" pour obtenir pour chaque destinataire quelque chose du type "Bien cher M. DUPONT Martin,". Pour cela, utilisez les `champs de fusion` lors de la création du courriel.
 
-## Courriel plus esthétique
+## Mailing ("Courriel - envoi massif")
 
-Si votre paroisse diffuse une lettre électronique d'information en complément du bulletin paroissiale, vous voudrez sans doute que l'oeil du futur lecteur soit attiré par une présentation plus recherchée. Là encore, CiviParoisse vous permet de le faire.
+Si votre paroisse diffuse une lettre électronique d'information en complément du bulletin paroissial, vous voudrez sans doute que l'oeil du futur lecteur soit attiré par une présentation plus recherchée. Là encore, CiviParoisse vous permet de le faire.
 
 Pour y accéder, cliquez sur `Mailings` et choisissez en haut de la liste `Nouveau mailing`. Vous pouvez également y accéder via le bouton `Action` dans les écrans de recherche, et en choisissant `Courriel - planifier/envoyer un mailing`.
 
-Toute une partie est identique au mailing traditionnel et ne sera donc pas répétée ici.
+### Première partie : le mailing
 
-Concentrons nous sur l'élaboration du contenu. Cliquez sur le modèle que vous avez prédéfini pour le choisir ou sur "Empty Template" pour créer un modèle.
+Indiquez un nom du mailing (ce nom se retrouvera, une fois le courriel envoyé, dans l'onglet `Activités` de chaque destinataire. Prenez par conséquent un nom suffisamment explicite pour qu'il vous parle encore des mois plus tard).
+
+Le champ `De` comporte en principe l'adresse courriel de votre paroisse.
+
+Dans `Destinataires` vous allez pouvoir choisir un groupe (si pour ce groupe il est bien coché "Liste de diffusion"). Si vous êtes préalablement passé par une recherche, le groupe est constitué automatiquement.
+
+Le `Sujet` correspond à ce qui est parfois "Objet" du courriel dans certains logiciels. C'est l'intitulé du courriel tel qu'il s'affichera chez vos destinataires.
+
+Choisissez le groupe *Désabonnement* dans la partie `Se désinscrire de la liste`.
+
+Cliquer sur `Suivant`.
+
+### Deuxième partie : le design
+
+Choisissez le `modèle mail UEPAL`.
 
 Vous obtiendrez la fenêtre suivante :
 
 ![mailing 2](img/mailing_2.png)
 
-Pour créer votre propre modèle, glissez-déposez un "bloc" (ou en cliquant sur le bouton "Add" qui apparait lorsque la souris ce place sur un bloc) de la gauche vers la droite. Vous pourrez les réarranger à volonté. Vous pouvez ensuite personnaliser les différents blocs, placer déjà du texte et des illustrations que vous utiliserez à chaque envoi et prévisualiser le résultat.
-A gauche de chaque bloc se trouve une icône pour le dupliquer et une autre pour le supprimer si vous décidez d'une autre présentation.
+Pour créer votre courriel, et selon les besoins, glissez-déposez un "bloc" (ou en cliquant sur le bouton "Add" qui apparait lorsque la souris se place sur un bloc) de la gauche vers la droite. Vous pourrez les réarranger à volonté. Vous pouvez ensuite personnaliser les différents blocs, placer du texte et des illustrations que vous utiliserez à chaque envoi et prévisualiser le résultat.  
+A droite de chaque bloc se trouve une icône pour le dupliquer et une autre pour le supprimer si vous décidez d'une autre présentation.
 
-Si vous cliquez sur certains éléments, la partie de droite change d'affichage pour vous permettre de personnaliser l'élément (par exemple pour indiquer la page Facebook de la paroisse).
+Si vous cliquez sur certains éléments, la partie de gauche change d'affichage pour vous permettre de personnaliser l'élément (par exemple pour indiquer la page Facebook de la paroisse).
 
-N'oubliez pas d'enregistrer le tout pour avoir un modèle prêt à l'emploi pour les prochains envois.
+Une fois le courriel composé, cliquer sur `Close`.  
+Au préalable, vous pourriez effectuer un test, en cliquant simplement sur `Test`. Cela vous sera utile si vous avez mis en place une esthétique élaborée et que vous voudrez vérifier que le contenu est bien conforme à vous attentes, avant d'envoyer le courriel à l'ensemble des destinataires.
 
+Cliquer sur `Suivant`.
 
+### Troisième partie : les options et l'envoi
 
+Planifiez l'envoi, soit immédiat (`Envoyer immédiatement`), soit à une date/heure future (`Send on...`).
 
+Pour ajouter des pièces jointes, cliquez sur `Advanced Mailing Options`. Rajoutez les fichiers en suivant les instructions à l'écran.
 
+Lorsque votre mailing est totalement préparé, cliquez sur `Envoyer le mailing`.
 
-indiquez un nom du mailing (ce nom se retrouvera, une fois le courriel envoyé, dans l'onglet "Activités" de chaque destinataire. Prenez par conséquent un nom suffisamment explicite pour qu'il vous parle encore des mois plus tard).
-Vous pouvez choisir d'utiliser un "Modèle" de courriel si vous avez déjà créé un.
-Le champ "De" comporte en principe l'adresse courriel de votre paroisse.
-
-Dans "Destinataires" vous allez pouvoir choisir un groupe (si pour ce groupe il est bien coché "Liste de diffusion")
-
-Le "Sujet" correspond à ce qui est parfois "Objet" du courriel dans certains logiciels. C'est l'intitulé du courriel tel qu'il s'affichera chez vos destinataires.
-
-Vous pouvez opter pour un message en "texte brut" qui n'aura alors aucune fioriture ou en "html" qui vous permet d'utiliser pleinement les possibilités de mise en forme du contenu.
-
-N'hésitez pas à consulter les différents onglets pour ajouter par exemple une pièce jointe ou pour ajouter l'entête de votre paroisse et en pied de page une signature que vous aurez pré enregistrée.
-
-Observez bien le bouton au centre bas de la fenêtre vous permettant d'envoyer un courriel de test. Cela vous sera utile si vous avez mis en place une esthétique élaborée et que vous voudrez vérifier que le contenu est bien conforme à vous attentes, avant d'envoyer le courriel à l'ensemble des destinataires.
-
-Un fois le courriel préparé, cliquez sur l'onglet "Vérification et planification" pour choisir si vous l'envoyez immédiatement ou de façon planifiée.
+!!! info "Délais d'envoi de votre mailing"
+    L'envoi de votre mailing commencera quelques minutes après avoir cliqué sur Envoyer. Selon le nombre de destinataires, la distribution sera étalée dans le temps. Ceci contribue à éviter que vos communications soient considérées comme des spams.

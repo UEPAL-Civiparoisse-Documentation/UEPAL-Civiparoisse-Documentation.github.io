@@ -1,9 +1,9 @@
 # Gérer les groupes
 
-## Les deux sortes de groupes
-
 Les groupes sont une autre façon d'établir un lien entre des personnes, de dire qu'elles partagent quelque chose, une activité par exemple.  
 Vous pouvez ainsi créer un groupe qui recense tous les membres de la chorale, un autre pour les catéchètes, ou encore pour les participants au groupe biblique.
+
+## Les deux sortes de groupes
 
 * Un **groupe statique** est composé des contacts que vous rajouterez manuellement.
 
@@ -24,9 +24,9 @@ Il est recommandé d'utiliser un nom explicite et d'ajouter une description pour
     En revanche, si vous envisagez d'envoyer des courriels aux membres du groupe, il sera indispensable de cocher `Liste de diffusion`.  
     Si vous voulez juste visualiser les membres sans leur écrire, ne cocher aucun des deux.
 
-Vous pouvez même, comme vous l'avez sans doute remarqué, créer des sous groupes en indiquant lors de la création du sous groupe quel est son groupe parent.
+Vous pouvez même, comme vous l'avez sans doute remarqué, créer des sous-groupes en indiquant lors de la création du sous-groupe quel est son groupe parent.
 
-Vous ajoutez ensuite des membres au groupe depuis leur fiche, onglet `Groupes`.
+Vous ajoutez ensuite des contacts au groupe depuis la fiche de chaque contact, onglet `Groupes`. Vous pouvez également faire des rajouts en nombre, à partir d'un écran `Recherches`.
 
 C'est depuis la `Gestion des groupes` que vous pouvez visualiser les membres en cliquant sur `Contacts` à la fin de la ligne du groupe.
 
@@ -39,7 +39,11 @@ Désormais, dès qu'un contact rempli les critères de la recherche il est autom
 
 ## Inscrire dans un groupe
 
+> Partie en cours d'écriture
+
 ## Enlever d'un groupe
+
+> Partie en cours d'écriture
 
 !!! warning "N'utilisez pas la suppression"
     Afin de conserver l'historique des participations aux différents groupes de la paroisse, n'utilisez jamais la touche Supprimer.

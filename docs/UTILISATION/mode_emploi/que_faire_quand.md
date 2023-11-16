@@ -4,35 +4,35 @@
 
 A l'arrivée d'une nouvelle famille au sein de la paroisse il vous faut suivre les étapes suivantes :
 
-* Créer la fiche Foyer ([en savoir plus](fiches-contact.md#enregistrer-un-nouveau-foyer))
-* Créer autant de fiches Individu que de personnes composant le foyer ([en savoir plus](fiches-contact.md#enregistrer-un-nouveau-individu))
-* Renseigner le lien avec la paroisse ([en savoir plus](liens_paroisses.md))
-* Renseigner les relations ([en savoir plus](relations.md))
-* Inscrire chaque Individu dans le(s) groupe(s) nécessaire(s) ([en savoir plus](groupes.md))
+* Créer la fiche Foyer ([:octicons-link-external-16: En savoir plus](fiches-contact.md#enregistrer-un-nouveau-foyer))
+* Créer autant de fiches Individu que de personnes composant le foyer ([:octicons-link-external-16: En savoir plus](fiches-contact.md#enregistrer-un-nouveau-individu))
+* Renseigner le lien avec la paroisse ([:octicons-link-external-16: En savoir plus](liens_paroisses.md))
+* Renseigner les relations ([:octicons-link-external-16: En savoir plus](relations.md))
+* Inscrire chaque Individu dans le(s) groupe(s) nécessaire(s) ([:octicons-link-external-16: En savoir plus](groupes.md))
 
 ## :fontawesome-solid-person-walking-dashed-line-arrow-right: Une personne quitte la paroisse ?
 
 Si une personne, voire toutes les personnes d'un foyer, quitte la paroisse, il est important de respecter les principes suivants :
 
-* Ne pas supprimer les fiches Individu et Foyer car ces personnes pourraient revenir, ou leur nouvelle paroisse pourrait vous contacter pour avoir des éléments d'information.
+* Ne pas supprimer les fiches Individu et Foyer, car ces personnes pourraient revenir, ou leur nouvelle paroisse pourrait vous contacter pour avoir des éléments d'information.
 * Ne supprimer aucune information figurant dans la(les) fiche(s).
 * Ne pas mettre l'adresse mail en invalide.
 * Ne pas toucher aux relations (sauf s'il y a séparation).
 
 Ce qu'il vous faut faire :
 
-* **Mettre fin aux Adhésions**, en indiquant une date de fin dans l'adhésion à la paroisse. ([En savoir plus](liens_paroisses.md#mettre-fin-à-une-adhesion))
-* **Retirez la(les) personne(s) des groupes** concernés. [En savoir plus](groupes.md#enlever-d-un-groupe))
+* **Mettre fin aux Adhésions**, en indiquant une date de fin dans l'adhésion à la paroisse. ([:octicons-link-external-16: En savoir plus](liens_paroisses.md#mettre-fin-à-une-adhesion))
+* **Retirez la(les) personne(s) des groupes** concernés. [:octicons-link-external-16: En savoir plus](groupes.md#enlever-d-un-groupe))
 * **Changez l'adresse postale** si la personne a déménagé (supprimer l'ancienne adresse si vous n'arrivez pas à connaître la nouvelle).
 * Si possible, **ajoutez une note** pour indiquer en quelques mots le départ, éventuellement les raisons, si besoin.
 * Modifiez les **Préférences de communication**, en cliquant sur "Modifiez les préférences de communication" dans l'onglet `Synthèse` et cochant les 4 cases :
-XXX `Ne pas envoyer de courriel`
-XXX `Ne pas envoyer de courrier postal`
-XXX `Ne pas envoyer de sms`
-XXX `Pas de mailing - opposition (opt out)`
+	* `Ne pas envoyer de courriel`
+	* `Ne pas envoyer de courrier postal`
+	* `Ne pas envoyer de sms`
+	* `Pas de mailing - opposition (opt out)` 
 * Enfin, cliquez sur le bouton **`Supprimer contact`**" et confirmez en cliquant sur `Supprimer contact(s)`. **Attention :** ne pas cliquez sur le bouton `Supprimer définitivement`, vous perdriez définitivement toutes les informations !  
 
-XXX Pensez à refaire les mêmes étapes pour les différentes personnes et pour leur Foyer, si c'est tout un foyer qui déménage.
+:fontawesome-solid-repeat: Pensez à refaire les mêmes étapes pour les différentes personnes et pour leur Foyer, si c'est tout un foyer qui déménage.
 
 ## :material-grave-stone: Une personne décède ?
 
@@ -45,13 +45,15 @@ Pour enregistrer le décès d'une personne, rendez-vous sur la fiche Individu de
 	* `Ne pas envoyer de sms`
 	* `Pas de mailing - opposition (opt out)`
 * Au niveau de l'**état civil**, renseignez si possible la date de l'enterrement et indiquez au sein de quel paroisse a eu lieu l'enterrement.
-* Retirez la personne des **groupes** auxquels elle appartenait, en utilisant la fonction `Retirer`. :octicons-no-entry-fill-12: Ne pas utiliser la fonction `Supprimer`, afin de conserver un historique de l'activité.
-* Vérifiez que les **Adhésions** soient passées en `Adhésions en attente ou exprirées`. :octicons-no-entry-fill-12: Ne pas utiliser la fonction `Supprimer` afin de conserver l'historique.
+* Retirez la personne des **groupes** auxquels elle appartenait, en utilisant la fonction `Retirer`. **Attention :** Ne pas utiliser la fonction `Supprimer`, afin de conserver un historique de l'activité.
+* Vérifiez que les **Adhésions** soient passées en `Adhésions en attente ou exprirées`. **Attention :** Ne pas utiliser la fonction `Supprimer` afin de conserver l'historique.
 * Créez une **Note** avec les coordonnées de contact de la famille. Cela pourra servir à les contacter en vue d'un culte des défunts.
 * Sur la fiche **Foyer**, modifiez l'intitulé du foyer pour enlever le nom du défunt. S'il n'y a plus personne au sein du foyer, supprimez le foyer.
 * Si besoin, ajoutez la **date de veuvage** sur la fiche Individu du conjoint survivant.
 
 ## :fontawesome-solid-hand-holding-hand: Un couple se marie ?
+
+> Partie en cours d'écriture
 
 Lorsque qu'un couple se marie et que les deux foyers étaient auparavant séparés au sein de votre paroisse, il vous faudra fusionner les deux foyers puis renommer le foyer unique obtenu. Pour cela :
 
@@ -69,6 +71,8 @@ Lorsque qu'un couple se marie et que les deux foyers étaient auparavant sépar�
 
 ## :material-call-split: Un couple divorce ou se sépare ?
 
+> Partie en cours d'écriture
+
 En cas de séparation, il est nécessaire de modifier le fiche Individu de chacun des conjoints comme suit :
 
 * Modifiez la relation `Conjoint de` en indiquant une date de fin de relation. Attention : ne pas supprimer la relation pour en conserver la trace historique.
@@ -84,6 +88,8 @@ Il est ensuite important de modifier les Foyers comme suit :
 Si une des personnes a clairement manifesté son intention de quitter la paroisse, ne pas oublier de dérouler la procédure adéquate : "Une personne quitte la paroisse".
 
 ## :material-email-remove: Une personne ne veut plus recevoir de communication ?
+
+> Partie en cours d'écriture
 
 Lorsqu'une personne ne veut plus recevoir la feuille mensuelle, il vous suffit de la supprimer du groupe dynamique "Feuille mensuelle - envoi" que vous aurez précédemment créé pour lister tous les destinataires.
 
@@ -104,6 +110,8 @@ Si par la suite la personne change d'avis, il faudra la rajouter manuellement au
 
 ## :material-home-remove: Un courrier revient car la personne a changé d'adresse ?
 
+> Partie en cours d'écriture
+
 Si vos tentatives pour trouver sa nouvelle adresse ont échouées, la procédure est la suivante :
 
 * Allez sur la fiche Individu de la personne.
@@ -113,13 +121,13 @@ Si vos tentatives pour trouver sa nouvelle adresse ont échouées, la procédure
 
 ## :material-email-off: Une personne n'a pas d'adresse mail ou ne veut pas la communiquer ?
 
+> Partie en cours d'écriture
+
 Si un paroissien n'a pas d'adresse mail ou ne souhaite pas nous la communiquer, il est conseillé de renseigner CiviParoisse pour lui éviter des relances régulières (dans le cadre de la fiabilisation de la base). Pour cela :
 
 * Modifiez les préférences de communication en cliquant sur `Modifiez les préférences de communication` dans l'onglet `Synthèse` et en cochant la case `Ne pas envoyer de courriel` puis enregistrez.
 * Dans l'onglet `Notes` de sa fiche, cliquez sur `Ajouter une note` puis indiquez en titre "Courriel" ou "Mail", laissez `Protection de la vie privée` à `Aucun`. Puis indiquez dans la note, selon le besoin, l'une des lignes suivantes :  
-XXX N'a pas d'adresse e-mail  
-XXX Ne souhaite pas communiquer son adresse e-mail  
-XXX Ne souhaite pas que son adresse e-mail (ajoutez entre parenthèse l'adresse) soit utilisée par la paroisse.  
-XXX Ne souhaite plus que son adresse e-mail (ajoutez entre parenthèse l'adresse) soit utilisée par la paroisse.
-
-
+  * N'a pas d'adresse e-mail  
+  * Ne souhaite pas communiquer son adresse e-mail  
+  * Ne souhaite pas que son adresse e-mail (ajoutez entre parenthèse l'adresse) soit utilisée par la paroisse.  
+  * Ne souhaite plus que son adresse e-mail (ajoutez entre parenthèse l'adresse) soit utilisée par la paroisse.

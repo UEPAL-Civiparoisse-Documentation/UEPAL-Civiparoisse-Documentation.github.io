@@ -6,8 +6,7 @@
 ## :fontawesome-solid-house-chimney: Enregistrer un nouveau foyer
 
 !!! warning "Attention"
-    N'utilisez pas le menu `Contact` -> `Nouveau foyer`, mais suivez la procédure ci-dessous.
-    Elle utilise un formulaire spécialement élaboré pour les paroisses.
+    N'utilisez pas le menu `Contact` -> `Nouveau foyer`, mais suivez la procédure ci-dessous. Elle utilise un formulaire spécialement élaboré pour les paroisses.
 
 Pour créer un nouveau "foyer" vous devez passer par la page d'accueil (voir [La page d'accueil](introduction.md#la-page-daccueil)) et cliquez sur l'icône "Nouveau Foyer".
 
@@ -20,8 +19,7 @@ Vous trouverez plus d'informations sur la gestion des fiches [:octicons-link-ext
 ## :fontawesome-solid-user: Enregistrer un nouvel individu
 
 !!! warning "Attention"
-    N'utilisez pas le menu `Contact` -> `Nouveau particulier` mais suivez la procédure ci-dessous.
-    Elle utilise un formulaire spécialement élaboré pour les paroisses.
+    N'utilisez pas le menu `Contact` -> `Nouveau particulier` mais suivez la procédure ci-dessous. Elle utilise un formulaire spécialement élaboré pour les paroisses.
 
 Contrairement à la fiche foyer, nous avons ici un large panel d'informations que nous pouvons enregistrer.
 

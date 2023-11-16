@@ -2,18 +2,17 @@
 
 ## Rajouter
 
-- Page sur les Adhésions
 - Page sur les opérations régulières
 - Information sur les listes
 - Revoir page Que faire si
 
-## Page Debuter.md - FINI-REVUE
+## XXX Page Debuter.md - FINI-REVU
 
 - [X] Passer les guillemets en ``
 - Changer les images
   - [X] Page d'accueil
 
-## Page Introduction.md - FINI-REVUE
+## XXX Page Introduction.md - FINI-REVU
 
 - [X] Passer les guillemets en ``
 - Changer les images
@@ -24,31 +23,44 @@
   - [X] Fiche Individu
 - [X] Revoir point 1 et 2 dans la liste
 
-## Page Rechercher.md - FINI
+## XXX Page Rechercher.md - FINI-REVU
 
 - [X] Passer les guillemets en ``
 - Rajouter images
   - [X] Image de la loupe
 
-## Page courriel.md
+## XXX Page courriel.md - FINI-REVU
 
-- [ ] Passer les guillemets en ``
+- [X] Passer les guillemets en ``
 - Changer les images
-  - [ ] Mailing traditionnel
+  - [X] Mailing traditionnel
 
 ## Page Que faire en cas de
+
+- [ ] Revoir tous les textes
 - [ ] Revoir le texte du couple qui se marie
 - [ ] Revoir le texte Une personne ne veut plus recevoir de communication
-- [ ] Rajouter des icônes dans le texte
+- [ ] Rajouter des icônes dans le texte ??
 
+## Page Groupes.md -
+
+- [ ] Finir l'écriture
 
 ## Page Relations
-- [ ] Choisir le mode de présentation des relations
 
-## Page Contact
-- [ ] Mettre les icônes en place un peu partout
+- [X] Choisir le mode de présentation des relations
+- [ ] Finir l'écriture des sections
+
+## Page Fiche Contact - FINI-REVU
+
+- [X] Mettre les icônes en place un peu partout
+
+## Page Listes
+
+- [ ] Finir l'écriture
 
 ## Page Comment faire ??
+
 - Gérer les fiches
 - Gérer les relations
 - Gérer les liens avec la paroisse

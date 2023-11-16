@@ -1,3 +1,3 @@
 # Créer et gérer un événement
 
-> Document en cours d'écriture
+> Page en cours d'écriture

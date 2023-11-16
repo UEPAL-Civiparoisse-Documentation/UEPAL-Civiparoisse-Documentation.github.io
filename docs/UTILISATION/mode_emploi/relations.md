@@ -1,20 +1,12 @@
 # Gérer les relations
 
-Les relations explicitent le lien entre des individus, mais aussi entre des individus et la paroisse ou des individus et des associations (ou des entreprises) que vous aurez enregistrées.
+Les relations explicitent le lien entre des individus, mais aussi entre des individus et la paroisse, ou entre des individus et des associations (ou des entreprises) que vous aurez enregistrées.
 
 ## Liste des relations
 
 CiviParoisse propose de nombreuses relations :fontawesome-regular-handshake: , que nous pouvons classer par catégorie :
 
-??? example "Relations familiales"
-    Parent de
-    Conjoint de
-    Partenaire de
-    Grand parent de
-    Frère ou soeur de
-    Parrain ou Marraine de
-
-|**Catégorie**|Liste de relations|
+|**Catégorie**|Liste des relations|
 |----|----|
 |**Familiale**|Enfant de|
 | |Parent de|
@@ -44,8 +36,8 @@ CiviParoisse propose de nombreuses relations :fontawesome-regular-handshake: , q
 Ceci va vous permettre de tisser assez finement les liens entre les uns et les autres.
 
 !!! warning "Attention"
-    Il est important que chaque Individu soit en relation avec au moins un Foyer ou une Organisation.
-    Au sein d'un Foyer, chaque Individu (parents comme enfants) est à enregistrer comme *membre du Foyer* ; et **les parents sont également à enregistrer** comme *chef de famille de*.
+    Il est important que chaque Individu soit en relation avec au moins un Foyer ou une Organisation.  
+    Au sein d'un Foyer, chaque Individu (parent comme enfant) est à enregistrer comme *membre du Foyer* ; et **les parents sont également à enregistrer** comme *chef de famille de*.
 
 !!! note "Conseil"
     Vous pouvez ainsi enregistrer la relation entre les membres du Conseil presbytéral et la paroisse.
@@ -53,9 +45,10 @@ Ceci va vous permettre de tisser assez finement les liens entre les uns et les a
 
 ## Mettre en place une relation
 
+> Partie en cours d'écriture
+
 !!! success "Mise en place automatique des relations"
     En utilisant le formulaire de [la page d'accueil](introduction.md#la-page-daccueil)), les relations sont générées automatiquement.
-
 
 
 ## Finir une relation
