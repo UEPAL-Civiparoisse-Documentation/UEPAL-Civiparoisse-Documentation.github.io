@@ -5,9 +5,3 @@
 li.md-nav__item.md-nav__item--section.md-nav__item--nested {
     font-size: x-large;
 }
-
-/* Balise initiale a:not([href*='mondomaine.com']):not([href^='#']):not([href^='/']) */
-a:not([href^='#']):not([href^='/']):after {
-  font-family: 'FontAwesome';
-  content: " \f35d";
-}
