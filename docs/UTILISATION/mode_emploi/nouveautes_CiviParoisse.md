@@ -2,21 +2,21 @@
 
 Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil du temps, en vous décrivant les nouveautés.
 
-## Version 1.45 - Hiver 2023
+## Version 1.45 - Prévu à l'hiver 2023
 
-### Nouvelles fonctions
+**Nouvelles fonctions**
 
 - Refonte totale des pages Contrôles et Améliorations de la base de données, pour en simplifier l'utilisation
 
-### Evolutions techniques
+**Evolutions techniques**
 
 ## Version 1.44 - Automne 2023
 
-### Nouvelles fonctions
+**Nouvelles fonctions**
 
 - Création de tests (unitaires et automatisés) pour faciliter la vérification de nouvelles versions de CiviParoisse
 
-### Evolutions techniques
+**Evolutions techniques**
 
 - Modification d'intitulés sur le formulaire Individu, et clarification des messages d'erreur
 - Clarification des consignes dans les pages Contrôles
@@ -29,11 +29,11 @@ Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil d
 
 ## Version 1.43 - Eté 2023
 
-### Nouvelles fonctions
+**Nouvelles fonctions**
 
 *Pas de nouvelles fonctions dans la version 1.43*
 
-### Evolutions techniques
+**Evolutions techniques**
 
 - Changements d'intitulés sur le formulaire Individu
 - Suppression du menu Support dans la barre de menu
@@ -42,12 +42,12 @@ Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil d
 
 ## Version 1.42 - Printemps 2023
 
-### Nouvelles fonctions
+**Nouvelles fonctions**
 
 - Affichage des anniversaires des 7 prochains jours, en page d'accueil
 - Page pour changer les noms des quartiers (pour la distribution du journal, les visiteurs, etc...). Pour en savoir plus, [cliquer ici](gestion_base_donnees.md).
 
-### Evolutions techniques
+**Evolutions techniques**
 
 - Nouvelle présentation graphique, avec le thème Claro
 - Création des rôles et permissions d'accès à CiviParoisse. Pour en savoir plus, [cliquer ici](gestion_base_donnees.md).
@@ -55,7 +55,7 @@ Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil d
 
 ## Version 1.41 - Hiver 2022
 
-### Nouvelles fonctions
+**Nouvelles fonctions**
 
 - Nouveaux rapports disponibles :
   - Liste des nouveaux arrivants = inscriptions des 15 derniers mois
@@ -66,7 +66,7 @@ Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil d
 - Modèle de mail aux couleurs UEPAL
 - Champ *Distribution du journal* rajouté à la fiche Foyer
 
-### Evolutions techniques
+**Evolutions techniques**
 
 - Activation des travaux programmés (Cron)
 - Liste complète des paroisses de l'UEPAL dans les listes déroulantes
@@ -75,6 +75,6 @@ Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil d
 
 ## Version 1.00 - Eté 2022
 
-### Evolutions techniques
+**Evolutions techniques**
 
 - Configuration des valeurs de base

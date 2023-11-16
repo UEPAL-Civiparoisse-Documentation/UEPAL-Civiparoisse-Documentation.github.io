@@ -11,7 +11,7 @@ L'ensemble des moyens de rechercher un contact permet l'utilisation du caractèr
 
 Vous accédez à la recherche simple en cliquant sur `Rechercher` puis `Rechercher des contacts`.
 
-Bien que considérée comme simple, elle vous permet de filtrer par exemple les résultats par **type de contact** (:fontawesome-solid-user: individu, :fontawesome-solid-house-chimney: foyer ou :fontawesome-solid-building: organisation), par :fontawesome-solid-users: **groupe** ou encore les contacts ayant une fontawesome-solid-tags: **étiquette** précise.
+Bien que considérée comme simple, elle vous permet de filtrer par exemple les résultats par **type de contact** (:fontawesome-solid-user: individu, :fontawesome-solid-house-chimney: foyer ou :fontawesome-solid-building: organisation), par :fontawesome-solid-users: **groupe** ou encore les contacts ayant une :fontawesome-solid-tags: **étiquette** précise.
 
 !!! note "Astuce"
     Dans la liste des résultats, laissez votre souris sur l'icône de la fiche (que ce soit un individu, un foyer ou une organisation) et une fenêtre apparait affichant un résumé de la fiche.

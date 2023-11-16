@@ -1,6 +1,6 @@
 # Gérer les fiches avec les contacts
 
-## ## :fontawesome-solid-house-chimney: Enregistrer un nouveau Foyer
+## :fontawesome-solid-house-chimney: Enregistrer un nouveau Foyer
 
 !!! warning "Attention"
     N'utilisez pas le menu `Contact` -> `Nouveau foyer` mais suivez la procédure ci-dessous. Elle utilise un formulaire spécialement élaboré pour les paroisses.
@@ -19,7 +19,7 @@ Merci de respecter les règles suivantes pour maintenir la cohérence des donné
 * NOM Prénom et Prénom, pour un couple portant le même nom de famille (ex. *DUPONT Marc et Cécile*)
 * NOM Prénom et NOM Prénom pour un couple ne portant pas le même nom de famille (ex. *DUPONT Marc et DURAND Cécile*)
 
-:fontawesome-regular-address-card: **Adresse** : la renseigner de façon aussi précise que possible  
+:fontawesome-solid-map-location-dot: **Adresse** : la renseigner de façon aussi précise que possible  
 
 :fontawesome-solid-phone: **Numéro(s) de téléphone fixe de la maison** : seul le téléphone fixe est saisi dans la fiche Foyer, les numéros de portables sont saisis sur les fiches Individu respectives.  
 Le(s) saisir en respectant le format international (ex. +33 3 88 89 90 91).  
@@ -56,12 +56,12 @@ Il est important de respecter quelques règles :
 
 :fontawesome-solid-church: Complétez les données **Religion** (dates de baptême, de confirmation de mariage...) et indiquez dans quel paroisse cela a eu lieu.
 
-:fontawesome-solid-hands-holding: Complétez ensuite l'**état civil** avec les éléments dont vous disposez.
+:material-calendar-month-outline: Complétez ensuite l'**état civil** avec les éléments dont vous disposez.
 
 :material-playlist-music: Ne négligez pas la rubrique **Compétences** lorsqu'elle sont connues, pour inviter par exemple la personne par la suite à venir renforcer la chorale ou un groupe de musique.
 
 :fontawesome-solid-photo-film: Ajoutez une **photo** de la personne si vous en avez une (format conseillé : 250 x 370 pixels, en 72 dpi)
 
-N'hésitez pas à consulter les recommandations sur le **lien avec la paroisse** si vous avez un doute sur le lien à établir.
+N'hésitez pas à consulter les recommandations sur le **lien avec la paroisse** si vous avez un doute sur le lien à établir. [:octicons-link-external-16: En savoir plus](relations.md)
 
 > Les éléments sur la Sécurité sociale, le Guso, ou pour savoir si la personne est fonctionnaire, ne sont réellement utiles que pour la fiche d'un musicien rémunéré par la paroisse.
