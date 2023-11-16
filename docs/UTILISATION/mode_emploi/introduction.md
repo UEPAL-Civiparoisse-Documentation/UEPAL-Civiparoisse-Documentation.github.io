@@ -10,16 +10,16 @@ CiviParoisse ajoute un troisième type : le **foyer** .
 
 Pas d'inquiétude, vous allez pouvoir identifier le type de contact aisément par son icône :
 
-* Le **foyer** : :fontawesome-solid-house-chimney: qui est le lieu où vivent un certain nombre de personnes ayant au minimum comme **relation** d'habiter dans le même foyer fiscal, mais qui souvent auront aussi des liens familiaux, que CiviParoisse sait enregistrer.
-* L'**individu** : :fontawesome-solid-user: qui comme son nom l'indique va être la fiche de contact de chaque individu que nous estimons important de garder dans notre fichier.
-* L'**organisation** : :fontawesome-solid-building: qui pourra être la fiche de contact d'une paroisse, ou d'une association avec laquelle on est souvent en relation, ou de l'entreprise qui entretient le chauffage du presbytère...
+* Le **foyer** :fontawesome-solid-house-chimney: qui est le lieu où vivent un certain nombre de personnes ayant au minimum comme **relation** d'habiter dans le même foyer fiscal, mais qui souvent auront aussi des liens familiaux, que CiviParoisse sait enregistrer.
+* L'**individu** :fontawesome-solid-user: qui comme son nom l'indique va être la fiche de contact de chaque individu que nous estimons important de garder dans notre fichier.
+* L'**organisation** :fontawesome-solid-building: qui pourra être la fiche de contact d'une paroisse, ou d'une association avec laquelle on est souvent en relation, ou de l'entreprise qui entretient le chauffage du presbytère...
 
 ### Quelles données vont dans quelle fiche ?
 
 Dans la fiche « Foyer » sont à noter les données qui ne changent pas d’un individu à l’autre au sein d'un même foyer. Et les données personnelles sont à indiquer dans la fiche « Individu ».  
 Le tableau ci-dessous montre de façon non exhaustive la répartition.
 
-| Fiches | Foyer | Individu |
+| Fiches | Foyer :fontawesome-solid-house-chimney: | Individu :fontawesome-solid-user: |
 | ----- | :----: | :---: |
 | Adresse postale | ✅  | (lien vers l'adresse du foyer) |
 | Téléphone fixe | ✅ | |
@@ -41,6 +41,8 @@ Le tableau ci-dessous montre de façon non exhaustive la répartition.
 | Participation à des événements | | ✅ |
 | Dons à la paroisse | | ✅ |
 
+Pour en savoir plus sur la gestion des fiches [:octicons-link-external-16: en cliquant ici](fiches_contact.md).
+
 ### Relations et groupes
 
 CiviParoisse ne permet pas seulement de créer des fiches de contact, mais également d'établir des liens entres les fiches et de les rassembler en groupes.
@@ -52,6 +54,8 @@ Un groupe est de plus un bon moyen pour rassembler l'ensemble des personnes à q
 
 !!! warning "Attention"
     Il est important de saisir toutes les relations dès la création d'une fiche, et de les faire évoluer dans le temps, pour bien identifier les interactions entre les personnes.
+
+Vous trouverez plus d'information sur les relations [:octicons-link-external-16: en cliquant ici](relations.md), et sur les groupes [:octicons-link-external-16: en cliquant ici](groupes.md).
 
 ## Interface de CiviParoisse
 
@@ -87,16 +91,16 @@ Passons en revue les différents éléments :
 |----|-----|
 |La loupe :fontawesome-solid-magnifying-glass:| Raccourci qui permet de rechercher rapidement une fiche, sans passer par une fonction « rechercher » plus évoluée, mais en choisissant sur quoi porte la recherche.|
 |L’icône en forme de triangle vert :simple-civicrm:| Est animée lorsque CiviParoisse est en train d’effectuer une opération. Elle permet une recherche rapide sur tout texte entré. Elle permet de revenir à l’accueil.|
-|L’onglet « Rechercher » :fontawesome-solid-magnifying-glass:| Vous permet soit une recherche simple, soit une recherche avancée, soit encore une recherche dans le contenu. Ce sera souvent par là que vous chercherez à accéder à une fiche.|
-|L’onglet « Contacts » :fontawesome-regular-address-book:|N’est pas à utiliser pour créer une fiche, puisque nous passons par un formulaire spécifique. C’est en revanche ici que vous pouvez gérer les groupes (Bénévoles, Acat, etc.).|
-|L’onglet « Contributions » :fontawesome-regular-credit-card:| Va nous permettre d’enregistrer les dons puis d’éditer les reçus fiscaux.|
-|L’onglet « Événements » :fontawesome-regular-calendar-days:| Permet de créer un événement (voyage à Wittenberg ou repas paroissial, par exemple) et de gérer tout ce qui y sera lié.|
-|L’onglet « Mailings » :octicons-mail-24:| Permet, comme son nom l’indique, d’envoyer des courriels.|
-|L’onglet « Adhésions » :fontawesome-regular-id-badge:| Permet d’enregistrer une nouvelle adhésion (mais il est conseillé de le faire au moment de la création de la fiche individuelle) et d’établir des statistiques sur les adhésions (d’où l’importance de le faire à la création pour avoir des dates réalistes).|
-|L’onglet « Rapports » :fontawesome-solid-chart-column:| Permet d’établir diverses statistiques.|
-|L’onglet « Administrer » :fontawesome-solid-gears:|Permet de paramétrer CiviParoisse. Ce menu est réservé aux personnes ayant les droits d'administration.|
-|L’onglet « Récent » :fontawesome-solid-clock-rotate-left:|Vous indique les dernières fiches créées.|
-|L'onglet « Paroisse » :fontawesome-regular-handshake:| Reprend les entrées de menu que vous trouvez en page d'accueil.|
+|Rechercher :fontawesome-solid-magnifying-glass:| Vous permet soit une recherche simple, soit une recherche avancée, soit encore une recherche dans le contenu. Ce sera souvent par là que vous chercherez à accéder à une fiche.|
+|Contacts :fontawesome-regular-address-book:|N’est pas à utiliser pour créer une fiche, puisque nous passons par un formulaire spécifique. C’est en revanche ici que vous pouvez gérer les groupes (Bénévoles, Acat, etc.).|
+|Contributions :fontawesome-regular-credit-card:| Va nous permettre d’enregistrer les dons puis d’éditer les reçus fiscaux.|
+|Événements :fontawesome-regular-calendar-days:| Permet de créer un événement (voyage à Wittenberg ou repas paroissial, par exemple) et de gérer tout ce qui y sera lié.|
+|Mailings :octicons-mail-24:| Permet, comme son nom l’indique, d’envoyer des courriels.|
+|Adhésions :fontawesome-regular-id-badge:| Permet d’enregistrer une nouvelle adhésion (mais il est conseillé de le faire au moment de la création de la fiche individuelle) et d’établir des statistiques sur les adhésions (d’où l’importance de le faire à la création pour avoir des dates réalistes).|
+|Rapports :fontawesome-solid-chart-column:| Permet d’établir diverses statistiques.|
+|Administrer :fontawesome-solid-gears:|Permet de paramétrer CiviParoisse. Ce menu est réservé aux personnes ayant les droits d'administration.|
+|Récent :fontawesome-solid-clock-rotate-left:|Vous indique les dernières fiches créées.|
+|Paroisse :fontawesome-regular-handshake:| Reprend les entrées de menu que vous trouvez en page d'accueil.|
 
 Vous remarquerez que sous ce menu, à gauche, CiviParoisse vous indique toujours où vous êtes.
 

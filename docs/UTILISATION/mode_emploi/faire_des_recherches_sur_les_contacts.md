@@ -14,7 +14,7 @@ Vous accédez à la recherche simple en cliquant sur `Rechercher` puis `Recherch
 Bien que considérée comme simple, elle vous permet de filtrer par exemple les résultats par **type de contact** (:fontawesome-solid-user: individu, :fontawesome-solid-house-chimney: foyer ou :fontawesome-solid-building: organisation), par **groupe** ou encore les contacts ayant une **étiquette** précise.
 
 !!! note "Astuce"
-    Laissez votre souris sur l'icône de la fiche (que ce soit un individu, un foyer ou une organisation) et une fenêtre apparait affichant un résumé de la fiche.
+    Dans la liste des résultats, laissez votre souris sur l'icône de la fiche (que ce soit un individu, un foyer ou une organisation) et une fenêtre apparait affichant un résumé de la fiche.
 
 ## La recherche avancée
 
@@ -49,3 +49,15 @@ Pour envoyer des courriers à ces personnes, il vous suffit de faire une recherc
 Une fois la liste affichée, sélectionnez tous les contacts comme vous avez appris à le faire, puis cliquez sur `Actions` et choisissez en fin de liste `Etiquettes pour la poste - imprimer`.
 
 Dans la fenêtre qui s'affiche, choisissez dans le menu `Sélectionner un format d'étiquette` le format des étiquettes dont dispose la paroisse, puis cliquez sur `Imprimer des étiquettes pour la Poste`. Un PDF est généré avec les étiquettes des différents foyers, il ne reste plus qu'à l'imprimer sur des planches d'étiquettes, et à envoyer votre courrier.
+
+Le menu `Actions` propose également, selon le contexte, les possibilités suivantes :
+* Afficher les contacts sur une carte
+* Ajouter des relations aux contacts
+* Supprimer les contacts (à manier évidemment avec précaution !)
+* Ajouter une information sur une interaction avec les contacts (activités)
+* Envoyer des courriels [en savoir plus](envoyer_un_courriel.md)
+* Fusionner des doublons
+* Ajouter ou enlever les contacts d'un groupe
+* Inscrire les contacts à un événement
+* Exporter les informations dans une feuille Excel
+* 
