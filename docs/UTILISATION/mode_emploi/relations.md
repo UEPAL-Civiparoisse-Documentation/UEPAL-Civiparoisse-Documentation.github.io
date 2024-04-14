@@ -48,8 +48,11 @@ Ceci va vous permettre de tisser assez finement les liens entre les uns et les a
 > Partie en cours d'écriture
 
 !!! success "Mise en place automatique des relations"
-    En utilisant le formulaire de [la page d'accueil](introduction.md#la-page-daccueil)), les relations sont générées automatiquement.
+    En utilisant le formulaire de [la page d'accueil](introduction.md#la-page-daccueil), les relations sont générées automatiquement.
 
+## Modifier une relation
+
+> Partie en cours d'écriture
 
 ## Finir une relation
 

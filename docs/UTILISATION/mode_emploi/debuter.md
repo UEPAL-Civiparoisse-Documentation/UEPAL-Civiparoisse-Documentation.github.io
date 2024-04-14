@@ -14,7 +14,7 @@ Vous obtiendrez la fenêtre suivante :
 
 ![Ecran foyer](img/ecran_formulaire_foyer.png)
 
-Vous trouverez plus d'informations sur la gestion des fiches [:octicons-link-external-16: en cliquant ici](fiches_contact.md).
+Vous trouverez plus d'informations sur la gestion des fiches [en cliquant ici](fiches_contact.md).
 
 ## :fontawesome-solid-user: Enregistrer un nouvel individu
 
@@ -27,18 +27,18 @@ Pour créer un nouveau "individu" vous devez passer par la page d'accueil (voir 
 
 ![ecran creation individu.png](img/ecran_formulaire_individu.png)
 
-Vous trouverez plus d'informations sur la gestion des fiches [:octicons-link-external-16: en cliquant ici](fiches_contact.md).
+Vous trouverez plus d'informations sur la gestion des fiches [en cliquant ici](fiches_contact.md).
 
 ## :fontawesome-regular-handshake: Gérer les relations
 
 Les relations explicitent le lien entre des individus mais aussi entre des individus et la paroisse ou des individus et des associations  (ou des entreprises) que vous aurez enregistrées.
 CiviParoisse propose de nombreuses relations.
 
-Vous trouverez plus d'information sur les relations [:octicons-link-external-16: en cliquant ici](relations.md).
+Vous trouverez plus d'information sur les relations [en cliquant ici](relations.md).
 
 ## :fontawesome-solid-users: Inscrire dans les groupes
 
 Après les relations, les groupes sont une autre façon d'établir un lien entre des personnes, de dire qu'elles partagent quelque chose, une activité par exemple.
 Vous pouvez ainsi créer un groupe qui recense tous les membres de la chorale, un autre pour les catéchètes, ou encore pour les participants au groupe biblique.
 
-Vous trouverez plus d'informations sur la gestion des groupes [:octicons-link-external-16: en cliquant ici](groupes.md).
+Vous trouverez plus d'informations sur la gestion des groupes [en cliquant ici](groupes.md).

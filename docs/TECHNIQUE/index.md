@@ -7,3 +7,4 @@ Cette partie vous permet d'accéder à toute la documentation technique du proje
 * [ROLES](roles.md) : Documentation des rôles et permissions octroyés aux utilisateurs
 * [MAIL](MAIL/index.md): Documentation des mails
 * [LOGICIEL](LOGICIEL/index.md): Documentation de la stack logicielle
+* [INTEGRATION_CONTINUE](INTEGRATION_CONTINUE/index.md): Documentation de l'intégration continue

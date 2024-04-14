@@ -25,8 +25,8 @@ Merci de respecter les règles suivantes pour maintenir la cohérence des donné
 Le(s) saisir en respectant le format international (ex. +33 3 88 89 90 91).  
 Mettre des espaces entre les numéros et non des points.
 
-:fontawesome-solid-tree-city: Quartier :  secteur géographique utilisé pour la distribution de journaux paroissiaux, du Nouveau Messager, de courriers, etc...  
-Il est possible de gérer les noms des quartiers ([:octicons-link-external-16: en savoir plus](gestion_base_donnees.md#modifier-la-liste-des-quartiers))
+:fontawesome-solid-tree-city: **Quartier** :  secteur géographique utilisé pour la distribution de journaux paroissiaux, du Nouveau Messager, de courriers, etc...  
+Il est possible de gérer les noms des quartiers ([en savoir plus](gestion_base_donnees.md#modifier-la-liste-des-quartiers))
 
 ## :fontawesome-solid-user: Enregistrer un nouvel individu
 
@@ -62,6 +62,6 @@ Il est important de respecter quelques règles :
 
 :fontawesome-solid-photo-film: Ajoutez une **photo** de la personne si vous en avez une (format conseillé : 250 x 370 pixels, en 72 dpi)
 
-N'hésitez pas à consulter les recommandations sur le **lien avec la paroisse** si vous avez un doute sur le lien à établir. [:octicons-link-external-16: En savoir plus](relations.md)
+N'hésitez pas à consulter les recommandations sur le **lien avec la paroisse** si vous avez un doute sur le lien à établir. [(En savoir plus)](relations.md)
 
 > Les éléments sur la Sécurité sociale, le Guso, ou pour savoir si la personne est fonctionnaire, ne sont réellement utiles que pour la fiche d'un musicien rémunéré par la paroisse.

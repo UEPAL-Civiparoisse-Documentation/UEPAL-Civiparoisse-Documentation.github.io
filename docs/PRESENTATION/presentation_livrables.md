@@ -7,11 +7,11 @@ La philosophie du projet est de laisser les paroisses qui souhaitent utiliser Ci
 
 La mise en œuvre de la solution est envisageable sous trois formes, en fonction des souhaits des paroisses :
 
-* Mise à disposition d’une infrastructure d’hébergement « centralisée », où seront déployées les instances packagées décrites ci-dessous : cette solution est la voie privilégiée, avec d’éventuelles économies d’échelles (en particulier, les moyens humains utilisés, mais également les matériels). Il s'agira ici de concevoir un « produit standardisé d’hébergement » pour lequel les paroisses émettront leurs souhaits d'évolution.
+* Mise à disposition d’une infrastructure d’hébergement « centralisée », où seront déployées les instances packagées décrites ci-dessous : **cette solution est la voie privilégiée**, avec à la clé des économies d’échelles (en particulier les moyens humains utilisés, mais également les matériels). Il s'agira ici d'un « produit standardisé d’hébergement » pour lequel les paroisses émettront leurs souhaits d'évolution.
 
 * Les paroisses peuvent souhaiter disposer d’un « package logiciel » et assurer les aspects infrastructures elles-mêmes : ceci permet aux paroisses qui désirent administrer leur solution sur une infrastructure existante de le faire elle-même, tout en profitant toutefois d’une solution logicielle commune. Dans ce cas de figure, la paroisse assume également les éléments de gestion et de mise à jour de son infrastructure.
 
-* Le code développé étant sous licence de logiciel libre, les paroisses peuvent éventuellement réutiliser le code et choisir d’héberger la solution elles-même, voire même de créer leur propre solution.  Notre expérience ayant montré que les ressources humaines ayant des compétences en informatique sont rares dans les paroisses, nous déconseillons fortement cette solution.
+* Le code développé étant sous licence de logiciel libre, les paroisses peuvent éventuellement réutiliser le code et choisir d’héberger la solution elles-même, voire même de créer leur propre solution.  Notre expérience ayant montré que les ressources humaines ayant des compétences en informatique sont rares dans les paroisses, nous déconseillons fortement cette solution, et n'assurerons aucun service après-vente pour les paroisses retenant cette solution.
 
 ## Les livrables de Civiparoisse
 
@@ -85,4 +85,4 @@ Les prérequis constituent des éléments que les paroisses qui souhaitent utili
 
 * il faudra également mettre en place des outils de supervision / monitoring des containers, de même que la récupération et l’analyse des logs.
 
-Vu la complexité, les compétences, et la disponibilité des ressources, autant matérielles qu’humaines, qui entrent en jeu, nous recommandons fortement de profiter des économies d'échelle proposées l’hébergement (et intrinsèquement l’administration) centralisés des instances.
+Vu la complexité, les compétences, et la disponibilité des ressources, autant matérielles qu’humaines, qui entrent en jeu, nous recommandons fortement de profiter des économies d'échelle proposées par l’hébergement (et intrinsèquement l’administration) centralisés des instances.

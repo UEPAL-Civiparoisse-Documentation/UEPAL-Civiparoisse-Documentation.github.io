@@ -6,11 +6,13 @@ Les besoins fonctionnels seront traités via des développements spécifiques s�
 
 Les développements spécifiques sont répartis à ce jour en trois modules :
 
-* un module drupal : ce module n’est qu’un module qui remplit un besoin technique (permettre l’utilisation de l’authentification de type basic)
+* un module Civicrm : ce module intègre les adaptations de CiviCRM nécessaires pour les fonctions « coeur de métier ».
 
-* un module civicrm : ce module intègre les adaptations de CiviCRM nécessaires pour les fonctions « coeur de métier »
+* un module plugin d'installation pour Civicrm : ce module intègre certains aspects d'installation initiale de CiviCRM qui ne sont pas ou difficilement prévus pour la ligne de commande.
 
-* un module plugin d'installation pour civicrm : ce module intègre certains aspects d'installation initiale de CiviCRM qui ne sont pas ou difficilement prévus pour la ligne de commande.
+* le code des tests automatisés : les tests automatisés sont basés sur codeception, et sont déployés via une stack technique en parallèle de CiviCRM.
+
+A noter qu'historiquement, il existait également un module Drupal qui remplissait un besoin technique (permettre l’utilisation de l’authentification de type basic).
 
 Chaque module est versionné dans git, et constitue un package composer. Le choix d’utiliser composer n’est pas anodin : il est utilisé à la fois par CiviCRM et Drupal, ce qui uniformise dans une certaine mesure la gestion des fichiers source du projet.
 
@@ -18,7 +20,7 @@ Il a été décidé de suivre la gestion git « gitflow » (<https://www.atlassi
 
 ## Qualité du code
 
-Le code spécifique est pour l’heure encore non stabilisé. Néanmoins, il devra être envisagé de mettre en place des tests automatisés pour fiabiliser les développements, voire même de faire de l’intégration continue.
+Le code spécifique est pour l’heure globalement stabilisé. Néanmoins, il devra être envisagé de mettre en place des tests automatisés pour fiabiliser les développements, voire même de faire de l’intégration continue.
 
 ## Distribution du code spécifique
 

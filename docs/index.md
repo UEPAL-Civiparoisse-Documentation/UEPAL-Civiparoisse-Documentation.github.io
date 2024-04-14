@@ -6,7 +6,7 @@ Cette documentation vise trois publics distincts, mais qui peuvent chacun avoir 
 
 * **les membres du groupe de travail Civiparoisse** : la section de documentation [technique](TECHNIQUE/index.md) va intéresser plus particulièrement les personnes intéressées par les aspects informatiques. La section de [formation à la documentation](FORMATION/index.md) vise également ces personnes.
 
-* **les prospects** : la section de documentation de [présentation](PRESENTATION/index.md) donne des explications globales sur le projet, et vise notamment à proposer une information préalable aux paroisses qui seraient intéressées par Civiparoisse.
+* **les futurs utilisateurs** : la section de documentation de [présentation](PRESENTATION/index.md) donne des explications globales sur le projet, et vise notamment à proposer une information préalable aux paroisses qui seraient intéressées par Civiparoisse.
 
 Bonne lecture !
 

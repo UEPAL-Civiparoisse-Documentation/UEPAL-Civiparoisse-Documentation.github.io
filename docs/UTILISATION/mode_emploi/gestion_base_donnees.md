@@ -26,14 +26,15 @@ Vous pouvez à tout moment donner accès à la base de données à un utilisateu
 8. Cliquer sur *Compte de l'utilisateur* ![écran Actions](img/ecran_actions_deux.png)
 9. Cliquer sur l’onglet *Modifier* ![bouton Modifier](img/bouton_voir_modifier_user.png)
 10. Dans la partie **Rôles**, choisir le ou les rôle(s) à donner à l'utilisateur, parmi la liste suivante
-      * **Administrateur** : possibilité de gérer tout le site (Drupal comme CiviCRM). Réservé à l'équipe technique de CiviParoisse.
-      * **Gestionnaire** : accès à l'ensemble de CiviParoisse en consultation et en modification, sans les données financières, ni l'envoi de mailing de masse ou l'administration du site. Ce rôle permet également de créer et gérer les droits d'accès à CiviParoisse.
+      * **Administrateur** : possibilité de gérer tout le site (Drupal comme CiviCRM). Réservé à l'équipe technique de CiviParoisse. Attention, **il ne faut en aucun cas attribuer ce rôle** à un nouvel utilisateur.
+      * **Gestionnaire paroissial** : accès à l'ensemble de CiviParoisse en consultation et en modification, sans les données financières, ni l'envoi de mailing de masse ou l'administration du site. Ce rôle permet également de créer et gérer les droits d'accès à CiviParoisse.
       * **Utilisateur paroissial** : accès à CiviParoisse uniquement en consultation, sans les données financières, et sans l'envoi de mailing de masse. Ce rôle peut tout de même enregistrer des événements, des activités, des notes. Il peut préparer des mailings, sans pouvoir en valider l'envoi. Il peut aussi créer de nouvelles fiches (sans pouvoir les modifier).
+11. Il est également possible de rajouter les options suivantes :
       * **Gestionnaire Mot de passe** : option qui permet de réinitialiser les mots de passe des utilisateurs. Attention, cette option permet également de créer et gérer les droits d'accès à CiviParoisse.
-      * **Financier** : option qui permet de modifier et consulter les données financières.
+      * **Financier** : option qui permet de modifier et consulter les données financières (dons, ...).
       * **Envoi de mailing** : option qui permet d'envoyer les mailings de masse.
-11. Cliquer sur Enregistrer
-12. Transmettre le mot de passe à l’utilisateur, il pourra se connecter immédiatement.
+12. Cliquer sur Enregistrer
+13. Transmettre le mot de passe à l’utilisateur, il pourra se connecter immédiatement.
 
 !!! warning "Attention"
     Selon le rôle que vous donnez à l'utilisateur, il aura accès à plus ou moins d'informations stockées dans la base de données. Il est donc fortement recommandé de ne pas diffuser largement un rôle *Gestionnaire*, ceci afin de préserver la confiance de vos paroissiens quant aux données personnelles que vous recueillez.

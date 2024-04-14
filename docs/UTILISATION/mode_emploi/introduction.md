@@ -41,7 +41,7 @@ Le tableau ci-dessous montre de façon non exhaustive la répartition.
 | Participation à des événements | | ✅ |
 | Dons à la paroisse | | ✅ |
 
-Pour en savoir plus sur la gestion des fiches [:octicons-link-external-16: cliquez ici](fiches_contact.md).
+Pour en savoir plus sur la gestion des fiches, [cliquez ici](fiches_contact.md).
 
 ### Relations et groupes
 
@@ -49,13 +49,13 @@ CiviParoisse ne permet pas seulement de créer des fiches de contact, mais égal
 
 Un enfant aura ainsi une **relation** comme *fils de* avec ses parents, un bénévole sera *bénévole de* pour une association ou un groupe d'activité.
 
-Il vous est également possible de constituer un **groupe** (dynamique ou non, [:octicons-link-external-16: voir le point dédié aux groupes](groupes.md) pour plus de détails). Le groupe pourra par exemple recenser tous les bénévoles de la paroisse, un autre les membres de la chorale, un autre encore les dames de l'ouvroir.  
+Il vous est également possible de constituer un **groupe** (dynamique ou non, [voir le point dédié aux groupes](groupes.md) pour plus de détails). Le groupe pourra par exemple recenser tous les bénévoles de la paroisse, un autre les membres de la chorale, un autre encore les dames de l'ouvroir.  
 Un groupe est de plus un bon moyen pour rassembler l'ensemble des personnes à qui vous allez envoyer régulièrement un courriel (par exemple les membres du conseil presbytéral).
 
 !!! warning "Attention"
     Il est important de saisir toutes les relations dès la création d'une fiche, et de les faire évoluer dans le temps, pour bien identifier les interactions entre les personnes.
 
-Vous trouverez plus d'information sur les relations [:octicons-link-external-16: en cliquant ici](relations.md), et sur les groupes [:octicons-link-external-16: en cliquant ici](groupes.md).
+Vous trouverez plus d'information sur les relations [en cliquant ici](relations.md), et sur les groupes [en cliquant ici](groupes.md).
 
 ## Interface de CiviParoisse
 
@@ -73,8 +73,8 @@ Plusieurs éléments sont à identifier :
 * L’icône 4 permet d’enregistrer un **nouvel individu** en suivant le cadre spécifique à CiviParoisse, si la fiche « Foyer » dont il fait partie existe déjà. Sinon passer d’abord par le point 3.
 * L’icône 5 nous permet d’enregistrer une **nouvelle entreprise ou association** en suivant le cadre spécifique à CiviParoisse. Il est indispensable de passer par ce cadre.
 * Le point 6 vous permet d’avoir une **liste des anniversaires à venir**, pour par exemple envoyer un petit mot et ainsi garder le lien avec les paroissiens.
-* Le point 7 vous permet d’établir facilement **différentes listes**. [:octicons-link-external-16: En savoir plus](listes.md)
-* Le point 8 donne accès à plusieurs outils permettant de vérifier que le fichier paroissial est complet et si non, d’y remédier. Il est conseillé de passer par ce point plusieurs fois dans l’année. [:octicons-link-external-16: En savoir plus](operations_a_mener_regulierement.md)
+* Le point 7 vous permet d’établir facilement **différentes listes**. [(En savoir plus)](listes.md)
+* Le point 8 donne accès à plusieurs outils permettant de vérifier que le fichier paroissial est complet et si non, d’y remédier. Il est conseillé de passer par ce point plusieurs fois dans l’année. [(En savoir plus)](operations_a_mener_regulierement.md)
 * Le point 9 donne accès au **mode d’emploi** de CiviParoisse.
 * Le point 10 indique les **anniversaires des sept prochains jours**, pour vous faciliter le lien avec vos paroissiens
 * Enfin, le point 11 vous donne accès au menu principal de CiviParoisse.

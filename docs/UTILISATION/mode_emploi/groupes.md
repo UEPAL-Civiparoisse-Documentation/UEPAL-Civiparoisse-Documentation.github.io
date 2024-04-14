@@ -32,10 +32,13 @@ C'est depuis la `Gestion des groupes` que vous pouvez visualiser les membres en 
 
 ## Créer un groupe dynamique
 
-Il s'agit tout d'abord d'effectuer une recherche (voir [:octicons-link-external-16: Faire des recherches](faire_des_recherches_sur_les_contacts.md) pour des conseils pour vous aider à retrouver les fiches selon divers critères).
+Il s'agit tout d'abord d'effectuer une recherche (voir [Faire des recherches](faire_des_recherches_sur_les_contacts.md) pour des conseils pour vous aider à retrouver les fiches selon divers critères).
 
 Une fois la liste des contacts obtenue, sélectionnez tout d'abord l'ensemble des contacts en cliquant sur `Sélection des enregistrements : Les x trouvés`. Puis cliquez sur `Actions` et choisissez `Groupe - créer un groupe dynamique`, donnez lui un nom, une description et cochez ou non `Liste de diffusion`
 Désormais, dès qu'un contact rempli les critères de la recherche il est automatiquement ajouté au groupe dynamique, et inversement, si pour un contact du groupe un critère n'est plus rempli, il ne sera plus membre du groupe dynamique.
+
+!!! danger "Ne pas supprimer un contact manuellement "
+    Pour assurer le bon fonctionnement des groupes dynamiques, il est important de ne **jamais supprimer manuellement** un contact présent dans un Groupe dynamique. Vous risquerez de perturber gravement les prochaines mises à jour du groupe.
 
 ## Inscrire dans un groupe
 

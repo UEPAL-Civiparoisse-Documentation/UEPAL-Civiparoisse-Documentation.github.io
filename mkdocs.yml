@@ -5,13 +5,14 @@ nav:
     - 'Mode d''emploi':
         - 'UTILISATION/mode_emploi/index.md'
         - 'Introduction': 'UTILISATION/mode_emploi/introduction.md'
-        - 'Débuter': 'UTILISATION/mode_emploi/debuter.md'
+        - 'Débuter': 'UTILISATION/mode_emploi/debuter.md'    
         - 'Gérer les fiches': 'UTILISATION/mode_emploi/fiches_contact.md'
+        - 'Gérer les relations': 'UTILISATION/mode_emploi/relations.md'
+        - 'Gérer les liens avec la paroisse': 'UTILISATION/mode_emploi/liens_paroisses.md'
         - 'Faire des recherches sur les contacts': 'UTILISATION/mode_emploi/faire_des_recherches_sur_les_contacts.md'
         - 'Envoyer un courriel': 'UTILISATION/mode_emploi/envoyer_un_courriel.md'
         - 'Gérer les groupes': 'UTILISATION/mode_emploi/groupes.md'
         - 'Utiliser les listes': 'UTILISATION/mode_emploi/listes.md'
-        - 'Gérer les liens avec la paroisse': 'UTILISATION/mode_emploi/relations.md'
         - 'Que faire quand... ?': 'UTILISATION/mode_emploi/que_faire_quand.md'
         - 'Gestion des dons et édition des reçus fiscaux': 'UTILISATION/mode_emploi/gestion_des_dons_et_edition_des_recus_fiscaux.md'
         - 'Créer et gérer un événement': 'UTILISATION/mode_emploi/creer_et_gerer_un_evenement.md'
@@ -27,8 +28,12 @@ nav:
         - 'Livrables': 'PRESENTATION/presentation_livrables.md'
     - 'Eléments techniques':
        - 'TECHNIQUE/index.md'
+       - 'Exploitation':
+           - 'TECHNIQUE/EXPLOITATION/index.md'
+           - 'Logs': 'TECHNIQUE/EXPLOITATION/logs.md'
        - 'POC': 
            - 'TECHNIQUE/POC/index.md'
+           - 'Remontage en local': 'TECHNIQUE/POC/remontage_local.md'
        - 'PRE_POC':           
            - 'TECHNIQUE/PREPOC/index.md'
            - 'Description générale': 'TECHNIQUE/PREPOC/prepoc.md'
@@ -92,6 +97,14 @@ nav:
            - 'Environnement de dev': 'TECHNIQUE/LOGICIEL/environnement_dev.md'
            - 'Personnalisation environnement de dev': 'TECHNIQUE/LOGICIEL/environnement_dev_env.md'
            - 'Importation de données': 'TECHNIQUE/LOGICIEL/importation.md'
+       - 'Intégration Continue':
+           - 'TECHNIQUE/INTEGRATION_CONTINUE/index.md'
+           - 'Docker build et push': 'TECHNIQUE/INTEGRATION_CONTINUE/docker_build_push.md'
+           - 'Tests automatisés : Codeception': 'TECHNIQUE/INTEGRATION_CONTINUE/tests_automatises.md'
+           - 'Tests automatisés : Phpunit': 'TECHNIQUE/INTEGRATION_CONTINUE/tests_phpunit.md'
+           - 'Composer': 'TECHNIQUE/INTEGRATION_CONTINUE/composer_ci.md'
+           - 'Trivy': 'TECHNIQUE/INTEGRATION_CONTINUE/trivy_ci.md'
+           - 'SonarLint et SonarQube': 'TECHNIQUE/INTEGRATION_CONTINUE/sonarqube_ci.md'
        - 'ARCHIVES':
            - 'TECHNIQUE/ARCHIVES/index.md'
     - 'Formation': 
@@ -123,15 +136,24 @@ theme:
      - toc.follow
      - toc.integrate
    palette:
-     - scheme: slate
-       toggle:
-         icon: material/toggle-switch-off-outline
-         name: switch to light mode
-     - scheme: default
-       toggle:
-         icon: material/toggle-switch
-         name: switch to dark mode
-   plugins:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+plugins:
    - search:
        lang: fr
 use_directory_urls: false

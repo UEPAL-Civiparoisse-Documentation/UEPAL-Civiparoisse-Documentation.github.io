@@ -1,8 +1,7 @@
 # Intégration des rôles des utilisateurs
 
 Les rôles utilisateurs sont un sujet complexe. Un rôle regroupe un ensemble de permissions qui sont nécessaires à la réalisation d'une tâche.
-On attribute ensuite à un utilisateur le ou les rôles qui lui sont nécessaires.
-
+On attribue ensuite à un utilisateur le ou les rôles qui lui sont nécessaires.
 
 Au niveau de CiviCRM, en sur-couche de Drupal, les permissions utilisées sont intégrées dans Drupal, si bien que la gestion des rôles se ferait réellement au niveau de Drupal et pas au niveau de CiviCRM. Cette documentation ne parle pas encore du système d'ACL proposé par CiviCRM.
 
@@ -107,7 +106,7 @@ CiviCRM dispose dans l'API4 d'un `Permission.get`. Il faut faire attention, car 
 En revanche, si on passe par l'API Drupal, on aura plutôt des commandes du genre
 
 ```bash
-drush php:eval "var_dump(array_keys(\\Drupal::service('user.permissions')>getPermissions()));"
+drush php:eval "var_dump(array_keys(\\Drupal::service('user.permissions')->getPermissions()));"
 ```
 
 Et dans ce cas, Drupal récupère les permissions pour CiviCRM via un callback (défini dans le module Drupal civicrm : civicrm.permissions.yml) depuis `Drupal\civicrm\CivicrmPermissions` et sa fonction `permissions` qui appele `CRM_Core_Permission::basicPermission(FALSE,TRUE)` et ne récupère donc que les droits actifs.

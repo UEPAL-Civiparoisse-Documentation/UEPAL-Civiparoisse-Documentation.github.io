@@ -53,7 +53,7 @@ Le menu `Actions` propose également, selon le contexte, les possibilités suiva
 * Ajouter des relations aux contacts
 * Supprimer les contacts (à manier évidemment avec précaution !)
 * Ajouter une information sur une interaction avec les contacts (activités)
-* Envoyer des courriels [en savoir plus](envoyer_un_courriel.md)
+* Envoyer des courriels [(en savoir plus)](envoyer_un_courriel.md)
 * Fusionner des doublons
 * Ajouter ou enlever les contacts d'un groupe
 * Inscrire les contacts à un événement

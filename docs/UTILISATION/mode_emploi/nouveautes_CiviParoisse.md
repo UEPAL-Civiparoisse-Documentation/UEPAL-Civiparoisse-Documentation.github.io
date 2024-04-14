@@ -2,13 +2,39 @@
 
 Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil du temps, en vous décrivant les nouveautés.
 
-## Version 1.45 - Prévu à l'hiver 2023
+## Version 1.46 - Prévue au printemps 2024
+
+**Nouvelles fonctions**
+
+- Refonte totale de la page Listes, pour en simplifier l'utilisation
+- Rajout de nouvelles listes
+    - Liste de distribution par Quartiers
+    - Liste des foyers n'ayant pas d'adresses mails
+- Rajout de critères de sélection sur des listes existantes
+    - Dates d'anniversaires
+    - Nouveaux arrivants
+    - Foyers paroissiaux
+- Amélioration de la documentation utilisateur
+    - Page [Opérations à mener régulièrement](operations_a_mener_regulierement.md)
+    - Page [Listes](listes.md)
+
+**Evolutions techniques**
+
+- Modification du mode SQL et désactivation du binlog
+- Travaux pour faciliter la lecture des Logs
+- Modification du User générique pour plus de sécurité
+- Modification des paramètres d'utilisation des ressources
+
+## Version 1.45 - Hiver 2024
 
 **Nouvelles fonctions**
 
 - Refonte totale des pages Contrôles et Améliorations de la base de données, pour en simplifier l'utilisation
 
 **Evolutions techniques**
+
+- Installation de nouvelles extensions Drupal
+    - Rôle Délégation 1.2. Permet de mieux maitriser les rôles donnés aux utilisateurs, en particulier d'éviter de donner le rôle d'administrateur
 
 ## Version 1.44 - Automne 2023
 
@@ -18,13 +44,15 @@ Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil d
 
 **Evolutions techniques**
 
+- Mise à jour d'extensions CiviCRM :
+    - Geocoder vers 1.10
 - Modification d'intitulés sur le formulaire Individu, et clarification des messages d'erreur
 - Clarification des consignes dans les pages Contrôles
 - Corrections d'erreur dans le Géocodage des adresses
 - Corrections des droits affectés aux utilisateurs
-  - Suppression des droits permettant d'afficher le Tableau de bord d'un contact
-  - Autorisation de gérer les Search Kit pour les Gestionnaires paroissiaux
-  - Corrections de bugs dans les droits attribués aux différents rôles
+    - Suppression des droits permettant d'afficher le Tableau de bord d'un contact
+    - Autorisation de gérer les Search Kit pour les Gestionnaires paroissiaux
+    - Corrections de bugs dans les droits attribués aux différents rôles
 - Nettoyage du code pour le simplifier et l'optimiser
 
 ## Version 1.43 - Eté 2023
@@ -35,6 +63,11 @@ Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil d
 
 **Evolutions techniques**
 
+- Mise à jour de CiviCRM vers 5.61.4
+- Mise à jour de Drupal vers 9.5.9
+- Mise à jour d'extensions CiviCRM :
+    - RecentMenu vers 1.5
+    - Mosaico vers 2.12
 - Changements d'intitulés sur le formulaire Individu
 - Suppression du menu Support dans la barre de menu
 - Rajout du lien vers la documentation CiviCRM dans la page d'aide en ligne
@@ -53,15 +86,15 @@ Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil d
 - Création des rôles et permissions d'accès à CiviParoisse. Pour en savoir plus, [cliquer ici](gestion_base_donnees.md).
 - Nettoyage du code initial, pour supprimer des rapports inutiles ou redondants
 
-## Version 1.41 - Hiver 2022
+## Version 1.41 - Hiver 2023
 
 **Nouvelles fonctions**
 
-- Nouveaux rapports disponibles :
-  - Liste des nouveaux arrivants = inscriptions des 15 derniers mois
-  - Liste des Individus ayant moins de 18 ans
-  - Liste des Individus ayant plus de 75 ans
-  - Liste électorale
+- Nouveaux rapports disponibles (*ces rapports sont changés en listes et sont améliorés à partir de la version 1.46*):
+    - Liste des nouveaux arrivants = inscriptions des 15 derniers mois
+    - Liste des Individus ayant moins de 18 ans
+    - Liste des Individus ayant plus de 75 ans
+    - Liste électorale
 - Sommaire CiviParoisse en page d'accueil
 - Modèle de mail aux couleurs UEPAL
 - Champ *Distribution du journal* rajouté à la fiche Foyer
@@ -77,4 +110,6 @@ Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil d
 
 **Evolutions techniques**
 
+- Installation de CiviCRM 5.47.0
+- Installation de Drupal 9.2
 - Configuration des valeurs de base

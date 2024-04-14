@@ -4,11 +4,11 @@
 
 A l'arrivée d'une nouvelle famille au sein de la paroisse il vous faut suivre les étapes suivantes :
 
-* Créer la fiche Foyer ([:octicons-link-external-16: En savoir plus](fiches-contact.md#enregistrer-un-nouveau-foyer))
-* Créer autant de fiches Individu que de personnes composant le foyer ([:octicons-link-external-16: En savoir plus](fiches-contact.md#enregistrer-un-nouveau-individu))
-* Renseigner le lien avec la paroisse ([:octicons-link-external-16: En savoir plus](liens_paroisses.md))
-* Renseigner les relations ([:octicons-link-external-16: En savoir plus](relations.md))
-* Inscrire chaque Individu dans le(s) groupe(s) nécessaire(s) ([:octicons-link-external-16: En savoir plus](groupes.md))
+* Créer la fiche Foyer ([En savoir plus](fiches-contact.md#enregistrer-un-nouveau-foyer))
+* Créer autant de fiches Individu que de personnes composant le foyer ([En savoir plus](fiches-contact.md#enregistrer-un-nouveau-individu))
+* Renseigner le lien avec la paroisse ([En savoir plus](liens_paroisses.md))
+* Renseigner les relations ([En savoir plus](relations.md))
+* Inscrire chaque Individu dans le(s) groupe(s) nécessaire(s) ([En savoir plus](groupes.md))
 
 ## :fontawesome-solid-person-walking-dashed-line-arrow-right: Une personne quitte la paroisse ?
 
@@ -21,8 +21,8 @@ Si une personne, voire toutes les personnes d'un foyer, quitte la paroisse, il e
 
 Ce qu'il vous faut faire :
 
-* **Mettre fin aux Adhésions**, en indiquant une date de fin dans l'adhésion à la paroisse. ([:octicons-link-external-16: En savoir plus](liens_paroisses.md#mettre-fin-à-une-adhesion))
-* **Retirez la(les) personne(s) des groupes** concernés. [:octicons-link-external-16: En savoir plus](groupes.md#enlever-d-un-groupe))
+* **Mettre fin aux Adhésions**, en indiquant une date de fin dans l'adhésion à la paroisse. ([En savoir plus](liens_paroisses.md#mettre-fin-à-une-adhesion))
+* **Retirez la(les) personne(s) des groupes** concernés. [En savoir plus](groupes.md#enlever-d-un-groupe))
 * **Changez l'adresse postale** si la personne a déménagé (supprimer l'ancienne adresse si vous n'arrivez pas à connaître la nouvelle).
 * Si possible, **ajoutez une note** pour indiquer en quelques mots le départ, éventuellement les raisons, si besoin.
 * Modifiez les **Préférences de communication**, en cliquant sur "Modifiez les préférences de communication" dans l'onglet `Synthèse` et cochant les 4 cases :
@@ -84,6 +84,12 @@ Il est ensuite important de modifier les Foyers comme suit :
 * Créer un nouveau Foyer pour l'un des conjoints et mettre en `Chef de famille` de ce foyer celui qui va y résider.
 * Renommer le Foyer existant au nom de l'autre conjoint.
 * Sur la fiche Individu de chaque conjoint, modifiez les relations `Chef de famille` et `Membre du foyer` pour qu'ils correspondent au bon foyer.
+
+Si les conjoints ont des enfants, il faut également modifier la fiche Individu de chaque enfant comme suit :
+
+* Créer une relation `Membre de` dans le nouveau Foyer crée ci-dessus
+* Vérifier que la relation `Membre de` soit bien resté dans l'ancien Foyer. La recréer au besoin.
+* Vérifier que la relation `Enfant de` ou `Parent de` soit toujours présente entre l'enfant et ses parents
 
 Si une des personnes a clairement manifesté son intention de quitter la paroisse, ne pas oublier de dérouler la procédure adéquate : "Une personne quitte la paroisse".
 
