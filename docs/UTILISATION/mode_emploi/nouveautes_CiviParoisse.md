@@ -2,7 +2,19 @@
 
 Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil du temps, en vous décrivant les nouveautés.
 
-## Version 1.46 - Prévue au printemps 2024
+<!--
+## Version 1.47 - Eté 2024
+
+**Nouvelles fonctions**
+
+- 
+
+**Evolutions techniques**
+
+- 
+
+-->
+## Version 1.46 - Printemps 2024
 
 **Nouvelles fonctions**
 
@@ -20,6 +32,7 @@ Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil d
 
 **Evolutions techniques**
 
+- Passage en MySQL 8.4
 - Modification du mode SQL et désactivation du binlog
 - Travaux pour faciliter la lecture des Logs
 - Modification du User générique pour plus de sécurité

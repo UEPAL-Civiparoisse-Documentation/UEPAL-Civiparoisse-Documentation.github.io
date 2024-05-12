@@ -19,20 +19,21 @@ Sur la page Listes, plusieurs possibilités vous sont proposées :
 
 | Catégorie | Rubrique | Titre de la liste | Description |
 | ---- | ---- | ---- | ---- |
+| Paroisse | Paroissiens | Dates d'anniversaire | Affiche les dates d'anniversaires |
+|  |  | Nouveaux arrivants | Affiche les informations sur les nouveaux inscrits à la paroisse  <br> *Critères par défaut : arrivants des 12 derniers mois, sans les Pas Intéressés*|
+|  |  | Foyers paroissiens | Donne la composition de chaque foyer |
+|  | Registre |  | *(sera disponible ultérieurement)* |
+|  | Elections | Liste électorale | Affiche la liste des électeurs de la paroisse |
+|  |  | Conseil Presbytéral | Affiche la liste des conseillers presbytéraux |
+| Communication | Foyers |  | *(sera disponible ultérieurement)* |
+|  | Individus |  | *(sera disponible ultérieurement)* |
+|  | Distribution | Liste de distribution par Quartiers | Affiche, par quartier, la liste des foyers et le mode de distribution souhaité <br> *Critères par défaut : mode de distribution = Distribué* |
+|  |  | Liste des Quartiers | Permet de renommer les quartiers, et de les gérer  |
 | Groupes | Participants | Dates d'anniversaires | Affiche les dates d'anniversaires |
 |  | Parents |  | *(sera disponible ultérieurement)* |
 |  | Compétences |  | *(sera disponible ultérieurement)* |
 | Gestion | Dons |  | *(sera disponible ultérieurement)* |
 |  | Administration |  | *(sera disponible ultérieurement)* |
-| Paroisse | Registre |  | *(sera disponible ultérieurement)* |
-|  | Elections | Liste électorale | Affiche la liste des électeurs de la paroisse |
-|  | Paroissiens | Dates d'anniversaire | Affiche les dates d'anniversaires |
-|  |  | Nouveaux arrivants | Affiche les informations sur les nouveaux inscrits à la paroisse  <br> *Critères par défaut : arrivants des 12 derniers mois, sans les Pas Intéressés*|
-|  |  | Foyers paroissiens | Donne la composition de chaque foyer |
-| Communication | Foyers |  | *(sera disponible ultérieurement)* |
-|  | Individus |  | *(sera disponible ultérieurement)* |
-|  | Distribution | Liste de distribution par Quartiers | Affiche, par quartier, la liste des foyers et le mode de distribution souhaité <br> *Critères par défaut : mode de distribution = Distribué* |
-|  |  | Liste des Quartiers | Permet de renommer les quartiers, et de les gérer  |
 
 ## Quels sont les critères de sélection ?
 
@@ -98,3 +99,18 @@ Une fois votre sélection faite, vous pouvez cliquer sur le bouton `Actions`, qu
 
 !!! info "Prise en compte du contexte de la liste"
     Les actions sont proposées selon le contexte de la liste. Cela signifie que toutes les actions ne sont pas systématiquement disponibles.
+
+## Quelques listes particulières et leur utilisation
+
+### Liste des Conseillers Presbytéraux
+
+Cette liste affiche les Conseillers Presbytéraux avec leur mandat actuel, et leurs éventuels mandants passés. Elle n'affiche pas le nom des anciens Conseillers Presbytéraux.
+
+Quelques conseils pour bien utiliser cette liste
+
+* Placer les Conseillers Presbytéraux **actuels** dans le Groupe *Conseil Presbytéral*
+* Enlever les anciens Conseillers Presbytéraux du Groupe *Conseil Presbytéral*
+* Créer une relation entre la fiche de l'Individu et celle de la paroisse pour indiquer le rôle du Conseiller : *est Président de, est Trésorier de, est Membre élu de, etc...*
+* Lors de la création de la relation, indiquer la date de début du mandat (sauf exceptions, = jour de l'élection)
+* Lors de la création de la relation, indiquer la date de fin du mandat (sauf exceptions, = 6 années après le jour de l'élection)
+* Si un Conseiller est réélu, créer une nouvelle relation. Ne pas prolonger la date de la première relation, pour permettre de savoir combien de mandats ont été effectués.
