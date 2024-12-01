@@ -22,7 +22,7 @@ Sur la page Listes, plusieurs possibilités vous sont proposées :
 | Paroisse | Paroissiens | Dates d'anniversaire | Affiche les dates d'anniversaires |
 |  |  | Nouveaux arrivants | Affiche les informations sur les nouveaux inscrits à la paroisse  <br> *Critères par défaut : arrivants des 12 derniers mois, sans les Pas Intéressés*|
 |  |  | Foyers paroissiens | Donne la composition de chaque foyer |
-|  | Registre |  | *(sera disponible ultérieurement)* |
+|  | Registre | Liste des naissances | Affiche les naissances <br> *Affichage du plus récent au plus ancien* |
 |  | Elections | Liste électorale | Affiche la liste des électeurs de la paroisse |
 |  |  | Conseil Presbytéral | Affiche la liste des conseillers presbytéraux |
 | Communication | Foyers |  | *(sera disponible ultérieurement)* |
@@ -37,8 +37,8 @@ Sur la page Listes, plusieurs possibilités vous sont proposées :
 
 ## Quels sont les critères de sélection ?
 
-Selon la liste, plusieurs critères de sélection vous sont proposés en haut de la page. En sélectionnant un des critères, la liste sera réduite aux fiches comportant ce critère. 
-!!! example "Example" 
+Selon la liste, plusieurs critères de sélection vous sont proposés en haut de la page. En sélectionnant un des critères, la liste sera réduite aux fiches comportant ce critère.
+!!! example "Exemple"
     En sélectionnant *Chorale* dans le critère `Groupes` pour la liste `Dates d'anniversaires`, vous obtiendrez la liste des dates d'anniversaires des Individus inscrits à la chorale.
 
 Vous pouvez également combiner plusieurs critères, pour affiner votre recherche.  
@@ -106,11 +106,20 @@ Une fois votre sélection faite, vous pouvez cliquer sur le bouton `Actions`, qu
 
 Cette liste affiche les Conseillers Presbytéraux avec leur mandat actuel, et leurs éventuels mandants passés. Elle n'affiche pas le nom des anciens Conseillers Presbytéraux.
 
-Quelques conseils pour bien utiliser cette liste
+Quelques conseils avant d'utiliser cette liste :
 
-* Placer les Conseillers Presbytéraux **actuels** dans le Groupe *Conseil Presbytéral*
-* Enlever les anciens Conseillers Presbytéraux du Groupe *Conseil Presbytéral*
-* Créer une relation entre la fiche de l'Individu et celle de la paroisse pour indiquer le rôle du Conseiller : *est Président de, est Trésorier de, est Membre élu de, etc...*
-* Lors de la création de la relation, indiquer la date de début du mandat (sauf exceptions, = jour de l'élection)
-* Lors de la création de la relation, indiquer la date de fin du mandat (sauf exceptions, = 6 années après le jour de l'élection)
-* Si un Conseiller est réélu, créer une nouvelle relation. Ne pas prolonger la date de la première relation, pour permettre de savoir combien de mandats ont été effectués.
+* Placez les Conseillers Presbytéraux **actuels** dans le Groupe *Conseil Presbytéral*
+* Enlevez les **anciens** Conseillers Presbytéraux du Groupe *Conseil Presbytéral*
+* Créez une relation entre la fiche de l'Individu et celle de la paroisse pour **indiquer comment le Conseiller a été élu** : *est Membre élu de, est Membre de droit, est Membre invité, etc...*
+    * Dans le champ *Date de début*, indiquez la date de début du mandat (= jour de l'élection, sauf exceptions)
+    * Dans le champ *Date de fin*, indiquez la date de fin du mandat (= 6 années après le jour de l'élection, sauf exceptions)
+    * Si un Conseiller est **réélu, créez une nouvelle relation**. Ne pas prolonger la date de la première relation, et ne supprimer pas non plus cette première relation. Cela permet de savoir combien de mandats ont été effectués.
+* Et créez une relation entre la fiche de l'Individu et celle de la paroisse pour **indiquer son éventuel rôle au sein du Conseil Presbytéral** : *est Président de, est Trésorier de , est Trésorier, etc...*
+    * Dans le champ *Date de début*, indiquez la date de début du rôle (= jour de l'élection du bureau, par exemple)
+    * Dans le champ *Date de fin*, ne pas indiquer la date de fin du mandat tant qu'elle n'est pas connue
+    * Si un Conseiller poursuit son rôle (de Trésorier, de Président, etc...) sur plusieurs mandats, ne pas créer ici de nouvelles relations (à la différence de la partie ci-dessus relative au mandat des conseillers). Indiquez la date de fin du rôle lorsque vous la connaitrez.
+
+Quelques conseils pour bien utiliser cette liste :
+
+* Pensez à bien **choisir le groupe *Conseil Presbytéral*** dans le critères *Groupe* en haut de page. Sans ce choix, la liste s'affichera vide.
+* Si nécessaire, il est possible de **limiter l'affichage à la paroisse**, en saisissant tout ou partie du nom de la paroisse dans le champ *Paroisse*.

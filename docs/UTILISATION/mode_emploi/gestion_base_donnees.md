@@ -13,7 +13,7 @@ Vous pouvez à tout moment donner accès à la base de données à un utilisateu
 
 1. Au préalable
       * Si ce n’est pas encore fait, créer la fiche de l’utilisateur dans la base de données
-      * Si ce n’est pas encore faire, renseigner l’adresse mail de l’utilisateur
+      * Si ce n’est pas encore fait, renseigner l’adresse mail de l’utilisateur
 2. Ouvrir la fiche *Particulier* de la personne (pas la fiche *Foyer*)
 3. Cliquer sur le bouton *Actions* de la fiche ![bouton Actions](img/bouton_action.png)
 4. Choisir l’entrée *Créer un compte utilisateur* ![écran Actions](img/ecran_actions.png)
@@ -62,25 +62,24 @@ En cours d'écriture
 
 ## Modifier la liste des Quartiers
 
-Dans le menu Paroisse, cliquer sur le menu Paramètres.
+Dans le menu Paroisse, cliquer sur le menu Paramètres.  
+Dans la page des Paramètres de CiviParoisse qui s'ouvre, sélectionner *Modifier la liste des Quartiers*.
 
-Dans la page des Paramètres de CiviParoisse qui s'ouvre, sélectionner *Modifier la liste des Quartiers*
+* Si vous souhaitez **modifier le nom d'un quartier** :
 
-* Si vous souhaitez modifier le nom d'un quartier :
+    1. Cliquer sur le nom du quartier à modifier
+    2. Saisir le nouveau nom
+    3. Cliquer sur la flèche verte sous le nom
 
-  1. Cliquer sur le nom du quartier à modifier
-  2. Saisir le nouveau nom
-  3. Cliquer sur la flèche verte sous le nom
+* Si vous souhaitez **ne plus utiliser un quartier** existant :
 
-* Si vous souhaitez ne plus utiliser un quartier existant :
+    1. Vérifier au préalable qu'aucun Foyer n'est encore attaché à ce quartier
+    2. Dans la colonne *Visible ?*, cliquer sur `Oui`
+    3. Choisir le bouton `Non`
+    4. Cliquer sur la flèche verte
 
-  1. Vérifier au préalable qu'aucun Foyer n'est encore attaché à ce quartier
-  2. Dans la colonne *Visible ?*, cliquer sur `Oui`
-  3. Choisir le bouton `Non`
-  4. Cliquer sur la flèche verte
+* Si vous souhaitez **utiliser à nouveau un quartier actuellement Non visible** :
 
-* Si vous souhaitez utiliser à nouveau un quartier actuellement Non visible :
-
-  1. Dans la colonne *Visible ?*, cliquer sur `Non`
-  2. Choisir le bouton `Oui`
-  3. Cliquer sur la flèche verte
+    1. Dans la colonne *Visible ?*, cliquer sur `Non`
+    2. Choisir le bouton `Oui`
+    3. Cliquer sur la flèche verte

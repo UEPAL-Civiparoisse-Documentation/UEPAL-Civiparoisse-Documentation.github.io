@@ -3,7 +3,7 @@
 Dans CiviParoisse, le lien avec la paroisse est géré comme une "Adhésion".
 
 !!! warning "Ce lien est important"
-    Pour assurer le bon fonctionnement de votre base de données, il est important de renseigner pour chaque individu son lien avec la paroisse, selon les règles ci-dessous.  
+    Pour assurer le bon fonctionnement de votre base de données, **il est important de renseigner pour chaque individu son lien avec la paroisse**, selon les règles ci-dessous.  
     Ne saisissez pas de liens pour les Foyers et les Organisations.
 
 ## Les 4 types de liens
@@ -17,7 +17,17 @@ Dans CiviParoisse, le lien avec la paroisse est géré comme une "Adhésion".
 
 ## Créer une adhésion sur une fiche
 
-> Partie en cours d'écriture
+*Chaque personne doit avoir une seule et unique adhésion. Celle-ci peut varier dans le temps, mais doit toujours rester unique.*
+
+* Positionnez-vous sur la fiche Individu de la personne concernée.
+* Cliquez sur l'onglet `Adhésion` et cliquez sur le bouton `Ajouter une adhésion`.
+* Dans la liste déroulante `- sélectionner -`, choisissez le lien avec la paroisse (cf supra pour plus de détails sur les 4 types de liens).
+* Si besoin, changez la date `Membre depuis le`.
+* Indiquez la date de début d'adhésion, qui est généralement la même que la date de la ligne ci-dessus.
+* Cliquez sur le bouton `Enregistrer`, et vérifiez que l'adhésion s'affiche à l'écran.
+
+!!! warning "Attention"
+    L'adhésion est **uniquement à inscrire sur une fiche Individu, et jamais sur une fiche Foyer ou Organisation**. La paroisse est en lien avec des personnes en chair et en os, pas avec des maisons ou des entreprises ;-)
 
 ## Modifier une adhésion existante
 
@@ -25,8 +35,9 @@ Dans CiviParoisse, le lien avec la paroisse est géré comme une "Adhésion".
 
 ## Mettre fin à une adhésion
 
+* Pour mettre fin à une adhésion, allez dans l'onglet `Adhésion`, et à la fin de la ligne de l'adhésion, cliquez sur `Modifier`, renseignez la date de fin.
+* Puis sélectionnez la case `Forcer / Outrepasser de façon permanente` afin que son statut soit modifié dans les listes
+* Passez le statut d'adhésion en `Annulé`, puis validez.
+
 !!! warning "N'utilisez pas la suppression"
     Afin de conserver l'historique du lien avec la paroisse, n'utilisez jamais la touche Supprimer.
-
-* Pour mettre fin à une adhésion, allez dans l'onglet `Adhésion`, et à la fin de la ligne de l'adhésion, cliquez sur `Modifier`, renseignez la date de fin.
-* Puis sélectionnez la case `Forcer / Outrepasser de façon permanente` afin que son statut soit modifié dans les listes, passez le statut d'adhésion en `Annulé`, puis validez.

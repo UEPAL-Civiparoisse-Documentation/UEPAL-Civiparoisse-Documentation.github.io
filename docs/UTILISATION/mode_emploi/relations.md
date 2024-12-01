@@ -45,10 +45,20 @@ Ceci va vous permettre de tisser assez finement les liens entre les uns et les a
 
 ## Mettre en place une relation
 
-> Partie en cours d'écriture
-
 !!! success "Mise en place automatique des relations"
-    En utilisant le formulaire de [la page d'accueil](introduction.md#la-page-daccueil), les relations sont générées automatiquement.
+    En utilisant les formulaires de [la page d'accueil](introduction.md#la-page-daccueil), les relations sont générées automatiquement.
+
+Sur chaque fiche, il est possible de créer manuellement les relations.
+
+* Commencez par sélectionner la fiche concernée.
+* Cliquez sur l'onglet :fontawesome-regular-handshake: `Relations`
+* Cliquer sur le bouton :material-plus-circle: `Ajouter une relation`
+* Sélectionnez le type de relation dans la liste déroulante
+* Choisissez le ou les contacts.
+    * :material-lightbulb-on: Il est possible de sélectionner plusieurs contacts à la fois.
+* Si besoin, indiquez une date de début et/ou une date de fin
+* Cliquer sur le bouton :material-check-bold: `Enregistrer la relation`
+
 
 ## Modifier une relation
 
@@ -61,10 +71,7 @@ Ceci va vous permettre de tisser assez finement les liens entre les uns et les a
 
 Pour la **fin d'une relation**, deux cas possibles :
 
-* Vous aviez indiqué une date de fin et la relation se désactivera automatiquement.
+* Vous avez déjà indiqué une date de fin. La relation se désactivera automatiquement à la date indiquée.
 * Il n'y avait pas de date de fin, il suffit alors de cliquer à la fin de la ligne de la relation sur `Modifier` et ajouter une date de fin.
 
 CiviParoisse garde en mémoire toutes les relations présentes et passées, c'est ainsi que les relations qui ont pris fin se retrouvent en bas des relations actives, dans la rubrique `Relations inactives`.
-
-
-

@@ -2,18 +2,24 @@
 
 Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil du temps, en vous décrivant les nouveautés.
 
-<!--
-## Version 1.47 - Eté 2024
+## Version 1.47 - Automne 2024
 
 **Nouvelles fonctions**
 
-- 
+- Rajout de nouvelles listes
+    - Registre : liste des naissances
+    - Liste avec la composition du Conseil Presbytéral ([pour en savoir plus](listes.md))
+- Page des personnes ressources à contacter (disponible en cliquant sur le bouton Aide en ligne dans CiviParoisse)
+- Création automatique d'un Groupe Conseil Presbytéral et d'un Groupe Désabonnement (qui est nécessaire pour vos envois de mails en masse)
+- Amélioration de la documentation utilisateur
+    - Adhésion : [créer une adhésion sur une fiche](liens_paroisses.md)
+    - Envoi de e-mails : [effectuer un envoi de mails en masse](envoyer_un_courriel.md)
+    - Relations : [mettre en place une relation](relations.md)
 
 **Evolutions techniques**
 
-- 
+- Améliorations des performances techniques : CiviParoisse fonctionne plus rapidement
 
--->
 ## Version 1.46 - Printemps 2024
 
 **Nouvelles fonctions**
