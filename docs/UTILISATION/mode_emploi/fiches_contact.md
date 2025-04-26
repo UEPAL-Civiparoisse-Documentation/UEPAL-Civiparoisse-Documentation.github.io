@@ -1,3 +1,5 @@
+<!-- D10 C5.81 OK, Peter le 21.04.2025 -->
+
 # Gérer les fiches avec les contacts
 
 ## :fontawesome-solid-house-chimney: Enregistrer un nouveau Foyer
@@ -15,11 +17,12 @@ Merci de respecter les règles suivantes pour maintenir la cohérence des donné
 
 :material-human-male-female-child: **Nom du Foyer** : saisir le nom de famille en **majuscules**, en respectant les règles suivantes :
 
-* NOM Prénom, pour un(e) célibataire (ex. : *DUPONT Marc*)
-* NOM Prénom et Prénom, pour un couple portant le même nom de famille (ex. *DUPONT Marc et Cécile*)
-* NOM Prénom et NOM Prénom pour un couple ne portant pas le même nom de famille (ex. *DUPONT Marc et DURAND Cécile*)
+* <span style="color:LightSlateGrey">*NOM Prénom*</span> pour un(e) célibataire (ex. : *DUPONT Marc*)
+* <span style="color:LightSlateGrey">*NOM Prénom et Prénom*</span> pour un couple portant le même nom de famille (ex. *DUPONT Marc et Cécile*)
+* <span style="color:LightSlateGrey">*NOM Prénom et NOM Prénom*</span> pour un couple ne portant pas le même nom de famille (ex. *DUPONT Marc et DURAND Cécile*)
 
-:fontawesome-solid-map-location-dot: **Adresse** : la renseigner de façon aussi précise que possible  
+
+:fontawesome-solid-map-location-dot: **Adresse** : la renseigner de façon aussi précise que possible.  
 
 :fontawesome-solid-phone: **Numéro(s) de téléphone fixe de la maison** : seul le téléphone fixe est saisi dans la fiche Foyer, les numéros de portables sont saisis sur les fiches Individu respectives.  
 Le(s) saisir en respectant le format international (ex. +33 3 88 89 90 91).  
@@ -54,13 +57,14 @@ Il est important de respecter quelques règles :
 
 :fontawesome-solid-phone: **Téléphone** : renseignez le numéro de portable, personnel voire professionnel, en respectant le format international (ex. +33 6 00 11 22 33), avec des espaces entre les numéros et nom des points.
 
-:fontawesome-solid-church: Complétez les données **Religion** (dates de baptême, de confirmation de mariage...) et indiquez dans quel paroisse cela a eu lieu.
+:fontawesome-solid-church: Complétez les données **Religion** (dates de baptême, de confirmation de mariage...) et indiquez dans quel paroisse cela a eu lieu.  
+Si vous ne trouvez pas le nom de la paroisse, choisissez `Autres`. Puis après la création de la fiche, rajoutez une `Note` pour indiquer le nom exact.
 
 :material-calendar-month-outline: Complétez ensuite l'**état civil** avec les éléments dont vous disposez.
 
-:material-playlist-music: Ne négligez pas la rubrique **Compétences** lorsqu'elle sont connues, pour inviter par exemple la personne par la suite à venir renforcer la chorale ou un groupe de musique.
+:material-playlist-music: Ne négligez pas la rubrique **Compétences** lorsqu'elles sont connues, pour inviter par exemple la personne par la suite à venir renforcer la chorale ou un groupe de musique.
 
-:fontawesome-solid-photo-film: Ajoutez une **photo** de la personne si vous en avez une (format conseillé : 250 x 370 pixels, en 72 dpi)
+:fontawesome-solid-photo-film: Une fois la fiche créée, ajoutez une **photo** de la personne si vous en avez une (format conseillé : 250 x 370 pixels, en 72 dpi)
 
 N'hésitez pas à consulter les recommandations sur le **lien avec la paroisse** si vous avez un doute sur le lien à établir. [(En savoir plus)](relations.md)
 

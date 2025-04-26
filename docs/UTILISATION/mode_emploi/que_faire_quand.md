@@ -1,3 +1,5 @@
+<!-- D10 C5.81 OK, Peter le 26.04.2025 -->
+
 # Que faire quand... ?
 
 ## :material-human-male-female-child: Une nouvelle famille arrive ?
@@ -25,12 +27,12 @@ Ce qu'il vous faut faire :
 * **Retirez la(les) personne(s) des groupes** concernés. [En savoir plus](groupes.md#enlever-d-un-groupe))
 * **Changez l'adresse postale** si la personne a déménagé (supprimer l'ancienne adresse si vous n'arrivez pas à connaître la nouvelle).
 * Si possible, **ajoutez une note** pour indiquer en quelques mots le départ, éventuellement les raisons, si besoin.
-* Modifiez les **Préférences de communication**, en cliquant sur "Modifiez les préférences de communication" dans l'onglet `Synthèse` et cochant les 4 cases :
+* Modifiez les **Préférences de communication**, en cliquant sur `Modifiez les préférences de communication` dans l'onglet `Synthèse` et cochant les 4 cases :
 	* `Ne pas envoyer de courriel`
 	* `Ne pas envoyer de courrier postal`
 	* `Ne pas envoyer de sms`
 	* `Pas de mailing - opposition (opt out)` 
-* Enfin, cliquez sur le bouton **`Supprimer contact`**" et confirmez en cliquant sur `Supprimer contact(s)`. **Attention :** ne pas cliquez sur le bouton `Supprimer définitivement`, vous perdriez définitivement toutes les informations !  
+* Enfin, dans le menu `Action`, cliquez sur le choix `Supprimer` et confirmez en cliquant sur `Supprimer contact(s)`. **Attention :** ne pas cliquez sur le bouton `Supprimer définitivement`, vous perdriez définitivement toutes les informations !  
 
 :fontawesome-solid-repeat: Pensez à refaire les mêmes étapes pour les différentes personnes et pour leur Foyer, si c'est tout un foyer qui déménage.
 
@@ -44,7 +46,7 @@ Pour enregistrer le décès d'une personne, rendez-vous sur la fiche Individu de
 	* `Ne pas envoyer de courrier postal`
 	* `Ne pas envoyer de sms`
 	* `Pas de mailing - opposition (opt out)`
-* Au niveau de l'**état civil**, renseignez si possible la date de l'enterrement et indiquez au sein de quel paroisse a eu lieu l'enterrement.
+* Au niveau de l'**état civil**, renseignez si possible la date des obsèques et indiquez au sein de quelle paroisse ont eu lieu les obsèques.
 * Retirez la personne des **groupes** auxquels elle appartenait, en utilisant la fonction `Retirer`. **Attention :** Ne pas utiliser la fonction `Supprimer`, afin de conserver un historique de l'activité.
 * Vérifiez que les **Adhésions** soient passées en `Adhésions en attente ou exprirées`. **Attention :** Ne pas utiliser la fonction `Supprimer` afin de conserver l'historique.
 * Créez une **Note** avec les coordonnées de contact de la famille. Cela pourra servir à les contacter en vue d'un culte des défunts.
@@ -53,25 +55,23 @@ Pour enregistrer le décès d'une personne, rendez-vous sur la fiche Individu de
 
 ## :fontawesome-solid-hand-holding-hand: Un couple se marie ?
 
-> Partie en cours d'écriture
+> Partie provisoire (sera revue en 2025)
 
 Lorsque qu'un couple se marie et que les deux foyers étaient auparavant séparés au sein de votre paroisse, il vous faudra fusionner les deux foyers puis renommer le foyer unique obtenu. Pour cela :
 
-* Construisez une recherche en allant dans "Rechercher" → "Constructeur de recherche". Ajoutez un premier champ de rechercher sur "Foyer", choisissez "Nom du foyer", l'opérateur "=" et comme résultat le nom du premier foyer. Puis cliquez sur "Inclure également les contacts pour lesquels" et faite de même pour le deuxième foyer. Vous aurez une fenêtre de recherche similaire à ceci :
-
-![Fusionner foyer](img/fusionner_foyer.png)
-
-* Cliquez sur "Rechercher".
-* Dans le fenêtre de résultat, sélectionnez les deux foyers puis cliquez sur "Actions" et choisissez "Fusionner les contacts." Eventuellement après avoir "Permuter les contacts original et doublon", pour que le foyer de Monsieur soit à droite.
+* Ouvrez les fiches Foyers des deux foyers.
+* Renommez chaque Foyer d'un même nom provisoire (par exemple *Foyer marié*)
+* Allez dans le menu `Rechercher` / `Rechercher des contacts`
+* Saisissez le nom provisoire du Foyer, et cliquez sur `Rechercher`
+* Dans la fenêtre de résultat, sélectionnez les deux foyers puis cliquez sur `Actions` et choisissez `Fusionner les doublons`. Eventuellement après avoir "Permuter les contacts original et doublon", pour que le foyer de Monsieur soit à droite.
 * Sélectionnez les données à conserver du Foyer en doublon.
-* Changez le nom du Foyer pour y inscrire les deux prénoms.
-* Vérifiez ensuite que les Relations se sont mises correctement, c'est-à-dire que les deux membres du foyer sont bien "Chef de famille de" mais aussi que la relation "Conjoint de" est présente sur les deux fiches Individu.
+* Changez le nom du Foyer pour y inscrire le (les) noms(s) de famille et les deux prénoms.
+* Vérifiez ensuite que les Relations se sont mises correctement, c'est-à-dire que les deux membres du foyer sont bien "Chef de famille de".
+* Si vous ne l'avez pas fait avant, pensez à créer la relation "Conjoint de" entre les deux fiches Individus.
 * Vérifiez aussi, si besoin, que les enfants sont bien rattachés au nouveau foyer.
 * Eventuellement, modifiez le nom de famille de Madame.
 
 ## :material-call-split: Un couple divorce ou se sépare ?
-
-> Partie en cours d'écriture
 
 En cas de séparation, il est nécessaire de modifier le fiche Individu de chacun des conjoints comme suit :
 
@@ -122,7 +122,7 @@ Si vos tentatives pour trouver sa nouvelle adresse ont échouées, la procédure
 
 * Allez sur la fiche Individu de la personne.
 * Supprimez l'adresse.
-* Ajoutez une note, en indiquant que le courrier revient avec la mention adresse erronée.
+* Ajoutez une note, en indiquant que le courrier revient avec la mention *adresse erronée*.
 * N'oubliez pas de supprimer aussi l'adresse de la fiche Foyer et sur celles des autres membres du foyer.
 
 ## :material-email-off: Une personne n'a pas d'adresse mail ou ne veut pas la communiquer ?

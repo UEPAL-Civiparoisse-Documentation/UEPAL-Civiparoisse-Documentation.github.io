@@ -1,3 +1,5 @@
+<!-- D10 C5.81 OK, Peter le 26.04.2025 -->
+
 # Envoyer un courriel
 
 CiviParoisse propose deux formes de courriels, l'une qui ressemble à ce que vous connaissez dans votre logiciel de courriel habituel, l'autre qui permet des présentations bien plus élaborées, tout en étant relativement simple à mettre en oeuvre. Cette deuxième solution est recommandée pour vos lettres électroniques, la première étant plutôt pour des courriels simples n'ayant pas besoin d'une grande esthétique.
@@ -23,13 +25,14 @@ Pour par exemple inviter les conseillers presbytéraux à la prochaine réunion,
 * Dans la nouvelle fenêtre, choisissez l'adresse mail d'expédition si nécessaire dans le champ `De`. Supprimez ou rajoutez des adresses mails dans le champ `A`. Puis indiquez l'objet du mail dans le champ `Sujet`.
 
 !!! warning "Attention"
-    Il est indispensable de **choisir l'adresse de la paroisse comme adresse d'expédition** (le champ `De` tout en haut du mail que vous êtes en train de créer). Ne choisissez jamais votre propre adresse mail : pour des raisons de sécurité, ces mails ne sont pas envoyés.
+    Il est indispensable de **choisir l'adresse de la paroisse comme adresse d'expédition** (le champ `De` tout en haut du mail que vous êtes en train de créer).  
+    Ne choisissez jamais votre propre adresse mail : pour des raisons de sécurité, ces mails ne sont pas envoyés.
 
 * Ecrivez votre courriel dans la partie `Format HTML`, rajoutez si besoin des pièces jointes dans la partie `Pièce jointe`, et cliquez sur `Envoyer les courriels`. Votre courrier sera alors envoyé immédiatement.
 
 * Vous avez également la possibilité de rajouter des destinataires en copie en cliquant sur le bouton `Ajouter CC`, ou en copie cachée en cliquant sur le bouton `Ajouter CCC`.
 
-* Si vous pensez envoyer régulièrement le même courriel, vous pouvez créer un modèle, en cliquant sur `Sauvegarder en tant que nouveau modèle` et en lui donnant un titre. Vous pourrez ensuite réutiliser ce modèle en le sélectionnant dans le champ `Utiliser un modèle`.
+<!--* Si vous pensez envoyer régulièrement le même courriel, vous pouvez créer un modèle, en cliquant sur `Sauvegarder en tant que nouveau modèle` et en lui donnant un titre. Vous pourrez ensuite réutiliser ce modèle en le sélectionnant dans le champ `Utiliser un modèle`.-->
 
 !!! note "Astuce"
     CiviParoisse permet de faire du publipostage, vous pouvez donc ajouter par exemple les champs "Formule de salutation par courriel" suivi du champ "nom affiché" pour obtenir pour chaque destinataire quelque chose du type `Bien cher M. DUPONT Martin,`. Pour cela, utilisez les `champs de fusion` lors de la création du courriel.
@@ -51,7 +54,7 @@ Vous pouvez également rappeler le nom d'un ancien mailing, si vous souhaitez é
 
 * Le `Sujet` correspond à ce qui est parfois "Objet" du courriel dans certains logiciels. C'est l'intitulé du courriel tel qu'il s'affichera chez vos destinataires.
 
-* Choisissez le groupe *Désabonnement* dans la partie `Se désinscrire de la liste`.
+<!-- * Choisissez le groupe *Désabonnement* dans la partie `Se désinscrire de la liste`. -->
 
 * Cliquer sur `Suivant`.
 
@@ -66,9 +69,9 @@ Vous pouvez également rappeler le nom d'un ancien mailing, si vous souhaitez é
 A droite de chaque bloc se trouve une icône pour le dupliquer et une autre pour le supprimer si vous décidez d'une autre présentation.  
 Si vous cliquez sur certains éléments, la partie de gauche change d'affichage pour vous permettre de personnaliser l'élément (par exemple pour indiquer la page Facebook de la paroisse).
 
-* Une fois le courriel composé, cliquer sur `Close`.
+* Une fois le courriel composé, cliquer sur :material-cloud-upload:`Fermer`.
 
-* Au préalable, vous pourriez effectuer un test, en cliquant simplement sur `Test`. Cela vous sera utile si vous avez mis en place une esthétique élaborée et que vous voudrez vérifier que le contenu est bien conforme à vous attentes, avant d'envoyer le courriel à l'ensemble des destinataires.
+* Au préalable, vous pourriez effectuer un test, en cliquant simplement sur :fontawesome-solid-paper-plane:`Tester`. Cela vous sera utile si vous avez mis en place une esthétique élaborée et que vous voudrez vérifier que le contenu est bien conforme à vous attentes, avant d'envoyer le courriel à l'ensemble des destinataires.
 
 * Cliquer sur `Suivant`.
 
@@ -78,7 +81,7 @@ Si vous cliquez sur certains éléments, la partie de gauche change d'affichage 
 
 * Pour ajouter des pièces jointes, cliquez sur `Advanced Mailing Options`. Rajoutez les fichiers en suivant les instructions à l'écran.
 
-* Lorsque votre mailing est totalement préparé, cliquez sur `Envoyer le mailing`.
+* Lorsque votre mailing est totalement préparé, cliquez sur `Submit Mailing`.
 
 !!! info "Délais d'envoi de votre mailing"
-    L'envoi de votre mailing commencera quelques minutes après avoir cliqué sur `Envoyer`. Selon le nombre de destinataires, la distribution sera étalée sur plusieurs dizaines de minutes. Ceci contribue à éviter que vos communications soient considérées comme des spams.
+    L'envoi de votre mailing commencera quelques minutes après avoir validé l'envoi. Selon le nombre de destinataires, la distribution sera étalée sur plusieurs dizaines de minutes. Ceci contribue à éviter que vos communications soient considérées comme des spams.

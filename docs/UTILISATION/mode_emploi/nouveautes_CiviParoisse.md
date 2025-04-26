@@ -2,6 +2,42 @@
 
 Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil du temps, en vous décrivant les nouveautés.
 
+## Version 1.51 - Printemps 2025
+
+**Nouvelles fonctions**
+<!--
+- Possibilité de gérer des modèles de messages personnalisés
+-->
+- Nouvelles listes
+    - Baptêmes
+    - Présentations
+    - Confirmations
+    - Mariages
+    - Décès
+    - Composition d'un Groupe
+
+**Evolutions techniques**
+
+
+## Version 1.50 - Hiver 2024
+
+**Nouvelles fonctions**
+
+*Pas de nouvelles fonctions dans la version 1.50*
+
+**Evolutions techniques**
+
+- Mise à jour de CiviCRM vers la version 5.81.0
+- Mise à jour de Drupal vers la version 10.4.0
+- Mise à jour d'extensions CiviCRM
+    - Mosaico : version 3.6
+    - Geocoder : version 1.13
+    - Recent Menu : version 1.6
+    - Roles et Délégations : version 1.3
+- Corrections du mode d'emploi Utilisateurs, pour intégrer les changements des récentes mises à jour
+
+*Les versions 1.48 et 1.49 étaient uniquement des versions techniques, sans modifications pour les utilisateurs*
+
 ## Version 1.47 - Automne 2024
 
 **Nouvelles fonctions**

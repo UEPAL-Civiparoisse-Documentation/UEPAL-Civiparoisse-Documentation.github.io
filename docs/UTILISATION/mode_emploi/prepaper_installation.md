@@ -7,7 +7,7 @@
     Plus ce nettoyage est fait en profondeur, meilleures seront les données disponibles dans CiviParoisse, et donc meilleur en sera votre utilisation et votre expérience
 
 Fichier des Individus
-|
+
 
 
 Fichier des Foyers (ou des familles)

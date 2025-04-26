@@ -1,3 +1,5 @@
+<!-- D10 C5.81 OK, Peter le 26.04.2025 -->
+
 # Utiliser les listes
 
 CiviParoisse met à votre disposition des listes prêtes à l'emploi. Vous pouvez ainsi obtenir des informations sur vos paroissiens selon de multiples critères, et utiliser ces informations pour interagir avec vos paroissiens.
@@ -72,7 +74,7 @@ Vous trouverez ci-dessous la liste des différents critères possibles. Tous ne 
 Dans toutes les listes, vous avez la possibilité de trier les informations de façon différente. Il suffit de cliquer sur le nom de la colonne pour changer l'ordre de tri.  
 Le petit triangle vous indique si le tri se fait de façon croissant (ou de A à Z), ou de façon décroissante.
 
-Pour le moment, il n'est malheureusement pas possible de combiner l'ordre de tri de plusieurs colonnes.
+Il est possible de combiner l'ordre de tri de plusieurs colonnes, en cliquant sur la touche `Majuscule` de votre clavier en même temps que vous cliquez sur chaque colonne à trier.
 
 ### Effectuer des actions
 

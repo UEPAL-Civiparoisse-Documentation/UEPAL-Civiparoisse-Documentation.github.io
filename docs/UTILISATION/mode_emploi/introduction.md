@@ -1,4 +1,6 @@
 
+<!-- D10 C5.81 OK, Peter le 25.01.2025 -->
+
 # Introduction
 
 ## Quelques principes de base
@@ -47,7 +49,7 @@ Pour en savoir plus sur la gestion des fiches, [cliquez ici](fiches_contact.md).
 
 CiviParoisse ne permet pas seulement de créer des fiches de contact, mais également d'établir des liens entres les fiches et aussi de les rassembler en groupes.
 
-Un enfant aura ainsi une **relation** comme *fils de* avec ses parents, un bénévole sera *bénévole de* pour une association ou un groupe d'activité.
+Un fils aura ainsi une **relation** comme *enfant de* avec ses parents, un bénévole sera *bénévole de* pour une association ou un groupe d'activité.
 
 Il vous est également possible de constituer un **groupe** (dynamique ou non, [voir le point dédié aux groupes](groupes.md) pour plus de détails). Le groupe pourra par exemple recenser tous les bénévoles de la paroisse, un autre les membres de la chorale, un autre encore les dames de l'ouvroir.  
 Un groupe est de plus un bon moyen pour rassembler l'ensemble des personnes à qui vous allez envoyer régulièrement un courriel (par exemple les membres du conseil presbytéral).
@@ -109,13 +111,13 @@ Vous remarquerez que sous ce menu, à gauche, CiviParoisse vous indique toujours
 Vous l'avez sans doute déjà remarqué, une fiche foyer a comme une icône une maison. C'est sur sur cette fiche que nous enregistrons toutes les informations communes aux différents membres d'un foyer : l'adresse, le numéro de téléphone fixe ou encore le quartier pour le portage du bulletin paroissial.
 Voici un aperçu d'une fiche foyer sur son onglet `Synthèse` :
 
-![ecran fiche](img/ecran_fiche_foyer.png)
+![ecran fiche Foyer](img/ecran_fiche_foyer.png)
 
 Nous détaillons les différentes onglets à partir de la fiche "individu".
 
 ### L'interface de la fiche "individu"
 
-![ecran fiche 2](img/ecran_fiche_individu.png)
+![ecran fiche Individu](img/ecran_fiche_individu.png)
 
 Remarquez d'emblée deux choses :
 
@@ -157,8 +159,8 @@ Deux solutions s’offrent à nous :
 
 ### Autres éléments des fiches
 
-* Le bouton « Actions » : placé sous le nom de la fiche, il permet d’effectuer rapidement certaines actions qui prendront cette fiche comme partie prenante : prévoir une réunion, appeler la personne, envoyer un courriel, etc.
-* Le bouton « Supprimer contact » : il n’est à utiliser que si l’on est certain que cette personne a quitté la paroisse et que nous n’aurons plus de lien avec elle ! Vigilance donc. La fiche est placée dans une corbeille accessible uniquement par les personnes ayant le rôle de Gestionnaire paroissial.
+* Le bouton « Actions » : placé sous le nom de la fiche, il permet d’effectuer rapidement certaines actions qui prendront cette fiche comme partie prenante : prévoir une réunion, appeler la personne, envoyer un courriel, supprimer la fiche, etc.
+    * :warning: L'action « Supprimer » n’est à utiliser que si l’on est certain que cette personne a quitté la paroisse et que nous n’aurons plus de lien avec elle ! Vigilance donc. La fiche est placée dans une corbeille accessible uniquement par les personnes ayant le rôle de Gestionnaire paroissial.
 * Les boutons « Précédent / Suivant » : Ils permettent de naviguer entre les fiches, classées par ordre alphabétique.
 
 ## Quitter CiviParoisse

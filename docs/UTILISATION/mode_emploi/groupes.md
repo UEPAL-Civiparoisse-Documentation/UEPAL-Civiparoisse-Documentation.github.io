@@ -1,3 +1,5 @@
+<!-- D10 C5.81 OK, Peter le 26.04.2025 -->
+
 # Gérer les groupes
 
 Les groupes sont une autre façon d'établir un lien entre des personnes, de dire qu'elles partagent quelque chose, une activité par exemple.  
@@ -28,7 +30,7 @@ Vous pouvez même, comme vous l'avez sans doute remarqué, créer des sous-group
 
 Vous ajoutez ensuite des contacts au groupe depuis la fiche de chaque contact, onglet `Groupes`. Vous pouvez également faire des rajouts en nombre, à partir d'un écran `Recherches`.
 
-C'est depuis la `Gestion des groupes` que vous pouvez visualiser les membres en cliquant sur `Contacts` à la fin de la ligne du groupe.
+C'est depuis le menu `Gérer les groupes` que vous pouvez visualiser les membres en cliquant sur `Contacts` à la fin de la ligne du groupe.
 
 ## Créer un groupe dynamique
 
