@@ -15,9 +15,16 @@ Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil d
     - Mariages
     - Décès
     - Composition d'un Groupe
+    - Participants à un Evénement
+- Rajouts de religions dans la liste déroulante
+- Ajout du nombre d'électeurs dans la Liste Electorale
+- Suppression du préfixe Mlle (remplacé par Mme)
+- Liste Conseil Presbytéral : modification de l'ordre de tri (maintenant : par fonction)
 
 **Evolutions techniques**
 
+- Mise à jour de Drupal vers la version 10.4.6
+- Moteur de recherche de la Documentation : séparation des résultats venant du  Mode d'Emploi et de la Technique
 
 ## Version 1.50 - Hiver 2024
 
