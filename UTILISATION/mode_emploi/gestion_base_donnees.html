@@ -1,0 +1,3688 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://uepal-civiparoisse-documentation.github.io/index.html/UTILISATION/mode_emploi/gestion_base_donnees.html">
+      
+      
+        <link rel="prev" href="operations_a_mener_regulierement.html">
+      
+      
+        <link rel="next" href="prepaper_installation.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+    
+    
+      
+        <title>Administration locale de la base de données - Documentation UEPAL Civiparoisse</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gestion-de-la-base-de-donnees" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../index.html" title="Documentation UEPAL Civiparoisse" class="md-header__button md-logo" aria-label="Documentation UEPAL Civiparoisse" data-md-component="logo">
+      
+  <img src="../../assets/uepal-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation UEPAL Civiparoisse
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Administration locale de la base de données
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Partager" aria-label="Partager" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Documentation Civiparoisse
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Mode d'emploi
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../PRESENTATION/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Présentation du projet
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../TECHNIQUE/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Eléments techniques
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../FORMATION/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Formation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Documentation UEPAL Civiparoisse" class="md-nav__button md-logo" aria-label="Documentation UEPAL Civiparoisse" data-md-component="logo">
+      
+  <img src="../../assets/uepal-logo.svg" alt="logo">
+
+    </a>
+    Documentation UEPAL Civiparoisse
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentation Civiparoisse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Mode d'emploi
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mode d'emploi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduction.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="debuter.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Débuter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fiches_contact.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gérer les fiches
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="relations.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gérer les relations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="liens_paroisses.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gérer les liens avec la paroisse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faire_des_recherches_sur_les_contacts.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Faire des recherches sur les contacts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="envoyer_un_courriel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Envoyer un courriel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="groupes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gérer les groupes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="listes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Utiliser les listes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="que_faire_quand.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Que faire quand... ?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gestion_des_dons_et_edition_des_recus_fiscaux.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestion des dons et édition des reçus fiscaux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="creer_et_gerer_un_evenement.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Créer et gérer un événement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="operations_a_mener_regulierement.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Opérations à mener régulièrement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Administration locale de la base de données
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="gestion_base_donnees.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Administration locale de la base de données
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gerer-les-acces-a-civiparoisse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gérer les accès à CiviParoisse
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gérer les accès à CiviParoisse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#donner-acces-a-la-base-de-donnees-pour-un-nouvel-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Donner accès à la base de données pour un nouvel utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifier-son-mot-de-passe-ou-celui-dun-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifier son mot de passe, ou celui d'un utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supprimer-lacces-a-la-base-de-donnees-a-un-utilisateur-existant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supprimer l’accès à la base de données à un utilisateur existant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lister-lensemble-des-utilisateurs-de-la-base-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lister l'ensemble des utilisateurs de la base de données
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifier-la-liste-des-quartiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifier la liste des Quartiers
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="prepaper_installation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Préparer l'installation initiale de CiviParoisse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="nouveautes_CiviParoisse.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Les nouveautés dans CiviParoisse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ressources.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ressources utiles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../PRESENTATION/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Présentation du projet
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Présentation du projet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PRESENTATION/presentation_fonctionnelle.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Périmètre fonctionnel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PRESENTATION/presentation_ecosysteme.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ecosystème projet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PRESENTATION/presentation_livrables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Livrables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../TECHNIQUE/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Eléments techniques
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Eléments techniques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../TECHNIQUE/EXPLOITATION/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Exploitation
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Exploitation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/EXPLOITATION/logs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../TECHNIQUE/POC/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    POC
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            POC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/POC/remontage_local.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Remontage en local
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../TECHNIQUE/PREPOC/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    PRE_POC
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            PRE_POC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/prepoc.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Description générale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../TECHNIQUE/PREPOC/ETUDES_PRECIS/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Etudes - précis techniques
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4_3" id="__nav_4_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Etudes - précis techniques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/ETUDES_PRECIS/infrastructure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/ETUDES_PRECIS/trafic_entrant.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trafic initiateur entrant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/ETUDES_PRECIS/traefik.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Maquettage Traefik
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/ETUDES_PRECIS/identites_certificats.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Identités et certificats
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/ETUDES_PRECIS/waf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Application Firewall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/ETUDES_PRECIS/integration_ca.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intégration CA Ubuntu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/ETUDES_PRECIS/minikube_traefik_wildcard.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Minikube + Traefik + Wildcard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../TECHNIQUE/PREPOC/INTEGRATION/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Opérationnel
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4_4" id="__nav_4_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Opérationnel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/deploiement_instance.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Déploiement instance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/docker.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Description générale Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Images Docker
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4_4_4" id="__nav_4_4_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Images Docker
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/selfkeys.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    selfkeys
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/keys_init.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    keys_init
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/mysql_tls_router.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    mysql_tls_router
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/mysql_tls_server.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    mysql_tls_server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/composer_base.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    composer_base
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/composer_files.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    composer_files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/tools.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/tools_debug" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tools_debug
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/init.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    init
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/cron.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    cron
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/httpd.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    httpd
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/httpd_debug.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    httpd_debug
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/update.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    update
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/test_msmtp_dovecot.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    test_msmtp_dovecot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/gen_hashed_ca.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    gen_hashed_ca
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/DOCKER/traefik_docker.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    traefik_docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4_4_5" id="__nav_4_4_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/maquettage.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Maquettage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/ressources.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ressources utiles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4_5_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Chart Helm
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4_4_5_4" id="__nav_4_4_4_5_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_4_4_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_4_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chart Helm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/description_generale.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Description générale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/db_dbrouter.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DB et DB Router
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/httpd.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Serveur web interne
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/cron.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cron
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/volumes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Volumes (persistants)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/secrets.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Secrets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/reservations.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Réservations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/maildemo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Serveur mail de démo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/PREPOC/INTEGRATION/KUBERNETES/HELM/tools.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Outils
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/roles.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rôles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../TECHNIQUE/MAIL/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Mail
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Mail
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/MAIL/mail.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Problématique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/MAIL/ecosysteme.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ecosystème
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/MAIL/sendmail.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Envoi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/MAIL/fetchmail.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Réception
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/MAIL/opensmtpd_dovecot.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Opensmtpd Dovecot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../TECHNIQUE/LOGICIEL/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Logiciel
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Logiciel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/LOGICIEL/distribution_code_composer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Distribution de code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/LOGICIEL/environnement_dev.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Environnement de dev
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/LOGICIEL/environnement_dev_env.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Personnalisation environnement de dev
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/LOGICIEL/importation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Importation de données
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../TECHNIQUE/INTEGRATION_CONTINUE/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Intégration Continue
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Intégration Continue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/INTEGRATION_CONTINUE/docker_build_push.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker build et push
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/INTEGRATION_CONTINUE/tests_automatises.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tests automatisés : Codeception
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/INTEGRATION_CONTINUE/tests_phpunit.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tests automatisés : Phpunit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/INTEGRATION_CONTINUE/composer_ci.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Composer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/INTEGRATION_CONTINUE/trivy_ci.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trivy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TECHNIQUE/INTEGRATION_CONTINUE/sonarqube_ci.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SonarLint et SonarQube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../TECHNIQUE/ARCHIVES/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    ARCHIVES
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            ARCHIVES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../FORMATION/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Formation
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Formation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!-- D10 C5.81 OK, Peter le 26.04.2025 -->
+
+<h1 id="gestion-de-la-base-de-donnees"><a class="toclink" href="#gestion-de-la-base-de-donnees">Gestion de la base de données</a></h1>
+<p><strong>Cette partie est destinée aux administrateurs locaux de la base de données.</strong></p>
+<h2 id="gerer-les-acces-a-civiparoisse"><a class="toclink" href="#gerer-les-acces-a-civiparoisse">Gérer les accès à CiviParoisse</a></h2>
+<h3 id="donner-acces-a-la-base-de-donnees-pour-un-nouvel-utilisateur"><a class="toclink" href="#donner-acces-a-la-base-de-donnees-pour-un-nouvel-utilisateur">Donner accès à la base de données pour un nouvel utilisateur</a></h3>
+<p>Vous pouvez à tout moment donner accès à la base de données à un utilisateur.</p>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Il est fortement conseillé de <strong>toujours mettre en place des accès nominatifs</strong>, au nom de l'utilisateur.<br />
+Evitez par exemple un accès <em>Secrétariat paroissial</em> qui ne vous permettra pas d'identifier précisément qui a travaillé sur le fichier, et dont le mot de passe ne sera pas forcément changé lors du changement de secrétaire.</p>
+</div>
+<p><strong>Pour mettre en place l’accès :</strong></p>
+<ol>
+<li>Au préalable<ul>
+<li>Si ce n’est pas encore fait, créer la fiche de l’utilisateur dans la base de données</li>
+<li>Si ce n’est pas encore fait, renseigner l’adresse mail de l’utilisateur</li>
+</ul>
+</li>
+<li>Ouvrir la fiche <em>Particulier</em> de la personne (pas la fiche <em>Foyer</em>)</li>
+<li>Cliquer sur le bouton <em>Actions</em> de la fiche <img alt="bouton Actions" src="img/bouton_action.png" /></li>
+<li>Choisir l’entrée <em>Créer un compte utilisateur</em> <img alt="écran Actions" src="img/ecran_actions.png" /></li>
+<li>Renseigner l’écran <em>Créer un compte utilisateur</em><ul>
+<li><strong>Nom utilisateur</strong> : c’est le nom qui servira pour se connecter. Il est recommandé de choisir le prénom + nom de l’utilisateur</li>
+<li><strong>Mot de passe</strong> : il est important que le mot de passe contienne au moins une majuscule, une minuscule, un chiffre et un caractère spécial. Pour garantir la sécurité de vos données, la longueur doit être de <strong>plus de 12 caractères</strong>.</li>
+<li>Cliquer sur le bouton <strong>Ajouter</strong></li>
+</ul>
+</li>
+<li>Cliquer sur le nom de l’utilisateur dans l’écran de confirmation <img alt="confirmation du nouvel utilisateur" src="img/confirmation_new_utilisateur.png" /></li>
+<li>Cliquer sur le bouton <em>Actions</em> de la fiche <img alt="bouton Actions" src="img/bouton_action.png" /></li>
+<li>Cliquer sur <em>Compte de l'utilisateur</em> <img alt="écran Actions" src="img/ecran_actions_deux.png" /></li>
+<li>Cliquer sur l’onglet <em>Modifier</em> <img alt="bouton Modifier" src="img/bouton_voir_modifier_user.png" /></li>
+<li>Dans la partie <strong>Rôles</strong>, choisir le ou les rôle(s) à donner à l'utilisateur, parmi la liste suivante<ul>
+<li><strong>Administrateur</strong> : possibilité de gérer tout le site (Drupal comme CiviCRM). Réservé à l'équipe technique de CiviParoisse. Attention, <strong>il ne faut en aucun cas attribuer ce rôle</strong> à un nouvel utilisateur.</li>
+<li><strong>Gestionnaire paroissial</strong> : accès à l'ensemble de CiviParoisse en consultation et en modification, sans les données financières, ni l'envoi de mailing de masse ou l'administration du site. Ce rôle permet également de créer et gérer les droits d'accès à CiviParoisse.</li>
+<li><strong>Utilisateur paroissial</strong> : accès à CiviParoisse uniquement en consultation, sans les données financières, et sans l'envoi de mailing de masse. Ce rôle peut tout de même enregistrer des événements, des activités, des notes. Il peut préparer des mailings, sans pouvoir en valider l'envoi. Il peut aussi créer de nouvelles fiches (sans pouvoir les modifier).</li>
+</ul>
+</li>
+<li>Il est également possible de rajouter les options suivantes :<ul>
+<li><strong>Gestionnaire Mot de passe</strong> : option qui permet de réinitialiser les mots de passe des utilisateurs. Attention, cette option permet également de créer et gérer les droits d'accès à CiviParoisse.</li>
+<li><strong>Gestion financière</strong> : option qui permet de modifier et consulter les données financières (dons, ...).</li>
+<li><strong>Gestion des mailing</strong> : option qui permet d'envoyer les mailings de masse.</li>
+</ul>
+</li>
+<li>Cliquer sur Enregistrer</li>
+<li>Transmettre le mot de passe à l’utilisateur, il pourra se connecter immédiatement. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> Transmettez toujours séparément le nom Utilisateur et le mot de passe.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Selon le rôle que vous donnez à l'utilisateur, il aura accès à plus ou moins d'informations stockées dans la base de données. Il est donc fortement recommandé de ne pas diffuser largement un rôle <em>Gestionnaire</em>, ceci afin de préserver la confiance de vos paroissiens quant aux données personnelles que vous recueillez.</p>
+</div>
+<h3 id="modifier-son-mot-de-passe-ou-celui-dun-utilisateur"><a class="toclink" href="#modifier-son-mot-de-passe-ou-celui-dun-utilisateur">Modifier son mot de passe, ou celui d'un utilisateur</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Votre mot de passe est la clé d'entrée à toutes les données stockées sur votre CiviParoisse.<br />
+Lorsque vous choisissez un nouveau mot de passe, soyez très prudent : <strong>le mot de passe doit faire plus de 12 caractères, contenir au moins une majuscule, une minuscule, un chiffre et un caractère spécial</strong>.<br />
+Ce nouveau mot de passe ne doit pas non plus être trop simple : évitez les dates, les noms de famille ou les prénoms, les mots courants.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Astuce</p>
+<p>Le site de la CNIL propose une aide à la création de mots de passe forts : <a href="https://www.cnil.fr/fr/generer-un-mot-de-passe-solide">lien vers le site de la CNIL</a></p>
+</div>
+<p><strong>Pour changer son propre mot de passe :</strong></p>
+<ol>
+<li>Allez sur votre fiche <em>Particulier</em></li>
+<li>Cliquez sur le bouton <em>Actions</em> de la fiche <img alt="bouton Actions" src="img/bouton_action.png" /></li>
+<li>Cliquez sur <em>Compte de l'utilisateur</em> <img alt="écran Actions" src="img/ecran_actions_deux.png" /></li>
+<li>Cliquez sur l’onglet <em>Modifier</em> <img alt="bouton Modifier" src="img/bouton_voir_modifier_user.png" /></li>
+<li>Saisissez votre <em>Mot de passe actuel</em></li>
+<li>Saisissez le nouveau mot de passe dans <em>Mot de passe</em> un peu plus bas</li>
+<li>Saisissez-le à nouveau dans <em>Confirmer le mot de passe</em></li>
+<li>Vérifiez que la <em>Sécurité du mot de passe</em> soit à Fort. Si ce n'est pas le cas, choisissez un mot de passe différent</li>
+<li>En bas de l'écran, cliquez sur le bouton Enregistrer. Le mot de passe est changé</li>
+</ol>
+<p><strong>Pour changer le mot de passe d'un autre utilisateur :</strong></p>
+<ol>
+<li>Allez sur la ficher <em>Particulier</em> de l'utilisateur concerné</li>
+<li>Déroulez les points 2 à 9 listés ci-dessous</li>
+<li>Communiquez le mot de passe à l'utilisateur.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Communiquez toujours séparément le Nom Utilisateur et le Mot de passe. Envoyez toujours ces informations par deux canaux différents.</p>
+</div>
+<h3 id="supprimer-lacces-a-la-base-de-donnees-a-un-utilisateur-existant"><a class="toclink" href="#supprimer-lacces-a-la-base-de-donnees-a-un-utilisateur-existant">Supprimer l’accès à la base de données à un utilisateur existant</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Il est important de vérifier régulièrement que la liste des personnes ayant accès à la base de données corresponde bien à la réalité de votre paroisse. Un utilisateur ayant toujours accès à la base de données alors qu’il ne s’en sert plus représente un risque potentiel pour la sécurité de votre base de données. Il est donc important de supprimer rapidement les accès qui ne sont plus nécessaires.</p>
+</div>
+<p><strong>Pour supprimer l’accès à un utilisateur existant :</strong></p>
+<ol>
+<li>Ouvrir la fiche <em>Particulier</em> de la personne (pas la fiche <em>Foyer</em>)</li>
+<li>Cliquer sur le bouton <em>Actions</em> de la fiche <img alt="bouton Actions" src="img/bouton_action.png" /></li>
+<li>Cliquer sur <em>Compte de l'utilisateur</em> <img alt="écran Actions" src="img/ecran_actions_deux.png" /></li>
+<li>Cliquer sur l’onglet <em>Modifier</em> <img alt="bouton Modifier" src="img/bouton_voir_modifier_user.png" /></li>
+<li>Dans la partie <strong>Statut</strong>, choisir <em>Bloqué</em> <img alt="statut_bloque" src="img/statut_bloque.png" /></li>
+<li>Dans la partie <strong>Rôles</strong>, décocher le ou les rôle(s)</li>
+<li>Cliquer sur <em>Enregistrer</em></li>
+</ol>
+<blockquote>
+<p>Le nom de l’utilisateur dont vous voulez supprimer l’accès restera affiché dans la liste des personnes. De même, sa fiche restera présente dans la base de données. Ceci permet de conserver l’historique des modifications faite par cet utilisateur.</p>
+</blockquote>
+<h3 id="lister-lensemble-des-utilisateurs-de-la-base-de-donnees"><a class="toclink" href="#lister-lensemble-des-utilisateurs-de-la-base-de-donnees">Lister l'ensemble des utilisateurs de la base de données</a></h3>
+<p>En cours d'écriture</p>
+<h2 id="modifier-la-liste-des-quartiers"><a class="toclink" href="#modifier-la-liste-des-quartiers">Modifier la liste des Quartiers</a></h2>
+<p>Dans le bandeau noir du haut, cliquer sur <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m272.2 64.6-51.1 51.1c-15.3 4.2-29.5 11.9-41.5 22.5L153 161.9c-10.2 9.1-23.5 14.1-37.2 14.1H96v128c20.4.6 39.8 8.9 54.3 23.4l35.6 35.6 7 7 27 27c6.2 6.2 16.4 6.2 22.6 0 1.7-1.7 3-3.7 3.7-5.8 2.8-7.7 9.3-13.5 17.3-15.3s16.4.6 22.2 6.5l10.8 10.6c11.6 11.6 30.4 11.6 41.9 0 5.4-5.4 8.3-12.3 8.6-19.4.4-8.8 5.6-16.6 13.6-20.4s17.3-3 24.4 2.1c9.4 6.7 22.5 5.8 30.9-2.6 9.4-9.4 9.4-24.6 0-33.9L340.1 243l-35.8 33c-27.3 25.2-69.2 25.6-97 .9-31.7-28.2-32.4-77.4-1.6-106.5l70.1-66.2C303.2 78.4 339.4 64 377.1 64c36.1 0 71 13.3 97.9 37.2l30.1 26.8H624c8.8 0 16 7.2 16 16v208c0 17.7-14.3 32-32 32h-32c-11.8 0-22.2-6.4-27.7-16h-84.9c-3.4 6.7-7.9 13.1-13.5 18.7-17.1 17.1-40.8 23.8-63 20.1-3.6 7.3-8.5 14.1-14.6 20.2-27.3 27.3-70 30-100.4 8.1-25.1 20.8-62.5 19.5-86-4.1L159 404l-7-7-35.6-35.6c-5.5-5.5-12.7-8.7-20.4-9.3 0 17.6-14.4 31.9-32 31.9H32c-17.7 0-32-14.3-32-32V144c0-8.8 7.2-16 16-16h99.8c2 0 3.9-.7 5.3-2l26.5-23.6C175.5 77.7 211.4 64 248.7 64H259c4.4 0 8.9.2 13.2.6M544 320V176h-48c-5.9 0-11.6-2.2-15.9-6.1l-36.9-32.8C425 120.9 401.5 112 377.1 112c-25.4 0-49.8 9.7-68.3 27.1l-70.1 66.2c-10.3 9.8-10.1 26.3.5 35.7 9.3 8.3 23.4 8.1 32.5-.3l71.9-66.4c9.7-9 24.9-8.4 33.9 1.4s8.4 24.9-1.4 33.9l-.8.8 74.4 74.4c10 10 16.5 22.3 19.4 35.1h74.8zM64 336a16 16 0 1 0-32 0 16 16 0 1 0 32 0m528 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32"/></svg></span><code>Paroisse</code> et choisissez la ligne <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"/></svg></span><code>Paramètres</code>.<br />
+Dans la page des Paramètres de CiviParoisse qui s'ouvre, sélectionner <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M40 48c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24zm152 16c-17.7 0-32 14.3-32 32s14.3 32 32 32h288c17.7 0 32-14.3 32-32s-14.3-32-32-32zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32h288c17.7 0 32-14.3 32-32s-14.3-32-32-32zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32h288c17.7 0 32-14.3 32-32s-14.3-32-32-32zM16 232v48c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24v-48c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24m24 136c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24v-48c0-13.3-10.7-24-24-24z"/></svg></span> <code>Modifier la liste des Quartiers</code>.</p>
+<ul>
+<li>
+<p>Si vous souhaitez <strong>modifier le nom d'un quartier</strong> :</p>
+<ol>
+<li>Cliquer sur le nom du quartier à modifier</li>
+<li>Saisir le nouveau nom</li>
+<li>Cliquer sur la flèche verte sous le nom</li>
+</ol>
+</li>
+<li>
+<p>Si vous souhaitez <strong>ne plus utiliser un quartier</strong> existant :</p>
+<ol>
+<li>Vérifier au préalable qu'aucun Foyer n'est encore attaché à ce quartier</li>
+<li>Dans la colonne <em>Visible ?</em>, cliquer sur <code>Oui</code></li>
+<li>Choisir le bouton <code>Non</code></li>
+<li>Cliquer sur la flèche verte</li>
+</ol>
+</li>
+<li>
+<p>Si vous souhaitez <strong>utiliser à nouveau un quartier actuellement Non visible</strong> :</p>
+<ol>
+<li>Dans la colonne <em>Visible ?</em>, cliquer sur <code>Non</code></li>
+<li>Choisir le bouton <code>Oui</code></li>
+<li>Cliquer sur la flèche verte</li>
+</ol>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="operations_a_mener_regulierement.html" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Opérations à mener régulièrement">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Opérations à mener régulièrement
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="prepaper_installation.html" class="md-footer__link md-footer__link--next" aria-label="Suivant: Préparer l&#39;installation initiale de CiviParoisse">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Préparer l'installation initiale de CiviParoisse
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.sections", "navigation.indexes", "navigation.tabs", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

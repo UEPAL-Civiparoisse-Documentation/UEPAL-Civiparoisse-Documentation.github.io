@@ -1,0 +1,3759 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://uepal-civiparoisse-documentation.github.io/index.html/TECHNIQUE/PREPOC/INTEGRATION/DOCKER/test_msmtp_dovecot.html">
+      
+      
+        <link rel="prev" href="update.html">
+      
+      
+        <link rel="next" href="gen_hashed_ca.html">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+    
+    
+      
+        <title>test_msmtp_dovecot - Documentation UEPAL Civiparoisse</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#container-de-test-opensmtpd-et-dovecot" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../../../index.html" title="Documentation UEPAL Civiparoisse" class="md-header__button md-logo" aria-label="Documentation UEPAL Civiparoisse" data-md-component="logo">
+      
+  <img src="../../../../assets/uepal-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation UEPAL Civiparoisse
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              test_msmtp_dovecot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Partager" aria-label="Partager" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Documentation Civiparoisse
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../UTILISATION/mode_emploi/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Mode d'emploi
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../PRESENTATION/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Présentation du projet
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Eléments techniques
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../FORMATION/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Formation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../index.html" title="Documentation UEPAL Civiparoisse" class="md-nav__button md-logo" aria-label="Documentation UEPAL Civiparoisse" data-md-component="logo">
+      
+  <img src="../../../../assets/uepal-logo.svg" alt="logo">
+
+    </a>
+    Documentation UEPAL Civiparoisse
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentation Civiparoisse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../UTILISATION/mode_emploi/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Mode d'emploi
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mode d'emploi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/introduction.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/debuter.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Débuter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/fiches_contact.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gérer les fiches
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/relations.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gérer les relations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/liens_paroisses.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gérer les liens avec la paroisse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/faire_des_recherches_sur_les_contacts.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Faire des recherches sur les contacts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/envoyer_un_courriel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Envoyer un courriel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/groupes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gérer les groupes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/listes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Utiliser les listes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/que_faire_quand.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Que faire quand... ?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/gestion_des_dons_et_edition_des_recus_fiscaux.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestion des dons et édition des reçus fiscaux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/creer_et_gerer_un_evenement.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Créer et gérer un événement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/operations_a_mener_regulierement.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Opérations à mener régulièrement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/gestion_base_donnees.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Administration locale de la base de données
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/prepaper_installation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Préparer l'installation initiale de CiviParoisse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/nouveautes_CiviParoisse.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Les nouveautés dans CiviParoisse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UTILISATION/mode_emploi/ressources.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ressources utiles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../PRESENTATION/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Présentation du projet
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Présentation du projet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../PRESENTATION/presentation_fonctionnelle.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Périmètre fonctionnel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../PRESENTATION/presentation_ecosysteme.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ecosystème projet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../PRESENTATION/presentation_livrables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Livrables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Eléments techniques
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Eléments techniques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../EXPLOITATION/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Exploitation
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Exploitation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EXPLOITATION/logs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../POC/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    POC
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            POC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../POC/remontage_local.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Remontage en local
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    PRE_POC
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            PRE_POC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prepoc.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Description générale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ETUDES_PRECIS/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Etudes - précis techniques
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4_3" id="__nav_4_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Etudes - précis techniques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ETUDES_PRECIS/infrastructure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ETUDES_PRECIS/trafic_entrant.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trafic initiateur entrant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ETUDES_PRECIS/traefik.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Maquettage Traefik
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ETUDES_PRECIS/identites_certificats.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Identités et certificats
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ETUDES_PRECIS/waf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Application Firewall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ETUDES_PRECIS/integration_ca.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intégration CA Ubuntu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ETUDES_PRECIS/minikube_traefik_wildcard.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Minikube + Traefik + Wildcard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Opérationnel
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4_4" id="__nav_4_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Opérationnel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploiement_instance.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Déploiement instance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Description générale Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Images Docker
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4_4_4" id="__nav_4_4_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_4_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_4_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Images Docker
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="selfkeys.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    selfkeys
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="keys_init.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    keys_init
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mysql_tls_router.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    mysql_tls_router
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mysql_tls_server.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    mysql_tls_server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="composer_base.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    composer_base
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="composer_files.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    composer_files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tools.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tools_debug" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tools_debug
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="init.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    init
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cron.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    cron
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="httpd.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    httpd
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="httpd_debug.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    httpd_debug
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="update.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    update
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    test_msmtp_dovecot
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="test_msmtp_dovecot.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    test_msmtp_dovecot
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#but" class="md-nav__link">
+    <span class="md-ellipsis">
+      But
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerfile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supervisor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opensmtpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenSMTPD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dovecot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dovecot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mutt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mutt
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gen_hashed_ca.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    gen_hashed_ca
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="traefik_docker.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    traefik_docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../KUBERNETES/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4_4_5" id="__nav_4_4_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KUBERNETES/maquettage.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Maquettage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KUBERNETES/ressources.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ressources utiles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4_5_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../KUBERNETES/HELM/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Chart Helm
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4_4_5_4" id="__nav_4_4_4_5_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_4_4_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_4_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chart Helm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KUBERNETES/HELM/description_generale.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Description générale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KUBERNETES/HELM/db_dbrouter.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DB et DB Router
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KUBERNETES/HELM/httpd.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Serveur web interne
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KUBERNETES/HELM/cron.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cron
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KUBERNETES/HELM/volumes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Volumes (persistants)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KUBERNETES/HELM/secrets.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Secrets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KUBERNETES/HELM/reservations.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Réservations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KUBERNETES/HELM/maildemo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Serveur mail de démo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KUBERNETES/HELM/tools.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Outils
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../roles.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rôles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../MAIL/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Mail
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_6" id="__nav_4_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Mail
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MAIL/mail.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Problématique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MAIL/ecosysteme.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ecosystème
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MAIL/sendmail.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Envoi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MAIL/fetchmail.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Réception
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MAIL/opensmtpd_dovecot.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Opensmtpd Dovecot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../LOGICIEL/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Logiciel
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_7" id="__nav_4_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Logiciel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LOGICIEL/distribution_code_composer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Distribution de code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LOGICIEL/environnement_dev.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Environnement de dev
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LOGICIEL/environnement_dev_env.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Personnalisation environnement de dev
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LOGICIEL/importation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Importation de données
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../INTEGRATION_CONTINUE/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Intégration Continue
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_8" id="__nav_4_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Intégration Continue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INTEGRATION_CONTINUE/docker_build_push.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker build et push
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INTEGRATION_CONTINUE/tests_automatises.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tests automatisés : Codeception
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INTEGRATION_CONTINUE/tests_phpunit.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tests automatisés : Phpunit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INTEGRATION_CONTINUE/composer_ci.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Composer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INTEGRATION_CONTINUE/trivy_ci.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trivy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INTEGRATION_CONTINUE/sonarqube_ci.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SonarLint et SonarQube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../ARCHIVES/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    ARCHIVES
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            ARCHIVES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../FORMATION/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Formation
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Formation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="container-de-test-opensmtpd-et-dovecot"><a class="toclink" href="#container-de-test-opensmtpd-et-dovecot">Container de test : opensmtpd et dovecot</a></h1>
+<p>La décision de simplification des infrastructures a fait que l'approche retenue n'est pas la spécialisation des mails au travers de containers dédiés à la réception et à l'envoi, mais l'utilisation directe des containers httpd et cron pour réaliser ces fonctions.</p>
+<p>Ceci entraîne qu'il est bon de disposer d'un environnement de test où l'on peut simuler l'envoi et la réception des mails de manière approchante à la réalité. Un container a été réalisé à ces fins, en utilisant supervisor, opensmtpd et dovecot :</p>
+<ul>
+<li>supervisor est un programme permet de gérer le lancement de plusieurs programmes/services, en s'occupant en plus de journaliser les sorties (standard et d'erreur) des programmes. Il peut être configuré pour relancer les programmes s'ils s'arrêtent</li>
+<li>opensmtpd est un MTA qui doit s'occuper de récupérer les mails via le protocole SMTP, et de le transmettre ensuite au MDA</li>
+<li>dovecot est le MDA : on peut utiliser l'utilitaire <code>dovecot-lda</code> livré avec dovecot pour intégrer les mails entrants dans les boites mails des utilisateurs</li>
+<li>un client mail (MUA) est également nécessaire : mutt a été utilisé à cet effet, étant donné qu'il est utilisable en interface texte, ce qui simplifie son intégration dans le même container.</li>
+</ul>
+<p>Quelques remarques :</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<ul>
+<li>le container crée n'a pas du tout vocation à passer en production : il n'est prévu que pour de l'expérimentation : en particulier, les aspects de sécurité n'ont pas été traités dans ce container, et les configurations n'ont pas été affinées : le but était d'avoir une maquette fonctionnelle mais sommaire</li>
+</ul>
+</div>
+<ul>
+<li>un autre MTA a été envisagé : msmtpd, qui est intégré dans les versions récentes de msmtp (nécessité de passer par la compilation du code source dans certaines distributions) : toutefois, l'analyse du code et de captures de trames a montré un problème de communication etnre mutt et msmtpd en SMTP, avec l'authentification PLAIN (<a href="https://www.rfc-editor.org/rfc/rfc4616">https://www.rfc-editor.org/rfc/rfc4616</a>) : la RFC prévoit trois champs dans l'authentification :l'identité optionnelle d'autorisation, l'identité d'authentification et le mot de passe. Mutt envoie les trois champs, alors que msmtpd, dans le code source consulté, prévoierait que le champ de l'identité d'autorisation devrait être vide, ce qui empêche l'authentification d'être validée par le serveur.</li>
+</ul>
+<h2 id="but"><a class="toclink" href="#but">But</a></h2>
+<p>Le but de l'expérimentation est de :</p>
+<ul>
+<li>disposer d'un compte SMTP pour l'envoi de mail, avec des identifiants distincts des identifiants IMAP</li>
+<li>disposer de deux comptes IMAP pour la réception des mails</li>
+<li>disposer du support TLS.</li>
+</ul>
+<p>Ces conditions reflètent donc dans une certaine mesure les conditions réelles, où l'on aura un provider de mail qui va fournir l'hébergement du compte mail avec support IMAP et SMTP d'une part, et un provider d'envoi de mails de masse qui va supporter l'envoi de mails en masse pour le compte mail en question. Les mots de passe des deux providers seront donc différents.</p>
+<p>Les noms des utilisateurs SMTP et IMAP, ainsi que les mots de passe, ont été passé en variables d'environnement, si l'image venait à évoluer et augmenter en qualité pour pouvoir être intégrée dans des clusters de démo.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Comme indiqué plus haut, le but était de faire un maquettage sommaire, tout juste fonctionnelle. L'image obtenue n'est donc pas à déployer (et surtout pas en production).</p>
+</div>
+<h2 id="dockerfile"><a class="toclink" href="#dockerfile">Dockerfile</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c">#Image pour disposer d&#39;un petit environnement avec smtp et imap</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c">#Attention : il faut rester sur ubuntu:focal car il y a un bug dans la version embarquée dans les Ubuntu supérieures.</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c">#Attention : NE PAS INSTALLER EN PROD</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu:focal</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">LABEL</span><span class="w"> </span>uepal.name<span class="o">=</span><span class="s2">&quot;uepal/test_msmtp_dovecot&quot;</span><span class="w"> </span>uepal.version<span class="o">=</span><span class="s2">&quot;0.0.1&quot;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">ENV</span><span class="w"> </span><span class="nv">LANG</span><span class="o">=</span>C.UTF-8
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">ENV</span><span class="w"> </span><span class="nv">SMTP_USER_SECRET</span><span class="o">=</span>smtpUsername<span class="w"> </span><span class="nv">SMTP_PASSWD_SECRET</span><span class="o">=</span>smtpPassword<span class="w"> </span><span class="nv">IMAP_PASSWD_SECRET</span><span class="o">=</span>imapPassword<span class="w"> </span><span class="nv">IMAP_USER_SECRET</span><span class="o">=</span>imapUsername<span class="w"> </span><span class="nv">IMAP_USER2_SECRET</span><span class="o">=</span>imapUsername2
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>full-upgrade<span class="w"> </span>-y<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ln<span class="w"> </span>-fs<span class="w"> </span>/usr/share/zoneinfo/Europe/Paris<span class="w"> </span>/etc/localtime<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>tzdata<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>dpkg-reconfigure<span class="w"> </span>--frontend<span class="w"> </span>noninteractive<span class="w"> </span>tzdata
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">RUN</span><span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git<span class="w"> </span>build-essential<span class="w"> </span>wget<span class="w"> </span>curl<span class="w"> </span>mc<span class="w"> </span>nano<span class="w"> </span>less<span class="w"> </span>telnet<span class="w"> </span>autoconf<span class="w"> </span>automake<span class="w"> </span>libtool-bin<span class="w"> </span>gettext<span class="w"> </span>texinfo<span class="w"> </span>libgnutls28-dev<span class="w"> </span>gnutls-bin<span class="w"> </span>pkg-config<span class="w"> </span>net-tools<span class="w"> </span>tcpdump<span class="w"> </span>mutt<span class="w"> </span>opensmtpd
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">RUN</span><span class="w"> </span>install<span class="w"> </span>-d<span class="w"> </span>/var/run/secrets
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">COPY</span><span class="w"> </span>secrets<span class="w"> </span>/var/run/secrets
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c">#RUN git clone https://git.marlam.de/git/msmtp.git /MSMTP</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c">#RUN cd /MSMTP &amp;&amp; autoreconf -i &amp;&amp; ./configure &amp;&amp; make &amp;&amp; make install</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">RUN</span><span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>supervisor<span class="w"> </span>supervisor-doc<span class="w"> </span>dovecot-core<span class="w"> </span>dovecot-imapd<span class="w"> </span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">RUN</span><span class="w"> </span>mkdir<span class="w"> </span>/MUTT<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>mkdir<span class="w"> </span>/KEYS
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c">#ADD server.key /KEYS</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c">#ADD server.crt /KEYS</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>uepal_test/selfkeys<span class="w"> </span>/KEYS/USAGE/mail.x509<span class="w"> </span>/KEYS/server.crt
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>uepal_test/selfkeys<span class="w"> </span>/KEYS/USAGE/mail.pem<span class="w"> </span>/KEYS/server.key
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c"># RUN export DEBIAN_FRONTEND=noninteractive &amp;&amp; apt-get remove --purge --auto-remove -y &amp;&amp; rm -rf /var/lib/apt/lists</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="k">RUN</span><span class="w">  </span>groupadd<span class="w"> </span>-g<span class="w"> </span><span class="m">1000</span><span class="w"> </span>vmail<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>useradd<span class="w"> </span>-u<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-g<span class="w"> </span><span class="m">1000</span><span class="w"> </span>vmail<span class="w"> </span>-d<span class="w"> </span>/var/vmail<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>passwd<span class="w"> </span>-l<span class="w"> </span>vmail<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>chown<span class="w"> </span>vmail:vmail<span class="w"> </span>/var/mail<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>chown<span class="w"> </span>root:vmail<span class="w"> </span>/usr/lib/dovecot/dovecot-lda<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>chmod<span class="w"> </span>u+s<span class="w"> </span>/usr/lib/dovecot/dovecot-lda<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>chmod<span class="w"> </span>g+x<span class="w"> </span>/usr/lib/dovecot/dovecot-lda<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>chmod<span class="w"> </span>o-rwx<span class="w"> </span>/usr/lib/dovecot/dovecot-lda<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>chmod<span class="w"> </span><span class="m">400</span><span class="w"> </span>/KEYS/server.key
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="k">ADD</span><span class="w"> </span>smtpd_standalone.conf<span class="w"> </span>/etc/smtpd_standalone.conf
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="k">ADD</span><span class="w"> </span>standalone.conf<span class="w"> </span>/etc/dovecot/standalone.conf
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="k">ADD</span><span class="w"> </span>supervisor_opensmtpd.conf<span class="w"> </span>/etc/supervisor/conf.d/supervisor_opensmtpd.conf
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="k">ADD</span><span class="w"> </span>supervisor_dovecot.conf<span class="w"> </span>/etc/supervisor/conf.d/supervisor_dovecot.conf
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="k">ADD</span><span class="w"> </span>mutt*<span class="w"> </span>/MUTT/
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="k">ADD</span><span class="w"> </span>smtpd.sh<span class="w"> </span>/
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="k">ADD</span><span class="w"> </span>launcher.sh<span class="w"> </span>/
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="c">#CMD [&quot;supervisord&quot;,&quot;-c&quot;,&quot;/etc/supervisor/supervisord.conf&quot;,&quot;-n&quot;]</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;/launcher.sh&quot;</span><span class="p">]</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="c">#CMD [&quot;bash&quot;]</span>
+</code></pre></div>
+<p>Le Dockerfile présenté au-dessus n'est pas minimal, car il présente également le nécessaire pour la compilation de msmtp.
+Le fichier de certificat est un certificat autosigné, qui contient du SubjectAltName pour le DNS localhost et l'IP 127.0.0.1.
+Un utilisateur et un groupe vmails ont été rajoutés pour pouvoir utiliser smtpd avec un compte non root pour l'envoi des mails. De plus, le groupe vmail est positionné sur l'utilitaire dovecot-lda avec le bit SUID et l'owner root pour régler rapidement les problèmes de droits évoqués dans la documentation de dovecot-lda (<a href="https://doc.dovecot.org/configuration_manual/protocols/lda/">https://doc.dovecot.org/configuration_manual/protocols/lda/</a>). Un autre type de solution aurait été de passer par le protocole LMTP.</p>
+<h2 id="supervisor"><a class="toclink" href="#supervisor">Supervisor</a></h2>
+<p>La configuration de supervisor dans Ubuntu est relativement simple, car Ubuntu prévoit d'inclure les fichiers de <code>/etc/supervisor/conf.d</code> dans sa configuration. En complément du daemon supervisord, on dispose également de l'utilitaire supervisorctl, qui est très pratique pour relire la configuration de supervisor et redémarrer un service.</p>
+<p>En ce qui concerne les fichiers ajoutés :</p>
+<ul>
+<li>démarrage de dovecot :</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[program:dovecot]
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>command=/usr/sbin/dovecot -F -c /etc/dovecot/standalone.conf
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>environment=IMAP_USER1=%(ENV_IMAP_USER1)s,IMAP_USER2=%(ENV_IMAP_USER2)s,IMAP_PASSWD=%(ENV_IMAP_PASSWD)s
+</code></pre></div>
+<p>La partie environnement n'est toutefois pas nécessaire. En effet, supervisor passe par défaut l'environnement aux processus qu'il contrôle. Il est toutefois possible de modifier l'environnement comme on le voit au-dessus (même si ici, ces modifications ne servent en fait à rien). Il est toutefois remarquable que l'environnement dans le processus Dovecot apparaît comme vide dans le fichier <code>/proc/&lt;pid&gt;/environ</code> - ce qui a causé les recherches sur l'environnement lors du débuggage.</p>
+<ul>
+<li>démarrage de opensmtpd :</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[program:smtpd]
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>command=/smtpd.sh
+</code></pre></div>
+<ul>
+<li>Fichier smtpd.sh :</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">set</span><span class="w"> </span>-xev
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SMTP_USER</span><span class="si">}</span><span class="s2">\t`smtpctl encrypt </span><span class="si">${</span><span class="nv">SMTP_PASSWD</span><span class="si">}</span><span class="s2">`&quot;</span><span class="w"> </span>&gt;/KEYS/smtp_passwd
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;@\tvmail&quot;</span><span class="w"> </span>&gt;/KEYS/vusers
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">IMAP_USER1</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>&gt;/KEYS/users
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">IMAP_USER2</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;/KEYS/users
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="nb">exec</span><span class="w"> </span>/usr/sbin/smtpd<span class="w"> </span>-d<span class="w"> </span>-f<span class="w"> </span>/etc/smtpd_standalone.conf<span class="w"> </span>-v
+</code></pre></div>
+<p>Ce fichier montre une technique d'initialisation en passant par un script shell, qui va se terminer par une commande exec pour remplacer le shell par le dernier programme qui va être utilisé. Cette méthode est souvent utilisée dans les fichiers de point d'entrée des containers Docker.</p>
+<p>OpenSMTPD utilise des fichiers de tables, avec du format <code>clefTABvaleur</code>. Le fichier <code>/KEYS/smtp_passwd</code> est utilisé pour le stockage des mots de passe reconnus ar OpenSMTPD ; il semblerait qu'il soit nécessaire de passer par des fichiers pour pouvoir utiliser <code>smtpctl</code> pour effectuer le chiffrement du mot de passe, car OpenSMTPD ne semble pas accepter les mots de passe non chiffrés dans une table directement écrite dans le fichier de configuration d'OpenSMTPD.</p>
+<p>Le fichier <code>/KEYS/vusers</code> est un fichier pour générer une liste d'alias, ou plutôt contient la correspondance entre adresse et mail et utilisateur virtuel (non système) pour dovecot.</p>
+<p>Le fichier <code>/KEYS/users</code> n'est pas utilisé.</p>
+<h2 id="opensmtpd"><a class="toclink" href="#opensmtpd">OpenSMTPD</a></h2>
+<ul>
+<li>le passage par le code d'OpenSMTPD a été également utile, notamment pour comprendre un problème de configuration lié à l'utilisation du compte root (code spécifique / limitations dans certains cas lorsque l'uid 0 est utilisée)</li>
+<li>OpenSMTPD connait un problème au niveau du support SSL dans la Ubuntu 22.04, avec OpenSSL 3.0 : <a href="https://github.com/OpenSMTPD/OpenSMTPD/issues/1171">https://github.com/OpenSMTPD/OpenSMTPD/issues/1171</a> . Ce problème a nécessité de repasser en Ubuntu 20.04 dans le cadre de cette expérimentation.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>smtpuser = &quot;smtpuser&quot;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>smtppass= &quot;smtppass&quot;
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>pki &quot;localpki&quot; cert &quot;/KEYS/server.crt&quot; key &quot;/KEYS/server.key&quot;
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>#table passwd {$smtpuser=$smtppass}
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>table passwdt &quot;file:/KEYS/smtp_passwd&quot;
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>table vusers {imapuser1=vmail,imapuser2=vmail}
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>table users &quot;file:/KEYS/users&quot;
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>action &quot;deliv&quot; mda &quot;/usr/lib/dovecot/dovecot-lda -c /etc/dovecot/standalone.conf -d %{rcpt.user}&quot; virtual &lt;vusers&gt; user vmail
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>listen on 0.0.0.0 pki &quot;localpki&quot; tls auth &lt;passwdt&gt;
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>match auth from any for any action &quot;deliv&quot;
+</code></pre></div>
+<p>Les deux premières lignes servent à définir des variables qui étaient prévues pour l'essai de mot de passe en dur qui est commenté.</p>
+<p>La table vusers utilise une variante du format autorisé, où on ne spécifie que la partie avant le nom de domaine de l'adresse mail.</p>
+<p>La directive listen permet d'écouter sur une socket (par défaut port 25) en précisant les clefs ssl pour le starttls et la table d'authentification à utiliser (on notera les supérieurs et inférieurs qui entourent le nom de la table et qui font partie de la syntaxe).</p>
+<p>La directive match permet de définir comment un mail sera traité : en l'occurence un mail qui vient d'une source authentifiée (dans les nouvelles versions <code>auth</code> devient <code>from auth</code>) sera traitée par l'action nommée <code>deliv</code>.</p>
+<p>L'action <code>deliv</code> utilise la méthode mda, de sorte à ce qu'un programme défini en argument soit utilisé pour faire transiter le mail. Le programme prend le mail sur son entrée standard (STDIN). L'indication <code>%{rcpt.user}</code> correspond à la partie avant le nom de domaine de l'adresse mail de destination. On utilise la table <code>vusers</code> pour faire la correspondance entre adresse et un utilisateur du système (cela est nécessaire au minimum pour cette méthode de livraison). Enfin, on spécifie l'utilisateur qui sera utilisé pour exécuter le programme de livraison du mail.</p>
+<p>Lors de l'expérimentation, on apprécie particulièrement l'utilitaire <code>smtpctl</code>, qui permet notamment d'activer les traces (dont <code>smtpctl trace all</code>), voir l'état des files (<code>smtpctl show queue</code>) et permet de replanifier immédiatement l'envoi des mails (<code>smtpctl schedule all</code>).</p>
+<h2 id="dovecot"><a class="toclink" href="#dovecot">Dovecot</a></h2>
+<p>La configuration a été très largement reprise de <a href="https://github.com/dovecot/docker/blob/main/2.3.20/dovecot.conf">https://github.com/dovecot/docker/blob/main/2.3.20/dovecot.conf</a></p>
+<ul>
+<li>/etc/dovecot/standalone.conf : </li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mail_debug=yes
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>auth_debug=yes
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>debug_log_path=/tmp/dovecot_debug.log
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>log_path=/tmp/dovecot_log.log
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>info_log_path=/tmp/dovecot_info.log
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>mail_home=/var/mail/%Lu
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>mail_location=sdbox:~/Mail
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>mail_uid=1000
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>mail_gid=1000
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>first_valid_uid=1000
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>last_valid_uid=1000
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>disable_plaintext_auth=no
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>protocols = imap
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>ssl=yes
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>ssl_cert = &lt;/KEYS/server.crt
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>ssl_key = &lt;/KEYS/server.key
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>passdb {
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>  driver = static
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>  args = password=%{env:IMAP_PASSWD}
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>}
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>namespace {
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>  inbox = yes
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>  separator = /
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>}
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>listen = *
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>import_environment = IMAP_USER1 IMAP_USER2 IMAP_PASSWD
+</code></pre></div>
+<p>Le paramètre <code>mail_home</code> indique le répertoire dans lequel sera stocké les mails. Le format <code>%Lu</code> correspond au nom d'utilisateur en minuscule (L : transformation lowercase). Le paramètre mail_location spécifie le format et le stockage des mails. Le format sdbox est un format spécifique à dovecot.</p>
+<p>Les uid et gid correspondent aux valeurs utilisées pour l'accès aux mails.</p>
+<p>On autorise dans le cadre des tests l'utilisation de l'authentification sous forme de texte, et on ne force pas mais autorise l'utilisation du SSL.</p>
+<p>La section <code>passdb</code> permet d'utiliser un mot de passe statique qui sera reconnu pour les comptes ; on se réfère à l'environnement pour récupérer la valeur du mot de passe.</p>
+<p>En ce qui concerne l'espace de nom, il s'agit de réglages qui dépendent également du format de la boîte de mail.</p>
+<p>La directive import_environment permet de spécifier des variables d'environnement passées aux processus enfants.</p>
+<h2 id="mutt"><a class="toclink" href="#mutt">Mutt</a></h2>
+<ul>
+<li>mutt_user1.sh : script pour le lancement de mutt</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>#!/bin/bash
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>mutt -n -F /MUTT/muttrc_user1
+</code></pre></div>
+<p>Le paramètre <code>n</code> permet de ne pas utiliser la configuration système, tandis que <code>F</code> spécifie le fichier de configuration à utiliser, ce qui est particulièrement arrangeant lorsqu'on veut utiliser plusieurs configuration depuis un même compte utilisateur système.</p>
+<ul>
+<li>muttrc_user1 : fichier de configuration pour Mutt</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>set smtp_url = &quot;smtp://${SMTP_USER}:${SMTP_PASSWD}@localhost:25&quot;
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>set spoolfile = &quot;imaps://${IMAP_USER1}:${IMAP_PASSWD}@localhost:993/INBOX&quot;
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>set mail_check = 60
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>set realname = &quot;${IMAP_USER1}&quot;
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>set from = &quot;${IMAP_USER1}@test.test&quot;
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>set ssl_force_tls = yes
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>set ssl_starttls = yes
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>set ssl_ca_certificates_file = &quot;/KEYS/server.crt&quot;
+</code></pre></div>
+<p>Le fichier de configuration supporte l'utilisation des variables d'environnement, et la plupart des paramètres sont assez transparents.
+En ce qui concerne l'utilisation des ports non ssl, il convient de ne pas oublier le mécanisme STARTTLS pour passer sur une communication chiffrée - ce qui est différent d'une communication où le protocole applicatif utilise une sous-couche avec une session SSL.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="update.html" class="md-footer__link md-footer__link--prev" aria-label="Précédent: update">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                update
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="gen_hashed_ca.html" class="md-footer__link md-footer__link--next" aria-label="Suivant: gen_hashed_ca">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                gen_hashed_ca
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.sections", "navigation.indexes", "navigation.tabs", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
