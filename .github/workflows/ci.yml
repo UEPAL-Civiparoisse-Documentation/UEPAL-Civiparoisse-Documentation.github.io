@@ -25,10 +25,10 @@ jobs:
          docker pull squidfunk/mkdocs-material
       - name: Render global doc
         run: |
-         docker run --rm -ti --mount type=bind,source=${GITHUB_WORKSPACE},destination=/docs --name="mkdocs_material"  ${MKDOCSIMG}  build -v -v -v -f global.yml
+         docker run --rm -i --mount type=bind,source=${GITHUB_WORKSPACE},destination=/docs --name="mkdocs_material"  ${MKDOCSIMG}  build -v -v -v -f global.yml
       - name: Render technical doc
         run: |
-         docker run --rm -ti --mount type=bind,source=${GITHUB_WORKSPACE},destination=/docs --name="mkdocs_material"  ${MKDOCSIMG}  build -v -v -v -f technique.yml
+         docker run --rm -i --mount type=bind,source=${GITHUB_WORKSPACE},destination=/docs --name="mkdocs_material"  ${MKDOCSIMG}  build -v -v -v -f technique.yml
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
