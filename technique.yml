@@ -95,7 +95,7 @@ nav:
         - '../FORMATION/index.html'
 theme:
     logo: ../assets/uepal-logo.svg
-   palette:
+    palette:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
