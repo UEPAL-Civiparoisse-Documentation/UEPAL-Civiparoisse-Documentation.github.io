@@ -1,0 +1,69 @@
+site_name: Documentation UEPAL Civiparoisse
+site_url: https://uepal-civiparoisse-documentation.github.io/index.html
+#draft_docs: |
+#     'TECHNIQUE/**'
+docs_dir: docs
+site_dir: site
+exclude_docs: |
+  UTILISATION/
+  FORMATION/
+  PRESENTATION/
+  TECHNIQUE/
+
+theme: 
+   name: material
+   logo: assets/uepal-logo.svg
+   locale: fr
+   language: fr
+   features:
+     - search.suggest
+     - search.highlight
+     - search.share
+     - navigation.sections
+     - navigation.indexes
+     - navigation.tabs
+     - navigation.top
+     - navigation.footer
+#     - navigation.expand
+     - toc.follow
+     - toc.integrate
+   palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+plugins:
+   - search:
+       lang: fr
+use_directory_urls: false
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
+  - admonition
+  - pymdownx.superfences
+  - toc:
+     anchorlink: true
+     title: 'Table des matières'
+extra_css:
+  - stylesheets/extra.css

@@ -9,4 +9,4 @@ Familiarisez-vous avec les fonctionnalités de CiviParoisse, en suivant pas à p
 
 * [01 - Connexion Et Affichage](01_ConnexionEtAffichage.md)
 * [02 - Création d'un Foyer](02_CreationFoyer.md)
-* [03 - Création d'un Individu](03_CreationIndividu.md.md)
+* [03 - Création d'un Individu](03_CreationIndividu.md)

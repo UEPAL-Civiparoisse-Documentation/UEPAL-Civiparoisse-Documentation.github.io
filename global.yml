@@ -1,0 +1,38 @@
+INHERIT: base.yml
+site_name: Documentation UEPAL Civiparoisse
+site_url: https://uepal-civiparoisse-documentation.github.io/
+#draft_docs: |
+#     'TECHNIQUE/**'
+docs_dir: docs
+site_dir: site
+exclude_docs: |
+  TECHNIQUE/
+nav:
+    - 'index.md'
+    - 'Mode d''emploi':
+        - 'UTILISATION/mode_emploi/index.md'
+        - 'Introduction': 'UTILISATION/mode_emploi/introduction.md'
+        - 'Débuter': 'UTILISATION/mode_emploi/debuter.md'
+        - 'Gérer les fiches': 'UTILISATION/mode_emploi/fiches_contact.md'
+        - 'Gérer les relations': 'UTILISATION/mode_emploi/relations.md'
+        - 'Gérer les liens avec la paroisse': 'UTILISATION/mode_emploi/liens_paroisses.md'
+        - 'Faire des recherches sur les contacts': 'UTILISATION/mode_emploi/faire_des_recherches_sur_les_contacts.md'
+        - 'Envoyer un courriel': 'UTILISATION/mode_emploi/envoyer_un_courriel.md'
+        - 'Gérer les groupes': 'UTILISATION/mode_emploi/groupes.md'
+        - 'Utiliser les listes': 'UTILISATION/mode_emploi/listes.md'
+        - 'Que faire quand... ?': 'UTILISATION/mode_emploi/que_faire_quand.md'
+        - 'Gestion des dons et édition des reçus fiscaux': 'UTILISATION/mode_emploi/gestion_des_dons_et_edition_des_recus_fiscaux.md'
+        - 'Créer et gérer un événement': 'UTILISATION/mode_emploi/creer_et_gerer_un_evenement.md'
+        - 'Opérations à mener régulièrement': 'UTILISATION/mode_emploi/operations_a_mener_regulierement.md'
+        - 'Administration locale de la base de données' : 'UTILISATION/mode_emploi/gestion_base_donnees.md'
+        - 'Préparer l''installation initiale de CiviParoisse' : 'UTILISATION/mode_emploi/prepaper_installation.md'
+        - 'Les nouveautés dans CiviParoisse' : 'UTILISATION/mode_emploi/nouveautes_CiviParoisse.md'
+        - 'Ressources utiles': 'UTILISATION/mode_emploi/ressources.md'
+    - 'Présentation du projet':
+        - 'PRESENTATION/index.md'
+        - 'Périmètre fonctionnel': 'PRESENTATION/presentation_fonctionnelle.md'
+        - 'Ecosystème projet': 'PRESENTATION/presentation_ecosysteme.md'
+        - 'Livrables': 'PRESENTATION/presentation_livrables.md'
+    - 'Eléments techniques': 'TECHNIQUE/index.html'
+    - 'Formation': 
+        - 'FORMATION/index.md'

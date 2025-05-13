@@ -1,0 +1,106 @@
+INHERIT: base.yml
+site_name: Documentation UEPAL Civiparoisse
+site_url: https://uepal-civiparoisse-documentation.github.io/TECHNIQUE/
+#draft_docs: |
+#     '**'
+docs_dir: docs/TECHNIQUE
+site_dir: site/TECHNIQUE
+exclude_docs:
+nav:
+    - 'Documentation Civiparoisse' : '../index.html'
+    - 'Mode d''emploi': '../UTILISATION/mode_emploi/index.html'
+    - 'Présentation du projet': '../PRESENTATION/index.html'
+    - 'Eléments techniques':
+       - 'index.md'
+       - 'Exploitation':
+           - 'EXPLOITATION/index.md'
+           - 'Logs': 'EXPLOITATION/logs.md'
+       - 'POC': 
+           - 'POC/index.md'
+           - 'Remontage en local': 'POC/remontage_local.md'
+       - 'PRE_POC':           
+           - 'PREPOC/index.md'
+           - 'Description générale': 'PREPOC/prepoc.md'
+           - 'Etudes - précis techniques':
+              - 'PREPOC/ETUDES_PRECIS/index.md'
+              - 'Infrastructure': 'PREPOC/ETUDES_PRECIS/infrastructure.md'
+              - 'Trafic initiateur entrant': 'PREPOC/ETUDES_PRECIS/trafic_entrant.md'
+              - 'Maquettage Traefik': 'PREPOC/ETUDES_PRECIS/traefik.md'
+              - 'Identités et certificats': 'PREPOC/ETUDES_PRECIS/identites_certificats.md'
+              - 'Web Application Firewall': 'PREPOC/ETUDES_PRECIS/waf.md'
+              - 'Intégration CA Ubuntu': 'PREPOC/ETUDES_PRECIS/integration_ca.md'
+              - 'Minikube + Traefik + Wildcard': 'PREPOC/ETUDES_PRECIS/minikube_traefik_wildcard.md'
+           - 'Opérationnel':
+             - 'PREPOC/INTEGRATION/index.md'
+             - 'Déploiement instance': 'PREPOC/INTEGRATION/deploiement_instance.md'             
+             - 'Description générale Docker': 'PREPOC/INTEGRATION/docker.md'
+             - 'Images Docker':                
+                - 'PREPOC/INTEGRATION/DOCKER/index.md'
+                - 'selfkeys': 'PREPOC/INTEGRATION/DOCKER/selfkeys.md'
+                - 'keys_init': 'PREPOC/INTEGRATION/DOCKER/keys_init.md' 
+                - 'mysql_tls_router': 'PREPOC/INTEGRATION/DOCKER/mysql_tls_router.md'
+                - 'mysql_tls_server': 'PREPOC/INTEGRATION/DOCKER/mysql_tls_server.md'
+                - 'composer_base': 'PREPOC/INTEGRATION/DOCKER/composer_base.md'
+                - 'composer_files': 'PREPOC/INTEGRATION/DOCKER/composer_files.md'
+                - 'tools': 'PREPOC/INTEGRATION/DOCKER/tools.md'
+                - 'tools_debug': 'PREPOC/INTEGRATION/DOCKER/tools_debug'
+                - 'init': 'PREPOC/INTEGRATION/DOCKER/init.md'
+                - 'cron': 'PREPOC/INTEGRATION/DOCKER/cron.md'
+                - 'httpd': 'PREPOC/INTEGRATION/DOCKER/httpd.md'
+                - 'httpd_debug': 'PREPOC/INTEGRATION/DOCKER/httpd_debug.md'
+                - 'update': 'PREPOC/INTEGRATION/DOCKER/update.md'
+                - 'test_msmtp_dovecot': 'PREPOC/INTEGRATION/DOCKER/test_msmtp_dovecot.md'
+                - 'gen_hashed_ca': 'PREPOC/INTEGRATION/DOCKER/gen_hashed_ca.md'
+                - 'traefik_docker': 'PREPOC/INTEGRATION/DOCKER/traefik_docker.md'
+             - 'Kubernetes': 
+                - 'PREPOC/INTEGRATION/KUBERNETES/index.md'
+                - 'Maquettage': 'PREPOC/INTEGRATION/KUBERNETES/maquettage.md'
+                - 'Ressources utiles': 'PREPOC/INTEGRATION/KUBERNETES/ressources.md'
+                - 'Chart Helm':
+                  - 'PREPOC/INTEGRATION/KUBERNETES/HELM/index.md'
+                  - 'Description générale': 'PREPOC/INTEGRATION/KUBERNETES/HELM/description_generale.md'
+                  - 'DB et DB Router': 'PREPOC/INTEGRATION/KUBERNETES/HELM/db_dbrouter.md'
+                  - 'Serveur web interne': 'PREPOC/INTEGRATION/KUBERNETES/HELM/httpd.md'
+                  - 'Cron': 'PREPOC/INTEGRATION/KUBERNETES/HELM/cron.md'
+                  - 'Volumes (persistants)': 'PREPOC/INTEGRATION/KUBERNETES/HELM/volumes.md'
+                  - 'Secrets': 'PREPOC/INTEGRATION/KUBERNETES/HELM/secrets.md'
+                  - 'Réservations': 'PREPOC/INTEGRATION/KUBERNETES/HELM/reservations.md'
+                  - 'Serveur mail de démo': 'PREPOC/INTEGRATION/KUBERNETES/HELM/maildemo.md'
+                  - 'Outils': 'PREPOC/INTEGRATION/KUBERNETES/HELM/tools.md'
+       - 'Rôles': 'roles.md'
+       - 'Mail':
+           - 'MAIL/index.md'
+           - 'Problématique': 'MAIL/mail.md'
+           - 'Ecosystème': 'MAIL/ecosysteme.md'
+           - 'Envoi': 'MAIL/sendmail.md'
+           - 'Réception': 'MAIL/fetchmail.md'
+           - 'Opensmtpd Dovecot': 'MAIL/opensmtpd_dovecot.md'
+       - 'Logiciel':
+           - 'LOGICIEL/index.md'
+           - 'Distribution de code': 'LOGICIEL/distribution_code_composer.md'
+           - 'Environnement de dev': 'LOGICIEL/environnement_dev.md'
+           - 'Personnalisation environnement de dev': 'LOGICIEL/environnement_dev_env.md'
+           - 'Importation de données': 'LOGICIEL/importation.md'
+       - 'Intégration Continue':
+           - 'INTEGRATION_CONTINUE/index.md'
+           - 'Docker build et push': 'INTEGRATION_CONTINUE/docker_build_push.md'
+           - 'Tests automatisés : Codeception': 'INTEGRATION_CONTINUE/tests_automatises.md'
+           - 'Tests automatisés : Phpunit': 'INTEGRATION_CONTINUE/tests_phpunit.md'
+           - 'Composer': 'INTEGRATION_CONTINUE/composer_ci.md'
+           - 'Trivy': 'INTEGRATION_CONTINUE/trivy_ci.md'
+           - 'SonarLint et SonarQube': 'INTEGRATION_CONTINUE/sonarqube_ci.md'
+       - 'ARCHIVES':
+           - 'ARCHIVES/index.md'
+    - 'Formation': 
+        - '../FORMATION/index.html'
+theme:
+    logo: ../assets/uepal-logo.svg
+   palette:
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+extra_css:
+  - ../stylesheets/extra.css
