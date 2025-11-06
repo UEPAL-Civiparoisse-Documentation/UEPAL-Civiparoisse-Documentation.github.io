@@ -152,7 +152,7 @@
 ## 011 - Rajouter une Note à un Individu
 
 1. Allez dans la fiche individuelle d’un individu.
-2. Cliquez sur le champ ![Champ Notes](img/notes.png).
+2. Cliquez sur le champ ![Champ Notes](img/Notes.png).
 3. Créez une nouvelle note.
 4. Enregistrez.
 5. CONFIRMEZ que la note est visible sur la fiche individuelle de contact.

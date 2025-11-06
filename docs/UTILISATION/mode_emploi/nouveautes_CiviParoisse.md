@@ -2,6 +2,20 @@
 
 Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil du temps, en vous décrivant les nouveautés.
 
+## Version 1.52 - Livraison prévue à l'automne 2025
+
+**Nouvelles fonctions**
+<!--
+- Possibilité de gérer des modèles de messages personnalisés
+-->
+- Documentation en ligne
+    - Exercices pas à pas pour apprendre à utiliser CiviParoisse. [Voir les exercices](../../FORMATION/EXERCICES/index.md)
+    - Diaporama pour apprendre à utiliser les fonctions les plus courantes de CiviParoisse. [Voir le diaporama](../../FORMATION/DIAPORAMAS/index.md)
+
+**Evolutions techniques**
+
+- Mise à jour de CiviCRM vers la version 6.5.0
+
 ## Version 1.51 - Printemps 2025
 
 **Nouvelles fonctions**

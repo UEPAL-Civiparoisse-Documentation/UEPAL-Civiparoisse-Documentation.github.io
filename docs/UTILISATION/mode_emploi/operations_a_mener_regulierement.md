@@ -38,9 +38,7 @@ Chaque page vous permet de corriger votre base de données, soit directement, so
 * Organisation sans Relations
 * Organisation avec Evénement
 
-
-
-## Actions à réaliser
+### Actions à réaliser
 
 Pour chaque contrôle ou amélioration, il est possible de réaliser différentes actions : soit une correction en ligne, soir des actions de masse.
 

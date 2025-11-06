@@ -42,7 +42,7 @@ Sur la page Listes, plusieurs possibilités vous sont proposées :
 |  | Compétences |  | *(sera disponible ultérieurement)* |
 | Evénements | Participants | Participants à un Evénement | Liste des participants à l'événement choisi <br> *Il faut choisir l'Evénement dans la liste déroulante, et cliquer sur "Rechercher" pour afficher le résultat* |
 | Gestion | Dons |  | *(sera disponible ultérieurement)* |
-|  | Administration |  | *(sera disponible ultérieurement)* |
+|  | Administration | Liste des Utilisateurs | Affiche la liste des Utilisateurs et le détail de leurs connexions |
 
 ## Quels sont les critères de sélection ?
 
@@ -65,7 +65,7 @@ Vous trouverez ci-dessous la liste des différents critères possibles. Tous ne 
 | Nom | Description |
 | ----- | ----- |
 | Groupes | Permet de choisir un ou plusieurs groupes |
-| Lien paroissial | Permet de sélectionner un ou plusieurs des liens d'appartenance à la paroisse  ([Cliquer ici pour en savoir plus](liens_paroisses.md#Les-4-types-de-liens)) |
+| Lien paroissial | Permet de sélectionner un ou plusieurs des liens d'appartenance à la paroisse  ([Cliquer ici pour en savoir plus](liens_paroisses.md#les-4-types-de-liens)) |
 | Genre | Permet de choisir le genre de l'Individu |
 | Date de naissance | Permet de choisir un intervalle de dates, ou une période (les deux dernières années, par exemple, pour avoir les naissances des 48 derniers mois) |
 | Date de création | Permet de sélectionner la date de création de la fiche, soit sur un intervalle de dates, soit sur une période (la dernière année par exemple) |

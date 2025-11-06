@@ -35,4 +35,30 @@ nav:
         - 'Livrables': 'PRESENTATION/presentation_livrables.md'
     - 'Eléments techniques': 'TECHNIQUE/index.html'
     - 'Formation': 
-        - 'FORMATION/index.md'
+        - 'Formation': 'FORMATION/index.md'
+        - 'Exercices en ligne':
+            - 'Liste des exercices en ligne':
+                - 'FORMATION/EXERCICES/index.md'
+                - '01 - Connexion et Affichage' : 'FORMATION/EXERCICES/01_ConnexionEtAffichage.md'
+                - '02 - Création d''un Foyer' : 'FORMATION/EXERCICES/02_CreationFoyer.md'
+                - '03 - Création d''un Individu' : 'FORMATION/EXERCICES/03_CreationIndividu.md'
+                - '04 - Création d''une Organisation' : 'FORMATION/EXERCICES/04_CreationOrganisation.md'
+                - '05 - Anniversaires' : 'FORMATION/EXERCICES/05_Anniversaires.md'
+                - '06 - Gestion des Groupes' : 'FORMATION/EXERCICES/06_GestionGroupes.md'
+                - '07 - Suivre la vie des paroissiens' : 'FORMATION/EXERCICES/07_VieParoissiens.md'
+                - '08 - Gestion des Etiquettes' : 'FORMATION/EXERCICES/08_GestionEtiquettes.md'
+                - '09 - Modifications de données' : 'FORMATION/EXERCICES/09_ModificationsDonnees.md'
+                - '10 - Recherches et Actions' : 'FORMATION/EXERCICES/10_RecherchesActions.md'
+                - '11 - Editions de Listes et d''Etiquettes' : 'FORMATION/EXERCICES/11_EditionsListesEtiquettes.md'
+                - '12 - Gestion des Contrôles et Améliorations' : 'FORMATION/EXERCICES/12_ControlesAmeliorations.md'
+                - '13 - Evénements' : 'FORMATION/EXERCICES/13_Evenements.md'
+                - '14 - Activités' : 'FORMATION/EXERCICES/14_Activites.md'
+                - '15 - Envoyer des courriels' : 'FORMATION/EXERCICES/15_Mailings.md'
+                - '16 - Gérer les adhésions' : 'FORMATION/EXERCICES/16_Adhesions.md'
+                - '17 - Gérer les contributions' : 'FORMATION/EXERCICES/17_Contributions.md'
+        - 'Diaporamas': 
+            - 'Liste des diaporamas':
+                - 'FORMATION/DIAPORAMAS/index.md'
+                - 'Rechercher une Fiche Individu': 'FORMATION/DIAPORAMAS/RechercherIndividu.md'
+                - 'Remplir la Fiche Foyer': 'FORMATION/DIAPORAMAS/RemplirFoyer.md'
+                

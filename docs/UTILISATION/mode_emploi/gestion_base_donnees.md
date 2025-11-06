@@ -30,10 +30,10 @@ Vous pouvez à tout moment donner accès à la base de données à un utilisateu
 7. Cliquer sur le bouton *Actions* de la fiche ![bouton Actions](img/bouton_action.png)
 8. Cliquer sur *Compte de l'utilisateur* ![écran Actions](img/ecran_actions_deux.png)
 9. Cliquer sur l’onglet *Modifier* ![bouton Modifier](img/bouton_voir_modifier_user.png)
-10. Dans la partie **Rôles**, choisir le ou les rôle(s) à donner à l'utilisateur, parmi la liste suivante
-      * **Administrateur** : possibilité de gérer tout le site (Drupal comme CiviCRM). Réservé à l'équipe technique de CiviParoisse. Attention, **il ne faut en aucun cas attribuer ce rôle** à un nouvel utilisateur.
+10. Dans la partie **Rôles**, choisir le ou les rôle(s) à donner à l'utilisateur, parmi la liste suivante. :warning: Il faut cocher un des rôles pour que l'utilisateur puisse se connecter.
       * **Gestionnaire paroissial** : accès à l'ensemble de CiviParoisse en consultation et en modification, sans les données financières, ni l'envoi de mailing de masse ou l'administration du site. Ce rôle permet également de créer et gérer les droits d'accès à CiviParoisse.
       * **Utilisateur paroissial** : accès à CiviParoisse uniquement en consultation, sans les données financières, et sans l'envoi de mailing de masse. Ce rôle peut tout de même enregistrer des événements, des activités, des notes. Il peut préparer des mailings, sans pouvoir en valider l'envoi. Il peut aussi créer de nouvelles fiches (sans pouvoir les modifier).
+      * **Administrateur** : possibilité de gérer tout le site (Drupal comme CiviCRM). Réservé à l'équipe technique de CiviParoisse. :warning: **Il ne faut en aucun cas attribuer ce rôle** à un nouvel utilisateur.
 11. Il est également possible de rajouter les options suivantes :
       * **Gestionnaire Mot de passe** : option qui permet de réinitialiser les mots de passe des utilisateurs. Attention, cette option permet également de créer et gérer les droits d'accès à CiviParoisse.
       * **Gestion financière** : option qui permet de modifier et consulter les données financières (dons, ...).
@@ -92,9 +92,22 @@ Vous pouvez à tout moment donner accès à la base de données à un utilisateu
 
 > Le nom de l’utilisateur dont vous voulez supprimer l’accès restera affiché dans la liste des personnes. De même, sa fiche restera présente dans la base de données. Ceci permet de conserver l’historique des modifications faite par cet utilisateur.
 
-### Lister l'ensemble des utilisateurs de la base de données
+### Consulter l'ensemble des utilisateurs de la base de données
 
-En cours d'écriture
+Il est important de vérifier régulièrement (**au moins tous les six mois**) votre liste des Utilisateurs. Ceci permet de contrôler que :
+
+* Les utilisateurs correspondent bien aux paroissiens qui ont le droit d'accéder aux données en ce moment
+* Les utilisateurs se connectent régulièrement (pour éviter des pertes de compétences)
+
+La liste vous indique :
+
+* Les noms, prénoms et adresses mails des utilisateurs
+* Les rôles de l'utilisateur (cf supra)
+* La date de création = date à partir de laquelle l'utilisateur a eu accès à CiviParoisse
+* La période de dernière connexion : inférieure à trois mois ; entre trois et neuf mois ; supérieur à neuf mois : jamais connecté
+* Le statut actuel de l'utilisateur : actif (= peut utiliser CiviParoisse) ; bloqué (= ne peut pas utiliser CiviParoisse)
+
+**Pour des questions de sécurité, nous vous conseillons vivement de ne pas avoir d'utilisateurs dont la dernière connexion est supérieure à neuf mois**. Il faut alors inciter l'utilisateur à se connecter à nouveau. Ou bien il faut lui supprimer son accès (cf supra).
 
 ## Modifier la liste des Quartiers
 

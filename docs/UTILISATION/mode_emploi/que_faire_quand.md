@@ -6,8 +6,8 @@
 
 A l'arrivée d'une nouvelle famille au sein de la paroisse il vous faut suivre les étapes suivantes :
 
-* Créer la fiche Foyer ([En savoir plus](fiches-contact.md#enregistrer-un-nouveau-foyer))
-* Créer autant de fiches Individu que de personnes composant le foyer ([En savoir plus](fiches-contact.md#enregistrer-un-nouveau-individu))
+* Créer la fiche Foyer ([En savoir plus](fiches_contact.md#enregistrer-un-nouveau-foyer))
+* Créer autant de fiches Individu que de personnes composant le foyer ([En savoir plus](fiches-contact.md#enregistrer-un-nouvel-individu))
 * Renseigner le lien avec la paroisse ([En savoir plus](liens_paroisses.md))
 * Renseigner les relations ([En savoir plus](relations.md))
 * Inscrire chaque Individu dans le(s) groupe(s) nécessaire(s) ([En savoir plus](groupes.md))
@@ -23,8 +23,8 @@ Si une personne, voire toutes les personnes d'un foyer, quitte la paroisse, il e
 
 Ce qu'il vous faut faire :
 
-* **Mettre fin aux Adhésions**, en indiquant une date de fin dans l'adhésion à la paroisse. ([En savoir plus](liens_paroisses.md#mettre-fin-à-une-adhesion))
-* **Retirez la(les) personne(s) des groupes** concernés. [En savoir plus](groupes.md#enlever-d-un-groupe))
+* **Mettre fin aux Adhésions**, en indiquant une date de fin dans l'adhésion à la paroisse. ([En savoir plus](liens_paroisses.md#mettre-fin-a-une-adhesion))
+* **Retirez la(les) personne(s) des groupes** concernés. [En savoir plus](groupes.md#enlever-dun-groupe))
 * **Changez l'adresse postale** si la personne a déménagé (supprimer l'ancienne adresse si vous n'arrivez pas à connaître la nouvelle).
 * Si possible, **ajoutez une note** pour indiquer en quelques mots le départ, éventuellement les raisons, si besoin.
 * Modifiez les **Préférences de communication**, en cliquant sur `Modifiez les préférences de communication` dans l'onglet `Synthèse` et cochant les 4 cases :
@@ -127,13 +127,11 @@ Si vos tentatives pour trouver sa nouvelle adresse ont échouées, la procédure
 
 ## :material-email-off: Une personne n'a pas d'adresse mail ou ne veut pas la communiquer ?
 
-> Partie en cours d'écriture
-
 Si un paroissien n'a pas d'adresse mail ou ne souhaite pas nous la communiquer, il est conseillé de renseigner CiviParoisse pour lui éviter des relances régulières (dans le cadre de la fiabilisation de la base). Pour cela :
 
 * Modifiez les préférences de communication en cliquant sur `Modifiez les préférences de communication` dans l'onglet `Synthèse` et en cochant la case `Ne pas envoyer de courriel` puis enregistrez.
-* Dans l'onglet `Notes` de sa fiche, cliquez sur `Ajouter une note` puis indiquez en titre "Courriel" ou "Mail", laissez `Protection de la vie privée` à `Aucun`. Puis indiquez dans la note, selon le besoin, l'une des lignes suivantes :  
-  * N'a pas d'adresse e-mail  
-  * Ne souhaite pas communiquer son adresse e-mail  
-  * Ne souhaite pas que son adresse e-mail (ajoutez entre parenthèse l'adresse) soit utilisée par la paroisse.  
-  * Ne souhaite plus que son adresse e-mail (ajoutez entre parenthèse l'adresse) soit utilisée par la paroisse.
+* Dans l'onglet `Notes` de sa fiche, cliquez sur `Ajouter une note` puis indiquez en titre "Courriel" (ou "Mail"), laissez `Protection de la vie privée` à `Aucun`. Puis indiquez dans la note, selon le besoin, l'une des lignes suivantes :  
+    * N'a pas d'adresse e-mail  
+    * Ne souhaite pas communiquer son adresse e-mail  
+    * Ne souhaite pas que son adresse e-mail (`ajoutez entre parenthèse l'adresse`) soit utilisée par la paroisse.  
+    * Ne souhaite plus que son adresse e-mail (`ajoutez entre parenthèse l'adresse`) soit utilisée par la paroisse.
