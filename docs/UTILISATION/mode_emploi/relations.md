@@ -1,4 +1,5 @@
 <!-- D10 C5.81 OK, Peter le 21.04.2025 -->
+<!-- D10 C6.5 OK, Peter le 08.12.2025 -->
 
 # Gérer les relations
 
@@ -69,7 +70,7 @@ Sur chaque fiche, il est possible de créer manuellement les relations.
 ## Finir une relation
 
 !!! warning "N'utilisez pas la suppression"
-    Afin de conserver l'historique des relations, n'utilisez jamais la touche Supprimer.
+    Afin de conserver l'historique des relations, n'utilisez jamais le menu `Supprimer la relation`.
 
 Pour la **fin d'une relation**, deux cas possibles :
 

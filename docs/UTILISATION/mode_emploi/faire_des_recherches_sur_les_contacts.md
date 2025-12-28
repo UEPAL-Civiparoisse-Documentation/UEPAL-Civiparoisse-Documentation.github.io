@@ -1,4 +1,5 @@
 <!-- D10 C5.81 OK, Peter le 26.04.2025 -->
+<!-- D10 C6.5 OK, Peter le 08.12.2025 -->
 
 # Faire des recherches sur les contacts
 
@@ -7,7 +8,7 @@
 La recherche rapide est celle accessible via **l'icône de loupe** :fontawesome-solid-magnifying-glass:, tout à gauche du menu de CiviParoisse.
 Par ce biais vous pouvez rapidement retrouver un contact si vous connaissez par exemple son nom, ou son numéro de téléphone.
 
-> :material-lightbulb-on: L'ensemble des moyens de rechercher un contact permet l'utilisation du caractère générique **%**. Ainsi, rechercher *Mich%* vous donnera tous les "Michel", mais aussi les "Michelle" et les "Michaël".
+> :material-lightbulb-on: L'ensemble des moyens de rechercher un contact permet l'utilisation du **caractère générique %**. Ainsi, rechercher *Mich%* vous donnera tous les "Michel", mais aussi les "Michelle" et les "Michaël".
 
 ## La recherche simple des contacts
 
@@ -33,7 +34,19 @@ Par cette recherche vous avez plusieurs possibilités, la recherche par quartier
 
 > Si en septembre vous voulez contacter tous les jeunes de 11 ans pour les inviter au catéchisme, il suffit de vous rendre dans `Données démographiques`, d'indiquer en âge minimal et maximal "11" et vous aurez la liste des jeunes concernés. De façon semblable pour lister tous les plus de 65 ans pour la fête des Aînés.
 
-Il est également possible d'écrire aux parents des jeunes ainsi sélectionnés. Pour cela, saisissez d'abord les critères pour sélectionner les jeunes (comme ci-dessus par exemple), puis en haut à droite de l'écran, dans les `Paramètres de recherche`, choisissez le type des résultats `Contacts liés`. Sélectionnez ensuite le type de relation `Parents de`, et cliquez sur `Rechercher`.
+Il est également possible d'écrire aux parents des jeunes ainsi sélectionnés. Pour cela, deux méthodes sont possibles :  
+
+1. La sélection de contacts liés
+    * Saisissez d'abord les critères pour sélectionner les jeunes (comme ci-dessus par exemple)
+    * Puis en haut à droite de l'écran, dans les `Paramètres de recherche`, choisissez le type des résultats `Contacts liés`.
+    * Sélectionnez ensuite le type de relation `Parents de`, et cliquez sur `Rechercher`.
+
+2. La sélection via une action
+    * Effectuez une recherche pour sélectionner les jeunes (via le choix d'un groupe, ou via les critères d'âge par exemple).
+    * Une fois la liste des jeunes affichée, sélectionnez-les en cliquant sur la case à cocher à gauche de `Nom`, ou en cliquant sur `Sélectionner : Tous (x trouvés)`.
+    * Cliquez ensuite sur le menu `Actions`, puis sur `Courriel - envoyer aux parents`.
+    * Remplissez les écrans pour préparer l'envoi du courriel aux parents des jeunes sélectionnés et envoyez votre message.
+
 
 Notez qu'à tout moment vous pouvez modifier vos critères de recherche en cliquant sur `Modifier les critères de recherche`, sans avoir besoin de tout paramétrer à nouveau.
 
@@ -44,7 +57,7 @@ Notez qu'à tout moment vous pouvez modifier vos critères de recherche en cliqu
 
 Admettons que vous avez recherché tous les jeunes de 11 à 13 ans, et que vous souhaitez créer un groupe "Liste de diffusion" pour communiquer régulièrement avec eux, il vous suffit, une fois la liste des contacts affichée, de cliquer sur `Sélectionner :` et cocher `Tous (x trouvés)`. Cliquez ensuite sur `Actions` puis sur `Groupe - créer un groupe dynamique` pour créer votre liste de diffusion.
 
-> Prenons un autre exemple, vous avez un groupe constitué des paroissiens qui ont fait un don à la paroisse l'année précédente à qui vous voulez envoyer un mot de remerciement.  
+Prenons un autre exemple, vous avez un groupe constitué des paroissiens qui ont fait un don à la paroisse l'année précédente à qui vous voulez envoyer un mot de remerciement.  
 Pour envoyer des courriers à ces personnes, il vous suffit de faire une recherche en utilisant la recherche simple, et en recherchant le groupe en question.  
 Une fois la liste affichée, sélectionnez tous les contacts comme vous avez appris à le faire, puis cliquez sur `Actions` et choisissez en fin de liste `Etiquettes pour la poste - imprimer`.  
 Dans la fenêtre qui s'affiche, choisissez dans le menu `Sélectionner un format d'étiquette` le format des étiquettes dont dispose la paroisse, puis cliquez sur `Imprimer des étiquettes pour la Poste`. Un PDF est généré avec les étiquettes des différents foyers, il ne reste plus qu'à l'imprimer sur des planches d'étiquettes, et à envoyer votre courrier.
@@ -56,6 +69,7 @@ Le menu `Actions` propose également, selon le contexte, les possibilités suiva
 * Supprimer les contacts (à manier évidemment avec précaution !)
 * Ajouter une information sur une interaction avec les contacts (activités)
 * Envoyer des courriels [(en savoir plus)](envoyer_un_courriel.md)
+* Envoyer des courriels aux parents
 * Fusionner des doublons
 * Ajouter ou enlever les contacts d'un groupe
 * Inscrire les contacts à un événement

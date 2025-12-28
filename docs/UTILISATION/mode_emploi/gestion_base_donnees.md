@@ -1,4 +1,5 @@
 <!-- D10 C5.81 OK, Peter le 26.04.2025 -->
+<!-- D10 C6.5 OK, Peter le 09.12.2025 -->
 
 # Gestion de la base de données
 
@@ -99,12 +100,13 @@ Il est important de vérifier régulièrement (**au moins tous les six mois**) v
 * Les utilisateurs correspondent bien aux paroissiens qui ont le droit d'accéder aux données en ce moment
 * Les utilisateurs se connectent régulièrement (pour éviter des pertes de compétences)
 
+La *Liste des Utilisateurs* est disponible sur la page d'accueil, dans le menu `Listes`, dans la partie `Gestion / Administration`.  
 La liste vous indique :
 
 * Les noms, prénoms et adresses mails des utilisateurs
 * Les rôles de l'utilisateur (cf supra)
 * La date de création = date à partir de laquelle l'utilisateur a eu accès à CiviParoisse
-* La période de dernière connexion : inférieure à trois mois ; entre trois et neuf mois ; supérieur à neuf mois : jamais connecté
+* La période de dernière connexion : inférieure à trois mois ; entre trois et neuf mois ; supérieur à neuf mois ; jamais connecté
 * Le statut actuel de l'utilisateur : actif (= peut utiliser CiviParoisse) ; bloqué (= ne peut pas utiliser CiviParoisse)
 
 **Pour des questions de sécurité, nous vous conseillons vivement de ne pas avoir d'utilisateurs dont la dernière connexion est supérieure à neuf mois**. Il faut alors inciter l'utilisateur à se connecter à nouveau. Ou bien il faut lui supprimer son accès (cf supra).

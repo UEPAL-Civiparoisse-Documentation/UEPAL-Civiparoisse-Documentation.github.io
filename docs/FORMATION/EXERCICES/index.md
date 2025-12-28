@@ -1,12 +1,12 @@
 # Exercices en ligne
 
 Vous trouverez ci-dessous les liens vers les exercices en ligne.  
-Familiarisez-vous avec les fonctionnalités de CiviParoisse, en suivant pas à pas les consignes.
-
-Ces exercices sont à réaliser dans un environnement de test. Pour savoir comment se connecter à cet environnement de test, contactez-nous.  
+Familiarisez-vous avec les fonctionnalités de CiviParoisse, en suivant pas à pas les consignes.  
 N'hésitez pas à refaire plusieurs fois les exercices pour bien maîtriser les fonctionnalités.
 
-> Page en cours d'écriture
+Ces exercices sont à réaliser dans un environnement de test. Pour savoir comment se connecter à cet environnement de test, contactez l'UEPAL.  
+
+:fontawesome-solid-warning: Ne saisissez aucune donnée réelle ou donnée de votre paroisse dans cet environnement de test.
 
 ## Liste des tests
 

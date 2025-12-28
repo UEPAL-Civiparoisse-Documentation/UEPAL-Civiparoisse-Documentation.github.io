@@ -1,4 +1,5 @@
 <!-- D10 C5.81 OK, Peter le 26.04.2025 -->
+<!-- D10 C6.5 OK, Peter le 09.12.2025 -->
 
 # Opérations à réaliser régulièrement
 
@@ -43,7 +44,7 @@ Chaque page vous permet de corriger votre base de données, soit directement, so
 Pour chaque contrôle ou amélioration, il est possible de réaliser différentes actions : soit une correction en ligne, soir des actions de masse.
 
 !!! warning "Faux positifs"
-    Chaque situation individuelle et familiale de vos paroissiens est particulière. La programmation mise en oeuvre pour les listes ci-dessus peut parfois provoquer des *faux positifs*. Ce sont des fiches qui sont signalées en anomalie, mais qui dans la réalité de votre paroissien ne sont pas une erreur.  
+    Chaque situation individuelle et familiale de vos paroissiens est particulière. La programmation mise en oeuvre pour les listes ci-dessus peut parfois provoquer des *faux positifs*. Ce sont des fiches qui sont signalées en anomalie, mais qui dans la réalité de votre paroisse ne sont pas une erreur.  
     Vous êtes toujours invités à considérer les résultats à la lumière de votre connaissance de chaque paroissien, avant de réaliser des corrections.
 
 ### Corriger en ligne

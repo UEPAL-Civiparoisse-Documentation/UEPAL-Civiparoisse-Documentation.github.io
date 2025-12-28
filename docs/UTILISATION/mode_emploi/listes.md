@@ -1,4 +1,5 @@
 <!-- D10 C5.81 OK, Peter le 26.04.2025 -->
+<!-- D10 C6.5 OK, Peter le 08.12.2025 -->
 
 # Utiliser les listes
 
@@ -34,7 +35,8 @@ Sur la page Listes, plusieurs possibilités vous sont proposées :
 |  |  | Conseil Presbytéral | Affiche la liste des conseillers presbytéraux |
 | Communication | Foyers | Foyers sans adresses mails | Affiche les Foyers dont aucun des Chefs de Famille n'a d'adresse mail |
 |  | Individus |  | *(sera disponible ultérieurement)* |
-|  | Distribution | Liste de distribution par Quartiers | Affiche, par quartier, la liste des foyers et le mode de distribution souhaité <br> *Critères par défaut : mode de distribution = Distribué* |
+|  | Distribution | Liste de distribution par Quartiers | Permet d'afficher et d'imprimer la liste de distribution pour vos porteurs <br> *Critères par défaut : mode de distribution = Distribué ; adresse validée* |
+|  |  | Liste des Foyers par Quartiers | Affiche, par quartier, la liste des foyers et le mode de distribution souhaité <br> *Critères par défaut : mode de distribution = Distribué* |
 |  |  | Liste des Quartiers | Permet de renommer les quartiers, et de les gérer  |
 | Groupes | Participants | Participants à un Groupe | Affiche la liste des Participants à un Groupe <br> *Il faut choisir le Groupe dans la liste déroulante, et cliquer sur "Rechercher" pour afficher le résultat* |
 |  |  | Dates d'anniversaires | Affiche les dates d'anniversaires |
@@ -77,7 +79,8 @@ Vous trouverez ci-dessous la liste des différents critères possibles. Tous ne 
 | Paroisse | Permet de sélectionner la paroisse |
 | Evénement | Permet de choisir un ou plusieurs événements |
 | Rôle du Participant | Permet de choisir le rôle dans un événement |
-| Status | Permet de choisir le statut dans un événement |
+| Statut | Permet de choisir le statut dans un événement |
+| Validation | Permet de choisir parmi des adresses validées, non vérifiées, erronées ou obsolètes |
 
 ## Que puis-je faire avec ces listes ?
 
@@ -103,10 +106,11 @@ Une fois votre sélection faite, vous pouvez cliquer sur le bouton `Actions`, qu
 | ---- | ---- |
 | Ajouter une activité | *Cette action sera documentée ultérieurement* |
 | Courriel : planifier/envoyer un mailing | Permet d'envoyer un mailing de masse aux personnes sélectionnées |
+| Courrier - envoyer aux parents | Permet d'envoyer un courriel aux parents des contacts sélectionnés |
 | Download Spreadsheet | Permet de télécharger les informations affichés à l'écran dans un fichier Excel ou PDF |
 | Exporter Contact | Permet de télécharger de nombreuses informations concernant les fiches sélectionnées, en plus de celles affichées à l'écran |
 | Groupes - ajouter les contacts | Propose de rajouter les contacts sélectionnés au groupe que vous choisirez.|
-| Imprimer/fusionner un document | permet de réaliser des courriers (du type publipostage) |
+| Imprimer/fusionner un document | Permet de réaliser des courriers (du type publipostage) |
 | Etiquettes pour la Poste - imprimer | Permet d'imprimer des étiquettes autocollantes |
 | Activer Elément de liste de choix | Permet la réactivation des éléments sélectionnées, et donc leur utilisation dans CiviParoisse |
 | Désactiver Eléments de liste de choix | Désactive les éléments sélectionnées, pour qu'ils ne soient plus utilisables dans CiviParoisse (sans les supprimer définitivement) |
@@ -137,3 +141,26 @@ Quelques conseils pour bien utiliser cette liste :
 
 * Pensez à bien **choisir le groupe *Conseil Presbytéral*** dans le critères *Groupe* en haut de page. Sans ce choix, la liste s'affichera vide.
 * Si nécessaire, il est possible de **limiter l'affichage à la paroisse**, en saisissant tout ou partie du nom de la paroisse dans le champ *Paroisse*.
+
+### Liste des utilisateurs
+
+Pour en savoir plus, cliquez sur [ce lien](gestion_base_donnees.md#consulter-lensemble-des-utilisateurs-de-la-base-de-donnees).
+
+## Comment faire pour... ?
+
+### Lister les grands anniversaires
+
+Supposons que vous vouliez écrire à tous vos paroissiens qui fêterons leur 80ème anniversaire dans l'année.  
+Vous avez deux possibilités :
+
+1. Lister les anniversaires des 12 prochains mois
+    * Sur la page d'accueil, allez dans les `Listes`
+    * Dans la partie Paroisse / Paroissiens, choisissez la liste `Dates d'anniversaires`
+    * Dans l'onglet qui s'ouvre, saisissez 80 comme âge minimum et comme âge maximum dans la partie *Choix des critères*
+
+2. Lister les anniversaires de l'année calendaire
+    * Dans le menu en haut de l'écran, allez dans `Rechercher` puis dans `Recherche avancée`
+    * Ouvrez la partie `Données démographiques`
+    * Saisissez 80 comme âge minimal et comme âge maximal
+    * Dans la case *Au*, saisissez le 31 décembre de l'année en cours
+    * Cliquer sur `Rechercher`

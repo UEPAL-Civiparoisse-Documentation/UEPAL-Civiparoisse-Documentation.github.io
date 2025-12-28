@@ -1,4 +1,5 @@
 <!-- D10 C5.81 OK, Peter le 26.04.2025 -->
+<!-- D10 C6.5 OK, Peter le 08.12.2025 -->
 
 # Envoyer un courriel
 
@@ -6,7 +7,7 @@ CiviParoisse propose deux formes de courriels, l'une qui ressemble à ce que vou
 
 !!! warning "Attention"
     Une autre différence importante est le nombre de destinataires.  
-    Pour un **envoi immédiat**, il est nécessaire d'avoir moins de 50 destinataires.  
+    Pour un **envoi immédiat**, il est nécessaire d'avoir un maximum de 50 destinataires.  
     Un **envoi massif** est possible pour tout nombre de destinataires, et obligatoire au-delà de 50 destinataires. Il est également possible d'en planifier l'envoi. Cela vous évitera d'être blacklistés, c'est à dire considéré comme spammeurs, ce qui aurait pour effet assez rapidement que soit vos courriels soient considérés comme "indésirables" (spam) ou pire n'arrivent pas du tout.  
     CiviParoisse n'envoie pas les messages de la même façon dans les deux cas.
 
@@ -16,7 +17,7 @@ Mais vous pouvez aussi procéder des deux façons détaillées ci-après.
 
 ## Courriel classique ("Courriel - envoi immédiat")
 
-Pour par exemple inviter les conseillers presbytéraux à la prochaine réunion, le contenu sera plus important que le contenant et aussi par souci écologique (les illustrations ont un coût en CO2), vous opterez sans doute pour le courriel classique qui permet déjà d'appliquer du gras, de l'italique, de placer un tableau, une image, d'ajouter des pièces jointes, etc.
+Par exemple pour inviter les conseillers presbytéraux à la prochaine réunion, le contenu sera plus important que le contenant et aussi par souci écologique (les illustrations ont un coût en CO2), vous opterez sans doute pour le courriel classique qui permet déjà d'appliquer du gras, de l'italique, de placer un tableau, une image, d'ajouter des pièces jointes, etc.
 
 * Pour y accéder, recherchez le ou les destinataires concernés, en utilisant les outils de recherche ([cliquez ici pour en savoir plus](faire_des_recherches_sur_les_contacts.md)). Après les avoir sélectionnés, cliquez sur `Courriel - envoi immédiat`.
 
@@ -26,7 +27,7 @@ Pour par exemple inviter les conseillers presbytéraux à la prochaine réunion,
 
 !!! warning "Attention"
     Il est indispensable de **choisir l'adresse de la paroisse comme adresse d'expédition** (le champ `De` tout en haut du mail que vous êtes en train de créer).  
-    Ne choisissez jamais votre propre adresse mail : pour des raisons de sécurité, ces mails ne sont pas envoyés.
+    Ne choisissez jamais votre propre adresse mail : pour des raisons de sécurité, ces mails ne seront pas envoyés.
 
 * Ecrivez votre courriel dans la partie `Format HTML`, rajoutez si besoin des pièces jointes dans la partie `Pièce jointe`, et cliquez sur `Envoyer les courriels`. Votre courrier sera alors envoyé immédiatement.
 
@@ -85,3 +86,22 @@ Si vous cliquez sur certains éléments, la partie de gauche change d'affichage 
 
 !!! info "Délais d'envoi de votre mailing"
     L'envoi de votre mailing commencera quelques minutes après avoir validé l'envoi. Selon le nombre de destinataires, la distribution sera étalée sur plusieurs dizaines de minutes. Ceci contribue à éviter que vos communications soient considérées comme des spams.
+
+## Comment faire pour... ?
+
+### Envoyer un courrier aux parents des enfants inscrits au catéchisme ?
+
+Pour envoyer un courrier aux parents des enfants inscrits au catéchisme, deux méthodes sont possibles.
+
+1. Envoi via la recherche avancée
+    * Effectuez une recherche avancée en choisissant le groupe des enfants inscrits au catéchisme.
+    * Puis en haut à droite de l'écran, dans les `Paramètres de recherche`, choisissez le type des résultats `Contacts liés`.
+    * Sélectionnez ensuite le type de relation `Parents de`, et cliquez sur `Rechercher`.
+    * Sélectionnez alors les contacts voulus.
+    * Cliquez sur `Actions` et choisissez `Courriel - envoi immédiat` ou `Courriel - planifier/envoyer un envoi massif`, selon le nombre de destinataires.
+
+2. Envoi via une action
+    * Effectuez une recherche simple en choisissant par exemple le groupe des enfants inscrits au catéchisme.
+    * Une fois la liste des enfants affichée, sélectionnez-les en cliquant sur la case à cocher à gauche de `Nom`, ou en cliquant sur `Sélectionner : Tous (x trouvés)`.
+    * Cliquez ensuite sur le menu `Actions`, puis sur `Courriel - envoyer aux parents`.
+    * Remplissez les écrans pour préparer l'envoi du courriel aux parents des enfants sélectionnés et envoyez votre message.

@@ -9,6 +9,7 @@
 * [Envoyer un courriel](envoyer_un_courriel.md)
 * [Gérer les groupes](groupes.md)
 * [Utiliser les listes](listes.md)
+* [Gérer les adresses](adresses.md)
 * [Que faire quand... ?](que_faire_quand.md)
 * [Gestion des dons et édition des reçus fiscaux](gestion_des_dons_et_edition_des_recus_fiscaux.md)
 * [Créer et gérer un événement](creer_et_gerer_un_evenement.md)

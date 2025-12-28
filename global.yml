@@ -20,6 +20,7 @@ nav:
         - 'Envoyer un courriel': 'UTILISATION/mode_emploi/envoyer_un_courriel.md'
         - 'Gérer les groupes': 'UTILISATION/mode_emploi/groupes.md'
         - 'Utiliser les listes': 'UTILISATION/mode_emploi/listes.md'
+        - 'Gérer les adresses': 'UTILISATION/mode_emploi/adresses.md'
         - 'Que faire quand... ?': 'UTILISATION/mode_emploi/que_faire_quand.md'
         - 'Gestion des dons et édition des reçus fiscaux': 'UTILISATION/mode_emploi/gestion_des_dons_et_edition_des_recus_fiscaux.md'
         - 'Créer et gérer un événement': 'UTILISATION/mode_emploi/creer_et_gerer_un_evenement.md'

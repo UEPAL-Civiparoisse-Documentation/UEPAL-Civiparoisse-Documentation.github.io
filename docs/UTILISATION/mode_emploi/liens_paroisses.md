@@ -1,4 +1,5 @@
 <!-- D10 C5.81 OK, Peter le 21.04.2025 -->
+<!-- D10 C6.5 OK, Peter le 08.12.2025 -->
 
 # Gérer les liens avec la paroisse
 
@@ -37,7 +38,8 @@ Dans CiviParoisse, le lien avec la paroisse est géré comme une "Adhésion".
 
 ## Mettre fin à une adhésion
 
-* Pour mettre fin à une adhésion, allez dans l'onglet `Adhésion`, et à la fin de la ligne de l'adhésion, cliquez sur `Modifier`, renseignez la date de fin.
+* Pour mettre fin à une adhésion, allez dans l'onglet `Adhésion`, et à la fin de la ligne de l'adhésion, cliquez sur `Modifier`
+* Renseignez la date de fin.
 * Puis sélectionnez la case `Forcer / Outrepasser de façon permanente` afin que son statut soit modifié dans les listes
 * Passez le statut d'adhésion en `Annulé`, puis validez.
 
