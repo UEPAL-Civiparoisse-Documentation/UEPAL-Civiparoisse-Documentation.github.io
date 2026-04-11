@@ -15,29 +15,23 @@ Chaque page vous permet de corriger votre base de données, soit directement, so
 
 ### Liste des contrôles
 
-* Individus Sans Genre
-* Individus Sans Civilité
-* Individus sans Statut Membre
-* Individus sans lien avec Foyer ou Organisation
-* Individus Majeurs avec Statut Enfant
-* Individus Enfants avec Statut Chef Famille
-* Individus Majeur chez leurs Parents
-* Foyers avec Statut Membre
-* Foyers sans relation Chef Famille
-* Foyer sans Relation Membre du Foyer
-* Foyers sans Mode de Distribution Journal
-* Organisation avec statut Adhésion
-* E-mails en erreur
+| Individus | Foyers | Organisations | E-mails |
+| ----- | ----- | ----- | ----- |
+| Individus sans Genre | Foyers avec Statut Adhésion | Organisation avec statut Adhésion | E-mails en erreur |
+| Individus sans Civilité | Foyers sans relation Chef Famille |  |  |
+| Individus sans Lien avec la Paroisse | Foyer sans Relation Membre du Foyer |  |  |
+| Individus sans lien avec Foyer ou Organisation | Foyers sans Mode de Distribution Journal |  |  |
+| Individus Majeurs avec Statut Enfant |  |  |  |
+| Individus Enfants avec Statut Chef Famille | |  |  |
+| Individus Majeur chez leurs Parents | |  |  |  |
 
 ### Liste des améliorations
 
-* Individus sans Date de Naissance
-* Foyers sans Adresses
-* Foyers avec Evénement
-* Foyers avec Distribution Inconnu
-* Organisations sans Adresses
-* Organisation sans Relations
-* Organisation avec Evénement
+| Individus | Foyers | Organisations |
+| ----- | ----- | ----- |
+| Individus sans Date de Naissance | Foyers sans Adresses | Organisations sans Adresses |
+| Individus sans Adresse E-mail | Foyers avec Evénement | Organisations sans Relations |
+|  | Foyers avec Distribution Inconnu | Organisations avec Evénement|
 
 ### Actions à réaliser
 
@@ -63,5 +57,6 @@ Vous pouvez sélectionner une, plusieurs ou toutes les fiches, en cliquant sur l
 | Ajouter une activité | *Cette action sera documentée ultérieurement* |
 | Courriel : planifier/envoyer un mailing | Permet d'envoyer un mailing de masse aux personnes sélectionnées, pour demander les informations manquantes par exemple |
 | Download Spreadsheet | Permet de télécharger les informations affichés à l'écran dans un fichier Excel ou PDF |
-| Imprimer/fusionner un document | Permet de réaliser des courriers (du type publipostage), pour demander les informations manquantes par exemple |
 | Etiquettes pour la Poste - imprimer | Permet d'imprimer des étiquettes autocollantes |
+| Groupes - ajouter les contacts | Permet d'ajouter les contacts sélectionnés à un groupe |
+| Imprimer/fusionner un document | Permet de réaliser des courriers (du type publipostage), pour demander les informations manquantes par exemple |

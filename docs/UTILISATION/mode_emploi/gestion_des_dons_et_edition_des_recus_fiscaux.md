@@ -1,3 +1,5 @@
+<!-- D10 C6.5 V1.53.0 OK, Peter le 02.04.2026 -->
+
 # Gestion des dons et édition des reçus et édition des reçus fiscaux
 
 ## Enregistrer des dons

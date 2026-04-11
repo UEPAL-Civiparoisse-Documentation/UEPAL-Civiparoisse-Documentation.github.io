@@ -1,5 +1,6 @@
 <!-- D10 C5.81 OK, Peter le 26.04.2025 -->
 <!-- D10 C6.5 OK, Peter le 09.12.2025 -->
+<!-- D10 C6.5 V1.53.0 OK, Peter le 02.04.2026 -->
 
 # Gestion de la base de données
 

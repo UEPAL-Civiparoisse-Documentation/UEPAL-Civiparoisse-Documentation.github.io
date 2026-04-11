@@ -1,5 +1,6 @@
 <!-- D10 C5.81 OK, Peter le 26.04.2025 -->
 <!-- D10 C6.5 OK, Peter le 09.12.2025 -->
+<!-- D10 C6.5 V1.53.0 OK, Peter le 02.04.2026 -->
 
 # Que faire quand... ?
 
@@ -57,18 +58,17 @@ Pour enregistrer le décès d'une personne, rendez-vous sur la fiche Individu de
 
 ## :fontawesome-solid-hand-holding-hand: Un couple se marie ?
 
-> Partie provisoire (sera revue prochainement)
-
 Lorsque qu'un couple se marie et que les deux foyers étaient auparavant séparés au sein de votre paroisse, il vous faudra fusionner les deux foyers puis renommer le foyer unique obtenu. Pour cela :
 
 1. Ouvrez les fiches Foyers des deux foyers.
-1. Renommez chaque Foyer d'un même nom provisoire (par exemple *Foyer marié*)
+1. Renommez chaque Foyer du même nom (en respectant les [règles de nommage d'un Foyer](fiches_contact.html#enregistrer-un-nouveau-foyer)) 
 1. Allez dans le menu `Rechercher` / `Rechercher des contacts`
-1. Saisissez le nom provisoire du Foyer, et cliquez sur `Rechercher`
-1. Dans la fenêtre de résultat, sélectionnez les deux foyers puis cliquez sur `Actions` et choisissez `Fusionner les doublons`. Eventuellement après avoir "Permuter les contacts original et doublon", pour que le foyer de Monsieur soit à droite.
-1. Sélectionnez les données à conserver du Foyer en doublon.
-1. Changez le nom du Foyer pour y inscrire le (les) noms(s) de famille et les deux prénoms.
-1. Vérifiez ensuite que les Relations se sont mises correctement, c'est-à-dire que les deux membres du foyer sont bien "Chef de famille de".
+1. Saisissez le nom du Foyer, et cliquez sur `Rechercher`
+1. Dans la fenêtre de résultat, sélectionnez les deux foyers puis cliquez sur `Actions` et choisissez `Fusionner les doublons`.
+1. Sélectionnez les données à conserver du Foyer en doublon. Les données surlignées en rouge sont celles qui seront supprimées, et les données surlignées en vert sont celles qui seront conservées.
+1. Cliquez ensuite sur `Fusionner`.
+1. La Fiche Foyer ainsi fusionnée s'ouvre. Si besoin, changez le nom du Foyer pour y inscrire le (les) noms(s) de famille et les deux prénoms.
+1. Vérifiez ensuite que les Relations se sont mises correctement, c'est-à-dire que les deux membres du foyer sont bien "Chef de famille de" et "Membre du foyer".
 1. Si vous ne l'avez pas fait avant, pensez à créer la relation "Conjoint de" entre les deux fiches Individus.
 1. Vérifiez aussi, si besoin, que les enfants sont bien rattachés au nouveau foyer.
 1. Eventuellement, modifiez le nom de famille de Madame.

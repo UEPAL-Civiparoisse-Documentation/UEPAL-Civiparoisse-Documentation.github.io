@@ -1,5 +1,6 @@
 <!-- D10 C5.81 OK, Peter le 21.04.2025 -->
 <!-- D10 C6.5 OK, Peter le 08.12.2025 -->
+<!-- D10 C6.5 V1.53.0 OK, Peter le 02.04.2026 -->
 
 # Gérer les relations
 

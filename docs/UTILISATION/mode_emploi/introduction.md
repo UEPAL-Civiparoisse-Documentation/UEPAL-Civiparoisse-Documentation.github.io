@@ -1,6 +1,7 @@
 
 <!-- D10 C5.81 OK, Peter le 25.01.2025 -->
 <!-- D10 C6.5 OK, Peter le 08.12.2025 -->
+<!-- D10 C6.5 V1.53.0 OK, Peter le 02.04.2026 -->
 
 # Introduction
 
@@ -103,7 +104,7 @@ Passons en revue les différents éléments :
 |:fontawesome-solid-chart-column: Rapports | Permet d’établir diverses statistiques.|
 |:fontawesome-solid-gears: Administrer |Permet de paramétrer CiviParoisse. Ce menu est réservé aux personnes ayant les droits d'administration.|
 |:fontawesome-solid-clock-rotate-left: Récent |Vous permet d'accéder aux dernières fiches consultées ou créées.|
-|:fontawesome-regular-handshake: Paroisse | Reprend les entrées de menu que vous trouvez en page d'accueil, et un menu de paramétrage spécifique.|
+|:fontawesome-regular-handshake: Paroisse | Reprend les entrées de menu que vous trouvez en page d'accueil, ainsi que l'accès aux listes de gestion des adresses, et un menu de paramétrage spécifique.|
 
 Vous remarquerez que sous ce menu, à gauche, CiviParoisse vous indique toujours où vous êtes.
 

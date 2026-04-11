@@ -1,5 +1,6 @@
 <!-- D10 C5.81 OK, Peter le 26.04.2025 -->
 <!-- D10 C6.5 OK, Peter le 08.12.2025 -->
+<!-- D10 C6.5 V1.53.0 OK, Peter le 02.04.2026 -->
 
 # Utiliser les listes
 
@@ -38,10 +39,13 @@ Sur la page Listes, plusieurs possibilités vous sont proposées :
 |  | Distribution | Liste de distribution par Quartiers | Permet d'afficher et d'imprimer la liste de distribution pour vos porteurs <br> *Critères par défaut : mode de distribution = Distribué ; adresse validée* |
 |  |  | Liste des Foyers par Quartiers | Affiche, par quartier, la liste des foyers et le mode de distribution souhaité <br> *Critères par défaut : mode de distribution = Distribué* |
 |  |  | Liste des Quartiers | Permet de renommer les quartiers, et de les gérer  |
+|  | Entreprise | Liste des Entreprises et Organisations | Permet d'afficher et d'imprimer la liste des entreprises et organisations, avec leurs coordonnées |
 | Groupes | Participants | Participants à un Groupe | Affiche la liste des Participants à un Groupe <br> *Il faut choisir le Groupe dans la liste déroulante, et cliquer sur "Rechercher" pour afficher le résultat* |
+|  |  | Trombinoscope d'un Groupe | Affiche les photos des Participants à un Groupe |
 |  |  | Dates d'anniversaires | Affiche les dates d'anniversaires |
 |  | Parents |  | *(sera disponible ultérieurement)* |
-|  | Compétences |  | *(sera disponible ultérieurement)* |
+|  | Compétences | Trombinoscope : Voix | Affiche les photos des personnes ayant une compétence Chant |
+|  |  | Trombinoscope : Instruments | Affiche les photos des personnes ayant une compétence Instrument de musique |
 | Evénements | Participants | Participants à un Evénement | Liste des participants à l'événement choisi <br> *Il faut choisir l'Evénement dans la liste déroulante, et cliquer sur "Rechercher" pour afficher le résultat* |
 | Gestion | Dons |  | *(sera disponible ultérieurement)* |
 |  | Administration | Liste des Utilisateurs | Affiche la liste des Utilisateurs et le détail de leurs connexions |
@@ -81,6 +85,7 @@ Vous trouverez ci-dessous la liste des différents critères possibles. Tous ne 
 | Rôle du Participant | Permet de choisir le rôle dans un événement |
 | Statut | Permet de choisir le statut dans un événement |
 | Validation | Permet de choisir parmi des adresses validées, non vérifiées, erronées ou obsolètes |
+| Compétences (Chant, Instruments de musique) | Permet de sélectionner les personnes ayant une des compétences |
 
 ## Que puis-je faire avec ces listes ?
 

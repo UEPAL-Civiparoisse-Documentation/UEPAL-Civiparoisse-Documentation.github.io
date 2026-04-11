@@ -1,3 +1,5 @@
+<!-- D10 C6.5 V1.53.0 OK, Peter le 02.04.2026 -->
+
 # Gérer les adresses dans CiviParoisse
 
 Cette page explique comment utiliser les fonctionnalités de normalisation des adresses.  
