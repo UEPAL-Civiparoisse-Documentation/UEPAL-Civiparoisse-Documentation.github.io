@@ -6,7 +6,7 @@
 2. Commencez la création d’une fiche sur la page qui s’ouvre.
 3. Cliquez sur la fenêtre intitulée « Choisir le Foyer ou l'Organisation d'appartenance ».
 4. Faites le choix dans la liste déroulante.
-5. A la ligne Statut Individu, faites le choix (Adulte ou enfant) en cliquant dans la pastille correspondant à votre choix.
+5. A la ligne Statut de l'Individu, faites le choix (Chef de famille ou Membre du foyer) en cliquant dans la pastille correspondant à votre choix.
 6. Dans le bloc d’information « Civilité », cochez la pastille correspondant à la Civilité et au Genre.
 7. Renseignez le lien avec la paroisse, en cochant le bouton correspond.
 8. Remplissez les autres champs et listes déroulantes.
@@ -21,7 +21,7 @@
 4. CONFIRMEZ qu’un message d’erreur s’affiche.
 5. Cliquez sur l’icône « Nouvel individu / Particulier » sur la page d’accueil.
 6. Allez jusqu’à la partie intitulée : Statut Individu.
-7. Faites le choix (Adulte ou enfant) en cliquant dans la pastille correspondant à votre choix.
+7. Faites le choix (Chef de famille ou Membre du foyer) en cliquant dans la pastille correspondant à votre choix.
 8. Cliquez sur la fenêtre grise « Enregistrer ».
 9. CONFIRMEZ qu’un message d’erreur s’affiche.
 10. Cliquez sur l’icône « Nouvel individu / Particulier » sur la page d’accueil.
@@ -41,7 +41,7 @@
 2. Commencez la création d’une fiche sur la page qui s’ouvre.
 3. Cliquez sur la fenêtre intitulée Choisir le Foyer ou l'Organisation d'appartenance.
 4. Faites le choix dans la liste déroulante.
-5. Statut Individu : Faites le choix (Adulte ou enfant) en cliquant dans la pastille correspondant à votre choix.
+5. Statut Individu : Faites le choix (Chef de famille ou Membre du foyer) en cliquant dans la pastille correspondant à votre choix.
 6. Renseignez les deux fenêtres Nom des parents, Nom des frères et sœurs avec les listes déroulantes.
 7. Dans le bloc d’information « Civilité », cochez les pastilles correspondantes à la Civilité et au Genre.
 8. Par la suite renseignez les fenêtres suivantes : Nom de famille et Nom de naissance.
@@ -117,7 +117,7 @@
 ## 007 - Règle de validation Lien enfants - parents
 
 1. Créez un nouvel Individu avec le formulaire de création disponible sur la page d'accueil.
-2. Indiquez que l’Individu est un Enfant, et pas un Adulte, dans le champ Statut Individu. Mais ne renseignez pas le nom des parents.
+2. Indiquez que l’Individu est un Membre du Foyer (donc un enfant, et pas un Chef de famille), dans le champ Statut Individu. Mais ne renseignez pas le nom des parents.
 3. Validez la saisie.
 4. CONFIRMEZ qu'un message d'erreur s'affiche demandant à corriger la saisie.
 5. Corrigez la saisie en remplissant le nom des parents.

@@ -41,7 +41,8 @@ Ceci va vous permettre de tisser assez finement les liens entre les uns et les a
 
 !!! warning "Attention"
     Il est important que chaque Individu soit en relation avec au moins un Foyer ou une Organisation.  
-    Au sein d'un Foyer, **chaque Individu** (parent comme enfant) est à enregistrer comme *membre du Foyer* ; et **les parents sont également à enregistrer** comme *chef de famille de*.
+    Au sein d'un Foyer, **chaque Individu** (parent comme enfant) est à enregistrer comme *membre du Foyer* ; et **les parents sont également à enregistrer** comme *chef de famille de*.  
+    NB : En utilisant le formulaire de création d'un nouvel Individu, lorsque vous choisissez *Chef de famille*, la création de la relation *Membre du foyer* se fait automatiquement.
 
 !!! note "Conseil"
     Vous pouvez ainsi enregistrer la relation entre les membres du Conseil presbytéral et la paroisse.

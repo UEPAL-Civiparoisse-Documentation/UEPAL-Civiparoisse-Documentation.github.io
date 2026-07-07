@@ -44,7 +44,9 @@ Sur la page Listes, plusieurs possibilités vous sont proposées :
 |  |  | Trombinoscope d'un Groupe | Affiche les photos des Participants à un Groupe |
 |  |  | Dates d'anniversaires | Affiche les dates d'anniversaires |
 |  | Parents |  | *(sera disponible ultérieurement)* |
-|  | Compétences | Trombinoscope : Voix | Affiche les photos des personnes ayant une compétence Chant |
+|  | Compétences | Pupitre | Affiche la liste des personnes ayant une compétence Chant |
+|  |  | Trombinoscope : Voix | Affiche les photos des personnes ayant une compétence Chant |
+|  |  | Instruments | Affiche la liste des personnes ayant une compétence Instrument de musique |
 |  |  | Trombinoscope : Instruments | Affiche les photos des personnes ayant une compétence Instrument de musique |
 | Evénements | Participants | Participants à un Evénement | Liste des participants à l'événement choisi <br> *Il faut choisir l'Evénement dans la liste déroulante, et cliquer sur "Rechercher" pour afficher le résultat* |
 | Gestion | Dons |  | *(sera disponible ultérieurement)* |

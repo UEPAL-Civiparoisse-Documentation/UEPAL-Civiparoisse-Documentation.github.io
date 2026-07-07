@@ -1,13 +1,38 @@
 # Nouveautés dans CiviParoisse
 
 Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil du temps, en vous décrivant les nouveautés.
+<!-->
+- Modification de paramètres dans les rôles des utilisateurs (rajout de l'édition de reçus fiscaux)
+-->
 
-<!--
-- Possibilité de gérer des modèles de messages personnalisés
-- Fiche Individu
+## Version 1.56 - Juin 2026
+
+**Nouvelles fonctions**
+
+- Affichage en page d'accueil des dernières informations sur CiviParoisse, ainsi que de trucs et astuces pour mieux utiliser l'outil
+    - Retrouvez également l'ensemble des informations publiées [en cliquant ici](https://uepal-civiparoisse-documentation.github.io/NewsDashlet/)
+- Evolutions de la Fiche Individu
     - Possibilité d'enregistrer une date et un lieu de bénédiction de fin de catéchisme
     - Champ Religion : rajout des choix "Autres religions" et "Sans religion"
--->
+    - Liste des instruments (dans les compétences) : rajout des choix "Trombone" et "Autres"
+    - Clarification des consignes pour la saisie du statut de l'Individu
+- Nouvelles listes
+    - Individus ayant des compétences musicales (chant et instruments)
+- Possibilité de gérer des modèles de messages personnalisés : permet de personnaliser le contenu des mails individuels
+- Suivi d'Activités : possibilité d'enregistrer une visite (visite pastorale, visite du Groupe des Visiteurs, ...)
+- Evénements : rajout de nouveaux rôles pour les Participants à un Evénement (Animateur·rice, Directeur·rice)
+- Aide en ligne > Personnes à contacter : ajout des nouvelles paroisses utilisatrices de CiviParoisse
+- Modification de paramètres dans les rôles des utilisateurs (suppression de la fonction Import de fichiers, suppression du menu Rapports)
+- Corrections de bugs mineurs et évolution de certains affichages
+
+**Evolutions techniques**
+
+- Mise à jour de Drupal vers la version 10.6.11 (correctif de sécurité)
+- Mise à jour de CiviCRM vers la version 6.15.5 (correctif de sécurité)
+- Amélioration de la vitesse d'affichage de certaines pages
+
+*La version 1.55 était uniquement une version technique, sans modifications pour les utilisateurs*
+
 
 ## Version 1.54 - Avril 2026
 
@@ -18,7 +43,7 @@ Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil d
     - Entreprises ou organisations présentes dans la base de données. [En savoir plus](mode_emploi/listes.html#quelles-listes-sont-disponibles)
     - Trombinoscopes pour les Groupes, les compétences Chants et les compétences Instruments. [Lien vers l'exercice de formation "Rajouter une photo"](../../FORMATION/EXERCICES/03_CreationIndividu.html?h=photo#010-rajouter-une-photo-a-un-individu)
 - Possibilité de "fermer" des fiches Foyers ou Organisations sans les supprimer, et d'indiquer la date de fermeture
-- Mode d'emploi : ajout des nouvelles paroisses utilisatrices de CiviParoisse
+- Aide en ligne > Personnes à contacter : ajout des nouvelles paroisses utilisatrices de CiviParoisse
 - Corrections de bugs mineurs
 
 **Evolutions techniques**

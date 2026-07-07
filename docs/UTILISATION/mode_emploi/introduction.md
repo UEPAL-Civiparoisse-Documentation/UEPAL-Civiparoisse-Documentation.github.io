@@ -73,15 +73,16 @@ Plusieurs éléments sont à identifier :
 
 * En 1, nous avons la loupe :fontawesome-solid-magnifying-glass: qui nous servira à effectuer des recherches ponctuelles (fiche d'une personne donnée, fiches de toutes une famille, etc...)
 * En 2, le lien `Accueil` qui nous permettra toujours de revenir à cette page en cliquant dessus.
-* L’icône 3 nous permet d’enregistrer un **nouveau foyer** en suivant le cadre spécifique à CiviParoisse. Il est indispensable de passer par ce cadre.
-* L’icône 4 permet d’enregistrer un **nouvel individu** en suivant le cadre spécifique à CiviParoisse, si la fiche « Foyer » dont il fait partie existe déjà. Sinon passer d’abord par le point 3.
-* L’icône 5 nous permet d’enregistrer une **nouvelle entreprise ou association** en suivant le cadre spécifique à CiviParoisse. Il est indispensable de passer par ce cadre.
-* Le point 6 vous permet d’avoir une **liste des anniversaires à venir**, pour par exemple envoyer un petit mot et ainsi garder le lien avec les paroissiens.
-* Le point 7 vous permet d’établir facilement **différentes listes**. [(En savoir plus)](listes.md)
-* Le point 8 donne accès à plusieurs outils permettant de vérifier que le fichier paroissial est complet et si non, d’y remédier. Il est conseillé de passer par ce point plusieurs fois dans l’année. [(En savoir plus)](operations_a_mener_regulierement.md)
-* Le point 9 donne accès au **mode d’emploi** de CiviParoisse.
-* Le point 10 indique les **anniversaires des sept prochains jours**, pour vous faciliter le lien avec vos paroissiens
-* Enfin, le point 11 vous donne accès au menu principal de CiviParoisse.
+* En 3, vous retrouverez les dernières **informations sur CiviParoisse** (nouveautés, ...) et des **astuces pour vous aider** à mieux utiliser cet outil.
+* L’icône 4 nous permet d’enregistrer un **nouveau foyer** en suivant le cadre spécifique à CiviParoisse. Il est indispensable de passer par ce cadre.
+* L’icône 5 permet d’enregistrer un **nouvel individu** en suivant le cadre spécifique à CiviParoisse, si la fiche « Foyer » dont il fait partie existe déjà. Sinon passer d’abord par le point 3.
+* L’icône 6 nous permet d’enregistrer une **nouvelle entreprise ou association** en suivant le cadre spécifique à CiviParoisse. Il est indispensable de passer par ce cadre.
+* Le point 7 vous permet d’avoir une **liste des anniversaires à venir**, pour par exemple envoyer un petit mot et ainsi garder le lien avec les paroissiens.
+* Le point 8 vous permet d’établir facilement **différentes listes**. [(En savoir plus)](listes.md)
+* Le point 9 donne accès à plusieurs outils permettant de vérifier que le fichier paroissial est complet et si non, d’y remédier. Il est conseillé de passer par ce point plusieurs fois dans l’année. [(En savoir plus)](operations_a_mener_regulierement.md)
+* Le point 10 donne accès au **mode d’emploi** de CiviParoisse.
+* Le point 11 indique les **anniversaires des sept prochains jours**, pour vous faciliter le lien avec vos paroissiens
+* Enfin, le point 12 vous donne accès au menu principal de CiviParoisse.
 
 ### Le menu principal de CiviParoisse
 
