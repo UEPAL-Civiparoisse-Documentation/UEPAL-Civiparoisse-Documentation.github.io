@@ -57,6 +57,9 @@ nav:
                 - '15 - Envoyer des courriels' : 'FORMATION/EXERCICES/15_Mailings.md'
                 - '16 - Gérer les adhésions' : 'FORMATION/EXERCICES/16_Adhesions.md'
                 - '17 - Gérer les contributions' : 'FORMATION/EXERCICES/17_Contributions.md'
+                - '18 - Gérer les rôles et profils' : 'FORMATION/EXERCICES/18_RolesEtProfils.md'
+                - '19 - Utiliser l''aide en ligne' : 'FORMATION/EXERCICES/19_AideEnLigne.md'
+                - '20 - Gérer les adresses' : 'FORMATION/EXERCICES/20_GestionAdresses.md'
         - 'Diaporamas': 
             - 'Liste des diaporamas':
                 - 'FORMATION/DIAPORAMAS/index.md'

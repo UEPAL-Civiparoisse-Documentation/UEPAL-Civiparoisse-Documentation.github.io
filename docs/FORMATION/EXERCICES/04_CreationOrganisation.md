@@ -1,25 +1,26 @@
+<!-- D11 C6.15 OK, Peter le 10.07.2026 -->
+
 # 04 - Création d'une organisation
 
 ## 001 - Remplir tous les champs et vérifier la bonne prise en compte
 
 1. Cliquez sur l’icône « Nouvel Entreprise ou Organisation » sur la page d’accueil.
 2. Saisissez en MAJUSCULES l'ensemble du nom de l'entreprise ou organisation.
-3. Saisissez les renseignements suivants :
-    1. Adresse ligne 1
-    2. Adresse ligne 2
-    3. Adresse ligne 3
-    4. Code Postal
-    5. Ville
-4. Saisissez en respectant le format international (exemple : +33 3 88 89 90 91). 
+1. Utilisez l'Assistant de saisie de l'adresse pour saisir les renseignements suivants :
+    1. Département
+    1. Ville
+    1. Rue
+    1. Numéro de rue
+    1. Code Postal
+    1. Cliquez sur *Valider*.
+1. CONFIRMEZ que l'adresse est reprise dans le formulaire.
+4. Saisissez en respectant le format international (exemple : +33 3 88 89 90 91).
     1. Téléphone Fixe Professionnel
     2. Fax Professionnel
-5. Saisissez le mail générique de l'Entreprise / l'Organisation (ex. contact@entreprise.com). 
+5. Saisissez le mail générique de l'Entreprise / l'Organisation (ex. contact@entreprise.com).
     1. Courriel Professionnel
     2. Site Internet
-6. Faites un choix dans les listes déroulants pour : 
-    1. Département
-    2. Pays
-    3. Etiquette(s)
+6. Faites un choix dans les listes déroulants pour choisir une (des) éventuelle(s) étiquette(s) :
 7. Cliquez sur la fenêtre grise « Enregistrer ».
 8. Recherchez la fiche nouvellement créée 
 9. CONFIRMEZ que les données saisies y figurent correctement.
@@ -55,3 +56,7 @@
 5. Corrigez la saisie en remplissant le nom de la ville, sans mettre de caractères spéciaux.
 6. Validez la saisie.
 7. CONFIRMEZ que le message d’erreur ne s’affiche plus.
+
+## 005 - Clôturer une fiche Organisation
+
+> 🚧 Test en cours d'écriture

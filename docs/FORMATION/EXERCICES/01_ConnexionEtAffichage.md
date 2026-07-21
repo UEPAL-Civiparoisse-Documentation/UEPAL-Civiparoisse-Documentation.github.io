@@ -1,3 +1,5 @@
+<!-- D11 C6.15 OK, Peter le 10.07.2026 -->
+
 # 01 - Connexion et affichage
 
 ## 001 - Connexion à la base de données
@@ -12,11 +14,12 @@
 3. Ouvrez une nouvelle fenêtre du navigateur et saisissez à nouveau l’URL de test de CiviParoisse.
 4. CONFIRMEZ que vous avez bien accès à la base de données sans avoir à vous connecter avec Nom d’Utilisateur et Mot de Passe.
 
-*Pour information : Civi Paroisse ne prévoit une déconnexion automatique qu’après plusieurs jours.*
+*Pour information : Civi Paroisse prévoit une déconnexion automatique seulement après plusieurs jours.*
 
 ## 003 - Déconnexion par la barre Menu CiviParoisse
 
 1. Déconnectez-vous de CiviParoisse via le menu, dans le bandeau noir en haut de l’écran, en cliquant sur le « triangle vert » sur la gauche du menu.
+1. Puis cliquez sur le lien *Déconnexion*.
 2. Retournez à la page d’accueil.
 3. CONFIRMEZ que vous devez à nouveau saisir le nom d’utilisateur et le mot de passe.
 
@@ -24,15 +27,16 @@
 
 *Ce test est à réaliser sur plusieurs jours, et nécessite de ne pas utiliser CiviParoisse durant plus d’une semaine. Nous vous conseillons de le réaliser à la fin de votre série de tests.*
 
-1. Se connectez à CiviParoisse selon la procédure habituelle.
+1. Connectez-vous à CiviParoisse selon la procédure habituelle.
 2. Fermez l’onglet CiviParoisse dans votre navigateur.
-3. Ne pas utiliser CiviParoisse pendant plus d’une semaine.
+3. N'utilisez pas CiviParoisse pendant plus d’une semaine.
 4. Après ce délai, saisissez l’URL de test de CiviParoisse dans votre navigateur.
 5. CONFIRMEZ que vous devez saisir votre Nom d’Utilisateur et votre Mot de passe.
 
 ## 005 - Affichage des éléments CiviParoisse sur la page d'accueil
 
 1. CONFIRMEZ que la page d'accueil affiche, entre autres, les éléments suivants :
+    1. Nouvelles de CiviParoisse.
     1. Menu CiviParoisse.
     2. Liste des anniversaires des 7 prochains jours.
 
@@ -46,5 +50,29 @@
 ## 007 - Accès au Mode d'emploi
 
 1. Dans le menu CiviParoisse, cliquez sur le bouton Aide en ligne, et confirmez que la page "Modes d'emploi CiviParoisse" s'affiche.
-2. Sur la page qui s’affiche, dans la partie Mode d’emploi Utilisateurs, cliquez sur le lien "Lien vers la documentation".
+2. Sur la page qui s’affiche, dans la partie *Mode d’emploi Utilisateurs*, cliquez sur le lien "Lien vers la documentation".
 3. CONFIRMEZ que le mode d'emploi s'ouvre dans un nouvel onglet.
+
+## 008 - Nouvelles de CiviParoisse - partie Informations
+
+1. Sur la page d'accueil, cliquez sur le bouton *Informations* sous la partie "Nouvelles de CiviParoisse".
+1. Cliquez sur une des nouvelles qui s'affichent.
+1. CONFIRMEZ que du texte complémentaire apparait dessus, avec un lien "Lire plus".
+1. Cliquez sur le lien "Lire plus".
+1. CONFIRMEZ qu'une nouvelle fenêtre s'ouvre et qu'une information détaillée s'y affiche.
+1. Cliquez à nouveau sur le titre (en fond noir).
+1. CONFIRMEZ que le texte complémentaire ne s'affiche plus.
+
+## 009 - Nouvelles de CiviParoisse - partie Astuces
+
+1. Sur la page d'accueil, cliquez sur le bouton *Astuces* sous la partie "Nouvelles de CiviParoisse".
+1. Cliquez sur une des astuces qui s'affichent.
+1. CONFIRMEZ que du texte complémentaire apparait dessus, avec un lien "Lire plus".
+1. Cliquez sur le lien "Lire plus".
+1. CONFIRMEZ qu'une nouvelle fenêtre s'ouvre et qu'une astuce détaillée s'y affiche. Profitez-en pour lire l'astuce 😉
+1. Cliquez à nouveau sur le titre (en fond noir).
+1. CONFIRMEZ que le texte complémentaire ne s'affiche plus.
+
+## 010 - Affichage des contacts récemment consultés
+
+> 🚧 Test en cours d'écriture

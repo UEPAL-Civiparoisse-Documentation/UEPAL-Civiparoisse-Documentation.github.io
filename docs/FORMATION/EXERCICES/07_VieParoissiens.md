@@ -1,40 +1,39 @@
+<!-- D11 C6.15 OK, Peter le 10.07.2026 -->
+
 # 07 - Suivi de la vie des paroissiens
 
 ## 001 - Enregistrer une naissance
 
 1. Créez un nouvel Individu avec le formulaire de création disponible sur la page d'accueil.
 2. Renseignez le nom des parents lors de la création.
+1. Renseignez la date de naissance avec une date de l'année en cours.
 3. Enregistrez la fiche.
 4. Consultez la fiche d’un des parents via les outils de recherche.
-5. CONFIRMEZ que la relation « Parent de » est présente, avec le nom du nouvel enfant.
+5. CONFIRMEZ que la relation `Parent de` est présente, avec le nom du nouvel enfant.
 6. Consultez la fiche du Foyer.
-7. CONFIRMEZ que la relation « est membre du foyer » est présente, avec le nom du nouvel enfant.
+7. CONFIRMEZ que la relation `est membre du foyer` est présente, avec le nom du nouvel enfant.
+1. sur la page d'accueil, allez dans le menu `Listes`, et choisissez la liste *Naissances* (dans la partie Paroisse / Registre).
+1. CONFIRMEZ que l'individu est bien présent dans la liste, avec la bonne date de naissance et le nom des parents.
 
 ## 002 - Enregistrer un baptême
 
 1. Choisissez une Fiche Individu d’un enfant.
-2. Saisissez une date de baptême.
+2. Saisissez une date de baptême (avec une date de l'année en cours).
 3. Saisissez un verset de baptême.
 4. Enregistrez.
 5. Quittez la fiche.
 6. Revenez sur la fiche.
 7. CONFIRMEZ que la date et le verset sont bien affichés.
+1. sur la page d'accueil, allez dans le menu `Listes`, et choisissez la liste *Baptêmes* (dans la partie Paroisse / Registre).
+1. CONFIRMEZ que l'individu est bien présent dans la liste, avec la bonne date de baptême et le bon verset.
 
 ## 003 - Enregistrer un mariage
 
 1. Choisissez deux fiches Individus de personnes qui ne sont pas mariées (si besoin créer la/les fiche(s) manquante(s)).
-2. Ouvrez les fiches Foyers des deux foyers.
-3. Renommez chaque Foyer d'un même nom provisoire (par exemple Foyer marié)
-4. Allez dans le menu « Rechercher » / « Rechercher des contacts »
-5. Saisissez le nom provisoire du Foyer, et cliquez sur « Rechercher »
-6. Dans la fenêtre de résultat, sélectionnez les deux foyers puis cliquez sur « Actions » et choisissez « Fusionner les doublons ». Eventuellement après avoir « Permuter les contacts original et doublon », pour que le foyer de Monsieur soit à droite.
-7. Sélectionnez les données à conserver du Foyer en doublon.
-8. Changez le nom du Foyer pour y inscrire le (les) noms(s) de famille et les deux prénoms.
-9. Vérifiez ensuite que les Relations se sont mises correctement, c'est-à-dire que les deux membres du foyer sont bien "Chef de famille de" mais aussi que la relation "Conjoint de" est présente sur les deux fiches Individu.
-10. Vérifiez aussi, si besoin, que les enfants sont bien rattachés au nouveau foyer.
-11. Eventuellement, modifiez le nom de famille de Madame.
-12. Consulter la fiche du « nouveau » foyer.
-13. CONFIRMEZ que le Foyer est bien en relation avec les deux Individus mariés.
+1. Suivez les étapes décrites dans le lien suivant : [https://uepal-civiparoisse-documentation.github.io/UTILISATION/mode_emploi/que_faire_quand.html#un-couple-se-marie](https://uepal-civiparoisse-documentation.github.io/UTILISATION/mode_emploi/que_faire_quand.html#un-couple-se-marie).
+1. CONFIRMEZ que les opérations se sont déroulées comme indiquées.
+1. Consulter la fiche du « nouveau » foyer.
+1. CONFIRMEZ que le Foyer est bien en relation avec les deux Individus mariés.
 
 ## 004 - Enregistrer un divorce
 
@@ -55,12 +54,14 @@
 ## 006 - Enregistrer une confirmation
 
 1. Choisissez une Fiche Individu d’un enfant.
-2. Saisissez une date de confirmation.
+2. Saisissez une date de confirmation (avec une date de l'année en cours).
 3. Saisissez un verset de confirmation.
 4. Enregistrez.
 5. Quittez la fiche.
 6. Revenez sur la fiche.
 7. CONFIRMEZ que la date et le verset sont bien affichés.
+1. sur la page d'accueil, allez dans le menu `Listes`, et choisissez la liste *Confirmations* (dans la partie Paroisse / Registre).
+1. CONFIRMEZ que l'individu est bien présent dans la liste, avec la bonne date de confirmation et le bon verset.
 
 ## 007 - Enregistrer un décès
 
@@ -68,43 +69,43 @@
 2. Suivez les instructions indiquées dans le Mode d’Emploi : [https://uepal-civiparoisse-documentation.github.io/UTILISATION/mode_emploi/que_faire_quand.html#une-personne-decede](https://uepal-civiparoisse-documentation.github.io/UTILISATION/mode_emploi/que_faire_quand.html#une-personne-decede)
 3. CONFIRMEZ que les opérations se sont déroulées comme indiquées.
 
-## 008 - Attribuer une fonction à un paroissien
+## 008 - Attribuer une fonction à un membre du conseil presbytéral
 
 1. Ouvrez la fiche d’un paroissien.
 2. Créez une Relation avec la Paroisse de type Membre (élu, de droit, coopté, …), en indiquant une date de début et une date de fin.
-3. Rajoutez le paroissien au groupe ‘Conseil Presbytéral’.
+3. Rajoutez le paroissien au groupe *Conseil Presbytéral*.
 4. Ouvrez la fiche de la Paroisse.
 5. CONFIRMEZ que la Relation est visible, avec le nom du paroissien.
 6. Ouvrez la fiche d’un autre paroissien.
 7. Créez une Relation avec la Paroisse de type Président, Trésorier, Secrétaire, …, en indiquant une date de début et une date de fin.
-8. Rajoutez le paroissien au groupe ‘Conseil Presbytéral’.
+8. Rajoutez le paroissien au groupe *Conseil Presbytéral*.
 9. Ouvrez la fiche de la paroisse.
 10. CONFIRMEZ que la Relation est visible, avec le nom du paroissien.
 
 ## 009 - Vérifier la liste Conseil Presbytéral
 
-Effectuez ce test à la suite du test ci-dessus (« Attribuer une fonction à un paroissien »)
+*Effectuez ce test à la suite du test ci-dessus (« Attribuer une fonction à un paroissien »)*
 
-1. Sur la page d’accueil, cliquez sur les Listes.
-2. Cliquez sur la liste Conseil Presbytéral.
-3. Dans les critères de choix, choisissez le groupe Conseil Presbytéral.
+1. Sur la page d’accueil, cliquez sur les `Listes`.
+2. Cliquez sur la liste `Conseil Presbytéral`.
+3. Dans les critères de choix, choisissez le groupe *Conseil Presbytéral*.
 4. CONFIRMEZ que dans la liste qui s’affiche figurent bien les deux personnes renseignées dans le test ci-dessus.
 
 ## 010 - Ajouter un salarié de la paroisse
 
 1. Ouvrez la fiche d’un Individu.
-2. Créez une Relation avec la Paroisse de type Employé de.
+2. Créez une Relation avec la Paroisse de type `Employé de`.
 3. Ouvrez la fiche de la Paroisse.
 4. CONFIRMEZ que la Relation est visible, avec le nom du paroissien.
 5. Ouvrez la fiche du Paroissien.
 6. CONFIRMEZ que le nom de la paroisse figure dans le champ Employeur.
-7. Ouvrez la fiche d’un autre paroissien
+7. Ouvrez la fiche d’un autre paroissien.
 8. Dans le champ Employeur, choisissez le nom de la paroisse.
 9. Ouvrez la fiche de la paroisse.
-10. CONFIRMEZ que la relation « Employeur de » est présente, avec le nom du paroissien
+10. CONFIRMEZ que la relation `Employeur de` est présente, avec le nom du paroissien
 11. Ouvrez la fiche du paroissien.
 12. Dans le champ Employeur, supprimez le nom de la paroisse.
-13. CONFIRMEZ que la relation « Est employé de » a disparu de la fiche Paroissien.
+13. CONFIRMEZ que la relation `Est employé de` a disparu de la fiche Paroissien.
 
 ## 011 - Enregistrer un départ de la paroisse
 
@@ -129,3 +130,7 @@ Effectuez ce test à la suite du test ci-dessus (« Attribuer une fonction à un
 1. Choisissez une Fiche Individu.
 2. Suivez les instructions indiquées dans le Mode d’Emploi : [https://uepal-civiparoisse-documentation.github.io/UTILISATION/mode_emploi/que_faire_quand.html#une-personne-na-pas-dadresse-mail-ou-ne-veut-pas-la-communiquer](https://uepal-civiparoisse-documentation.github.io/UTILISATION/mode_emploi/que_faire_quand.html#une-personne-na-pas-dadresse-mail-ou-ne-veut-pas-la-communiquer)
 3. CONFIRMEZ que les opérations se sont déroulées comme indiquées.
+
+## 015 - Enregistrer une bénédiction de fin de catéchisme
+
+> 🚧 Test en cours d'écriture

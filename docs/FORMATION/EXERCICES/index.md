@@ -27,4 +27,6 @@ Ces exercices sont à réaliser dans un environnement de test. Pour savoir comme
 * [15 - Envoyer des courriels](15_Mailings.md)
 * [16 - Gérer les adhésions](16_Adhesions.md)
 * [17 - Gérer les contributions](17_Contributions.md)
-
+* [18 - Gérer les rôles et profils](18_RolesEtProfils.md)
+* [19 - Utiliser l'aide en ligne](19_AideEnLigne.md)
+* [20 - Gérer les adresses](20_GestionAdresses.md)

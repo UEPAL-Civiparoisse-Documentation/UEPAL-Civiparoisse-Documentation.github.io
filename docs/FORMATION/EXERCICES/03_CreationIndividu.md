@@ -1,3 +1,5 @@
+<!-- D11 C6.15 OK, Peter le 10.07.2026 -->
+
 # 03 - Création d'un individu
 
 ## 001 - Créer une fiche uniquement avec les champs obligatoires à partir du menu « Accueil »
@@ -13,8 +15,7 @@
 9. Cliquer sur la fenêtre grise « Enregistrer ».
 10. CONFIRMEZ que les informations ont été prises en compte en recherchant la fiche de l’individu.
 
-## 002 - Créer une fiche en omettant 1 champ obligatoire à partir du menu « Accueil »
-
+## 002 - Créer une fiche en omettant 1 champ obligatoire
 1. Cliquez sur l’icône « Nouvel individu / Particulier » sur la page d’accueil.
 2. Cliquez sur la fenêtre intitulée « Choisir le Foyer ou l'Organisation d'appartenance ».
 3. Cliquez sur la fenêtre grise « Enregistrer ».
@@ -35,7 +36,7 @@
 18. Cliquez sur la fenêtre grise « Enregistrer ».
 19. CONFIRMEZ qu’un message d’erreur s’affiche.
 
-## 003 - Valider le formulaire rempli intégralement et vérifier le bon résultat champ par champ à partir du menu « Accueil »
+## 003 - Valider le formulaire rempli intégralement et vérifier le bon résultat champ par champ
 
 1. Cliquez sur l’icône « Nouvel individu / Particulier » sur la page d’accueil.
 2. Commencez la création d’une fiche sur la page qui s’ouvre.
@@ -44,38 +45,40 @@
 5. Statut Individu : Faites le choix (Chef de famille ou Membre du foyer) en cliquant dans la pastille correspondant à votre choix.
 6. Renseignez les deux fenêtres Nom des parents, Nom des frères et sœurs avec les listes déroulantes.
 7. Dans le bloc d’information « Civilité », cochez les pastilles correspondantes à la Civilité et au Genre.
-8. Par la suite renseignez les fenêtres suivantes : Nom de famille et Nom de naissance.
+8. Puis renseignez les fenêtres suivantes : Nom de famille et Nom de naissance.
 9. Faites le choix dans le calendrier pour renseigner la Date de naissance.
 10. Renseignez la fenêtre Lieu de naissance.
 11. Renseignez les fenêtres de bloc Information Contact : Téléphone Portable Personnel, Téléphone Professionnel, Courriel Personnel, Courriel professionnel, Métier.
 12. Renseignez les Liens avec la Paroisse en cochant la pastille correspondante.
 13. Renseignez les listes déroulantes Groupes et Etiquettes.
 14. Informations sur le couple : renseignez les fenêtres proposées, pour les informations suivantes :
-    a. Sélectionner le conjoint ou partenaire
-    b. Type de relation
-    c. Date du mariage
-    d. Date de la bénédiction nuptiale
-    e. Paroisse de mariage
-    f. Verset de mariage
-    g. Divorcé ?
-    h. Date de divorce
-    i. Date de veuvage
+    1. Sélectionner le conjoint ou partenaire
+    1. Type de relation
+    1. Date du mariage
+    1. Date de la bénédiction nuptiale
+    1. Paroisse de mariage
+    1. Verset de mariage
+    1. Divorcé ?
+    1. Date de divorce
+    1. Date de veuvage
 15. Informations sur la religion : renseignez les fenêtres proposées, pour les informations suivantes :
-    a. Religion
-    b. Date de présentation
-    c. Paroisse de présentation
-    d. Date de baptême
-    e. Paroisse de baptême
-    f. Verset de baptême
-    g. Date de confirmation
-    h. Paroisse de confirmation
-    i. Verset de confirmation
+    1. Religion
+    1. Date de présentation
+    1. Paroisse de présentation
+    1. Date de baptême
+    1. Paroisse de baptême
+    1. Verset de baptême
+    1. Date de confirmation
+    1. Paroisse de confirmation
+    1. Verset de confirmation
+    1. Date de bénédiction de fin de catéchisme
+    1. Lieu de bénédiction de fin de catéchisme
 16. Informations sur les musiciens : renseignez les fenêtres proposées, pour les informations suivantes :
-    a. Compétence Musique : instrument
-    b. Compétence Musique : voix
-    c. Numéro de Sécurité Sociale
-    d. Numéro Guso
-    e. Fonctionnaire ?
+    1. Compétence Musique : instrument
+    1. Compétence Musique : voix
+    1. Numéro de Sécurité Sociale
+    1. Numéro Guso
+    1. Fonctionnaire ?
 17. Cliquez sur la fenêtre grise « Enregistrer ».
 18. Recherchez et ouvrez la fiche ainsi crée.
 19. CONFIRMEZ que la fiche contient correctement l’ensemble des renseignements que vous avez saisis ci-dessus.
@@ -146,7 +149,8 @@
 1. Allez dans la fiche individuelle d’un individu.
 2. Cliquez sur Modifier ![Bouton Modifier](img/BoutonModifier.png).
 3. Dans le bloc « Fiche contact », cliquez sur « Parcourir » (Parcourir/télécharger une image).
-4. Enregistrez.
+1. Sélectionnez une photo (ou autre) sur votre disque dur, et validez.
+4. Cliquez sur *Enregistrer*.
 5. CONFIRMEZ que la photo est visible sur la fiche de l’Individu.
 
 ## 011 - Rajouter une Note à un Individu
@@ -188,7 +192,7 @@
 7. CONFIRMEZ que la fiche n’est pas visible.
 8. Allez dans Rechercher / Recherche avancée (bandeau noir en haut de l’écran).
 9. Saisissez le nom de la fiche supprimée dans « Nom complet ou partiel ».
-10. Dans les « Critères de base », cliquez sur Rechercher dans la corbeille (Search Deleted Contacts).
+10. Dans les « Critères de base », cliquez sur *Rechercher dans les contacts supprimés*.
 11. Cliquez sur Rechercher.
 12. CONFIRMEZ que la fiche est visible.
 
@@ -198,7 +202,8 @@
 
 1. Allez dans Rechercher / Recherche avancée.
 2. Saisissez le nom de la fiche concernée dans « Nom complet ou partiel ».
-3. Dans les « Critères de base », cliquer sur Rechercher dans la corbeille (Search Deleted Contacts).
+3. Dans les « Critères de base », cliquer sur *Rechercher dans les contacts supprimés*.
+1. Cliquez sur *Recherche*.
 4. CONFIRMEZ que la fiche est visible.
 5. Cliquez sur la fiche.
 6. Cliquez sur le bouton Restaurer de la Corbeille.
@@ -211,16 +216,18 @@
 1. Reproduisez les étapes du test 015 « Supprimer un Individu de la base ».
 2. Allez dans Rechercher / Recherche avancée.
 3. Saisissez le nom de la fiche concernée dans « Nom complet ou partiel ».
-4. Dans les « Critères de base », cliquez sur Rechercher dans la corbeille (Search Deleted Contacts).
+4. Dans les « Critères de base », cliquez sur *Rechercher dans les contacts supprimés*.
+1. Cliquez sur *Recherchez*.
 5. CONFIRMEZ que la fiche est visible.
 6. Cliquez sur la fiche.
 7. Cliquez sur le bouton « Supprimer définitivement ».
 8. Effectuez une recherche de la fiche.
 9. CONFIRMEZ que la fiche n’est pas visible.
 10. Allez dans Rechercher / Recherche avancée.
-11. Dans les « Critères de base », cliquez sur Rechercher dans la corbeille (Search Deleted Contacts).
+11. Dans les « Critères de base », cliquez sur *Rechercher dans les contacts supprimés*.
+1. Cliquez sur *Recherchez*.
 12. CONFIRMEZ que la fiche est n’est plus visible.
 
 ## 017 - Fusionner deux fiches du même individu
 
-*Ce test sera documenté prochainement, merci d’y revenir ultérieurement.*
+> 🚧 Ce test sera documenté prochainement, merci d’y revenir ultérieurement.

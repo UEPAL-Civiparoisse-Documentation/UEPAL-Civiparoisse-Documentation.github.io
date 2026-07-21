@@ -1,7 +1,7 @@
 # Nouveautés dans CiviParoisse
 
 Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil du temps, en vous décrivant les nouveautés.
-<!-->
+<!--
 - Modification de paramètres dans les rôles des utilisateurs (rajout de l'édition de reçus fiscaux)
 -->
 

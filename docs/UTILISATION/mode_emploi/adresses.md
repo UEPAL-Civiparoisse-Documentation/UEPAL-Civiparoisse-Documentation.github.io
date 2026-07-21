@@ -81,10 +81,9 @@ Pour rajouter des critères de tri supplémentaires, appuyez sur la touche `Maj`
 
 ### :material-map-search: Une adresse correcte n'est pas reconnue
  
-Si vous constatez une anomalie dans la mise en correspondance entre , il y a lieu de vérifier la cohérence et l'orthographe des données (d'abord département et code postal, puis ville, puis rue, puis numéro de rue et suffixe), éventuellement en faisant des tests à l'aide de l'Assistant de Saisie, et en corrigeant la saisie si nécessaire. 
+Si vous constatez une anomalie dans la mise en correspondance entre les adresses, il y a lieu de vérifier la cohérence et l'orthographe des données (d'abord département et code postal, puis ville, puis rue, puis numéro de rue et suffixe), éventuellement en faisant des tests à l'aide de l'Assistant de Saisie, et en corrigeant la saisie si nécessaire. 
 
 Il peut arriver que les données disponibles ne soient pas complètes. Dans ce cas nous vous conseillons de chercher à vérifier les données depuis le site <https://adresse.data.gouv.fr/>{:target="_blank"}.
 
-* Si le site adresse.data restitue correctement l'adresse, mais que cette adresse n'est pas disponible dans CiviParoisse, vous pouvez déclarer l'adresse comme étant **invalide**. Cela permettra, dès qu'il y aura eu une mise à jour des données du moteur, de réussir à obtenir une mise en correspondance. Si ce n'est pas le cas après plusieurs tentatives, il sera bon de contacter l'UEPAL.
+* Si le site internet restitue correctement l'adresse, mais que cette adresse n'est pas disponible dans CiviParoisse, vous pouvez déclarer l'adresse comme étant **invalide**. Cela permettra, dès qu'il y aura eu une mise à jour des données du moteur, de réussir à obtenir une mise en correspondance. Si ce n'est pas le cas après plusieurs tentatives, nous vous invitons à contacter l'UEPAL.
 * En revanche, si les données ne sont pas sur <https://adresse.data.gouv.fr/>{:target="_blank"}, il peut alors être judicieux de se rapprocher des services administratifs locaux compétents pour leur demander l'ajout de cette adresse dans la Base Nationale des Adresses.
-
