@@ -2,20 +2,20 @@
 
 Civiparoisse a besoin de données pour pouvoir rendre service aux paroisses. Les données initiales ont été collectées et stockées dans un fichier excel ad-hoc, dont le format est décrit dans un document tiers. Deux étapes sont nécessaires pour importer les données : parser le fichier excel, puis exploiter les données.
 
-## Parsage des données
+## Analyse des données
 
-Le parsage du fichier excel peut être effectué grâce à la librairie phpoffice/phpspreadsheet, qui est une dépendance (récente) de CiviCRM. Les données parsées correspondent à une partie d'une pseudo-table globale de connaissances sur les paroissiens.
+L'analyse du fichier excel peut être effectué grâce à la librairie phpoffice/phpspreadsheet, qui est une dépendance (récente) de CiviCRM. Les données analysées correspondent à une partie d'une pseudo-table globale de connaissances sur les paroissiens.
 
-Il a semblé judicieux de mettre le code relatif au parsage des données dans une bibliothèque séparée, afin de pouvoir éventuellement réutiliser le code de parsage pour une validation du fichier Excel hors CiviCRM.
+Il a semblé judicieux de mettre le code relatif à l'analyse des données dans une bibliothèque séparée, afin de pouvoir éventuellement réutiliser le code de cette analyse pour une validation du fichier Excel hors CiviCRM.
 
-Le parsage est conceptuellement simple : on crée des parseurs de colonnes issus d'une même classe abstraite pour analyser les différents cellules d'une ligne de données, et on met les résultats du parsage dans une structure de données.
+L'analyse est conceptuellement simple : on crée des noms de règles d'analyses sous forme de colonnes issus d'une même classe abstraite pour analyser les différents cellules d'une ligne de données, et on met les résultats de l'analyse dans une structure de données.
 
-Parser une ligne consiste donc à exécuter l'ensemble des parseurs disponibles.
+Analyser une ligne consiste donc à exécuter l'ensemble des règles d'analyses disponibles.
 
-Le code prévoit des contrôles sur les données ; une donnée jugée invalide est ignorée. Les contrôles similaires (par exemple sur la casse, ou sur des expressions rationnelles) sont implémentées dans des classes abstraites qui découlent du parseur principal afin de factoriser le code.
+Le code prévoit des contrôles sur les données ; une donnée jugée invalide est ignorée. Les contrôles similaires (par exemple sur la casse, ou sur des expressions rationnelles) sont implémentées dans des classes abstraites qui découlent des règles d'analyses principales afin de factoriser le code.
 
 
-On liste en-dessous les parseurs, et les contrôles effectués. On arrive à déduire du nom du parseur le champ concerné du fichier Excel. En plus des champs proprement dit, on récupère égalemement le numéro de ligne. Celui-ci pourra éventuellement être utile pour les logs de message d'erreur.
+On liste en-dessous les règles d'analyses, et les contrôles effectués. On arrive à déduire du nom de la règle d'analyse le champ concerné du fichier Excel. En plus des champs proprement dit, on récupère égalemement le numéro de ligne. Celui-ci pourra éventuellement être utile pour les fichiers de trace des messages d'erreurs.
 
 !!! bug
     Remarque globale pour tous les parsers "Oui/Non" : vérifier que Excel renvoie bien Oui/Non, et pas Vrai/Faux
@@ -26,33 +26,33 @@ On liste en-dessous les parseurs, et les contrôles effectués. On arrive à dé
 !!! bug
     Téléphones : on peut avoir des numéros à l'étranger (Allemagne, Suisse, ...)    
 
-|Parseur|Contrôle|
+|Nom de la règle|Contrôle|
 |-----|-----|
-|AdresseLigne1Parser|Ne pas matcher la chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
-|AdresseLigne2Parser|Ne pas matcher la chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
-|AdresseLigne3Parser|Ne pas matcher la chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
+|AdresseLigne1Parser|Ne pas analyser une chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
+|AdresseLigne2Parser|Ne pas analyser une chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
+|AdresseLigne3Parser|Ne pas analyser une chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
 |AdulteParser|Doit correspondre soit à la chaîne `'Oui'` soit à la chaîne `'Non'`|
 |CiviliteParser|Doit correspondre soit à la chaîne `'M.'` soit à la chaîne `'Mme'`|
-|CodePostalParser|Doit matcher `'/^([[:upper:]]+-)?[0-9]{5}$/'`| 
-|DateNaissanceParser|Doit être parsable avec le format DateTime `'d/m/Y|'`|
-|DiversParser|Ne pas matcher la chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
+|CodePostalParser|Doit correspondre à 5 chiffres `'/^([[:upper:]]+-)?[0-9]{5}$/'`| 
+|DateNaissanceParser|Doit correspondre au format DateTime `'d/m/Y|'`|
+|DiversParser|Ne pas analyser une chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
 |ElecteurParser|Doit correspondre soit à la chaîne `'Oui'` soit à la chaîne `'Non'`|
 |EmailAutreParser|Doit passer avec `filter_var` avec `FILTER_VALIDATE_EMAIL` |
 |EmailPriveParser|Doit passer avec `filter_var` avec `FILTER_VALIDATE_EMAIL`|
 |EnfantParser|Doit correspondre soit à la chaîne `'Oui'` soit à la chaîne `'Non'`|
-|FoyerAppartenanceParser|Ne pas matcher la chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
-|LieuNaissanceParser|Ne pas matcher la chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
-|NomConjointParser|Ne pas matcher la chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
-|NomNaissanceParser|Doit matcher la Regex `'#^[[:upper:]]+([ \-\'/][[:upper:]]+)*$#'`|
-|NomParentsParser|Ne pas matcher la chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
-|NomParser|Doit matcher la Regex `'#^[[:upper:]]+([ \-\'/][[:upper:]]+)*$#'`|
-|PaysParser|Ne pas matcher la chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
-|PrenomParser|Doit matcher la regex `'/^[[:upper:]][[:lower:]éèêëüôïàù]+(-[[:upper:]][[:lower:]éèêëüôïàù]+)*$/'`|
+|FoyerAppartenanceParser|Ne pas analyser une chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
+|LieuNaissanceParser|Ne pas analyser une chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
+|NomConjointParser|Ne pas analyser une chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
+|NomNaissanceParser|Doit correspondre à la règle Regex `'#^[[:upper:]]+([ \-\'/][[:upper:]]+)*$#'`|
+|NomParentsParser|Ne pas analyser une chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
+|NomParser|Doit correspondre à la règle Regex `'#^[[:upper:]]+([ \-\'/][[:upper:]]+)*$#'`|
+|PaysParser|Ne pas analyser une chaîne vide (Regex : `'/^[[:space:]]*$/'`)|
+|PrenomParser|Doit correspondre à la règle Regex `'/^[[:upper:]][[:lower:]éèêëüôïàù]+(-[[:upper:]][[:lower:]éèêëüôïàù]+)*$/'`|
 |RowIndexParser|La valeur doit être non vide et numérique (`is_numeric`)|
-|TelephoneAutreParser|Doit matcher la Regex `'#^00 33 [12345679] [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}$#'`|
-|TelephoneFixeParser|Doit matcher la Regex `'#^00 33 [123459] [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}$#'`|
-|TelephonePortableParser|Doit matcher la Regex `'#^00 33 [67] [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}$#'`|
-|VilleParser|Doit matcher la Regex `'#^[[:upper:]]+([ \-\'/][[:upper:]]+)*$#'`|
+|TelephoneAutreParser|Doit correspondre à la règle Regex `'#^00 33 [12345679] [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}$#'`|
+|TelephoneFixeParser|Doit correspondre à la règle Regex `'#^00 33 [123459] [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}$#'`|
+|TelephonePortableParser|Doit correspondre à la règle Regex `'#^00 33 [67] [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}$#'`|
+|VilleParser|Doit correspondre à la règle Regex `'#^[[:upper:]]+([ \-\'/][[:upper:]]+)*$#'`|
 
 
 
@@ -68,7 +68,7 @@ Plusieurs approches semblent convenir pour exploiter cette pseudo-table :
 ### Import des éléments liés au Contact
 
 
-Le parsage crée des objets de type Uepal\CiviImport\ParsedContact. Pour importer les éléments, il faut d'abord commencer par identifier les entités cibles de CiviCRM :
+L'analyse crée des objets de type Uepal\CiviImport\ParsedContact. Pour importer les éléments, il faut d'abord commencer par identifier les entités cibles de CiviCRM :
 
 * le contact : on aura un contact par ligne. Les attributs qui seront stockés sont les suivants :
 * 
@@ -346,11 +346,11 @@ Le but est ici uniquement de gérer un import initial. Toutefois, si les donnée
 
 ### Outillage : l'image tools
 
-La procédure d'import est prévue pour être lancée depuis la ligne de commande (outil cv). De ce fait, on utilisera l'image des outils pour accéder au nécessaire, en effectuant les montages requis (en particulier montage des fichiers, et montage du point d'accès à la BD). Le fichier lui-même pourra être également monté dans l'image, ou copié dans le container lors de l'exécution (par exemple via `docker cp`).
+La procédure d'import est prévue pour être lancée depuis la ligne de commande (outil cv). De ce fait, on utilisera l'image des outils pour y accéder, en effectuant les montages requis (en particulier montage des fichiers, et montage du point d'accès à la BD). Le fichier lui-même pourra être également monté dans l'image, ou copié dans le container lors de l'exécution (par exemple via `docker cp`).
 
-### Parsage
+### Analyse du fichier d'import
 
-Avant de lancer l'import proprement dit, il faut vérifier si le parsage se fait correctement. Il est en effet arrivé lors des tests qu'un fichier au format xlsx modifié par LibreOffice a posé problème lors du parsage (mauvaise considération de la dernière ligne renseignée). Dans ce genre de cas, on privilégiera des enregistrements dans des formats natifs (ods, xlsx) du moment que les formats sont supportés par phpspreadsheet.
+Avant de lancer l'import proprement dit, il faut vérifier si l'analyse se fait correctement. Il est en effet arrivé lors des tests qu'un fichier au format xlsx modifié par LibreOffice a posé problème lors de l'analyse (mauvaise considération de la dernière ligne renseignée). Dans ce genre de cas, on privilégiera des enregistrements dans des formats natifs (ods, xlsx) du moment que les formats sont supportés par phpspreadsheet.
 
 ```bash
 #!/bin/bash
@@ -360,11 +360,11 @@ export CIVIPAROISSE_IMPORT_SHEETNAME="Feuil1"
 cv ev 'var_dump(CRM_Civiparoisse_Import_Importer::parse(new Uepal\CiviImport\MiniLogger()))'
 ```
 
-Le parseur est prévu pour utiliser un logger spécifié en paramètre. Trois loggers sont notamment à considérer :
+L'outil d'analyse est prévu pour utiliser un fichier de trace (Log) spécifié en paramètre. Trois fichiers de trace sont notamment à considérer :
 
-* le MiniLogger : `new Uepal\CiviImport\MiniLogger())` : ce logger est inclus dans le code du parseur, et il utilise le error_log de PHP pour logguer les messages
+* le fichier de trace MiniLogger : `new Uepal\CiviImport\MiniLogger())` : ce fichier de trace est inclus dans le code de l'analyseur, et il utilise le paramètre error_log de PHP pour tracer les messages
 
-* le Logger de Civicrm (`CRM_Core_Error_Log`) : l'accès à ce Logger suppose la présence de CiviCRM. Un helper a été préparé pour accéder à ce logger : `CRM_Civiparoisse_Utils_Logger::getLogger` :
+* le fichier de trace de Civicrm (`CRM_Core_Error_Log`) : l'accès à ce fichier de trace suppose la présence de CiviCRM. Une aide a été préparé pour accéder à ce fichier de trace : `CRM_Civiparoisse_Utils_Logger::getLogger` :
 
 ```php
  /**
@@ -377,11 +377,11 @@ Le parseur est prévu pour utiliser un logger spécifié en paramètre. Trois lo
   }
 ```
 
-* le Logger présent dans `\Psr\Log\NullLogger` : ce logger fait parti du package Composer psr/log, et fait partie des dépendances requises par le parseur. Son intérêt est qu'il ne fait rien, donc ne va pas effectuer des logs, et permet de garder une sortie écran "propre" pour voir ce qui a été parsé.
+* le ficher de trace présent dans `\Psr\Log\NullLogger` : ce fichier fait parti du package Composer psr/log, et fait partie des dépendances requises par l'analyseur. Son intérêt est qu'il ne fait rien, donc ne va pas effectuer des traces, et permet de garder une sortie écran "propre" pour voir ce qui a été analysé.
 
-A l'occasion des parsages, on fera en particulier attention si les dates correspondent, et si le nombre d'enregistrement est juste. Le parsage est fait en "Best Effort" : une valeur qui n'est pas validée par les contrôles du système sera ignorée.
+A l'occasion des analyses, on fera en particulier attention si les dates correspondent, et si le nombre d'enregistrement est juste. L'analyse est faite en "Best Effort" : une valeur qui n'est pas validée par les contrôles du système sera ignorée.
 
-### Importation
+### Importation du fichier
 
 L'importation est réalisée également en ligne de commande.
 
