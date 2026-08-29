@@ -12,7 +12,7 @@
 5. CONFIRMEZ que la relation `Parent de` est présente, avec le nom du nouvel enfant.
 6. Consultez la fiche du Foyer.
 7. CONFIRMEZ que la relation `est membre du foyer` est présente, avec le nom du nouvel enfant.
-1. sur la page d'accueil, allez dans le menu `Listes`, et choisissez la liste *Naissances* (dans la partie Paroisse / Registre).
+1. Sur la page d'accueil, allez dans le menu `Listes`, et choisissez la liste *Naissances* (dans la partie Paroisse / Registre).
 1. CONFIRMEZ que l'individu est bien présent dans la liste, avec la bonne date de naissance et le nom des parents.
 
 ## 002 - Enregistrer un baptême
@@ -24,7 +24,7 @@
 5. Quittez la fiche.
 6. Revenez sur la fiche.
 7. CONFIRMEZ que la date et le verset sont bien affichés.
-1. sur la page d'accueil, allez dans le menu `Listes`, et choisissez la liste *Baptêmes* (dans la partie Paroisse / Registre).
+1. Sur la page d'accueil, allez dans le menu `Listes`, et choisissez la liste *Baptêmes* (dans la partie Paroisse / Registre).
 1. CONFIRMEZ que l'individu est bien présent dans la liste, avec la bonne date de baptême et le bon verset.
 
 ## 003 - Enregistrer un mariage
@@ -60,7 +60,7 @@
 5. Quittez la fiche.
 6. Revenez sur la fiche.
 7. CONFIRMEZ que la date et le verset sont bien affichés.
-1. sur la page d'accueil, allez dans le menu `Listes`, et choisissez la liste *Confirmations* (dans la partie Paroisse / Registre).
+1. Sur la page d'accueil, allez dans le menu `Listes`, et choisissez la liste *Confirmations* (dans la partie Paroisse / Registre).
 1. CONFIRMEZ que l'individu est bien présent dans la liste, avec la bonne date de confirmation et le bon verset.
 
 ## 007 - Enregistrer un décès
@@ -133,4 +133,14 @@
 
 ## 015 - Enregistrer une bénédiction de fin de catéchisme
 
-> 🚧 Test en cours d'écriture
+1. Choisissez une Fiche Individu d’un enfant.
+2. Saisissez une date de bénédiction de fin de catéchisme (avec une date de l'année en cours).
+3. Saisissez un lieu de bénédiction de fin de catéchisme.
+4. Enregistrez.
+5. Quittez la fiche.
+6. Revenez sur la fiche.
+7. CONFIRMEZ que la date et le lieu sont bien affichés.
+<!--
+1. Sur la page d'accueil, allez dans le menu `Listes`, et choisissez la liste *Bénédiction de fin de catéchisme* (dans la partie `Paroisse` / `Registre`).
+1. CONFIRMEZ que l'individu est bien présent dans la liste, avec la bonne date de bénédiction et le bon lieu.
+ -->

@@ -184,4 +184,17 @@ Plusieurs méthodes sont possibles (essayez d'effectuer tous les tests).
 
 ## 016 - Créer des étiquettes autocollantes avec décalage pour remercier les donateurs
 
-> 🚧 Test en cours d'écriture
+1. Dans le menu `Recherche`, ouvrir la `Recherche Avancée`.
+2. Ouvrir l’entrée `Contributions`.
+2. Dans la partie `Date de contribution`, choisissez une valeur (par exemple, *Cette année calendaire*).
+4. Cliquer sur `Rechercher`.
+5. CONFIRMEZ qu’une liste de fiches s’affiche.
+8. Cliquer sur `Sélectionner Tous` au-dessus de la liste.
+9. Dans le menu `Actions`, sélectionner `Etiquettes pour la Poste (avec impression décalée)`.
+10. Dans le menu qui s’ouvre, sélectionner un format d’étiquette.
+1. Sélectionner l'option *Inverser l'ordre d'impression par défaut des étiquettes*.
+1. Saisissez une valeur entre 5 et 10 dans la partie *Décaler l'impression de la première étiquette*.
+11. Cliquer sur le bouton `Imprimer des étiquettes pour la Poste`.
+12. CONFIRMEZ qu’un fichier PDF est crée.
+13. Ouvrir le fichier PDF.
+14. CONFIRMEZ que les adresses sont imprimées de gauche à droite, et que les premières cases sont vides (en fonction de la valeur saisie ci-dessus).

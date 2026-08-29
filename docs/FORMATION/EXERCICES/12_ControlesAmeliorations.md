@@ -201,7 +201,20 @@
 
 ## 017 - Détection des e-mails en erreur
 
-> 🚧 Test en cours d'écriture
+1. Sélectionnez une fiche Individu, et renseignez une adresse courriel.
+1. Allez sur le menu d’accueil, et cliquez sur le bouton `Contrôles` du menu CiviParoisse.
+1. Cliquez sur la case *E-mails en erreur*.
+1. CONFIRMEZ que le nom de la personne n'apparait pas dans la liste.
+1. Retournez sur la fiche Individu.
+1. Modifiez l'adresse courriel de la fiche Individu, en cliquant sur la case à cocher `Invalidée`, puis enregistrez.
+1. Allez sur le menu d’accueil, et cliquez sur le bouton `Contrôles` du menu CiviParoisse.
+1. Cliquez sur la case *E-mails en erreur*.
+1. CONFIRMEZ que le nom de la personne apparait bien dans la liste.
+1. Cliquez sur la fiche de l'Individu.
+1. Modifiez l'adresse courriel de la fiche Individu, en décochant la case à cocher `Invalidée`, puis enregistrez.
+1. Allez sur le menu d’accueil, et cliquez sur le bouton `Contrôles` du menu CiviParoisse.
+1. Cliquez sur la case *E-mails en erreur*.
+1. CONFIRMEZ que le nom de la personne n'apparait plus dans la liste.
 
 ## 018 - Détection des Individus sans Date de naissance
 
@@ -307,4 +320,16 @@
 
 ## 025 - Détection des Individus sans Courriel
 
-> 🚧 Test en cours d'écriture
+1. Choisissez une fiche Individu.
+2. Supprimez l'adresse Courriel si elle est déjà présente.
+3. Allez sur le menu d’accueil, et cliquez sur le bouton `Contrôles` du menu CiviParoisse.
+4. Cliquez sur le lien accessible en haut de la page, pour aller vers la page Améliorations.
+5. Cliquez sur la case *Individus sans Courriel*.
+6. CONFIRMEZ que du texte s’affiche (avec des rubriques d’explications : Contextes, Risques, etc...).
+7. CONFIRMEZ que la fiche que vous avez modifiée apparait dans le tableau sous la rubrique *Liste des Individus concernés*.
+8. Lisez les instructions décrites dans *Actions à mener*.
+9. Déroulez ces instructions pour corriger l’anomalie.
+10. Affichez à nouveau la liste des Contrôles.
+11. CONFIRMEZ que l’Individu a disparu de la liste.
+12. Ouvrez à nouveau la fiche de l'Individu
+1. CONFIRMEZ que l'adresse courriel est bien indiquée sur la fiche

@@ -40,7 +40,7 @@ Les informations ci-dessous vous indiquent comment évolue CiviParoisse au fil d
 
 - Nouvelles listes
     - Individus n'ayant pas d'adresses mails. [En savoir plus](operations_a_mener_regulierement.html#liste-des-ameliorations)
-    - Entreprises ou organisations présentes dans la base de données. [En savoir plus](mode_emploi/listes.html#quelles-listes-sont-disponibles)
+    - Entreprises ou organisations présentes dans la base de données. [En savoir plus](listes.html#quelles-listes-sont-disponibles)
     - Trombinoscopes pour les Groupes, les compétences Chants et les compétences Instruments. [Lien vers l'exercice de formation "Rajouter une photo"](../../FORMATION/EXERCICES/03_CreationIndividu.html?h=photo#010-rajouter-une-photo-a-un-individu)
 - Possibilité de "fermer" des fiches Foyers ou Organisations sans les supprimer, et d'indiquer la date de fermeture
 - Aide en ligne > Personnes à contacter : ajout des nouvelles paroisses utilisatrices de CiviParoisse

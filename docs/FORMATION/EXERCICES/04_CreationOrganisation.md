@@ -59,4 +59,12 @@
 
 ## 005 - Clôturer une fiche Organisation
 
-> 🚧 Test en cours d'écriture
+1. Ouvrez une fiche Organisation en passant par le menu `Rechercher` puis `Rechercher des Contacts` et en sélectionnant pour la recherche le type de contact *Organisation*.
+2. Cliquez sur `Rechercher`.
+3. Dans la liste qui s'affiche, cliquez sur une des fiches.
+1. Cliquer sur le bouton `Modifier` en haut de la fiche.
+4. Dans le formulaire qui s'affiche, cochez la case `L'organisation est fermée`.
+1. Saisissez une date de fermeture.
+5. Cliquez sur `Enregistrer`.
+1. CONFIRMEZ que le message *(fermé)* s'affiche en rouge à côté du nom de l'organisation.
+1. CONFIRMEZ que la date de fermeture s'affiche dans la fiche.

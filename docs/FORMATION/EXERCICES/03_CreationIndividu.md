@@ -8,7 +8,7 @@
 2. Commencez la création d’une fiche sur la page qui s’ouvre.
 3. Cliquez sur la fenêtre intitulée « Choisir le Foyer ou l'Organisation d'appartenance ».
 4. Faites le choix dans la liste déroulante.
-5. A la ligne Statut de l'Individu, faites le choix (Chef de famille ou Membre du foyer) en cliquant dans la pastille correspondant à votre choix.
+5. A la ligne Statut de l'Individu, faites le choix (`Chef·fe de famille (adulte majeur et responsable du foyer)` ou `Membre du foyer (enfant du foyer, mineur ou majeur)`) en cliquant dans la pastille correspondant à votre choix.
 6. Dans le bloc d’information « Civilité », cochez la pastille correspondant à la Civilité et au Genre.
 7. Renseignez le lien avec la paroisse, en cochant le bouton correspond.
 8. Remplissez les autres champs et listes déroulantes.
@@ -22,7 +22,7 @@
 4. CONFIRMEZ qu’un message d’erreur s’affiche.
 5. Cliquez sur l’icône « Nouvel individu / Particulier » sur la page d’accueil.
 6. Allez jusqu’à la partie intitulée : Statut Individu.
-7. Faites le choix (Chef de famille ou Membre du foyer) en cliquant dans la pastille correspondant à votre choix.
+7. Faites le choix (`Chef·fe de famille (adulte majeur et responsable du foyer)` ou `Membre du foyer (enfant du foyer, mineur ou majeur)`) en cliquant dans la pastille correspondant à votre choix.
 8. Cliquez sur la fenêtre grise « Enregistrer ».
 9. CONFIRMEZ qu’un message d’erreur s’affiche.
 10. Cliquez sur l’icône « Nouvel individu / Particulier » sur la page d’accueil.
@@ -42,7 +42,7 @@
 2. Commencez la création d’une fiche sur la page qui s’ouvre.
 3. Cliquez sur la fenêtre intitulée Choisir le Foyer ou l'Organisation d'appartenance.
 4. Faites le choix dans la liste déroulante.
-5. Statut Individu : Faites le choix (Chef de famille ou Membre du foyer) en cliquant dans la pastille correspondant à votre choix.
+5. Statut Individu : Faites le choix (`Chef·fe de famille (adulte majeur et responsable du foyer)` ou `Membre du foyer (enfant du foyer, mineur ou majeur)`) en cliquant dans la pastille correspondant à votre choix.
 6. Renseignez les deux fenêtres Nom des parents, Nom des frères et sœurs avec les listes déroulantes.
 7. Dans le bloc d’information « Civilité », cochez les pastilles correspondantes à la Civilité et au Genre.
 8. Puis renseignez les fenêtres suivantes : Nom de famille et Nom de naissance.
@@ -230,4 +230,17 @@
 
 ## 017 - Fusionner deux fiches du même individu
 
-> 🚧 Ce test sera documenté prochainement, merci d’y revenir ultérieurement.
+1. Créer deux fiches Individu ayant le même nom, le même prénom et la même adresse postale, mais ayant deux dates de naissance différentes.
+1. Dans le menu en haut de la page, cliquez sur `Contacts`, puis sur `Find and merge Duplicate Contacts`.
+1. CONFIRMEZ qu'une page s'ouvre ayant pour titre *Gérer les doublons*.
+1. Dans la partie *Règles Particulier*, repérez la ligne *Nom et adresse (réservé)* et cliquez sur `Utiliser cette règle`.
+1. Sur la page qui s'affichez, cliquez sur `Suivant`.
+1. Dans la liste qui s'affiche, CONFIRMEZ la présence de l'individu que vous avez crée.
+1. Au bout de la ligne de cet individu, cliquez sur `Fusionner`.
+1. Parcourez la page qui explique quelles données du doublon seront fusionnées dans la fiche de l'Individu qui sera conservé.
+1. Cochez ou décochez les cases au milieu de l'écran, en fonction des données que vous voulez conserver dans la fusion (notamment pour la date de naissance).
+1. En bas de la page, cliquez sur le bouton `Fusionner et voir les résultats`.
+1. CONFIRMEZ que la fiche Individu qui s'affiche contient bien les bonnes informations.
+1. En haut de l'écran, cliquez sur `Rechercher`/ `Recherchez des contacts`.
+1. Saisissez le nom de famille de l'Individu et cliquez sur `Rechercher`.
+1. CONFIRMER qu'il n'y a qu'une seule fiche de l'Individu choisi qui s'affiche, et que la deuxième fiche n'apparait pas dans la liste.

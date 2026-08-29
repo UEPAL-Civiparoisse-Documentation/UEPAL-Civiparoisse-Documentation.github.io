@@ -40,18 +40,17 @@
 
 ## 006 - Rajouter une Note à une fiche Foyer
 
-> 🚧 Test en cours d'écriture
-
-*(Février 2025) Description du test à revoir. Merci de ne pas l’effectuer en attendant.*
-
-1. Ouvrez une fiche Foyer en passant par le menu *Rechercher* puis *Rechercher des Contacts* et en sélectionnant pour la recherche le type de contact « Foyer ».
-2. Cliquez sur « Rechercher ».
-3. Dans la liste qui s'affiche, choisissez une des fiches et cliquez sur "plus" à droite au bout de la ligne.
-4. Dans le menu qui s'affiche, cliquez sur *Ajouter une note*.
+1. Ouvrez une fiche Foyer en passant par le menu `Rechercher` puis `Rechercher des Contacts` et en sélectionnant pour la recherche le type de contact *Foyer*.
+2. Cliquez sur `Rechercher`.
+3. Dans la liste qui s'affiche, choisissez une des fiches et cliquez sur `plus` à droite au bout de la ligne.
+4. Dans le menu qui s'affiche, cliquez sur `Ajouter une note`.
 4. Remplissez les champs de la note dans la fenêtre qui s'ouvre et enregistrez.
 5. Ouvrez la fiche en cliquant sur le nom du Foyer.
-1. Cliquez sur le bouton *Notes*.
+1. Cliquez sur le bouton `Notes`.
 6. CONFIRMEZ que le contenu de la note s'affiche.
+1. Cliquer sur le bouton `Ajouter une note` pour ajouter une nouvelle note.
+7. Remplissez les champs de la note dans la fenêtre qui s'ouvre et enregistrez.
+8. CONFIRMEZ que le contenu de la nouvelle note s'affiche dans la liste des notes.
 
 ## 007 - Règles de validation Nom du Foyer
 
@@ -100,4 +99,12 @@
 
 ## 011 - Clôturer une fiche Foyer
 
-> 🚧 Test en cours d'écriture
+1. Ouvrez une fiche Foyer en passant par le menu `Rechercher` puis `Rechercher des Contacts` et en sélectionnant pour la recherche le type de contact *Foyer*.
+2. Cliquez sur `Rechercher`.
+3. Dans la liste qui s'affiche, cliquez sur une des fiches.
+1. Cliquer sur le bouton `Modifier` en haut de la fiche.
+4. Dans le formulaire qui s'affiche, cochez la case `Le foyer est fermé`.
+1. Saisissez une date de fermeture.
+5. Cliquez sur `Enregistrer`.
+1. CONFIRMEZ que le message *(fermé)* s'affiche en rouge à côté du nom du foyer.
+1. CONFIRMEZ que la date de fermeture s'affiche dans la fiche.

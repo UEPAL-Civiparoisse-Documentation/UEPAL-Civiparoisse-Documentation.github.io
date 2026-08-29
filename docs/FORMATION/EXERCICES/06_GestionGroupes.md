@@ -58,8 +58,29 @@
 
 ## 005 - Afficher le trombinoscope d'un Groupe
 
-> 🚧 Test en cours d'écriture
+*Cet exercice est à réaliser après avoir effectué l'exercice "Rajouter une photo à un individu" dans la partie "Création d'un Individu" [(lien vers l'exercice)](03_CreationIndividu.md#010-rajouter-une-photo-a-un-individu)*
+
+1. Ouvrez la fiche de l'individu à qui vous avez rajouté une photo dans l'exercice mentionné en préambule.
+1. Dans l'onglet `Groupes`, rajouter l'individu à un groupe existant.
+1. Sur la page d'accueil, allez dans le menu `Listes`
+1. Dans la partie *Groupes* / *Participants*, cliquez sur `Trombinoscope des Participants`.
+1. Dans les critères de recherche, choisissez le groupe auquel vous avez rajouté l'individu, et cliquez sur `Rechercher`.
+1. CONFIRMEZ que la photo de l'individu s'affiche correctement dans le trombinoscope.
 
 ## 006 - Envoyer un mailing aux parents des inscrits à un groupe
 
-> 🚧 Test en cours d'écriture
+1. Choisissez un Individu dans la base de données.
+1. Si l'Individu n'est pas encore dans un Groupe, rajoutez-le à un Groupe existant.
+2. Allez dans l'onglet `Relations`, et rajouter une relation de type *Enfant de* avec un autre Individu.
+3. Si le parent n'a pas de courriel renseigné, ouvrez la fiche du Parent et rajoutez-en un.
+1. Sur la page d'accueil, allez dans le menu `Listes`.
+1. Dans la partie *Groupes* / *Participants*, cliquez sur `Participants à un Groupe`.
+1. Dans les critères de recherche, choisissez le groupe auquel vous avez rajouté l'individu, et cliquez sur `Rechercher`.
+1. Sélectionnez l'ensemble des participants en cochant la case tout en haut de la liste affichée.
+1. Dans le menu `Actions`, choisissez `Courrier - envoyer aux parents`.
+1. Renseignez le nom du mailing. Choisissez *Mosaico* comme Type de mailing, et cliquez sur `Créer le mailing`.
+1. CONFIRMEZ que vous arrivez sur la page de création du mailing.
+1. Dans la partie *Destinataires*, cliquez sur le nombre de destinaires.
+1. CONFIRMEZ que le nom du parent s'affiche.
+
+*Il n'est pas nécessaire de continuer la création du mailing. Mais vous pouvez le faire pour vous exercer* 😉.

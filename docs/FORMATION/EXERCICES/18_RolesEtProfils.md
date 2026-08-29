@@ -25,7 +25,7 @@
 ## 005 - Mettre en place l’accès pour un nouvel utilisateur
 
 1. Choisissez une fiche Individu, et renseigner une adresse mail dans le champ Mail.
-2. Suivez les instructions (à partir du point 2) décrites dans le Mode d’Emploi : https://uepal-civiparoisse-documentation.github.io/UTILISATION/mode_emploi/gestion_base_donnees.html#donner-acces-a-la-base-de-donnees-pour-un-nouvel-utilisateur 
+2. Suivez les instructions (à partir du point 2) décrites dans le Mode d’Emploi : <https://uepal-civiparoisse-documentation.github.io/UTILISATION/mode_emploi/gestion_base_donnees.html#donner-acces-a-la-base-de-donnees-pour-un-nouvel-utilisateur>.
 3. Notez soigneusement le nom d’utilisateur et le mot de passe.
 4. Déconnectez-vous de CiviParoisse.
 5. Connectez-vous avec le nom d’utilisateur et le mot de passe crée ci-dessus.
@@ -40,12 +40,15 @@
 *Ce test est à réaliser après avoir effectué le test « Mettre en place l’accès pour un nouvel utilisateur » décrit ci-dessus.*
 
 1. Connectez-vous avec votre Utilisateur et Mot de passe (et pas avec celui que vous avez créé dans le test ci-dessus)
-2. Suivez les instructions décrites dans le Mode d’Emploi : https://uepal-civiparoisse-documentation.github.io/UTILISATION/mode_emploi/gestion_base_donnees.html#supprimer-lacces-a-la-base-de-donnees-a-un-utilisateur-existant 
+2. Suivez les instructions décrites dans le Mode d’Emploi : <https://uepal-civiparoisse-documentation.github.io/UTILISATION/mode_emploi/gestion_base_donnees.html#supprimer-lacces-a-la-base-de-donnees-a-un-utilisateur-existant>. 
 3. Déconnectez-vous de CiviParoisse.
 4. Connectez-vous avec le nom d’utilisateur et le mot de passe crée dans le test ci-dessus.
 5. CONFIRMEZ que la connexion n’est pas autorisée.
 
 ## 007 - Lister les utilisateurs de votre CiviParoisse
 
-> 🚧 Test en cours d'écriture
-
+1. Sur la page d'accueil, cliquez sur le bouton `Listes`.
+1. Dans la partie `Gestion` / `Administration`, cliquez sur `Liste des Utilisateurs`.
+1. CONFIRMEZ qu'une liste s'ouvre avec votre nom dans la colonne *Nom de l'utilisateur*.
+1. CONFIRMEZ que votre dernière connexion est indiquée comme *Inférieur à 3 mois* (voir la colonne *Dernière connexion*).
+1. Si vous avez effectué les tests ci-dessus, CONFIRMEZ que l'utilisateur que vous avez supprimé est indiqué comme *Bloqué* dans la colonne *Statut*.

@@ -75,4 +75,12 @@
 
 ## 010 - Affichage des contacts récemment consultés
 
-> 🚧 Test en cours d'écriture
+1. En haut de l'écran, utilisez le menu `Rechercher` / `Rechercher des contacts` pour afficher une liste de contacts (vous pouvez utiliser les critères de recherches que vous souhaitez).
+1. Dans la liste des contacts qui s’affiche, cliquez sur un contact pour afficher sa fiche.
+1. Retournez à la page d'accueil.
+1. En haut de l'écran, cliquez sur le menu `Récent`.
+1. CONFIRMEZ que le contact que vous venez de consulter s'affiche dans la liste du menu `Récent`.
+1. Cliquez sur le menu `Voir contact`.
+1. CONFIRMEZ que la fiche du contact s'affiche.
+1. Renouvelez l'opération avec deux à trois autres contacts.
+1. CONFIRMEZ que tous ces contacts s'affichent dans la liste du menu `Récent`.
