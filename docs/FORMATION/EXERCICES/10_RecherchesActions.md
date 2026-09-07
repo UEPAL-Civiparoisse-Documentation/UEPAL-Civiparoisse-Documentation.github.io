@@ -34,7 +34,7 @@
 Plusieurs méthodes sont possibles (essayez d'effectuer tous les tests).  
 ***Méthode 1 : si l’ensemble du foyer porte le même nom de famille***
 
-1. Dans le moteur de recherche en haut à gauche de l’écran, saisir le nom du foyer, et uniquement le nom du foyer.
+1. Dans le moteur de recherche en haut à gauche de l’écran, saisir le nom de famille, et uniquement le nom de famille.
 2. Taper sur la touche Entrée du clavier.
 3. CONFIRMEZ que s’affiche alors l’ensemble des Individus composant le Foyer, ainsi que le Foyer lui-même.
 

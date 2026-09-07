@@ -184,53 +184,53 @@
 ## 014 - Supprimer un Individu de la base
 
 1. Ouvrez une fiche Individu.
-2. Cliquez sur le bouton Actions.
-3. Choisissez Supprimer.
+2. Cliquez sur le bouton `Actions`.
+3. Choisissez `Supprimer`.
 4. Validez la suppression.
 5. CONFIRMEZ que la fiche est marquée avec un trait rouge barré.
 6. Effectuez une recherche de la fiche.
 7. CONFIRMEZ que la fiche n’est pas visible.
-8. Allez dans Rechercher / Recherche avancée (bandeau noir en haut de l’écran).
-9. Saisissez le nom de la fiche supprimée dans « Nom complet ou partiel ».
-10. Dans les « Critères de base », cliquez sur *Rechercher dans les contacts supprimés*.
-11. Cliquez sur Rechercher.
+8. Allez dans `Rechercher` / `Recherche avancée` (bandeau noir en haut de l’écran).
+9. Saisissez le nom de la fiche supprimée dans `Nom`.
+10. Dans les `Critères de base`, cochez la case `Rechercher dans les contacts supprimés`.
+11. Cliquez sur `Rechercher`.
 12. CONFIRMEZ que la fiche est visible.
 
 ## 015 - Restaurer un Individu supprimé par erreur
 
 *Ce test est à effectuer après avoir effectué le test ci-dessus (« Supprimer un Individu de la base »)*
 
-1. Allez dans Rechercher / Recherche avancée.
-2. Saisissez le nom de la fiche concernée dans « Nom complet ou partiel ».
-3. Dans les « Critères de base », cliquer sur *Rechercher dans les contacts supprimés*.
-1. Cliquez sur *Recherche*.
+1. Allez dans `Rechercher` / `Recherche avancée`.
+2. Saisissez le nom de la fiche concernée dans `Nom`.
+3. Dans les `Critères de base`, cliquer sur `Rechercher dans les contacts supprimés`.
+1. Cliquez sur `Recherche`.
 4. CONFIRMEZ que la fiche est visible.
 5. Cliquez sur la fiche.
-6. Cliquez sur le bouton Restaurer de la Corbeille.
+6. Cliquez sur le bouton `Restaurer de la Corbeille`.
 7. Validez la restauration de la fiche.
 8. CONFIRMEZ que la fiche n’est pas plus barrée de rouge.
 9. CONFIRMEZ que les anciennes relations sont bien à nouveau affichées.
 
 ## 016 - Supprimer un Individu définitivement de la base
 
-1. Reproduisez les étapes du test 015 « Supprimer un Individu de la base ».
-2. Allez dans Rechercher / Recherche avancée.
-3. Saisissez le nom de la fiche concernée dans « Nom complet ou partiel ».
-4. Dans les « Critères de base », cliquez sur *Rechercher dans les contacts supprimés*.
-1. Cliquez sur *Recherchez*.
+1. Reproduisez les étapes du test 014 « Supprimer un Individu de la base ».
+2. Allez dans `Rechercher` / `Recherche avancée`.
+3. Saisissez le nom de la fiche concernée dans `Nom`.
+4. Dans les `Critères de base`, cliquez sur `Rechercher dans les contacts supprimés`.
+1. Cliquez sur `Recherchez`.
 5. CONFIRMEZ que la fiche est visible.
 6. Cliquez sur la fiche.
-7. Cliquez sur le bouton « Supprimer définitivement ».
+7. Cliquez sur le bouton `Supprimer définitivement`.
 8. Effectuez une recherche de la fiche.
-9. CONFIRMEZ que la fiche n’est pas visible.
-10. Allez dans Rechercher / Recherche avancée.
-11. Dans les « Critères de base », cliquez sur *Rechercher dans les contacts supprimés*.
-1. Cliquez sur *Recherchez*.
+9. CONFIRMEZ que la fiche n’est pas visible et qu'elle est définitivement supprimée.
+10. Allez dans `Rechercher` / `Recherche avancée`.
+11. Dans les `Critères de base`, cliquez sur `Rechercher dans les contacts supprimés`.
+1. Cliquez sur `Recherchez`.
 12. CONFIRMEZ que la fiche est n’est plus visible.
 
 ## 017 - Fusionner deux fiches du même individu
 
-1. Créer deux fiches Individu ayant le même nom, le même prénom et la même adresse postale, mais ayant deux dates de naissance différentes.
+1. Créer deux fiches Individu ayant le même nom, le même prénom, la même adresse postale et la même date de naissance, mais ayant deux ~~dates de naissance~~ religions différentes.
 1. Dans le menu en haut de la page, cliquez sur `Contacts`, puis sur `Find and merge Duplicate Contacts`.
 1. CONFIRMEZ qu'une page s'ouvre ayant pour titre *Gérer les doublons*.
 1. Dans la partie *Règles Particulier*, repérez la ligne *Nom et adresse (réservé)* et cliquez sur `Utiliser cette règle`.
@@ -238,7 +238,7 @@
 1. Dans la liste qui s'affiche, CONFIRMEZ la présence de l'individu que vous avez crée.
 1. Au bout de la ligne de cet individu, cliquez sur `Fusionner`.
 1. Parcourez la page qui explique quelles données du doublon seront fusionnées dans la fiche de l'Individu qui sera conservé.
-1. Cochez ou décochez les cases au milieu de l'écran, en fonction des données que vous voulez conserver dans la fusion (notamment pour la date de naissance).
+1. Cochez ou décochez les cases au milieu de l'écran, en fonction des données que vous voulez conserver dans la fusion (notamment pour la ~~date de naissance~~ religion).
 1. En bas de la page, cliquez sur le bouton `Fusionner et voir les résultats`.
 1. CONFIRMEZ que la fiche Individu qui s'affiche contient bien les bonnes informations.
 1. En haut de l'écran, cliquez sur `Rechercher`/ `Recherchez des contacts`.

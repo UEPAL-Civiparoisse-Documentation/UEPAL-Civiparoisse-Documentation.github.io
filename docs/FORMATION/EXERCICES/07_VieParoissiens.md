@@ -105,7 +105,7 @@
 10. CONFIRMEZ que la relation `Employeur de` est présente, avec le nom du paroissien
 11. Ouvrez la fiche du paroissien.
 12. Dans le champ Employeur, supprimez le nom de la paroisse.
-13. CONFIRMEZ que la relation `Est employé de` a disparu de la fiche Paroissien.
+13. CONFIRMEZ que la relation `Est employé de` apparait maintenant dans les `Relations inactives`.
 
 ## 011 - Enregistrer un départ de la paroisse
 
