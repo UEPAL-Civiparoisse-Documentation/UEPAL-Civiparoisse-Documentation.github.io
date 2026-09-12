@@ -51,7 +51,7 @@ Pour enregistrer le décès d'une personne, rendez-vous sur la fiche Individu de
 	* `Pas de mailing - opposition (opt out)`
 1. Au niveau de l'**état civil**, renseignez si possible la date des obsèques et indiquez au sein de quelle paroisse ont eu lieu les obsèques.
 1. Retirez la personne des **groupes** auxquels elle appartenait, en utilisant la fonction `Retirer`. **Attention :** Ne pas utiliser la fonction `Supprimer`, afin de conserver un historique de l'activité.
-1. Vérifiez que les **Adhésions** soient passées en `Adhésions en attente ou exprirées`. **Attention :** Ne pas utiliser la fonction `Supprimer` afin de conserver l'historique.
+1. Vérifiez que les **Adhésions** soient passées en `Adhésions en attente ou expirées`. **Attention :** Ne pas utiliser la fonction `Supprimer` afin de conserver l'historique.
 1. Créez une **Note** avec les coordonnées de contact de la famille. Cela pourra servir à les contacter en vue d'un culte des défunts.
 1. Sur la fiche **Foyer**, modifiez l'intitulé du foyer pour enlever le nom du défunt. S'il n'y a plus personne au sein du foyer, supprimez le foyer.
 1. Si besoin, ajoutez la **date de veuvage** sur la fiche Individu du conjoint survivant.

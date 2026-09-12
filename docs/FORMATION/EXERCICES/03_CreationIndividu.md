@@ -198,7 +198,7 @@
 
 ## 015 - Restaurer un Individu supprimé par erreur
 
-*Ce test est à effectuer après avoir effectué le test ci-dessus (« Supprimer un Individu de la base »)*
+*Cet exercice est à effectuer après avoir effectué l'exercice ci-dessus (« Supprimer un Individu de la base »)*
 
 1. Allez dans `Rechercher` / `Recherche avancée`.
 2. Saisissez le nom de la fiche concernée dans `Nom`.
@@ -213,7 +213,9 @@
 
 ## 016 - Supprimer un Individu définitivement de la base
 
-1. Reproduisez les étapes du test 014 « Supprimer un Individu de la base ».
+*La suppression définitive n'est possible que sur des Individus n'ayant pas de Contributions enregistrés. Pour cet exercice, choisissez une Fiche sans Contributions. Ou supprimez les Contributions déjà présentes avant de commencer l'exercice.*
+
+1. Reproduisez les étapes de l'exercice 014 « Supprimer un Individu de la base ».
 2. Allez dans `Rechercher` / `Recherche avancée`.
 3. Saisissez le nom de la fiche concernée dans `Nom`.
 4. Dans les `Critères de base`, cliquez sur `Rechercher dans les contacts supprimés`.

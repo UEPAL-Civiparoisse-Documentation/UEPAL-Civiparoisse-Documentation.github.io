@@ -45,7 +45,7 @@
 
 ## 005 - Enregistrer un mariage après divorce
 
-1. Reprenez les deux fiches Individus utilisées dans le test ci-dessous.
+1. Reprenez les deux fiches Individus utilisées dans l'exercice ci-dessous.
 2. Suivez les instructions indiquées dans le Mode d’Emploi : [https://uepal-civiparoisse-documentation.github.io/UTILISATION/mode_emploi/que_faire_quand.html#un-couple-se-marie](https://uepal-civiparoisse-documentation.github.io/UTILISATION/mode_emploi/que_faire_quand.html#un-couple-se-marie)
 3. CONFIRMEZ que les opérations se sont déroulées comme indiquées.
 4. Consultez la fiche du « nouveau » foyer.
@@ -84,12 +84,12 @@
 
 ## 009 - Vérifier la liste Conseil Presbytéral
 
-*Effectuez ce test à la suite du test ci-dessus (« Attribuer une fonction à un paroissien »)*
+*Effectuez cet exercice à la suite de l'exercice ci-dessus (« Attribuer une fonction à un paroissien »)*
 
 1. Sur la page d’accueil, cliquez sur les `Listes`.
 2. Cliquez sur la liste `Conseil Presbytéral`.
 3. Dans les critères de choix, choisissez le groupe *Conseil Presbytéral*.
-4. CONFIRMEZ que dans la liste qui s’affiche figurent bien les deux personnes renseignées dans le test ci-dessus.
+4. CONFIRMEZ que dans la liste qui s’affiche figurent bien les deux personnes renseignées dans l'exercice ci-dessus.
 
 ## 010 - Ajouter un salarié de la paroisse
 

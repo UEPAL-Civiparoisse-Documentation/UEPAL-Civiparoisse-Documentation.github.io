@@ -25,7 +25,7 @@
 
 ## 004 - Déconnexion automatique
 
-*Ce test est à réaliser sur plusieurs jours, et nécessite de ne pas utiliser CiviParoisse durant plus d’une semaine. Nous vous conseillons de le réaliser à la fin de votre série de tests.*
+*Cet exercice est à réaliser sur plusieurs jours, et nécessite de ne pas utiliser CiviParoisse durant plus d’une semaine. Nous vous conseillons de le réaliser à la fin de votre série d'exercices.*
 
 1. Connectez-vous à CiviParoisse selon la procédure habituelle.
 2. Fermez l’onglet CiviParoisse dans votre navigateur.

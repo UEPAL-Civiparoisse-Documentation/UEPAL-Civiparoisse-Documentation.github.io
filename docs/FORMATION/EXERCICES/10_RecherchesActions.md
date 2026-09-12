@@ -31,7 +31,7 @@
 
 ## 004 - Afficher toutes les personnes d’un foyer
 
-Plusieurs méthodes sont possibles (essayez d'effectuer tous les tests).  
+Plusieurs méthodes sont possibles (essayez d'effectuer tous les méthodes).  
 ***Méthode 1 : si l’ensemble du foyer porte le même nom de famille***
 
 1. Dans le moteur de recherche en haut à gauche de l’écran, saisir le nom de famille, et uniquement le nom de famille.
@@ -180,7 +180,7 @@ Plusieurs méthodes sont possibles (essayez d'effectuer tous les tests).
 24. Choisir Désabonnement pour le champ « Se désabonner de la liste ».
 25. Cliquer sur Suivant.
 
-*(Le test s’arrête là pour le moment. Il sera complété ultérieurement)*
+*(L'exercice s’arrête là pour le moment. Il sera complété ultérieurement)*
 
 ## 016 - Créer des étiquettes autocollantes avec décalage pour remercier les donateurs
 

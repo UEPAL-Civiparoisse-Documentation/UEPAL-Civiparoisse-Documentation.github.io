@@ -16,7 +16,7 @@
 
 ## 002 - Définir différents types d'événements et de rôles en utilisant les outils librement
 
-1. Suivez les instructions données dans le titre du test 😉
+1. Suivez les instructions données dans le titre de l'exercice 😉
 2. CONFIRMEZ que les résultats obtenus sont ceux que vous souhaitiez.
 
 ## 003 - Inscrire un participant à un événement existant
