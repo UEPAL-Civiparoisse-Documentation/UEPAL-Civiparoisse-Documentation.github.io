@@ -96,6 +96,7 @@ Plusieurs méthodes sont possibles (essayez d'effectuer tous les méthodes).
 1. Dans le menu `Recherche`, ouvrir la `Recherche Avancée`.
 2. Dans l’entrée `Champs personnalisées`, `Compétences`, sélectionner une des compétences `Musique :chant`.
 3. Rajouter les trois autres compétences Chant.
+1. Dans l’entrée `Données démographiques`, sélectionner *Non* à la ligne `Est décédé / fermé`.
 4. Cliquer sur `Rechercher`.
 5. CONFIRMEZ que des fiches s’affichent (environ 30 fiches sur test-1).
 6. Ouvrir quelques fiches.

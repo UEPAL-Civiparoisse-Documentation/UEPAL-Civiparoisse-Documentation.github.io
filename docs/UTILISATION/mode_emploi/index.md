@@ -1,6 +1,7 @@
 # Mode d'emploi de Civiparoisse
 
 * [Introduction](introduction.md)
+* [Les nouveautés dans CiviParoisse](nouveautes_CiviParoisse.md)
 * [Débuter](debuter.md)
 * [Gérer les fiches](fiches_contact.md)
 * [Gérer les relations](relations.md)
@@ -15,6 +16,6 @@
 * [Créer et gérer un événement](creer_et_gerer_un_evenement.md)
 * [Opérations à mener régulièrement](operations_a_mener_regulierement.md)
 * [Administration locale de la base de données](gestion_base_donnees.md)
+* [Gérer en Multiparoisse](multiparoisse.md)
 * [Préparer l'installation initiale de CiviParoisse](prepaper_installation.md)
-* [Les nouveautés dans CiviParoisse](nouveautes_CiviParoisse.md)
 * [Ressources](ressources.md)

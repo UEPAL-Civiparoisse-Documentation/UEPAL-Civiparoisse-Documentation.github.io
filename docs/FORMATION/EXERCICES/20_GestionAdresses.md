@@ -58,40 +58,40 @@
 ## 004 - Corriger une adresse déclarée erronée
 
 1. Dans le menu en haut de l'écran, cliquez sur `Paroisse` puis choisissez `Gestion des adresses` et `Validation des propositions d'adresses`.
-1. Choisissez une ligne où la rue et/ou la ville sont affichés sur fond rouge.
-1. Cliquez sur `Modifier l'adresse` au bout de la ligne.
-1. Dans l'onglet qui s'ouvre, cliquer sur 'Modifier l'adresse' au niveau du pavé Adresse de la fiche.
-1. Cliquez sur le bouton `Assistant de saisie de l'adresse`.
-1. Dans la fenêtre qui s'ouvre, choisissez
+2. Choisissez une ligne où la rue et/ou la ville sont affichés sur fond rouge.
+3. Cliquez sur `Modifier l'adresse` au bout de la ligne.
+4. Dans l'onglet qui s'ouvre, cliquer sur 'Modifier l'adresse' au niveau du pavé Adresse de la fiche.
+5. Cliquez sur le bouton `Assistant de saisie de l'adresse`.
+6. Dans la fenêtre qui s'ouvre, choisissez
     1. Un des départements dans la liste déroulante.
     1. Une des villes dans la liste déroulante.
     1. Une des rues dans la liste déroulante correspondante.
     1. Un des numéros de rue dans la liste correspondante.
     1. Le code postal correspondant à votre choix.
-1. Cliquez sur `Valider`.
-1. Cliquez sur `Enregistrer` dans le pavé Adresse de la fiche.
-1. CONFIRMEZ que l'adresse corrigée s'affiche bien dans le pavé Adresse de la fiche.
-1. Dans le menu en haut de l'écran, cliquez sur `Paroisse` puis choisissez `Gestion des adresses` et `Validation des propositions d'adresses`.
-1. CONFIRMEZ que l'adresse du foyer choisi s'affiche maintenant avec un fond vert.
-1. Cochez la ligne de la fiche choisie.
-1. En haut de la liste, cliquez sur le bouton `Action` et le choix `Valider l'adresse proposée`.
-1. Dans la fenêtre qui s'ouvre, cliquez sur `Valider l'adresse proposée`.
-1. CONFIRMEZ que le foyer ne figure plus sur la liste.
+7. Cliquez sur `Valider`.
+8. Cliquez sur `Enregistrer` dans le pavé Adresse de la fiche.
+9. CONFIRMEZ que l'adresse corrigée s'affiche bien dans le pavé Adresse de la fiche.
+10. Dans le menu en haut de l'écran, cliquez sur `Paroisse` puis choisissez `Gestion des adresses` et `Validation des propositions d'adresses`.
+11. CONFIRMEZ que l'adresse du foyer choisi s'affiche maintenant avec un fond vert.
+12. Cochez la ligne de la fiche choisie.
+13. En haut de la liste, cliquez sur le bouton `Action` et le choix `Valider l'adresse proposée`.
+14. Dans la fenêtre qui s'ouvre, cliquez sur `Valider l'adresse proposée`.
+15. CONFIRMEZ que le foyer ne figure plus sur la liste.
 
 *Variante du même test*
 
 1. Dans le menu en haut de l'écran, cliquez sur `Paroisse` puis choisissez `Gestion des adresses` et `Validation des propositions d'adresses`.
-1. Cochez trois-quatre lignes où la rue et/ou la ville sont affichés sur fond rouge. (pour la suite de l'exercice, notez-vous le nom des foyers concernés).
-1. Cliquez sur le bouton `Actions` en haut de la liste, puis choisissez `Déclarer erronée une proposition d'adresse`.
-1. Dans la fenêtre qui s'ouvre, cliquez sur le bouton `Déclarer erronée une proposition d'adresse`.
-1. CONFIRMEZ que les quelques fiches Foyers ont bien disparus de la liste.
-1. Dans le menu en haut de l'écran, cliquez sur `Paroisse` puis choisissez `Gestion des adresses`et `Adresses erronées, à corriger`.
-1. CONFIRMEZ que les fiches choisies apparaissent bien sur l'écran.
-1. Corrigez les adresses en suivant la démarche ci-dessous.
-1. Dans le menu en haut de l'écran, cliquez sur `Paroisse` puis choisissez `Gestion des adresses`et `Adresses erronées, à corriger`.
-1. CONFIRMEZ que les fiches corrigées ont bien disparus de la liste.
-1. Dans le menu en haut de l'écran, cliquez sur `Paroisse`puis choisissez `Gestion des adresses`et `Validation des propositions d'adresses`.
-1. Cochez les fiches choisies.
-1. En haut de la liste, cliquez sur le bouton `Action`et le choix `Valider l'adresse proposée`.
-1. Dans la fenêtre qui s'ouvre, cliquez sur `Valider l'adresse proposée`.
-1. CONFIRMEZ que les fiches choisies n'apparaissent plus dans la liste.
+2. Cochez trois-quatre lignes où la rue et/ou la ville sont affichés sur fond rouge. (pour la suite de l'exercice, notez-vous le nom des foyers concernés).
+3. Cliquez sur le bouton `Actions` en haut de la liste, puis choisissez `Déclarer erronée une proposition d'adresse`.
+4. Dans la fenêtre qui s'ouvre, cliquez sur le bouton `Déclarer erronée une proposition d'adresse`.
+5. CONFIRMEZ que les quelques fiches Foyers ont bien disparus de la liste.
+6. Dans le menu en haut de l'écran, cliquez sur `Paroisse` puis choisissez `Gestion des adresses`et `Adresses erronées, à corriger`.
+7. CONFIRMEZ que les fiches choisies apparaissent bien sur l'écran.
+8. Corrigez les adresses en suivant la démarche ci-dessus.
+9. Dans le menu en haut de l'écran, cliquez sur `Paroisse` puis choisissez `Gestion des adresses`et `Adresses erronées, à corriger`.
+10. CONFIRMEZ que les fiches corrigées ont bien disparus de la liste.
+11. Dans le menu en haut de l'écran, cliquez sur `Paroisse`puis choisissez `Gestion des adresses`et `Validation des propositions d'adresses`.
+12. Cochez les fiches choisies.
+13. En haut de la liste, cliquez sur le bouton `Action`et le choix `Valider l'adresse proposée`.
+14. Dans la fenêtre qui s'ouvre, cliquez sur `Valider l'adresse proposée`.
+15. CONFIRMEZ que les fiches choisies n'apparaissent plus dans la liste.

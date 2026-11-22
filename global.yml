@@ -12,6 +12,7 @@ nav:
     - 'Mode d''emploi':
         - 'UTILISATION/mode_emploi/index.md'
         - 'Introduction': 'UTILISATION/mode_emploi/introduction.md'
+        - 'Les nouveautés dans CiviParoisse' : 'UTILISATION/mode_emploi/nouveautes_CiviParoisse.md'
         - 'Débuter': 'UTILISATION/mode_emploi/debuter.md'
         - 'Gérer les fiches': 'UTILISATION/mode_emploi/fiches_contact.md'
         - 'Gérer les relations': 'UTILISATION/mode_emploi/relations.md'
@@ -26,9 +27,10 @@ nav:
         - 'Créer et gérer un événement': 'UTILISATION/mode_emploi/creer_et_gerer_un_evenement.md'
         - 'Opérations à mener régulièrement': 'UTILISATION/mode_emploi/operations_a_mener_regulierement.md'
         - 'Administration locale de la base de données' : 'UTILISATION/mode_emploi/gestion_base_donnees.md'
+        - 'Gérer en Multiparoisse': 'UTILISATION/mode_emploi/multiparoisse.md'
         - 'Préparer l''installation initiale de CiviParoisse' : 'UTILISATION/mode_emploi/prepaper_installation.md'
-        - 'Les nouveautés dans CiviParoisse' : 'UTILISATION/mode_emploi/nouveautes_CiviParoisse.md'
         - 'Ressources utiles': 'UTILISATION/mode_emploi/ressources.md'
+
     - 'Présentation du projet':
         - 'PRESENTATION/index.md'
         - 'Périmètre fonctionnel': 'PRESENTATION/presentation_fonctionnelle.md'

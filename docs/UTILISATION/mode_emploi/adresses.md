@@ -27,7 +27,7 @@ En cliquant sur `Valider`, l'adresse normalisée va s'insérer dans les champs A
 Lorsque vous saisissez une adresse manuellement (ou pour les adresses saisies dans le passé), CiviParoisse va chercher à rapprocher votre saisie de la Base Nationale des Adresses. Il vous **appartient de vérifier que ce rapprochement soit correct**, en validant les adresses ainsi proposées. Cette validation se fait de la façon suivante :
 
 1. Allez dans le menu `Paroisse`dans le menu en haut de l'écran
-1. Allez dans le sous-menu `Gestion des adresses` et choississez `Validation des propositions d'adresses`
+1. Allez dans le sous-menu `Gestion des adresses` et choisissez `Validation des propositions d'adresses`
 1. Un code couleur dans les colonnes *Saisie : rue* et *Saisie : ville* vous aide à repérer les différences.
     * Vert : la rue ou la ville saisies semblent correspondre à la proposition
     * Rouge : la rue ou la ville saisies semblent ne pas correspondre pas à la proposition
@@ -52,7 +52,7 @@ Que faire si l'adresse est erronée? Comment corriger ?-->
 A tout moment, il est possible de consulter l'ensemble des adresses de vos fiches, et de visualiser si vous devez encore les modifier.
 
 1. Allez dans le menu `Paroisse`dans le menu en haut de l'écran
-2. Allez dans le sous-menu `Gestion des adresses` et choississez `Adresse : toutes les propositions`
+2. Allez dans le sous-menu `Gestion des adresses` et choisissez `Adresse : toutes les propositions`
 3. La première colonne vous indique l'état de l'adresse :
     * Valide (fond vert) : vous avez déjà indiqué que cette adresse était correctement restituée
     * Non vérifié (fond jaune) : vous n'avez pas encore indiqué si cette adresse était correctement restituée par l'outil. Vous pouvez le faire en suivant les explications ci-dessus (*Valider les adresses saisies manuellement*)
@@ -68,7 +68,7 @@ La `Liste de distribution par Quartier` est disponible dans le menu Listes de la
 Lorsque vous imprimez la liste, **chaque Quartier est imprimé sur une page à part**, ce qui vous permet de donner facilement une liste à chacun de vos porteurs.  
 En haut de l'écran, vous pouvez modifier le nombre de critères pris en compte pour le découpage des tableaux. Par défaut, un seul critère est pris en compte : le premier indiqué dans la partie *Critères de tri sélectionnés*. En augmentant le nombre de critères, vous pouvez imprimer plus de listes.
 
-Si vous n'avez pas encore finalisé la validation des adresses (cf explications ci-dessous), pensez à rajouter le critère `Non vérifié` dans le filtre *Validation* en haut de l'écran.  
+Si vous n'avez pas encore finalisé la validation des adresses (cf. explications ci-dessous), pensez à rajouter le critère `Non vérifié` dans le filtre *Validation* en haut de l'écran.  
 Un signe d'avertissement (:fontawesome-solid-warning:) est alors visible devant les adresses non vérifiées. Ce signe permet à vos porteurs de savoir qu'ils doivent vérifier ces adresses lors de leur tournée.
 
 La page vous indique les critères de tri de votre liste. **Vous pouvez modifier les critères choisis par défaut**. Pour cela, cliquez sur la colonne que vous triez en premier (cliquez une deuxième fois si vous voulez inverser l'ordre de tri).  
@@ -86,4 +86,4 @@ Si vous constatez une anomalie dans la mise en correspondance entre les adresses
 Il peut arriver que les données disponibles ne soient pas complètes. Dans ce cas nous vous conseillons de chercher à vérifier les données depuis le site <https://adresse.data.gouv.fr/>{:target="_blank"}.
 
 * Si le site internet restitue correctement l'adresse, mais que cette adresse n'est pas disponible dans CiviParoisse, vous pouvez déclarer l'adresse comme étant **invalide**. Cela permettra, dès qu'il y aura eu une mise à jour des données du moteur, de réussir à obtenir une mise en correspondance. Si ce n'est pas le cas après plusieurs tentatives, nous vous invitons à contacter l'UEPAL.
-* En revanche, si les données ne sont pas sur <https://adresse.data.gouv.fr/>{:target="_blank"}, il peut alors être judicieux de se rapprocher des services administratifs locaux compétents pour leur demander l'ajout de cette adresse dans la Base Nationale des Adresses.
+* En revanche, si les données ne sont pas sur <https://adresse.data.gouv.fr/>{:target="_blank"}, vous pouvez signaler cette absence directement en ligne, en allant sur le site <https://signalement.adresse.data.gouv.fr/>{:target="_blank"}, en cliquant sur la `Recherche Avancée` et en renseignant les différents écrans. Vous contribuerez ainsi à fiabiliser la base de données nationale... et aussi CiviParoisse.

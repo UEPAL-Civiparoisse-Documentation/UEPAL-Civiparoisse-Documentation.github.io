@@ -52,3 +52,7 @@
 1. CONFIRMEZ qu'une liste s'ouvre avec votre nom dans la colonne *Nom de l'utilisateur*.
 1. CONFIRMEZ que votre dernière connexion est indiquée comme *Inférieur à 3 mois* (voir la colonne *Dernière connexion*).
 1. Si vous avez effectué les exercices ci-dessus, CONFIRMEZ que l'utilisateur que vous avez supprimé est indiqué comme *Bloqué* dans la colonne *Statut*.
+
+## 008 - Supprimer les utilisateurs qui ne se connectent plus
+
+> 🚧 Test en cours d'écriture

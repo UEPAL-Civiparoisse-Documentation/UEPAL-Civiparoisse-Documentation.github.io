@@ -56,7 +56,7 @@ Les dons enregistrés dans CiviParoisse sont récapitulés dans la liste **Donat
 
 ### Imprimer les reçus fiscaux
 
-1. Au préalable, vous devez avoir préparé les reçus fiscaux (cf chapitre ci-dessus).
+1. Au préalable, vous devez avoir préparé les reçus fiscaux (cf. chapitre ci-dessus).
 1. Dans la fenêtre qui s'ouvre, décocher la case `Mettre à jour les dates de remerciement pour ces contributions`.
 1. Puis choisir **Contacts** dans la liste déroulante `Regrouper les contributions par`.
 1. Vérifier que la ligne `Options d'impression et de courriel` soit positionnée à **Générer des documents PDF pour imprimer (seulement)**.

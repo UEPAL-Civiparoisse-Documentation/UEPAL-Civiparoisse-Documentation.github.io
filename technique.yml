@@ -82,6 +82,7 @@ nav:
            - 'Personnalisation environnement de dev': 'LOGICIEL/environnement_dev_env.md'
            - 'Importation de données': 'LOGICIEL/importation.md'
            - 'Gestion des adresses': 'LOGICIEL/adresses_technique.md'
+           - 'Gestion en Multiparoisse': 'LOGICIEL/multiparoisse.md'
        - 'Intégration Continue':
            - 'INTEGRATION_CONTINUE/index.md'
            - 'Docker build et push': 'INTEGRATION_CONTINUE/docker_build_push.md'

@@ -55,7 +55,7 @@ CMD [bash]
     Texte du bloc
 
 !!! info "Titre de l'information"
-    Texte de de l'information
+    Texte de l'information
 
 !!! success "Titre de la note"
     Texte du bloc

@@ -14,7 +14,7 @@
 1. Sur la page d’accueil, cliquez sur la Liste des prochains anniversaires des 7 prochains jours.
 2. CONFIRMEZ que seuls les anniversaires des 7 prochains jours s'affichent.
 3. Vérifiez que le calcul de l'âge est correct.
-    1. Il s’agit de l’âge au jour où vous regardez, pas l’âge que la personne aura dans quelques jours lors de son anniversaire.
+    1. Il s’agit de l’âge que la personne aura lors de son anniversaire dans quelques jours.
 4. Modifiez la date d'anniversaire d'un contact Individu (ne figurant pas déjà dans la liste) en indiquant une date d'anniversaire dans les 7 prochains jours.
 5. Retournez sur la liste Anniversaires.
 6. CONFIRMEZ que ce contact modifié figure bien dans la liste.

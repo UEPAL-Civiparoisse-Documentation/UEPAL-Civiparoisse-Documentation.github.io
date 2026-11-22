@@ -114,7 +114,7 @@ Une fois votre sélection faite, vous pouvez cliquer sur le bouton `Actions`, qu
 | Ajouter une activité | *Cette action sera documentée ultérieurement* |
 | Courriel : planifier/envoyer un mailing | Permet d'envoyer un mailing de masse aux personnes sélectionnées |
 | Courrier - envoyer aux parents | Permet d'envoyer un courriel aux parents des contacts sélectionnés |
-| Download Spreadsheet | Permet de télécharger les informations affichés à l'écran dans un fichier Excel ou PDF |
+| Télécharger (xlsx, pdf, csv, ...) | Permet de télécharger les informations affichées à l'écran dans un fichier Excel ou PDF |
 | Exporter Contact | Permet de télécharger de nombreuses informations concernant les fiches sélectionnées, en plus de celles affichées à l'écran |
 | Groupes - ajouter les contacts | Propose de rajouter les contacts sélectionnés au groupe que vous choisirez.|
 | Imprimer/fusionner un document | Permet de réaliser des courriers (du type publipostage) |

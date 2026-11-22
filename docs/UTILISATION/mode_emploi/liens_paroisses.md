@@ -25,7 +25,7 @@ Dans CiviParoisse, le lien avec la paroisse est géré comme une "Adhésion".
 
 * Positionnez-vous sur la fiche Individu de la personne concernée.
 * Cliquez sur l'onglet `Adhésion` et cliquez sur le bouton :material-plus-circle:`Ajouter une adhésion`.
-* Dans la liste déroulante `- sélectionner -`, choisissez le lien avec la paroisse (cf supra pour plus de détails sur les 4 types de liens).
+* Dans la liste déroulante `- sélectionner -`, choisissez le lien avec la paroisse (cf. supra pour plus de détails sur les 4 types de liens).
 * Si besoin, changez la date `Membre depuis le`.
 * Indiquez la date de début d'adhésion, qui est généralement la même que la date de la ligne ci-dessus.
 * Cliquez sur le bouton :fontawesome-solid-check:`Enregistrer`, et vérifiez que l'adhésion s'affiche à l'écran.

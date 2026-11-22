@@ -112,7 +112,9 @@ La liste vous indique :
 
 **Pour des questions de sécurité, nous vous conseillons vivement de ne pas avoir d'utilisateurs dont la dernière connexion est supérieure à neuf mois**. Il faut alors inciter l'utilisateur à se connecter à nouveau. Ou bien il faut lui supprimer son accès (cf supra).
 
-## Modifier la liste des Quartiers
+## Paramétrer et personnaliser son CiviParoisse
+
+### Modifier la liste des Quartiers
 
 Dans le bandeau noir du haut, cliquer sur :fontawesome-regular-handshake:`Paroisse` et choisissez la ligne :material-cog:`Paramètres`.  
 Dans la page des Paramètres de CiviParoisse qui s'ouvre, sélectionner :fontawesome-solid-list: `Modifier la liste des Quartiers`.
@@ -135,3 +137,17 @@ Dans la page des Paramètres de CiviParoisse qui s'ouvre, sélectionner :fontawe
     1. Dans la colonne *Visible ?*, cliquer sur `Non`
     2. Choisir le bouton `Oui`
     3. Cliquer sur la flèche verte
+
+### Créer de nouveaux formats pour les planches d'étiquettes autocollantes
+
+Un large choix de format de planches d'étiquettes autocollantes est déjà disponible dans CiviParoisse. Vous avez également la possibilité de créer de nouveaux formats, selon vos besoins spécifiques.
+
+1. Dans le menu du haut, cliquer sur :fontawesome-regular-handshake:`Paroisse` puis sur :material-cog:`Paramètres`.
+2. Cliquer sur le lien :fontawesome-solid-list: `Créer de nouveaux formats d'étiquettes autocollantes`.
+3. Cliquer sur le bouton `Ajouter`.
+4. Dans la fenêtre qui s'ouvre, compléter les champs, et en particulier les champs suivants :
+    1. Cocher la case `Ce format d'étiquettes est-il par défaut ?`
+    2. Choissisez *ISO A4* pour le `format de papier`.
+    3. Changer `l'unité de mesure` en *Centimètres*.
+    4. Compléter les autres champs selon les caractéristiques des planches que vous utilisez.
+5. Cliquer sur `Enregistrer`.

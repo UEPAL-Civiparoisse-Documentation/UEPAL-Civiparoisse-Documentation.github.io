@@ -97,12 +97,12 @@
 2. Allez sur la fiche ainsi créée.
 3. Renseignez une Adhésion *Inscrit.e Enfant* sur la fiche.
 4. Allez sur le menu d’accueil, et cliquez sur le bouton `Contrôles` du menu CiviParoisse.
-5. Cliquez sur la case *Individus de plus de 18 ans ayant encore le Statut ‘Inscrit Enfant’*.
+5. Cliquez sur la case *Individus Majeurs avec Statut Enfant*.
 6. CONFIRMEZ que du texte s’affiche (avec des rubriques d’explications : Contextes, Risques, etc...).
 7. CONFIRMEZ que la fiche que vous avez créée apparait dans le tableau sous la rubrique *Liste des Individus concernés*.
 8. Lisez les instructions décrites dans *Actions à mener*.
 9. Déroulez ces instructions pour corriger l’anomalie.
-10. Affichez à nouveau la liste des Contrôles.
+10. Affichez à nouveau la liste des Contrôles (la rafraichir si besoin).
 11. CONFIRMEZ que l’Individu a disparu de la liste.
 
 ## 010 - Détection des personnes ayant un Statut Enfant et une Relation Chef de famille
@@ -278,7 +278,7 @@
 2. Ne remplissez aucun élément d’adresse pour cette nouvelle fiche.
 3. Retournez sur la page d’accueil.
 4. Cliquez sur le lien `Contrôles` dans le menu CiviParoisse.
-5. Allez sur la page des Améliorations en cliquant sur le lien dans le paragraphe « Comment utiliser cette page ? ».
+5. Cliquez sur le lien accessible en haut de la page, pour aller vers la page Améliorations.
 6. Dans les Améliorations sur les fiches Organisation, ouvrez la case *Organisations n’ayant pas d’adresse*.
 7. CONFIRMEZ que l’Organisation nouvellement créée est présente dans la liste.
 8. Lisez les instructions décrites dans *Actions à mener*.
@@ -292,7 +292,7 @@
 2. Ne remplissez aucun élément de relations pour cette nouvelle fiche.
 3. Retournez sur la page d’accueil.
 4. Cliquez sur le lien `Contrôles` dans le menu CiviParoisse.
-5. Aller sur la page des Améliorations en cliquant sur le lien dans le paragraphe « Comment utiliser cette page ? ».
+5. Cliquez sur le lien accessible en haut de la page, pour aller vers la page Améliorations.
 6. Dans les Améliorations sur les fiches Organisation, ouvrez la case *Organisations n’ayant pas de relations*.
 7. CONFIRMEZ que l’Organisation nouvellement créée est présente dans la liste.
 8. Lisez les instructions décrites dans *Actions à mener*.
@@ -310,7 +310,7 @@
 6. Enregistrez l’inscription.
 7. Retournez sur la page d’accueil.
 8. Cliquez sur le lien `Contrôles` dans le menu CiviParoisse.
-9. Allez sur la page des Améliorations en cliquant sur le lien dans le paragraphe « Comment utiliser cette page ? ».
+9. Cliquez sur le lien accessible en haut de la page, pour aller vers la page Améliorations.
 10. Dans les Améliorations sur les fiches Organisation, ouvrez la case *Organisations ayant participées à un Evénement*.
 11. CONFIRMEZ que l’Organisation nouvellement créée est présente dans la liste.
 12. Lissez les instructions décrites dans *Actions à mener*.

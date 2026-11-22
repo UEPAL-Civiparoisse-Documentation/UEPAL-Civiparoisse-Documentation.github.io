@@ -21,7 +21,7 @@
 1. CONFIRMEZ qu'une page s'ouvre dans un nouvel onglet, avec le titre *CiviParoisse : personnes ressources*.
 1. Cliquez sur un des boutons dans la partie *Contacter la communauté*.
 1. CONFIRMEZ qu'un nouvel onglet s'ouvre avec les coordonnées de la paroisse (vous êtes sur le site internet de l'UEPAL).
-1. Revenez sur l'onglet précédant.
+1. Revenez sur l'onglet précédent.
 1. Dans la partie *Contacts à l'UEPAL*, cliquez sur le nom d'une des personnes.
 1. CONFIRMEZ qu'une fenêtre de courriel s'ouvre.
 1. CONFIRMEZ que l'adresse mail de la personne choisie est préremplie.

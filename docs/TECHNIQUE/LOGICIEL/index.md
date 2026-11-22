@@ -38,3 +38,4 @@ Cette section répertoire les documentations relatives au développement logicie
 * [Customisation environnement de dev](environnement_dev_env.md)
 * [Importation des données](importation.md)
 * [Gestion des adresses](adresses_technique.md)
+* [Gestion en multiparoisse](multiparoisses.md)

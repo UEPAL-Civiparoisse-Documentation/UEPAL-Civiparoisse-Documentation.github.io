@@ -48,7 +48,7 @@ Lorsque la correction n'est pas possible directement sur l'écran, un lien ouvre
 
 ### Réaliser des actions de masse
 
-Vous pouvez sélectionner une, plusieurs ou toutes les fiches, en cliquant sur les cases à gauche des fiches. Une fois les fiches sélectionnés, en cliquant sur le bouton "Action", vous pouvez réaliser les actions suivantes :
+Vous pouvez sélectionner une, plusieurs ou toutes les fiches, en cliquant sur les cases à gauche des fiches. Une fois les fiches sélectionnées, en cliquant sur le bouton "Action", vous pouvez réaliser les actions suivantes :
 
 <!-- Le tableau ci-dessous est quasiment identique à celui dans "Listes". Penser à l'actualiser également si celui-ci change. -->
 
@@ -56,7 +56,7 @@ Vous pouvez sélectionner une, plusieurs ou toutes les fiches, en cliquant sur l
 | ---- | ---- |
 | Ajouter une activité | *Cette action sera documentée ultérieurement* |
 | Courriel : planifier/envoyer un mailing | Permet d'envoyer un mailing de masse aux personnes sélectionnées, pour demander les informations manquantes par exemple |
-| Download Spreadsheet | Permet de télécharger les informations affichés à l'écran dans un fichier Excel ou PDF |
+| Télécharger (xlsx, pdf, csv, ...) | Permet de télécharger les informations affichées à l'écran dans un fichier Excel ou PDF |
 | Etiquettes pour la Poste - imprimer | Permet d'imprimer des étiquettes autocollantes |
 | Groupes - ajouter les contacts | Permet d'ajouter les contacts sélectionnés à un groupe |
 | Imprimer/fusionner un document | Permet de réaliser des courriers (du type publipostage), pour demander les informations manquantes par exemple |

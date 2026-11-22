@@ -22,4 +22,4 @@
 1. Renseignez le `Statut d'activité`à *Terminé*.
 5. Et cliquez sur `Enregistrer`.
 6. Sur la fiche de l’Individu, cliquez sur l’onglet `Activités`.
-7. CONFIRMEZ la présence de l’activité *Appel téléphonique*.
+7. CONFIRMEZ la présence de l’activité *Visite*.

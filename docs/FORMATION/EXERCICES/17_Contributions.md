@@ -13,7 +13,7 @@
 
 ## 002 - Rajouter une contribution Don par chèque
 
-*Se connecter avec un profil pouvant visualiser les contributions*
+*Se connecter avec un profil pouvant visualiser et modifier les contributions*
 
 1. Ouvrez la fiche d’un Individu.
 2. Cliquez sur l’onglet `Contribution`.
@@ -27,7 +27,7 @@
 
 ## 003 - Rajouter une contribution Don en espèces
 
-*Se connecter avec un profil pouvant visualiser les contributions*
+*Se connecter avec un profil pouvant visualiser et modifier les contributions*
 
 1. Ouvrez la fiche d’un Individu.
 2. Cliquez sur l’onglet `Contribution`.
@@ -41,7 +41,7 @@
 
 ## 004 - Rajouter une contribution Don par virement
 
-*Se connecter avec un profil pouvant visualiser les contributions*
+*Se connecter avec un profil pouvant visualiser et modifier les contributions*
 
 1. Ouvrez la fiche d’un Individu.
 2. Cliquez sur l’onglet `Contribution`.
@@ -55,7 +55,7 @@
 
 ## 005 - Supprimer une contribution enregistrée par erreur
 
-*Se connecter avec un profil pouvant visualiser les contributions*
+*Se connecter avec un profil pouvant visualiser et modifier les contributions*
 
 1. Ouvrez la fiche d’un Individu.
 2. Cliquez sur l’onglet `Contribution`.

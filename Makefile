@@ -14,8 +14,8 @@ build:
 	docker run --rm -ti --mount type=bind,source=${CURDIR},destination=/docs --name="mkdocs_material"  ${image}  build -v -v -v -f global.yml
 	docker run --rm -ti --mount type=bind,source=${CURDIR},destination=/docs --name="mkdocs_material"  ${image}  build -v -v -v -f technique.yml
 serve:
-	docker run  --rm -ti -p ${servip}:${servport}:8000 --mount type=bind,source=${CURDIR},destination=/docs --name="mkdocs_material" ${image}  serve -a 0.0.0.0:8000 -v -v -v -f global.yml
-#	docker run  --rm -ti -p ${servip}:${servport}:8000 --mount type=bind,source=${CURDIR},destination=/docs --name="mkdocs_material" ${image}  serve -a 0.0.0.0:8000 -v -v -v -f technique.yml
+	docker run  --rm -ti -p ${servip}:${servport}:8000 --mount type=bind,source=${CURDIR},destination=/docs --name="mkdocs_material" ${image}  serve -a 0.0.0.0:8000 -v -v -v -f global.yml --livereload
+#	docker run  --rm -ti -p ${servip}:${servport}:8000 --mount type=bind,source=${CURDIR},destination=/docs --name="mkdocs_material" ${image}  serve -a 0.0.0.0:8000 -v -v -v -f technique.yml --livereload
 
 servopen: serve
 	xdg-open http://${servip}:${servport}

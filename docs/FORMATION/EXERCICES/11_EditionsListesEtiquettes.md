@@ -68,7 +68,7 @@ Listes à tester :
 2. Dans la partie Paroisse / Elections, choisissez la liste électorale.
 3. Sous le bouton `Action`, sélectionnez quelques fiches en cliquant sur les cases à gauche de la ligne.
 4. Cliquer sur le bouton `Action`.
-5. Sélectionner `Download Spreadsheet`.
+5. Sélectionner `Télécharger`.
 6. Dans la fenêtre qui s’ouvre, choisissez le format souhaité (Excel).
 7. Cliquer sur Télécharger.
 8. CONFIRMEZ qu’un fichier Excel a bien été téléchargé.
@@ -139,7 +139,7 @@ Listes à tester :
 5. Sélectionnez toutes les fiches, en cliquant sur la première case sous le bouton `Action`.
 6. CONFIRMEZ que toutes les fiches sont sélectionnées.
 7. Cliquez sur le bouton `Action`.
-8. Cliquer sur `Download Spreadsheet` (« télécharger un fichier Excel »).
+8. Cliquer sur `Télécharger`.
 9. Choisissez le format Excel (ou Open Office, selon le logiciel installé sur votre ordinateur).
 10. Cliquez sur Télécharger.
 11. CONFIRMEZ qu’un fichier est téléchargé.
